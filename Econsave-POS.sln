@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.438
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Econsave-POS", "Econsave-POS\Econsave-POS.vbproj", "{E0074C35-64BB-4FAA-8E98-98E5510B3248}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E0074C35-64BB-4FAA-8E98-98E5510B3248}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E0074C35-64BB-4FAA-8E98-98E5510B3248}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E0074C35-64BB-4FAA-8E98-98E5510B3248}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E0074C35-64BB-4FAA-8E98-98E5510B3248}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5FCE3E00-A915-4431-8DC6-0210079B1001}
+	EndGlobalSection
+EndGlobal
