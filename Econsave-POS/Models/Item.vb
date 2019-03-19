@@ -18,9 +18,10 @@ Partial Public Class Item
     Public Property stockQuantity As Integer
     Public Property createdOn As Date
     Public Property lastUpdate As Nullable(Of Date)
-    Public Property category As String
+    Public Property categoryID As Integer
     Public Property status As Integer
 
+    Public Overridable Property Category As Category
     Public Overridable Property ItemSales As ICollection(Of ItemSale) = New HashSet(Of ItemSale)
 
 End Class

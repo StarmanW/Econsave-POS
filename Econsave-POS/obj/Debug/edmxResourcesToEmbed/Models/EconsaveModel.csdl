@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="EconsaveDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Item">
+    <Key>
+      <PropertyRef Name="itemID" />
+    </Key>
+    <Property Name="itemID" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="description" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="price" Type="Double" Nullable="false" />
+    <Property Name="stockQuantity" Type="Int32" Nullable="false" />
+    <Property Name="createdOn" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="lastUpdate" Type="DateTime" Precision="0" />
+    <Property Name="category" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="status" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="ItemSales" Relationship="Self.FK_ItemSales_ToItem" FromRole="Item" ToRole="ItemSales" />
+  </EntityType>
+  <EntityType Name="ItemSale">
+    <Key>
+      <PropertyRef Name="transactionID" />
+    </Key>
+    <Property Name="transactionID" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="itemID" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="quantity" Type="Int32" Nullable="false" />
+    <Property Name="subtotal" Type="Double" Nullable="false" />
+    <NavigationProperty Name="Item" Relationship="Self.FK_ItemSales_ToItem" FromRole="ItemSales" ToRole="Item" />
+    <NavigationProperty Name="Transaction" Relationship="Self.FK_ItemSales_ToTransaction" FromRole="ItemSales" ToRole="Transaction" />
+  </EntityType>
+  <EntityType Name="Staff">
+    <Key>
+      <PropertyRef Name="staffID" />
+    </Key>
+    <Property Name="staffID" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="password" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="registeredOn" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="lastLogin" Type="DateTime" Precision="0" />
+    <Property Name="position" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Transactions" Relationship="Self.FK_Transaction_ToStaff" FromRole="Staff" ToRole="Transaction" />
+  </EntityType>
+  <EntityType Name="Transaction">
+    <Key>
+      <PropertyRef Name="transactionID" />
+    </Key>
+    <Property Name="transactionID" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="staffID" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="totalPrice" Type="Double" Nullable="false" />
+    <Property Name="createdOn" Type="DateTime" Nullable="false" Precision="0" />
+    <NavigationProperty Name="ItemSale" Relationship="Self.FK_ItemSales_ToTransaction" FromRole="Transaction" ToRole="ItemSales" />
+    <NavigationProperty Name="Staff" Relationship="Self.FK_Transaction_ToStaff" FromRole="Transaction" ToRole="Staff" />
+  </EntityType>
+  <Association Name="FK_ItemSales_ToItem">
+    <End Role="Item" Type="Self.Item" Multiplicity="1" />
+    <End Role="ItemSales" Type="Self.ItemSale" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Item">
+        <PropertyRef Name="itemID" />
+      </Principal>
+      <Dependent Role="ItemSales">
+        <PropertyRef Name="itemID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ItemSales_ToTransaction">
+    <End Role="Transaction" Type="Self.Transaction" Multiplicity="1" />
+    <End Role="ItemSales" Type="Self.ItemSale" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Transaction">
+        <PropertyRef Name="transactionID" />
+      </Principal>
+      <Dependent Role="ItemSales">
+        <PropertyRef Name="transactionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Transaction_ToStaff">
+    <End Role="Staff" Type="Self.Staff" Multiplicity="1" />
+    <End Role="Transaction" Type="Self.Transaction" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Staff">
+        <PropertyRef Name="staffID" />
+      </Principal>
+      <Dependent Role="Transaction">
+        <PropertyRef Name="staffID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="EconsaveDBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Items" EntityType="Self.Item" />
+    <EntitySet Name="ItemSales" EntityType="Self.ItemSale" />
+    <EntitySet Name="Staffs" EntityType="Self.Staff" />
+    <EntitySet Name="Transactions" EntityType="Self.Transaction" />
+    <AssociationSet Name="FK_ItemSales_ToItem" Association="Self.FK_ItemSales_ToItem">
+      <End Role="Item" EntitySet="Items" />
+      <End Role="ItemSales" EntitySet="ItemSales" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ItemSales_ToTransaction" Association="Self.FK_ItemSales_ToTransaction">
+      <End Role="Transaction" EntitySet="Transactions" />
+      <End Role="ItemSales" EntitySet="ItemSales" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Transaction_ToStaff" Association="Self.FK_Transaction_ToStaff">
+      <End Role="Staff" EntitySet="Staffs" />
+      <End Role="Transaction" EntitySet="Transactions" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

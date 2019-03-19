@@ -14,6 +14,7 @@
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -26,7 +27,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -76,6 +76,7 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
@@ -97,6 +98,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ApplicationEvents.vb" />
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -104,32 +106,72 @@
       <DependentUpon>Form1.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Models\EconsaveModel.Context.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>EconsaveModel.Context.tt</DependentUpon>
+    <Compile Include="Models\Category.vb">
+      <DependentUpon>EconsaveDBModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\EconsaveModel.Designer.vb">
+    <Compile Include="Models\EconsaveDBModel.Context.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>EconsaveModel.edmx</DependentUpon>
+      <DependentUpon>EconsaveDBModel.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\EconsaveModel.vb">
+    <Compile Include="Models\EconsaveDBModel.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>EconsaveModel.tt</DependentUpon>
+      <DependentUpon>EconsaveDBModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EconsaveDBModel.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EconsaveDBModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Item.vb">
-      <DependentUpon>EconsaveModel.tt</DependentUpon>
+      <DependentUpon>EconsaveDBModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\ItemSale.vb">
-      <DependentUpon>EconsaveModel.tt</DependentUpon>
+      <DependentUpon>EconsaveDBModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Staff.vb">
-      <DependentUpon>EconsaveModel.tt</DependentUpon>
+      <DependentUpon>EconsaveDBModel.tt</DependentUpon>
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Models\Transaction.vb">
-      <DependentUpon>EconsaveModel.tt</DependentUpon>
+      <DependentUpon>EconsaveDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\ItemManagement\AddItem.Designer.vb">
+      <DependentUpon>AddItem.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\ItemManagement\AddItem.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\ItemManagement\DisplayItem.Designer.vb">
+      <DependentUpon>DisplayItem.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\ItemManagement\DisplayItem.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\ItemManagement\UpdateItem.Designer.vb">
+      <DependentUpon>UpdateItem.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\ItemManagement\UpdateItem.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Login\Form2.Designer.vb">
+      <DependentUpon>Form2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Login\Form2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Sales\Staff.Designer.vb">
+      <DependentUpon>Staff.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Sales\Staff.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\StaffManagement\Form3.Designer.vb">
+      <DependentUpon>Form3.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\StaffManagement\Form3.vb">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
@@ -151,6 +193,9 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Modules\ItemManagement\AddItem.resx">
+      <DependentUpon>AddItem.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
@@ -159,12 +204,12 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EntityDeploy Include="Models\EconsaveModel.edmx">
+    <EntityDeploy Include="Models\EconsaveDBModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>EconsaveModel.Designer.vb</LastGenOutput>
+      <LastGenOutput>EconsaveDBModel.Designer.vb</LastGenOutput>
     </EntityDeploy>
-    <None Include="Models\EconsaveModel.edmx.diagram">
-      <DependentUpon>EconsaveModel.edmx</DependentUpon>
+    <None Include="Models\EconsaveDBModel.edmx.diagram">
+      <DependentUpon>EconsaveDBModel.edmx</DependentUpon>
     </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
@@ -175,29 +220,26 @@
       <CustomToolNamespace>My</CustomToolNamespace>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="ItemManagement\" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Database\EconsaveDB.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    <Content Include="Database\EconsaveDB.mdf" />
     <Content Include="Database\EconsaveDB_log.ldf">
       <DependentUpon>EconsaveDB.mdf</DependentUpon>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Models\EconsaveModel.Context.tt">
+    <Content Include="Models\EconsaveDBModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>EconsaveModel.edmx</DependentUpon>
-      <LastGenOutput>EconsaveModel.Context.vb</LastGenOutput>
+      <DependentUpon>EconsaveDBModel.edmx</DependentUpon>
+      <LastGenOutput>EconsaveDBModel.Context.vb</LastGenOutput>
     </Content>
-    <Content Include="Models\EconsaveModel.tt">
+    <Content Include="Models\EconsaveDBModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>EconsaveModel.edmx</DependentUpon>
-      <LastGenOutput>EconsaveModel.vb</LastGenOutput>
+      <DependentUpon>EconsaveDBModel.edmx</DependentUpon>
+      <LastGenOutput>EconsaveDBModel.vb</LastGenOutput>
     </Content>
   </ItemGroup>
   <ItemGroup>
