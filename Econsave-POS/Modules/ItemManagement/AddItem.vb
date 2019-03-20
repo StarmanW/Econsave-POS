@@ -7,19 +7,19 @@ Public Class AddItem
         InitializeComponent()
 
         ' Populate Item Category combo box and generate Item ID
-        Using db As New EconsaveDBEntities()
+        Using db As New EconsaveDataClassesDataContext()
             GenerateItemID(db)
             InitializeCategoryBox(db)
         End Using
     End Sub
 
     ' Sub routine to generate item ID
-    Private Sub GenerateItemID(db As EconsaveDBEntities)
+    Private Sub GenerateItemID(db As EconsaveDataClassesDataContext)
         txtItemID.Text = (db.Items.Count + 1).ToString("D6")
     End Sub
 
     ' Sub routine to initialize category combo box
-    Private Sub InitializeCategoryBox(db As EconsaveDBEntities)
+    Private Sub InitializeCategoryBox(db As EconsaveDataClassesDataContext)
         Dim category As List(Of Category)
         category = db.Categories.ToList()
 
@@ -42,7 +42,7 @@ Public Class AddItem
     ' Sub routine to handle add button
     Private Sub btnAddItem_Click(sender As Object, e As EventArgs) Handles btnAddItem.Click
         If Not isValidFields() Then
-            Using db As New EconsaveDBEntities()
+            Using db As New EconsaveDataClassesDataContext()
                 Dim itemCategory As String = cmbCategory.SelectedItem
                 Dim newItem As New Item()
 
@@ -54,11 +54,15 @@ Public Class AddItem
                 newItem.stockQuantity = Int16.Parse(numStockQuantity.Value)
                 newItem.createdOn = DateTime.Now
                 newItem.categoryID = db.Categories.Where(Function(cat) cat.categoryName = itemCategory).FirstOrDefault().categoryID
-                newItem.status = 1
+                If newItem.stockQuantity = 0 Then
+                    newItem.status = "Out-of-stock"
+                Else
+                    newItem.status = "In-stock"
+                End If
 
                 ' Add new item and save changes
-                db.Items.Add(newItem)
-                db.SaveChanges()
+                db.Items.InsertOnSubmit(newItem)
+                db.SubmitChanges()
 
                 ' Display successful message
                 MessageBox.Show($"Item ({newItem.name}) has been successfully added!", "Item Added", MessageBoxButtons.OKCancel)
