@@ -16,7 +16,3 @@ C:\Users\StarmanW\Documents\Visual Studio 2017\Projects\Econsave-POS\Econsave-PO
 C:\Users\StarmanW\Documents\Visual Studio 2017\Projects\Econsave-POS\Econsave-POS\obj\Debug\Econsave-POS.pdb
 C:\Users\StarmanW\Documents\Visual Studio 2017\Projects\Econsave-POS\Econsave-POS\bin\Debug\EntityFramework.dll
 C:\Users\StarmanW\Documents\Visual Studio 2017\Projects\Econsave-POS\Econsave-POS\bin\Debug\EntityFramework.SqlServer.dll
-C:\Users\StarmanW\Documents\Visual Studio 2017\Projects\Econsave-POS\Econsave-POS\obj\Debug\Econsave_POS.DisplayItem.resources
-C:\Users\StarmanW\Documents\Visual Studio 2017\Projects\Econsave-POS\Econsave-POS\bin\Debug\MetroFramework.Design.dll
-C:\Users\StarmanW\Documents\Visual Studio 2017\Projects\Econsave-POS\Econsave-POS\bin\Debug\MetroFramework.dll
-C:\Users\StarmanW\Documents\Visual Studio 2017\Projects\Econsave-POS\Econsave-POS\bin\Debug\MetroFramework.Fonts.dll
