@@ -1,6 +1,6 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class DisplayItem
-    Inherits System.Windows.Forms.Form
+    Inherits MetroFramework.Forms.MetroForm
 
     'Form overrides dispose to clean up the component list.
     <System.Diagnostics.DebuggerNonUserCode()>
@@ -23,29 +23,59 @@ Partial Class DisplayItem
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.itemDGV = New System.Windows.Forms.DataGridView()
+        Me.cmbCategory = New MetroFramework.Controls.MetroComboBox()
+        Me.lblCategory = New MetroFramework.Controls.MetroLabel()
         CType(Me.itemDGV, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'itemDGV
         '
+        Me.itemDGV.AllowUserToResizeColumns = False
+        Me.itemDGV.AllowUserToResizeRows = False
+        Me.itemDGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.itemDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.itemDGV.Location = New System.Drawing.Point(12, 55)
+        Me.itemDGV.Location = New System.Drawing.Point(23, 94)
         Me.itemDGV.Name = "itemDGV"
-        Me.itemDGV.Size = New System.Drawing.Size(926, 362)
+        Me.itemDGV.Size = New System.Drawing.Size(851, 331)
         Me.itemDGV.TabIndex = 0
+        '
+        'cmbCategory
+        '
+        Me.cmbCategory.FormattingEnabled = True
+        Me.cmbCategory.ItemHeight = 23
+        Me.cmbCategory.Location = New System.Drawing.Point(115, 59)
+        Me.cmbCategory.Name = "cmbCategory"
+        Me.cmbCategory.Size = New System.Drawing.Size(203, 29)
+        Me.cmbCategory.TabIndex = 1
+        Me.cmbCategory.UseSelectable = True
+        '
+        'lblCategory
+        '
+        Me.lblCategory.AutoSize = True
+        Me.lblCategory.FontSize = MetroFramework.MetroLabelSize.Tall
+        Me.lblCategory.Location = New System.Drawing.Point(24, 59)
+        Me.lblCategory.Name = "lblCategory"
+        Me.lblCategory.Size = New System.Drawing.Size(85, 25)
+        Me.lblCategory.TabIndex = 2
+        Me.lblCategory.Text = "Category:"
         '
         'DisplayItem
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(950, 450)
+        Me.ClientSize = New System.Drawing.Size(897, 450)
+        Me.Controls.Add(Me.lblCategory)
+        Me.Controls.Add(Me.cmbCategory)
         Me.Controls.Add(Me.itemDGV)
         Me.Name = "DisplayItem"
-        Me.Text = "DisplayItem"
+        Me.Text = "Display Item"
         CType(Me.itemDGV, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
     Friend WithEvents itemDGV As DataGridView
+    Friend WithEvents cmbCategory As MetroFramework.Controls.MetroComboBox
+    Friend WithEvents lblCategory As MetroFramework.Controls.MetroLabel
 End Class
