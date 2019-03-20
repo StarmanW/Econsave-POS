@@ -241,6 +241,10 @@
       <DependentUpon>EconsaveDBModel.edmx</DependentUpon>
       <LastGenOutput>EconsaveDBModel.vb</LastGenOutput>
     </Content>
+    <None Include="Resources\Webiconset-Application-Login.ico" />
+    <None Include="Resources\cbvoi-qjprf-6.png" />
+    <None Include="Resources\cb4e4-ot9m3-6.png" />
+    <None Include="Resources\Econsave_logo.png" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
