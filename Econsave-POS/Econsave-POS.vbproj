@@ -69,9 +69,19 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Data.Linq" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Runtime.Serialization" />
@@ -99,43 +109,22 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="EconsaveDataClasses.designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EconsaveDataClasses.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="EconsaveDBDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EconsaveDBDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.vb">
       <DependentUpon>Form1.vb</DependentUpon>
       <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Models\Category.vb">
-      <DependentUpon>EconsaveDBModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\EconsaveDBModel.Context.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>EconsaveDBModel.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\EconsaveDBModel.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>EconsaveDBModel.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="Models\EconsaveDBModel.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>EconsaveDBModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Item.vb">
-      <DependentUpon>EconsaveDBModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\ItemSale.vb">
-      <DependentUpon>EconsaveDBModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Staff.vb">
-      <DependentUpon>EconsaveDBModel.tt</DependentUpon>
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Models\Transaction.vb">
-      <DependentUpon>EconsaveDBModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Modules\ItemManagement\AddItem.Designer.vb">
       <DependentUpon>AddItem.vb</DependentUpon>
@@ -196,6 +185,9 @@
     <EmbeddedResource Include="Modules\ItemManagement\AddItem.resx">
       <DependentUpon>AddItem.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Modules\ItemManagement\DisplayItem.resx">
+      <DependentUpon>DisplayItem.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
@@ -204,12 +196,24 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EntityDeploy Include="Models\EconsaveDBModel.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>EconsaveDBModel.Designer.vb</LastGenOutput>
-    </EntityDeploy>
-    <None Include="Models\EconsaveDBModel.edmx.diagram">
-      <DependentUpon>EconsaveDBModel.edmx</DependentUpon>
+    <None Include="EconsaveDataClasses.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>EconsaveDataClasses.designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="EconsaveDataClasses.dbml.layout">
+      <DependentUpon>EconsaveDataClasses.dbml</DependentUpon>
+    </None>
+    <None Include="EconsaveDBDataSet.xsc">
+      <DependentUpon>EconsaveDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="EconsaveDBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>EconsaveDBDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="EconsaveDBDataSet.xss">
+      <DependentUpon>EconsaveDBDataSet.xsd</DependentUpon>
     </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
@@ -227,19 +231,9 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <Content Include="Database\EconsaveDB.mdf" />
-    <Content Include="Database\EconsaveDB_log.ldf">
+    <Content Include="EconsaveDB.mdf" />
+    <Content Include="EconsaveDB_log.ldf">
       <DependentUpon>EconsaveDB.mdf</DependentUpon>
-    </Content>
-    <Content Include="Models\EconsaveDBModel.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>EconsaveDBModel.edmx</DependentUpon>
-      <LastGenOutput>EconsaveDBModel.Context.vb</LastGenOutput>
-    </Content>
-    <Content Include="Models\EconsaveDBModel.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>EconsaveDBModel.edmx</DependentUpon>
-      <LastGenOutput>EconsaveDBModel.vb</LastGenOutput>
     </Content>
   </ItemGroup>
   <ItemGroup>
@@ -255,6 +249,7 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />

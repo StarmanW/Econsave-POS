@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="EconsaveDB" Class="EconsaveDataClassesDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Database\EconsaveDB.mdf;Integrated Security=True" SettingsObjectName="Econsave_POS.My.MySettings" SettingsPropertyName="EconsaveDBConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Category" Member="Categories">
+    <Type Name="Category">
+      <Column Name="categoryID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="categoryName" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Association Name="Category_Item" Member="Items" ThisKey="categoryID" OtherKey="categoryID" Type="Item" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[Transaction]" Member="Transactions">
+    <Type Name="Transaction">
+      <Column Name="transactionID" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="staffID" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="totalPrice" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="createdOn" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Association Name="Transaction_ItemSale" Member="ItemSale" ThisKey="transactionID" OtherKey="transactionID" Type="ItemSale" Cardinality="One" />
+      <Association Name="Staff_Transaction" Member="Staff" ThisKey="staffID" OtherKey="staffID" Type="Staff" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Item" Member="Items">
+    <Type Name="Item">
+      <Column Name="itemID" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="description" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="price" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="stockQuantity" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="createdOn" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="lastUpdate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="categoryID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="status" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Item_ItemSale" Member="ItemSales" ThisKey="itemID" OtherKey="itemID" Type="ItemSale" />
+      <Association Name="Category_Item" Member="Category" ThisKey="categoryID" OtherKey="categoryID" Type="Category" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ItemSales" Member="ItemSales">
+    <Type Name="ItemSale">
+      <Column Name="transactionID" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="itemID" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="quantity" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="subtotal" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Association Name="Item_ItemSale" Member="Item" ThisKey="itemID" OtherKey="itemID" Type="Item" IsForeignKey="true" />
+      <Association Name="Transaction_ItemSale" Member="Transaction" ThisKey="transactionID" OtherKey="transactionID" Type="Transaction" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Staff" Member="Staffs">
+    <Type Name="Staff">
+      <Column Name="staffID" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="password" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="registeredOn" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="lastLogin" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="position" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Staff_Transaction" Member="Transactions" ThisKey="staffID" OtherKey="staffID" Type="Transaction" />
+    </Type>
+  </Table>
+</Database>
