@@ -25,7 +25,7 @@ Partial Public Class EconsaveDBEntities
     Public Overridable Property Categories() As DbSet(Of Category)
     Public Overridable Property Items() As DbSet(Of Item)
     Public Overridable Property ItemSales() As DbSet(Of ItemSale)
-    Public Overridable Property Staffs() As DbSet(Of Staff)
+    Public Overridable Property Staffs() As DbSet(Of Sales)
     Public Overridable Property Transactions() As DbSet(Of Transaction)
 
 End Class

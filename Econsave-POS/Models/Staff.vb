@@ -10,7 +10,7 @@
 Imports System
 Imports System.Collections.Generic
 
-Partial Public Class Staff
+Partial Public Class Sales
     Public Property staffID As String
     Public Property name As String
     Public Property password As String

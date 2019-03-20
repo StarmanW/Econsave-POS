@@ -17,6 +17,6 @@ Partial Public Class Transaction
     Public Property createdOn As Date
 
     Public Overridable Property ItemSale As ItemSale
-    Public Overridable Property Staff As Staff
+    Public Overridable Property Staff As Sales
 
 End Class

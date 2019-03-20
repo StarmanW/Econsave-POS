@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Staff
+Partial Class Sales
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
