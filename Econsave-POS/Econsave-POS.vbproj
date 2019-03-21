@@ -83,6 +83,7 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Data.Linq" />
     <Reference Include="System.Deployment" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
@@ -150,10 +151,10 @@
     <Compile Include="Modules\Login\Form2.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Modules\Sales\Staff.Designer.vb">
-      <DependentUpon>Staff.vb</DependentUpon>
+    <Compile Include="Modules\Sales\Sales.Designer.vb">
+      <DependentUpon>Sales.vb</DependentUpon>
     </Compile>
-    <Compile Include="Modules\Sales\Staff.vb">
+    <Compile Include="Modules\Sales\Sales.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Modules\StaffManagement\Form3.Designer.vb">
@@ -187,6 +188,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Modules\ItemManagement\DisplayItem.resx">
       <DependentUpon>DisplayItem.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Sales\Sales.resx">
+      <DependentUpon>Sales.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
