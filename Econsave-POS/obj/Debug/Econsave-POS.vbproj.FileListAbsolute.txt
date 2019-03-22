@@ -20,26 +20,3 @@ C:\Users\StarmanW\Documents\Visual Studio 2017\Projects\Econsave-POS\Econsave-PO
 C:\Users\StarmanW\Documents\Visual Studio 2017\Projects\Econsave-POS\Econsave-POS\bin\Debug\MetroFramework.Design.dll
 C:\Users\StarmanW\Documents\Visual Studio 2017\Projects\Econsave-POS\Econsave-POS\bin\Debug\MetroFramework.dll
 C:\Users\StarmanW\Documents\Visual Studio 2017\Projects\Econsave-POS\Econsave-POS\bin\Debug\MetroFramework.Fonts.dll
-C:\Users\silversun\Documents\GitHub\Econsave-POS\Econsave-POS\obj\Debug\Econsave-POS.vbprojAssemblyReference.cache
-C:\Users\silversun\Documents\GitHub\Econsave-POS\Econsave-POS\obj\Debug\Econsave_POS.Form1.resources
-C:\Users\silversun\Documents\GitHub\Econsave-POS\Econsave-POS\obj\Debug\Econsave_POS.AddItem.resources
-C:\Users\silversun\Documents\GitHub\Econsave-POS\Econsave-POS\obj\Debug\Econsave_POS.DisplayItem.resources
-C:\Users\silversun\Documents\GitHub\Econsave-POS\Econsave-POS\obj\Debug\Econsave_POS.Sales.resources
-C:\Users\silversun\Documents\GitHub\Econsave-POS\Econsave-POS\obj\Debug\Econsave_POS.Resources.resources
-C:\Users\silversun\Documents\GitHub\Econsave-POS\Econsave-POS\obj\Debug\Econsave-POS.vbproj.GenerateResource.cache
-C:\Users\silversun\Documents\GitHub\Econsave-POS\Econsave-POS\obj\Debug\Econsave-POS.vbproj.CoreCompileInputs.cache
-C:\Users\silversun\Documents\GitHub\Econsave-POS\Econsave-POS\obj\Debug\Econsave-POS.exe
-C:\Users\silversun\Documents\GitHub\Econsave-POS\Econsave-POS\obj\Debug\Econsave-POS.xml
-C:\Users\silversun\Documents\GitHub\Econsave-POS\Econsave-POS\obj\Debug\Econsave-POS.pdb
-C:\Users\silversun\Documents\GitHub\Econsave-POS\Econsave-POS\bin\Debug\Econsave-POS.exe.config
-C:\Users\silversun\Documents\GitHub\Econsave-POS\Econsave-POS\bin\Debug\Econsave-POS.exe
-C:\Users\silversun\Documents\GitHub\Econsave-POS\Econsave-POS\bin\Debug\Econsave-POS.pdb
-C:\Users\silversun\Documents\GitHub\Econsave-POS\Econsave-POS\bin\Debug\Econsave-POS.xml
-C:\Users\silversun\Documents\GitHub\Econsave-POS\Econsave-POS\bin\Debug\EntityFramework.dll
-C:\Users\silversun\Documents\GitHub\Econsave-POS\Econsave-POS\bin\Debug\EntityFramework.SqlServer.dll
-C:\Users\silversun\Documents\GitHub\Econsave-POS\Econsave-POS\bin\Debug\MetroFramework.Design.dll
-C:\Users\silversun\Documents\GitHub\Econsave-POS\Econsave-POS\bin\Debug\MetroFramework.dll
-C:\Users\silversun\Documents\GitHub\Econsave-POS\Econsave-POS\bin\Debug\MetroFramework.Fonts.dll
-C:\Users\silversun\Documents\GitHub\Econsave-POS\Econsave-POS\bin\Debug\EntityFramework.xml
-C:\Users\silversun\Documents\GitHub\Econsave-POS\Econsave-POS\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\silversun\Documents\GitHub\Econsave-POS\Econsave-POS\obj\Debug\Econsave-POS.vbproj.CopyComplete
