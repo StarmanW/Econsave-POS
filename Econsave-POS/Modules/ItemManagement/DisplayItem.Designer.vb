@@ -25,9 +25,8 @@ Partial Class DisplayItem
         Me.itemDGV = New System.Windows.Forms.DataGridView()
         Me.cmbCategory = New MetroFramework.Controls.MetroComboBox()
         Me.lblCategory = New MetroFramework.Controls.MetroLabel()
-        Me.EconsaveDBDataSet1 = New Econsave_POS.EconsaveDBDataSet()
+        Me.ItemSalesTableAdapter1 = New Econsave_POS.EconsaveDBDataSetTableAdapters.ItemSalesTableAdapter()
         CType(Me.itemDGV, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.EconsaveDBDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'itemDGV
@@ -61,10 +60,9 @@ Partial Class DisplayItem
         Me.lblCategory.TabIndex = 2
         Me.lblCategory.Text = "Category:"
         '
-        'EconsaveDBDataSet1
+        'ItemSalesTableAdapter1
         '
-        Me.EconsaveDBDataSet1.DataSetName = "EconsaveDBDataSet"
-        Me.EconsaveDBDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        Me.ItemSalesTableAdapter1.ClearBeforeFill = True
         '
         'DisplayItem
         '
@@ -77,7 +75,6 @@ Partial Class DisplayItem
         Me.Name = "DisplayItem"
         Me.Text = "Display Item"
         CType(Me.itemDGV, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.EconsaveDBDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -86,5 +83,5 @@ Partial Class DisplayItem
     Friend WithEvents itemDGV As DataGridView
     Friend WithEvents cmbCategory As MetroFramework.Controls.MetroComboBox
     Friend WithEvents lblCategory As MetroFramework.Controls.MetroLabel
-    Friend WithEvents EconsaveDBDataSet1 As EconsaveDBDataSet
+    Friend WithEvents ItemSalesTableAdapter1 As EconsaveDBDataSetTableAdapters.ItemSalesTableAdapter
 End Class

@@ -43,15 +43,15 @@ Public Class AddItem
     Private Sub btnAddItem_Click(sender As Object, e As EventArgs) Handles btnAddItem.Click
         If Not isValidFields() Then
             Using db As New EconsaveDataClassesDataContext()
-                Dim itemCategory As String = cmbCategory.SelectedItem
+                Dim itemCategory As String = CType(cmbCategory.SelectedItem, String)
                 Dim newItem As New Item()
 
                 ' Set new item property
                 newItem.itemID = txtItemID.Text
                 newItem.name = txtItemName.Text
                 newItem.description = txtDescription.Text
-                newItem.price = Double.Parse(numPrice.Value)
-                newItem.stockQuantity = Int16.Parse(numStockQuantity.Value)
+                newItem.price = Double.Parse(CType(numPrice.Value, String))
+                newItem.stockQuantity = Int16.Parse(CType(numStockQuantity.Value, String))
                 newItem.createdOn = DateTime.Now
                 newItem.categoryID = db.Categories.Where(Function(cat) cat.categoryName = itemCategory).FirstOrDefault().categoryID
                 If newItem.stockQuantity = 0 Then
@@ -74,7 +74,7 @@ Public Class AddItem
     End Sub
 
     ' Function to validate field inputs
-    Private Function isValidFields()
+    Private Function isValidFields() As Boolean
         Dim textRegex As New Regex("^[A-z0-9\s\-\@\#\$\%\&\*\(\)\[\]\'\:\,\.\|]+$")
         Dim hasError As Boolean = False
 
