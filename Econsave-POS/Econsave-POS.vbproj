@@ -160,28 +160,11 @@
     <Compile Include="Modules\Sales\Staff.Designer.vb">
       <DependentUpon>Staff.vb</DependentUpon>
     </Compile>
-<<<<<<< HEAD
-    <Compile Include="Modules\StaffManagement\AddEmployee.Designer.vb">
-      <DependentUpon>AddEmployee.vb</DependentUpon>
-=======
     <Compile Include="Modules\Sales\Staff.vb" />
     <Compile Include="Modules\StaffManagement\Form3.Designer.vb">
       <DependentUpon>Form3.vb</DependentUpon>
->>>>>>> parent of 3842853... Revert "Merge branch 'master' of https://github.com/StarmanW/Econsave-POS"
     </Compile>
-    <Compile Include="Modules\StaffManagement\AddEmployee.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Modules\StaffManagement\RetrieveStaff.Designer.vb">
-      <DependentUpon>RetrieveStaff.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Modules\StaffManagement\RetrieveStaff.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Modules\StaffManagement\UpdateStaff.Designer.vb">
-      <DependentUpon>UpdateStaff.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Modules\StaffManagement\UpdateStaff.vb">
+    <Compile Include="Modules\StaffManagement\Form3.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -210,21 +193,6 @@
     <EmbeddedResource Include="Modules\ItemManagement\DisplayItem.resx">
       <DependentUpon>DisplayItem.vb</DependentUpon>
     </EmbeddedResource>
-<<<<<<< HEAD
-    <EmbeddedResource Include="Modules\Sales\Sales.resx">
-      <DependentUpon>Sales.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Modules\StaffManagement\AddEmployee.resx">
-      <DependentUpon>AddEmployee.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Modules\StaffManagement\RetrieveStaff.resx">
-      <DependentUpon>RetrieveStaff.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Modules\StaffManagement\UpdateStaff.resx">
-      <DependentUpon>UpdateStaff.vb</DependentUpon>
-    </EmbeddedResource>
-=======
->>>>>>> parent of 3842853... Revert "Merge branch 'master' of https://github.com/StarmanW/Econsave-POS"
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
