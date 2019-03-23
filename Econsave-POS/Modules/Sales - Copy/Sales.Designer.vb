@@ -37,12 +37,12 @@ Partial Class Sales
         Me.MetroButton2 = New MetroFramework.Controls.MetroButton()
         Me.Tota = New MetroFramework.Controls.MetroLabel()
         Me.MetroLabel1 = New MetroFramework.Controls.MetroLabel()
-        Me.EconsaveDBDataSet = New Econsave_POS.EconsaveDBDataSet()
+        Me.EconsaveDBDataSet1 = New Econsave_POS.EconsaveDBDataSet1()
         Me.lblCategory = New MetroFramework.Controls.MetroLabel()
         Me.cmbCategory = New MetroFramework.Controls.MetroComboBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.MenuStrip2.SuspendLayout()
-        CType(Me.EconsaveDBDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.EconsaveDBDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -155,8 +155,8 @@ Partial Class Sales
         '
         'EconsaveDBDataSet1
         '
-        Me.EconsaveDBDataSet.DataSetName = "EconsaveDBDataSet1"
-        Me.EconsaveDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        Me.EconsaveDBDataSet1.DataSetName = "EconsaveDBDataSet1"
+        Me.EconsaveDBDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'lblCategory
         '
@@ -255,7 +255,7 @@ Partial Class Sales
         Me.Theme = MetroFramework.MetroThemeStyle.[Default]
         Me.MenuStrip2.ResumeLayout(False)
         Me.MenuStrip2.PerformLayout()
-        CType(Me.EconsaveDBDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.EconsaveDBDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -273,7 +273,7 @@ Partial Class Sales
     Friend WithEvents MetroButton2 As MetroFramework.Controls.MetroButton
     Friend WithEvents Tota As MetroFramework.Controls.MetroLabel
     Friend WithEvents MetroLabel1 As MetroFramework.Controls.MetroLabel
-    Friend WithEvents EconsaveDBDataSet As EconsaveDBDataSet
+    Friend WithEvents EconsaveDBDataSet1 As EconsaveDBDataSet1
     Friend WithEvents lblCategory As MetroFramework.Controls.MetroLabel
     Friend WithEvents cmbCategory As MetroFramework.Controls.MetroComboBox
     Friend WithEvents DataGridView1 As DataGridView

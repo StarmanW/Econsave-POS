@@ -43,3 +43,6 @@ C:\Users\silversun\Documents\GitHub\Econsave-POS\Econsave-POS\obj\Debug\Econsave
 C:\Users\silversun\Documents\GitHub\Econsave-POS\Econsave-POS\obj\Debug\Econsave-POS.exe
 C:\Users\silversun\Documents\GitHub\Econsave-POS\Econsave-POS\obj\Debug\Econsave-POS.xml
 C:\Users\silversun\Documents\GitHub\Econsave-POS\Econsave-POS\obj\Debug\Econsave-POS.pdb
+C:\Users\silversun\Documents\GitHub\Econsave-POS\Econsave-POS\obj\Debug\Econsave_POS.AddEmployee.resources
+C:\Users\silversun\Documents\GitHub\Econsave-POS\Econsave-POS\obj\Debug\Econsave_POS.RetrieveStaff.resources
+C:\Users\silversun\Documents\GitHub\Econsave-POS\Econsave-POS\obj\Debug\Econsave_POS.UpdateStaff.resources

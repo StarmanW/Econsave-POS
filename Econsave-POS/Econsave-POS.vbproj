@@ -38,9 +38,9 @@
     <DefineTrace>true</DefineTrace>
     <OutputPath>bin\Debug\</OutputPath>
     <DocumentationFile>Econsave-POS.xml</DocumentationFile>
-    <NoWarn>
-    </NoWarn>
-    <WarningsAsErrors>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</WarningsAsErrors>
+    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</NoWarn>
+    <WarningsAsErrors>
+    </WarningsAsErrors>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -50,9 +50,9 @@
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
     <DocumentationFile>Econsave-POS.xml</DocumentationFile>
-    <NoWarn>
-    </NoWarn>
-    <WarningsAsErrors>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</WarningsAsErrors>
+    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</NoWarn>
+    <WarningsAsErrors>
+    </WarningsAsErrors>
   </PropertyGroup>
   <PropertyGroup>
     <OptionExplicit>On</OptionExplicit>
@@ -61,7 +61,7 @@
     <OptionCompare>Binary</OptionCompare>
   </PropertyGroup>
   <PropertyGroup>
-    <OptionStrict>On</OptionStrict>
+    <OptionStrict>Off</OptionStrict>
   </PropertyGroup>
   <PropertyGroup>
     <OptionInfer>On</OptionInfer>
@@ -157,14 +157,28 @@
     <Compile Include="Modules\Login\Form2.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Modules\Sales\Staff.Designer.vb">
-      <DependentUpon>Staff.vb</DependentUpon>
+    <Compile Include="Modules\Sales\Sales.Designer.vb">
+      <DependentUpon>Sales.vb</DependentUpon>
     </Compile>
-    <Compile Include="Modules\Sales\Staff.vb" />
-    <Compile Include="Modules\StaffManagement\Form3.Designer.vb">
-      <DependentUpon>Form3.vb</DependentUpon>
+    <Compile Include="Modules\Sales\Sales.vb">
+      <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Modules\StaffManagement\Form3.vb">
+    <Compile Include="Modules\StaffManagement\AddEmployee.Designer.vb">
+      <DependentUpon>AddEmployee.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\StaffManagement\AddEmployee.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\StaffManagement\RetrieveStaff.Designer.vb">
+      <DependentUpon>RetrieveStaff.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\StaffManagement\RetrieveStaff.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\StaffManagement\UpdateStaff.Designer.vb">
+      <DependentUpon>UpdateStaff.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\StaffManagement\UpdateStaff.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -192,6 +206,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Modules\ItemManagement\DisplayItem.resx">
       <DependentUpon>DisplayItem.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Sales\Sales.resx">
+      <DependentUpon>Sales.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\StaffManagement\AddEmployee.resx">
+      <DependentUpon>AddEmployee.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\StaffManagement\RetrieveStaff.resx">
+      <DependentUpon>RetrieveStaff.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\StaffManagement\UpdateStaff.resx">
+      <DependentUpon>UpdateStaff.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
