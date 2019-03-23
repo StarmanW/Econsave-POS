@@ -438,7 +438,7 @@ Partial Public Class Item
 	
 	Private _categoryID As Integer
 	
-	Private _status As Integer
+	Private _status As String
 	
 	Private _ItemSales As EntitySet(Of ItemSale)
 	
@@ -483,7 +483,7 @@ Partial Public Class Item
     End Sub
     Partial Private Sub OncategoryIDChanged()
     End Sub
-    Partial Private Sub OnstatusChanging(value As Integer)
+    Partial Private Sub OnstatusChanging(value As String)
     End Sub
     Partial Private Sub OnstatusChanged()
     End Sub
@@ -631,14 +631,13 @@ Partial Public Class Item
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_status", DbType:="Int NOT NULL")>  _
-	Public Property status() As Integer
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_status", DbType:="VarChar(50) NOT NULL", CanBeNull:=false)>  _
+	Public Property status() As String
 		Get
 			Return Me._status
 		End Get
 		Set
-			If ((Me._status = value)  _
-						= false) Then
+			If (String.Equals(Me._status, value) = false) Then
 				Me.OnstatusChanging(value)
 				Me.SendPropertyChanging
 				Me._status = value
