@@ -56,7 +56,6 @@ Partial Class AddItem
         'MenuStrip2
         '
         Me.MenuStrip2.Font = New System.Drawing.Font("Segoe UI", 10.0!)
-        Me.MenuStrip2.ImageScalingSize = New System.Drawing.Size(20, 20)
         Me.MenuStrip2.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SalesToolStripMenuItem, Me.ItemManagementToolStripMenuItem, Me.ProfileToolStripMenuItem})
         Me.MenuStrip2.Location = New System.Drawing.Point(21, 60)
         Me.MenuStrip2.Name = "MenuStrip2"
@@ -107,9 +106,15 @@ Partial Class AddItem
         '
         '
         Me.txtItemID.CustomButton.Image = Nothing
+<<<<<<< HEAD
         Me.txtItemID.CustomButton.Location = New System.Drawing.Point(363, 2)
         Me.txtItemID.CustomButton.Name = ""
         Me.txtItemID.CustomButton.Size = New System.Drawing.Size(19, 19)
+=======
+        Me.txtItemID.CustomButton.Location = New System.Drawing.Point(361, 1)
+        Me.txtItemID.CustomButton.Name = ""
+        Me.txtItemID.CustomButton.Size = New System.Drawing.Size(23, 23)
+>>>>>>> parent of 3842853... Revert "Merge branch 'master' of https://github.com/StarmanW/Econsave-POS"
         Me.txtItemID.CustomButton.Style = MetroFramework.MetroColorStyle.Blue
         Me.txtItemID.CustomButton.TabIndex = 1
         Me.txtItemID.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
@@ -127,7 +132,11 @@ Partial Class AddItem
         Me.txtItemID.SelectionLength = 0
         Me.txtItemID.SelectionStart = 0
         Me.txtItemID.ShortcutsEnabled = True
+<<<<<<< HEAD
         Me.txtItemID.Size = New System.Drawing.Size(385, 24)
+=======
+        Me.txtItemID.Size = New System.Drawing.Size(385, 25)
+>>>>>>> parent of 3842853... Revert "Merge branch 'master' of https://github.com/StarmanW/Econsave-POS"
         Me.txtItemID.TabIndex = 6
         Me.txtItemID.TabStop = False
         Me.txtItemID.UseSelectable = True
@@ -293,9 +302,15 @@ Partial Class AddItem
         '
         '
         Me.txtDescription.CustomButton.Image = Nothing
+<<<<<<< HEAD
         Me.txtDescription.CustomButton.Location = New System.Drawing.Point(277, 2)
         Me.txtDescription.CustomButton.Name = ""
         Me.txtDescription.CustomButton.Size = New System.Drawing.Size(105, 105)
+=======
+        Me.txtDescription.CustomButton.Location = New System.Drawing.Point(275, 1)
+        Me.txtDescription.CustomButton.Name = ""
+        Me.txtDescription.CustomButton.Size = New System.Drawing.Size(109, 109)
+>>>>>>> parent of 3842853... Revert "Merge branch 'master' of https://github.com/StarmanW/Econsave-POS"
         Me.txtDescription.CustomButton.Style = MetroFramework.MetroColorStyle.Blue
         Me.txtDescription.CustomButton.TabIndex = 1
         Me.txtDescription.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
@@ -314,7 +329,11 @@ Partial Class AddItem
         Me.txtDescription.SelectionLength = 0
         Me.txtDescription.SelectionStart = 0
         Me.txtDescription.ShortcutsEnabled = True
+<<<<<<< HEAD
         Me.txtDescription.Size = New System.Drawing.Size(385, 110)
+=======
+        Me.txtDescription.Size = New System.Drawing.Size(385, 111)
+>>>>>>> parent of 3842853... Revert "Merge branch 'master' of https://github.com/StarmanW/Econsave-POS"
         Me.txtDescription.TabIndex = 17
         Me.txtDescription.TabStop = False
         Me.txtDescription.UseSelectable = True

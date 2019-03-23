@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="EconsaveDB" Class="EconsaveDataClassesDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Database\EconsaveDB.mdf;Integrated Security=True" SettingsObjectName="Econsave_POS.My.MySettings" SettingsPropertyName="EconsaveDBConnectionString" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\EconsaveDB.mdf;Integrated Security=True" SettingsObjectName="Econsave_POS.My.MySettings" SettingsPropertyName="EconsaveDBConnectionString" Provider="System.Data.SqlClient" />
   <Table Name="dbo.Category" Member="Categories">
     <Type Name="Category">
       <Column Name="categoryID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
@@ -27,7 +27,7 @@
       <Column Name="createdOn" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
       <Column Name="lastUpdate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
       <Column Name="categoryID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="status" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="status" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
       <Association Name="Item_ItemSale" Member="ItemSales" ThisKey="itemID" OtherKey="itemID" Type="ItemSale" />
       <Association Name="Category_Item" Member="Category" ThisKey="categoryID" OtherKey="categoryID" Type="Category" IsForeignKey="true" />
     </Type>
