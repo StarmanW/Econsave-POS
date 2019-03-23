@@ -22,30 +22,51 @@ Partial Class AddEmployee
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.lblName = New System.Windows.Forms.Label()
         Me.lblPosition = New System.Windows.Forms.Label()
         Me.lblstaff = New System.Windows.Forms.Label()
         Me.lblPassword = New System.Windows.Forms.Label()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.txtPassword = New System.Windows.Forms.TextBox()
+        Me.txtName = New System.Windows.Forms.TextBox()
         Me.btnRegister = New System.Windows.Forms.Button()
-        Me.CmboxPositionlist = New System.Windows.Forms.ComboBox()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.EditToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ClearToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.FontToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ColorToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ViewToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.UpdateToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ListAllEmployeeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.lblStaffID = New System.Windows.Forms.Label()
         Me.ExitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ListView1 = New System.Windows.Forms.ListView()
+        Me.grpEmployee = New System.Windows.Forms.GroupBox()
+        Me.lblDialogbox = New System.Windows.Forms.Label()
+        Me.lblStaffID = New System.Windows.Forms.Label()
+        Me.lblconfirmpassword = New System.Windows.Forms.Label()
+        Me.txtconfirmpassword = New System.Windows.Forms.TextBox()
+        Me.lstvData = New System.Windows.Forms.ListView()
+        Me.ColumnHeader1 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader2 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader3 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader4 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.EconsaveDBDataSet = New Econsave_POS.EconsaveDBDataSet()
+        Me.StaffBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.StaffTableAdapter = New Econsave_POS.EconsaveDBDataSetTableAdapters.StaffTableAdapter()
+        Me.StaffBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.btnView = New System.Windows.Forms.Button()
+        Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
+        Me.StaffBindingSource2 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.StaffBindingSource3 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.StaffBindingSource4 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.radManager = New System.Windows.Forms.RadioButton()
+        Me.radCashier = New System.Windows.Forms.RadioButton()
         Me.MenuStrip1.SuspendLayout()
-        Me.GroupBox1.SuspendLayout()
+        Me.grpEmployee.SuspendLayout()
+        CType(Me.EconsaveDBDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.StaffBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.StaffBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.StaffBindingSource2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.StaffBindingSource3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.StaffBindingSource4, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'lblName
@@ -79,55 +100,48 @@ Partial Class AddEmployee
         '
         Me.lblPassword.AutoSize = True
         Me.lblPassword.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblPassword.Location = New System.Drawing.Point(356, 43)
+        Me.lblPassword.Location = New System.Drawing.Point(358, 45)
         Me.lblPassword.Name = "lblPassword"
         Me.lblPassword.Size = New System.Drawing.Size(87, 19)
         Me.lblPassword.TabIndex = 7
         Me.lblPassword.Text = "Password :"
         '
-        'TextBox3
+        'txtPassword
         '
-        Me.TextBox3.Location = New System.Drawing.Point(449, 43)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(181, 20)
-        Me.TextBox3.TabIndex = 10
+        Me.txtPassword.Location = New System.Drawing.Point(451, 47)
+        Me.txtPassword.Name = "txtPassword"
+        Me.txtPassword.Size = New System.Drawing.Size(181, 20)
+        Me.txtPassword.TabIndex = 10
+        Me.txtPassword.UseSystemPasswordChar = True
         '
-        'TextBox4
+        'txtName
         '
-        Me.TextBox4.Location = New System.Drawing.Point(108, 92)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(177, 20)
-        Me.TextBox4.TabIndex = 11
+        Me.txtName.Location = New System.Drawing.Point(99, 93)
+        Me.txtName.Name = "txtName"
+        Me.txtName.Size = New System.Drawing.Size(177, 20)
+        Me.txtName.TabIndex = 11
         '
         'btnRegister
         '
-        Me.btnRegister.Location = New System.Drawing.Point(273, 192)
+        Me.btnRegister.Location = New System.Drawing.Point(233, 192)
         Me.btnRegister.Name = "btnRegister"
         Me.btnRegister.Size = New System.Drawing.Size(81, 28)
         Me.btnRegister.TabIndex = 0
         Me.btnRegister.Text = "Register"
         Me.btnRegister.UseVisualStyleBackColor = True
         '
-        'CmboxPositionlist
-        '
-        Me.CmboxPositionlist.FormattingEnabled = True
-        Me.CmboxPositionlist.Location = New System.Drawing.Point(108, 137)
-        Me.CmboxPositionlist.Name = "CmboxPositionlist"
-        Me.CmboxPositionlist.Size = New System.Drawing.Size(177, 21)
-        Me.CmboxPositionlist.TabIndex = 12
-        '
         'MenuStrip1
         '
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EditToolStripMenuItem, Me.ViewToolStripMenuItem, Me.ExitToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(20, 60)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(640, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(668, 24)
         Me.MenuStrip1.TabIndex = 13
         Me.MenuStrip1.Text = "MenuStrip1"
         '
         'EditToolStripMenuItem
         '
-        Me.EditToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ClearToolStripMenuItem, Me.FontToolStripMenuItem, Me.ColorToolStripMenuItem})
+        Me.EditToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ClearToolStripMenuItem})
         Me.EditToolStripMenuItem.Name = "EditToolStripMenuItem"
         Me.EditToolStripMenuItem.Size = New System.Drawing.Size(39, 20)
         Me.EditToolStripMenuItem.Text = "Edit"
@@ -135,20 +149,8 @@ Partial Class AddEmployee
         'ClearToolStripMenuItem
         '
         Me.ClearToolStripMenuItem.Name = "ClearToolStripMenuItem"
-        Me.ClearToolStripMenuItem.Size = New System.Drawing.Size(103, 22)
+        Me.ClearToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.ClearToolStripMenuItem.Text = "Clear"
-        '
-        'FontToolStripMenuItem
-        '
-        Me.FontToolStripMenuItem.Name = "FontToolStripMenuItem"
-        Me.FontToolStripMenuItem.Size = New System.Drawing.Size(103, 22)
-        Me.FontToolStripMenuItem.Text = "Font"
-        '
-        'ColorToolStripMenuItem
-        '
-        Me.ColorToolStripMenuItem.Name = "ColorToolStripMenuItem"
-        Me.ColorToolStripMenuItem.Size = New System.Drawing.Size(103, 22)
-        Me.ColorToolStripMenuItem.Text = "Color"
         '
         'ViewToolStripMenuItem
         '
@@ -160,59 +162,14 @@ Partial Class AddEmployee
         'UpdateToolStripMenuItem
         '
         Me.UpdateToolStripMenuItem.Name = "UpdateToolStripMenuItem"
-        Me.UpdateToolStripMenuItem.Size = New System.Drawing.Size(162, 22)
+        Me.UpdateToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.UpdateToolStripMenuItem.Text = "Update"
         '
         'ListAllEmployeeToolStripMenuItem
         '
         Me.ListAllEmployeeToolStripMenuItem.Name = "ListAllEmployeeToolStripMenuItem"
-        Me.ListAllEmployeeToolStripMenuItem.Size = New System.Drawing.Size(162, 22)
+        Me.ListAllEmployeeToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.ListAllEmployeeToolStripMenuItem.Text = "List all employee"
-        '
-        'GroupBox1
-        '
-        Me.GroupBox1.Controls.Add(Me.lblStaffID)
-        Me.GroupBox1.Controls.Add(Me.Label1)
-        Me.GroupBox1.Controls.Add(Me.TextBox2)
-        Me.GroupBox1.Controls.Add(Me.btnRegister)
-        Me.GroupBox1.Controls.Add(Me.lblstaff)
-        Me.GroupBox1.Controls.Add(Me.CmboxPositionlist)
-        Me.GroupBox1.Controls.Add(Me.lblPosition)
-        Me.GroupBox1.Controls.Add(Me.TextBox3)
-        Me.GroupBox1.Controls.Add(Me.TextBox4)
-        Me.GroupBox1.Controls.Add(Me.lblPassword)
-        Me.GroupBox1.Controls.Add(Me.lblName)
-        Me.GroupBox1.Location = New System.Drawing.Point(23, 104)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(636, 241)
-        Me.GroupBox1.TabIndex = 14
-        Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "Employee Details"
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(294, 90)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(149, 19)
-        Me.Label1.TabIndex = 14
-        Me.Label1.Text = "Confirm Password :"
-        '
-        'TextBox2
-        '
-        Me.TextBox2.Location = New System.Drawing.Point(449, 90)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(181, 20)
-        Me.TextBox2.TabIndex = 13
-        '
-        'lblStaffID
-        '
-        Me.lblStaffID.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.lblStaffID.Location = New System.Drawing.Point(108, 37)
-        Me.lblStaffID.Name = "lblStaffID"
-        Me.lblStaffID.Size = New System.Drawing.Size(177, 23)
-        Me.lblStaffID.TabIndex = 15
         '
         'ExitToolStripMenuItem
         '
@@ -220,21 +177,172 @@ Partial Class AddEmployee
         Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(37, 20)
         Me.ExitToolStripMenuItem.Text = "Exit"
         '
-        'ListView1
+        'grpEmployee
         '
-        Me.ListView1.Location = New System.Drawing.Point(54, 368)
-        Me.ListView1.Name = "ListView1"
-        Me.ListView1.Size = New System.Drawing.Size(584, 132)
-        Me.ListView1.TabIndex = 15
-        Me.ListView1.UseCompatibleStateImageBehavior = False
+        Me.grpEmployee.Controls.Add(Me.radCashier)
+        Me.grpEmployee.Controls.Add(Me.radManager)
+        Me.grpEmployee.Controls.Add(Me.btnView)
+        Me.grpEmployee.Controls.Add(Me.lblDialogbox)
+        Me.grpEmployee.Controls.Add(Me.lblStaffID)
+        Me.grpEmployee.Controls.Add(Me.lblconfirmpassword)
+        Me.grpEmployee.Controls.Add(Me.txtconfirmpassword)
+        Me.grpEmployee.Controls.Add(Me.btnRegister)
+        Me.grpEmployee.Controls.Add(Me.lblstaff)
+        Me.grpEmployee.Controls.Add(Me.lblPosition)
+        Me.grpEmployee.Controls.Add(Me.txtPassword)
+        Me.grpEmployee.Controls.Add(Me.txtName)
+        Me.grpEmployee.Controls.Add(Me.lblPassword)
+        Me.grpEmployee.Controls.Add(Me.lblName)
+        Me.grpEmployee.Location = New System.Drawing.Point(23, 104)
+        Me.grpEmployee.Name = "grpEmployee"
+        Me.grpEmployee.Size = New System.Drawing.Size(665, 241)
+        Me.grpEmployee.TabIndex = 14
+        Me.grpEmployee.TabStop = False
+        Me.grpEmployee.Text = "Employee Details"
+        '
+        'lblDialogbox
+        '
+        Me.lblDialogbox.Location = New System.Drawing.Point(451, 113)
+        Me.lblDialogbox.Name = "lblDialogbox"
+        Me.lblDialogbox.Size = New System.Drawing.Size(181, 23)
+        Me.lblDialogbox.TabIndex = 17
+        '
+        'lblStaffID
+        '
+        Me.lblStaffID.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.lblStaffID.Location = New System.Drawing.Point(99, 37)
+        Me.lblStaffID.Name = "lblStaffID"
+        Me.lblStaffID.Size = New System.Drawing.Size(177, 23)
+        Me.lblStaffID.TabIndex = 15
+        '
+        'lblconfirmpassword
+        '
+        Me.lblconfirmpassword.AutoSize = True
+        Me.lblconfirmpassword.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblconfirmpassword.Location = New System.Drawing.Point(296, 91)
+        Me.lblconfirmpassword.Name = "lblconfirmpassword"
+        Me.lblconfirmpassword.Size = New System.Drawing.Size(149, 19)
+        Me.lblconfirmpassword.TabIndex = 14
+        Me.lblconfirmpassword.Text = "Confirm Password :"
+        '
+        'txtconfirmpassword
+        '
+        Me.txtconfirmpassword.Location = New System.Drawing.Point(451, 90)
+        Me.txtconfirmpassword.Name = "txtconfirmpassword"
+        Me.txtconfirmpassword.Size = New System.Drawing.Size(181, 20)
+        Me.txtconfirmpassword.TabIndex = 13
+        Me.txtconfirmpassword.UseSystemPasswordChar = True
+        '
+        'lstvData
+        '
+        Me.lstvData.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader1, Me.ColumnHeader2, Me.ColumnHeader3, Me.ColumnHeader4})
+        Me.lstvData.FullRowSelect = True
+        Me.lstvData.GridLines = True
+        Me.lstvData.Location = New System.Drawing.Point(43, 367)
+        Me.lstvData.Name = "lstvData"
+        Me.lstvData.Size = New System.Drawing.Size(599, 132)
+        Me.lstvData.TabIndex = 15
+        Me.lstvData.UseCompatibleStateImageBehavior = False
+        Me.lstvData.View = System.Windows.Forms.View.Details
+        '
+        'ColumnHeader1
+        '
+        Me.ColumnHeader1.Text = "Staff ID"
+        Me.ColumnHeader1.Width = 116
+        '
+        'ColumnHeader2
+        '
+        Me.ColumnHeader2.Text = "Employee Name"
+        Me.ColumnHeader2.Width = 169
+        '
+        'ColumnHeader3
+        '
+        Me.ColumnHeader3.Text = "Position"
+        Me.ColumnHeader3.Width = 159
+        '
+        'ColumnHeader4
+        '
+        Me.ColumnHeader4.Text = "Password"
+        Me.ColumnHeader4.Width = 153
+        '
+        'EconsaveDBDataSet
+        '
+        Me.EconsaveDBDataSet.DataSetName = "EconsaveDBDataSet"
+        Me.EconsaveDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'StaffBindingSource
+        '
+        Me.StaffBindingSource.DataMember = "Staff"
+        Me.StaffBindingSource.DataSource = Me.EconsaveDBDataSet
+        '
+        'StaffTableAdapter
+        '
+        Me.StaffTableAdapter.ClearBeforeFill = True
+        '
+        'StaffBindingSource1
+        '
+        Me.StaffBindingSource1.DataMember = "Staff"
+        Me.StaffBindingSource1.DataSource = Me.EconsaveDBDataSet
+        '
+        'btnView
+        '
+        Me.btnView.Location = New System.Drawing.Point(347, 192)
+        Me.btnView.Name = "btnView"
+        Me.btnView.Size = New System.Drawing.Size(81, 28)
+        Me.btnView.TabIndex = 18
+        Me.btnView.Text = "View"
+        Me.btnView.UseVisualStyleBackColor = True
+        '
+        'ErrorProvider1
+        '
+        Me.ErrorProvider1.ContainerControl = Me
+        '
+        'StaffBindingSource2
+        '
+        Me.StaffBindingSource2.DataMember = "Staff"
+        Me.StaffBindingSource2.DataSource = Me.EconsaveDBDataSet
+        '
+        'StaffBindingSource3
+        '
+        Me.StaffBindingSource3.DataMember = "Staff"
+        Me.StaffBindingSource3.DataSource = Me.EconsaveDBDataSet
+        '
+        'StaffBindingSource4
+        '
+        Me.StaffBindingSource4.DataMember = "Staff"
+        Me.StaffBindingSource4.DataSource = Me.EconsaveDBDataSet
+        '
+        'radManager
+        '
+        Me.radManager.AutoSize = True
+        Me.radManager.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.radManager.Location = New System.Drawing.Point(99, 138)
+        Me.radManager.Name = "radManager"
+        Me.radManager.Size = New System.Drawing.Size(83, 22)
+        Me.radManager.TabIndex = 19
+        Me.radManager.TabStop = True
+        Me.radManager.Text = "Manager"
+        Me.radManager.UseVisualStyleBackColor = True
+        '
+        'radCashier
+        '
+        Me.radCashier.AutoSize = True
+        Me.radCashier.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.radCashier.Location = New System.Drawing.Point(188, 138)
+        Me.radCashier.Name = "radCashier"
+        Me.radCashier.Size = New System.Drawing.Size(73, 22)
+        Me.radCashier.TabIndex = 20
+        Me.radCashier.TabStop = True
+        Me.radCashier.Text = "Cashier"
+        Me.radCashier.UseVisualStyleBackColor = True
         '
         'AddEmployee
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(680, 522)
-        Me.Controls.Add(Me.ListView1)
-        Me.Controls.Add(Me.GroupBox1)
+        Me.ClientSize = New System.Drawing.Size(708, 522)
+        Me.Controls.Add(Me.lstvData)
+        Me.Controls.Add(Me.grpEmployee)
         Me.Controls.Add(Me.MenuStrip1)
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "AddEmployee"
@@ -242,8 +350,15 @@ Partial Class AddEmployee
         Me.TextAlign = MetroFramework.Forms.MetroFormTextAlign.Center
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
-        Me.GroupBox1.ResumeLayout(False)
-        Me.GroupBox1.PerformLayout()
+        Me.grpEmployee.ResumeLayout(False)
+        Me.grpEmployee.PerformLayout()
+        CType(Me.EconsaveDBDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.StaffBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.StaffBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.StaffBindingSource2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.StaffBindingSource3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.StaffBindingSource4, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -252,22 +367,35 @@ Partial Class AddEmployee
     Friend WithEvents lblPosition As Label
     Friend WithEvents lblstaff As Label
     Friend WithEvents lblPassword As Label
-    Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents TextBox4 As TextBox
+    Friend WithEvents txtPassword As TextBox
+    Friend WithEvents txtName As TextBox
     Friend WithEvents btnRegister As Button
-    Friend WithEvents CmboxPositionlist As ComboBox
     Friend WithEvents MenuStrip1 As MenuStrip
     Friend WithEvents EditToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ClearToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents FontToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents ColorToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents grpEmployee As GroupBox
     Friend WithEvents ViewToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents UpdateToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ListAllEmployeeToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents Label1 As Label
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents lblconfirmpassword As Label
+    Friend WithEvents txtconfirmpassword As TextBox
     Friend WithEvents lblStaffID As Label
     Friend WithEvents ExitToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents ListView1 As ListView
+    Friend WithEvents lstvData As ListView
+    Friend WithEvents ColumnHeader1 As ColumnHeader
+    Friend WithEvents ColumnHeader2 As ColumnHeader
+    Friend WithEvents ColumnHeader3 As ColumnHeader
+    Friend WithEvents ColumnHeader4 As ColumnHeader
+    Friend WithEvents lblDialogbox As Label
+    Friend WithEvents EconsaveDBDataSet As EconsaveDBDataSet
+    Friend WithEvents StaffBindingSource As BindingSource
+    Friend WithEvents StaffTableAdapter As EconsaveDBDataSetTableAdapters.StaffTableAdapter
+    Friend WithEvents StaffBindingSource1 As BindingSource
+    Friend WithEvents btnView As Button
+    Friend WithEvents ErrorProvider1 As ErrorProvider
+    Friend WithEvents StaffBindingSource3 As BindingSource
+    Friend WithEvents StaffBindingSource2 As BindingSource
+    Friend WithEvents StaffBindingSource4 As BindingSource
+    Friend WithEvents radCashier As RadioButton
+    Friend WithEvents radManager As RadioButton
 End Class
