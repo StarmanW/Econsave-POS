@@ -162,22 +162,10 @@
     <Compile Include="Modules\Sales\Sales.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Modules\StaffManagement\AddEmployee.Designer.vb">
-      <DependentUpon>AddEmployee.vb</DependentUpon>
+    <Compile Include="Modules\StaffManagement\Form3.Designer.vb">
+      <DependentUpon>Form3.vb</DependentUpon>
     </Compile>
-    <Compile Include="Modules\StaffManagement\AddEmployee.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Modules\StaffManagement\RetrieveStaff.Designer.vb">
-      <DependentUpon>RetrieveStaff.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Modules\StaffManagement\RetrieveStaff.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Modules\StaffManagement\UpdateStaff.Designer.vb">
-      <DependentUpon>UpdateStaff.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Modules\StaffManagement\UpdateStaff.vb">
+    <Compile Include="Modules\StaffManagement\Form3.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -208,15 +196,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Modules\Sales\Sales.resx">
       <DependentUpon>Sales.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Modules\StaffManagement\AddEmployee.resx">
-      <DependentUpon>AddEmployee.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Modules\StaffManagement\RetrieveStaff.resx">
-      <DependentUpon>RetrieveStaff.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Modules\StaffManagement\UpdateStaff.resx">
-      <DependentUpon>UpdateStaff.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
