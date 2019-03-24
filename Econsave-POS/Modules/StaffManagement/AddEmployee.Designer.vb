@@ -38,6 +38,10 @@ Partial Class AddEmployee
         Me.ListAllEmployeeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ExitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.grpEmployee = New System.Windows.Forms.GroupBox()
+        Me.lblDialogBoxPassword = New System.Windows.Forms.Label()
+        Me.radCashier = New System.Windows.Forms.RadioButton()
+        Me.radManager = New System.Windows.Forms.RadioButton()
+        Me.btnView = New System.Windows.Forms.Button()
         Me.lblDialogbox = New System.Windows.Forms.Label()
         Me.lblStaffID = New System.Windows.Forms.Label()
         Me.lblconfirmpassword = New System.Windows.Forms.Label()
@@ -51,13 +55,11 @@ Partial Class AddEmployee
         Me.StaffBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.StaffTableAdapter = New Econsave_POS.EconsaveDBDataSetTableAdapters.StaffTableAdapter()
         Me.StaffBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.btnView = New System.Windows.Forms.Button()
         Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.StaffBindingSource2 = New System.Windows.Forms.BindingSource(Me.components)
         Me.StaffBindingSource3 = New System.Windows.Forms.BindingSource(Me.components)
         Me.StaffBindingSource4 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.radManager = New System.Windows.Forms.RadioButton()
-        Me.radCashier = New System.Windows.Forms.RadioButton()
+        Me.radStaff = New System.Windows.Forms.RadioButton()
         Me.MenuStrip1.SuspendLayout()
         Me.grpEmployee.SuspendLayout()
         CType(Me.EconsaveDBDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -81,7 +83,7 @@ Partial Class AddEmployee
         'lblPosition
         '
         Me.lblPosition.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblPosition.Location = New System.Drawing.Point(15, 137)
+        Me.lblPosition.Location = New System.Drawing.Point(15, 143)
         Me.lblPosition.Name = "lblPosition"
         Me.lblPosition.Size = New System.Drawing.Size(78, 23)
         Me.lblPosition.TabIndex = 3
@@ -149,7 +151,7 @@ Partial Class AddEmployee
         'ClearToolStripMenuItem
         '
         Me.ClearToolStripMenuItem.Name = "ClearToolStripMenuItem"
-        Me.ClearToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ClearToolStripMenuItem.Size = New System.Drawing.Size(101, 22)
         Me.ClearToolStripMenuItem.Text = "Clear"
         '
         'ViewToolStripMenuItem
@@ -162,13 +164,13 @@ Partial Class AddEmployee
         'UpdateToolStripMenuItem
         '
         Me.UpdateToolStripMenuItem.Name = "UpdateToolStripMenuItem"
-        Me.UpdateToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.UpdateToolStripMenuItem.Size = New System.Drawing.Size(162, 22)
         Me.UpdateToolStripMenuItem.Text = "Update"
         '
         'ListAllEmployeeToolStripMenuItem
         '
         Me.ListAllEmployeeToolStripMenuItem.Name = "ListAllEmployeeToolStripMenuItem"
-        Me.ListAllEmployeeToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ListAllEmployeeToolStripMenuItem.Size = New System.Drawing.Size(162, 22)
         Me.ListAllEmployeeToolStripMenuItem.Text = "List all employee"
         '
         'ExitToolStripMenuItem
@@ -179,6 +181,8 @@ Partial Class AddEmployee
         '
         'grpEmployee
         '
+        Me.grpEmployee.Controls.Add(Me.radStaff)
+        Me.grpEmployee.Controls.Add(Me.lblDialogBoxPassword)
         Me.grpEmployee.Controls.Add(Me.radCashier)
         Me.grpEmployee.Controls.Add(Me.radManager)
         Me.grpEmployee.Controls.Add(Me.btnView)
@@ -199,6 +203,44 @@ Partial Class AddEmployee
         Me.grpEmployee.TabIndex = 14
         Me.grpEmployee.TabStop = False
         Me.grpEmployee.Text = "Employee Details"
+        '
+        'lblDialogBoxPassword
+        '
+        Me.lblDialogBoxPassword.Location = New System.Drawing.Point(454, 71)
+        Me.lblDialogBoxPassword.Name = "lblDialogBoxPassword"
+        Me.lblDialogBoxPassword.Size = New System.Drawing.Size(205, 16)
+        Me.lblDialogBoxPassword.TabIndex = 21
+        '
+        'radCashier
+        '
+        Me.radCashier.AutoSize = True
+        Me.radCashier.Location = New System.Drawing.Point(172, 143)
+        Me.radCashier.Name = "radCashier"
+        Me.radCashier.Size = New System.Drawing.Size(60, 17)
+        Me.radCashier.TabIndex = 20
+        Me.radCashier.TabStop = True
+        Me.radCashier.Text = "Cashier"
+        Me.radCashier.UseVisualStyleBackColor = True
+        '
+        'radManager
+        '
+        Me.radManager.AutoSize = True
+        Me.radManager.Location = New System.Drawing.Point(99, 143)
+        Me.radManager.Name = "radManager"
+        Me.radManager.Size = New System.Drawing.Size(67, 17)
+        Me.radManager.TabIndex = 19
+        Me.radManager.TabStop = True
+        Me.radManager.Text = "Manager"
+        Me.radManager.UseVisualStyleBackColor = True
+        '
+        'btnView
+        '
+        Me.btnView.Location = New System.Drawing.Point(347, 192)
+        Me.btnView.Name = "btnView"
+        Me.btnView.Size = New System.Drawing.Size(81, 28)
+        Me.btnView.TabIndex = 18
+        Me.btnView.Text = "View"
+        Me.btnView.UseVisualStyleBackColor = True
         '
         'lblDialogbox
         '
@@ -284,15 +326,6 @@ Partial Class AddEmployee
         Me.StaffBindingSource1.DataMember = "Staff"
         Me.StaffBindingSource1.DataSource = Me.EconsaveDBDataSet
         '
-        'btnView
-        '
-        Me.btnView.Location = New System.Drawing.Point(347, 192)
-        Me.btnView.Name = "btnView"
-        Me.btnView.Size = New System.Drawing.Size(81, 28)
-        Me.btnView.TabIndex = 18
-        Me.btnView.Text = "View"
-        Me.btnView.UseVisualStyleBackColor = True
-        '
         'ErrorProvider1
         '
         Me.ErrorProvider1.ContainerControl = Me
@@ -312,29 +345,16 @@ Partial Class AddEmployee
         Me.StaffBindingSource4.DataMember = "Staff"
         Me.StaffBindingSource4.DataSource = Me.EconsaveDBDataSet
         '
-        'radManager
+        'radStaff
         '
-        Me.radManager.AutoSize = True
-        Me.radManager.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.radManager.Location = New System.Drawing.Point(99, 138)
-        Me.radManager.Name = "radManager"
-        Me.radManager.Size = New System.Drawing.Size(83, 22)
-        Me.radManager.TabIndex = 19
-        Me.radManager.TabStop = True
-        Me.radManager.Text = "Manager"
-        Me.radManager.UseVisualStyleBackColor = True
-        '
-        'radCashier
-        '
-        Me.radCashier.AutoSize = True
-        Me.radCashier.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.radCashier.Location = New System.Drawing.Point(188, 138)
-        Me.radCashier.Name = "radCashier"
-        Me.radCashier.Size = New System.Drawing.Size(73, 22)
-        Me.radCashier.TabIndex = 20
-        Me.radCashier.TabStop = True
-        Me.radCashier.Text = "Cashier"
-        Me.radCashier.UseVisualStyleBackColor = True
+        Me.radStaff.AutoSize = True
+        Me.radStaff.Location = New System.Drawing.Point(239, 143)
+        Me.radStaff.Name = "radStaff"
+        Me.radStaff.Size = New System.Drawing.Size(47, 17)
+        Me.radStaff.TabIndex = 22
+        Me.radStaff.TabStop = True
+        Me.radStaff.Text = "Staff"
+        Me.radStaff.UseVisualStyleBackColor = True
         '
         'AddEmployee
         '
@@ -398,4 +418,6 @@ Partial Class AddEmployee
     Friend WithEvents StaffBindingSource4 As BindingSource
     Friend WithEvents radCashier As RadioButton
     Friend WithEvents radManager As RadioButton
+    Friend WithEvents lblDialogBoxPassword As Label
+    Friend WithEvents radStaff As RadioButton
 End Class

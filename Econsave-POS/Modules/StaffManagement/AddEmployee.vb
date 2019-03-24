@@ -27,9 +27,8 @@ Public Class AddEmployee
                 regEmp.password = txtconfirmpassword.Text
                 regEmp.position = Convert.ToByte(radManager.Checked)
                 regEmp.position = Convert.ToByte(radCashier.Checked)
+                regEmp.position = Convert.ToByte(radStaff.Checked)
                 regEmp.registeredOn = DateAndTime.Now
-                'POSITION UNABLE TO ADD INTO DATABSE -- INT TYPE    
-
                 ' Add new item and save changes
                 db.Staffs.InsertOnSubmit(regEmp)
                 db.SubmitChanges()
@@ -42,12 +41,20 @@ Public Class AddEmployee
     End Sub
 
     Private Sub txtconfirmpassword_TextChanged(sender As Object, e As EventArgs) Handles txtconfirmpassword.TextChanged
-        If txtPassword.Text = txtconfirmpassword.Text Then
+        If txtconfirmpassword.Text = txtPassword.Text Then
             lblDialogbox.Text = ("Password Match")
             lblDialogbox.ForeColor = Color.Green
         Else
             lblDialogbox.Text = ("Password Does Not Match")
             lblDialogbox.ForeColor = Color.Red
+        End If
+    End Sub
+
+    Private Sub txtPassword_TextChanged(sender As Object, e As EventArgs) Handles txtPassword.TextChanged
+        If txtPassword.Text.Length < 8 Then
+            lblDialogBoxPassword.Text = ("Too short at least 9 digits or character above")
+        ElseIf txtPassword.Text.Length > 8 Then
+            lblDialogBoxPassword.ResetText()
         End If
     End Sub
 
@@ -57,20 +64,20 @@ Public Class AddEmployee
             Dim ListOfEmp As ListViewItem
             ListOfEmp = lstvData.Items.Add(lblStaffID.Text)
             ListOfEmp.SubItems.Add(txtName.Text)
+
             If radManager.Text = radManager.Text Then
                 ListOfEmp.SubItems.Add(radManager.Text)
-            Else
-                radCashier.Text = radCashier.Text
+            ElseIf radCashier.Text = radCashier.Text Then
                 ListOfEmp.SubItems.Add(radCashier.Text)
+            Else
+                ListOfEmp.SubItems.Add(radStaff.Text)
             End If
-            ListOfEmp.SubItems.Add(radCashier.Text)
-            ListOfEmp.SubItems.Add(radManager.Text)
             ListOfEmp.SubItems.Add(txtconfirmpassword.Text)
             ListOfEmp = Nothing
         Else
-            With lstvData
+                With lstvData
                 Dim addedlistOfEmp As ListViewItem
-                addedlistOfEmp = .FindItemWithText(txtName.Text, True, 0)
+                addedlistOfEmp = .FindItemWithText(txtName.Text, True, 0, True)
                 If Not addedlistOfEmp Is Nothing Then
                     MessageBox.Show($"{(txtName.Text)} already in the database")
                 Else
@@ -79,9 +86,10 @@ Public Class AddEmployee
                     ListOfEmp.SubItems.Add(txtName.Text)
                     If radManager.Text = radManager.Text Then
                         ListOfEmp.SubItems.Add(radManager.Text)
-                    Else
-                        radCashier.Text = radCashier.Text
+                    ElseIf radCashier.Text = radCashier.Text Then
                         ListOfEmp.SubItems.Add(radCashier.Text)
+                    Else
+                        ListOfEmp.SubItems.Add(radStaff.Text)
                     End If
                     ListOfEmp.SubItems.Add(txtconfirmpassword.Text)
                     ListOfEmp = Nothing
@@ -112,14 +120,12 @@ Public Class AddEmployee
         Return hasError
     End Function
 
-
-
-
     Private Sub ClearToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ClearToolStripMenuItem.Click
         txtName.Text = ""
         txtPassword.Text = ""
         txtconfirmpassword.Text = ""
         lblDialogbox.Text = ""
+        lblDialogBoxPassword.Text = ""
     End Sub
 
     Private Sub ExitToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ExitToolStripMenuItem.Click
