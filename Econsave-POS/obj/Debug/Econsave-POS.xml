@@ -22,6 +22,21 @@ Econsave-POS
   resource lookups using this strongly typed resource class.
 </summary>
 </member>
+<member name="P:Econsave_POS.My.Resources.Resources.cb4e4_ot9m3_6">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Econsave_POS.My.Resources.Resources.cbvoi_qjprf_6">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Econsave_POS.My.Resources.Resources.Econsave_logo">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="T:Econsave_POS.EconsaveDBDataSet">
 <summary>
 Represents a strongly typed in-memory cache of data.

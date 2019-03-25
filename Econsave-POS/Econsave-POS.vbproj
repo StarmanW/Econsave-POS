@@ -151,10 +151,16 @@
     <Compile Include="Modules\ItemManagement\UpdateItem.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Modules\Login\Form2.Designer.vb">
-      <DependentUpon>Form2.vb</DependentUpon>
+    <Compile Include="Modules\Login\History.Designer.vb">
+      <DependentUpon>History.vb</DependentUpon>
     </Compile>
-    <Compile Include="Modules\Login\Form2.vb">
+    <Compile Include="Modules\Login\History.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Login\Login.Designer.vb">
+      <DependentUpon>Login.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Login\Login.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Modules\Sales\Sales.Designer.vb">
@@ -206,6 +212,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Modules\ItemManagement\DisplayItem.resx">
       <DependentUpon>DisplayItem.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Login\History.resx">
+      <DependentUpon>History.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Login\Login.resx">
+      <DependentUpon>Login.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Modules\Sales\Sales.resx">
       <DependentUpon>Sales.vb</DependentUpon>
@@ -266,6 +278,9 @@
     <Content Include="EconsaveDB_log.ldf">
       <DependentUpon>EconsaveDB.mdf</DependentUpon>
     </Content>
+    <Content Include="Resources\cb4e4-ot9m3-6.png" />
+    <Content Include="Resources\cbvoi-qjprf-6.png" />
+    <Content Include="Resources\Econsave_logo.png" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
