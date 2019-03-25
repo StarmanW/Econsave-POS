@@ -11,7 +11,7 @@
         DataGridView1.Columns(3).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
         DataGridView1.Columns(3).DefaultCellStyle.Format = "N2"
         DataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells
-        DataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnMode.Fill
+        DataGridView1.AutoSizeColumnsMode = CType(DataGridViewAutoSizeColumnMode.Fill, DataGridViewAutoSizeColumnsMode)
     End Sub
 
 
@@ -19,7 +19,7 @@
     Private Sub DataGridView1_CellMouseDoubleClick(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellMouseEventArgs) Handles DataGridView1.CellMouseDoubleClick
         If e.RowIndex >= 0 AndAlso e.ColumnIndex >= 0 Then
             Dim selectedRow = DataGridView1.Rows(e.RowIndex)
-            MessageBox.Show(DataGridView1.Item(0, selectedRow.Index).Value)
+            MessageBox.Show(CType(DataGridView1.Item(0, selectedRow.Index).Value, String))
         End If
     End Sub
 
@@ -48,7 +48,7 @@
 
     Private Sub cmbCategory_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbCategory.SelectedIndexChanged
         Dim db As New EconsaveDataClassesDataContext()
-        Dim rs
+        Dim rs As Object
 
         If cmbCategory.SelectedIndex = 0 Then
             rs = From i In db.Items Select

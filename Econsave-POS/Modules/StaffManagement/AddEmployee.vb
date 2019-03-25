@@ -13,7 +13,7 @@ Public Class AddEmployee
 
     ' Sub routine to generate item ID
     Private Sub GenerateItemID(db As EconsaveDataClassesDataContext)
-        lblStaffID.Text = (db.Staffs.Count + 1).ToString("D4")
+        lblStaffID.Text = $"{(db.Staffs.Count + 1).ToString("D4")}"
     End Sub
 
     Private Sub btnRegister_Click(sender As Object, e As EventArgs) Handles btnRegister.Click
@@ -25,9 +25,11 @@ Public Class AddEmployee
                 regEmp.staffID = lblStaffID.Text
                 regEmp.name = txtName.Text
                 regEmp.password = txtconfirmpassword.Text
-                regEmp.position = Convert.ToByte(radManager.Checked)
-                regEmp.position = Convert.ToByte(radCashier.Checked)
-                regEmp.position = Convert.ToByte(radStaff.Checked)
+                If radManager.Checked Then
+                    regEmp.position = 1
+                Else
+                    regEmp.position = 2
+                End If
                 regEmp.registeredOn = DateAndTime.Now
                 ' Add new item and save changes
                 db.Staffs.InsertOnSubmit(regEmp)
@@ -69,8 +71,6 @@ Public Class AddEmployee
                 ListOfEmp.SubItems.Add(radManager.Text)
             ElseIf radCashier.Text = radCashier.Text Then
                 ListOfEmp.SubItems.Add(radCashier.Text)
-            Else
-                ListOfEmp.SubItems.Add(radStaff.Text)
             End If
             ListOfEmp.SubItems.Add(txtconfirmpassword.Text)
             ListOfEmp = Nothing
@@ -88,8 +88,6 @@ Public Class AddEmployee
                         ListOfEmp.SubItems.Add(radManager.Text)
                     ElseIf radCashier.Text = radCashier.Text Then
                         ListOfEmp.SubItems.Add(radCashier.Text)
-                    Else
-                        ListOfEmp.SubItems.Add(radStaff.Text)
                     End If
                     ListOfEmp.SubItems.Add(txtconfirmpassword.Text)
                     ListOfEmp = Nothing
