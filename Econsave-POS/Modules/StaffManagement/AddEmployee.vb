@@ -5,15 +5,27 @@ Public Class AddEmployee
     Public Sub New()
         ' This call is required by the designer.
         InitializeComponent()
-        ' Populate Item Category combo box and generate Item ID
+        ' Generate ID
         Using db As New EconsaveDataClassesDataContext()
-            GenerateItemID(db)
+            GenerateID(db)
         End Using
     End Sub
 
-    ' Sub routine to generate item ID
-    Private Sub GenerateItemID(db As EconsaveDataClassesDataContext)
-        lblStaffID.Text = $"{(db.Staffs.Count + 1).ToString("D4")}"
+    ' Sub routine to generate ID
+    Private Sub GenerateID(db As EconsaveDataClassesDataContext)
+        'lblStaffID.Text = $"MN{(db.Staffs.Count + 1).ToString("D4")}"
+    End Sub
+
+    Private Sub radCashier_CheckedChanged(sender As Object, e As EventArgs) Handles radCashier.CheckedChanged
+        Using db As New EconsaveDataClassesDataContext()
+            lblStaffID.Text = $"CS{(db.Staffs.Count + 1).ToString("D4")}"
+        End Using
+    End Sub
+
+    Private Sub radManager_CheckedChanged(sender As Object, e As EventArgs) Handles radManager.CheckedChanged
+        Using db As New EconsaveDataClassesDataContext()
+            lblStaffID.Text = $"MN{(db.Staffs.Count + 1).ToString("D4")}"
+        End Using
     End Sub
 
     Private Sub btnRegister_Click(sender As Object, e As EventArgs) Handles btnRegister.Click
@@ -31,13 +43,13 @@ Public Class AddEmployee
                     regEmp.position = 2
                 End If
                 regEmp.registeredOn = DateAndTime.Now
-                ' Add new item and save changes
+                ' Add new emp and save changes
                 db.Staffs.InsertOnSubmit(regEmp)
                 db.SubmitChanges()
                 ' Display successful message
                 MessageBox.Show($"({regEmp.staffID}) has been successfully added!", "Succesfully Added", MessageBoxButtons.OKCancel)
                 ' Generate new Item ID
-                GenerateItemID(db)
+                GenerateID(db)
             End Using
         End If
     End Sub
@@ -67,11 +79,12 @@ Public Class AddEmployee
             ListOfEmp = lstvData.Items.Add(lblStaffID.Text)
             ListOfEmp.SubItems.Add(txtName.Text)
 
-            If radManager.Text = radManager.Text Then
+            If radManager.Checked Then
                 ListOfEmp.SubItems.Add(radManager.Text)
-            ElseIf radCashier.Text = radCashier.Text Then
+            Else
                 ListOfEmp.SubItems.Add(radCashier.Text)
             End If
+
             ListOfEmp.SubItems.Add(txtconfirmpassword.Text)
             ListOfEmp = Nothing
         Else
@@ -79,7 +92,7 @@ Public Class AddEmployee
                 Dim addedlistOfEmp As ListViewItem
                 addedlistOfEmp = .FindItemWithText(txtName.Text, True, 0, True)
                 If Not addedlistOfEmp Is Nothing Then
-                    MessageBox.Show($"{(txtName.Text)} already in the database")
+                    MessageBox.Show($"{(txtName.Text)} already Added")
                 Else
                     Dim ListOfEmp As ListViewItem
                     ListOfEmp = lstvData.Items.Add(lblStaffID.Text)
@@ -114,7 +127,6 @@ Public Class AddEmployee
             ErrorProvider1.SetError(txtPassword, "Required To Set Password.")
             hasError = True
         End If
-
         Return hasError
     End Function
 
@@ -124,6 +136,7 @@ Public Class AddEmployee
         txtconfirmpassword.Text = ""
         lblDialogbox.Text = ""
         lblDialogBoxPassword.Text = ""
+        radManager.Checked = True
     End Sub
 
     Private Sub ExitToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ExitToolStripMenuItem.Click

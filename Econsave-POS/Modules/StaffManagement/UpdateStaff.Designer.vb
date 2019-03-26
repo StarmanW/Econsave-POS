@@ -29,22 +29,23 @@ Partial Class UpdateStaff
         Me.lblstaffname = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.EconsaveDBDataSet = New Econsave_POS.EconsaveDBDataSet()
         Me.StaffBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.EconsaveDBDataSet = New Econsave_POS.EconsaveDBDataSet()
         Me.StaffTableAdapter = New Econsave_POS.EconsaveDBDataSetTableAdapters.StaffTableAdapter()
+        Me.lblshowname = New System.Windows.Forms.Label()
+        Me.lblShwID = New System.Windows.Forms.Label()
+        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.EntityCommand1 = New System.Data.Entity.Core.EntityClient.EntityCommand()
         Me.StaffIDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.NameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.PasswordDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.RegisteredOnDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.LastLoginDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.PositionDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.lblshowname = New System.Windows.Forms.Label()
-        Me.lblShwID = New System.Windows.Forms.Label()
-        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.EconsaveDBDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.StaffBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.EconsaveDBDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'lblSearchKey
@@ -95,64 +96,30 @@ Partial Class UpdateStaff
         '
         'DataGridView1
         '
+        Me.DataGridView1.AllowUserToAddRows = False
+        Me.DataGridView1.AllowUserToDeleteRows = False
         Me.DataGridView1.AutoGenerateColumns = False
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.StaffIDDataGridViewTextBoxColumn, Me.NameDataGridViewTextBoxColumn, Me.PasswordDataGridViewTextBoxColumn, Me.RegisteredOnDataGridViewTextBoxColumn, Me.LastLoginDataGridViewTextBoxColumn, Me.PositionDataGridViewTextBoxColumn})
         Me.DataGridView1.DataSource = Me.StaffBindingSource
-        Me.DataGridView1.Location = New System.Drawing.Point(10, 357)
+        Me.DataGridView1.Location = New System.Drawing.Point(11, 325)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.Size = New System.Drawing.Size(646, 181)
         Me.DataGridView1.TabIndex = 5
-        '
-        'EconsaveDBDataSet
-        '
-        Me.EconsaveDBDataSet.DataSetName = "EconsaveDBDataSet"
-        Me.EconsaveDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'StaffBindingSource
         '
         Me.StaffBindingSource.DataMember = "Staff"
         Me.StaffBindingSource.DataSource = Me.EconsaveDBDataSet
         '
+        'EconsaveDBDataSet
+        '
+        Me.EconsaveDBDataSet.DataSetName = "EconsaveDBDataSet"
+        Me.EconsaveDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
         'StaffTableAdapter
         '
         Me.StaffTableAdapter.ClearBeforeFill = True
-        '
-        'StaffIDDataGridViewTextBoxColumn
-        '
-        Me.StaffIDDataGridViewTextBoxColumn.DataPropertyName = "staffID"
-        Me.StaffIDDataGridViewTextBoxColumn.HeaderText = "staffID"
-        Me.StaffIDDataGridViewTextBoxColumn.Name = "StaffIDDataGridViewTextBoxColumn"
-        '
-        'NameDataGridViewTextBoxColumn
-        '
-        Me.NameDataGridViewTextBoxColumn.DataPropertyName = "name"
-        Me.NameDataGridViewTextBoxColumn.HeaderText = "name"
-        Me.NameDataGridViewTextBoxColumn.Name = "NameDataGridViewTextBoxColumn"
-        '
-        'PasswordDataGridViewTextBoxColumn
-        '
-        Me.PasswordDataGridViewTextBoxColumn.DataPropertyName = "password"
-        Me.PasswordDataGridViewTextBoxColumn.HeaderText = "password"
-        Me.PasswordDataGridViewTextBoxColumn.Name = "PasswordDataGridViewTextBoxColumn"
-        '
-        'RegisteredOnDataGridViewTextBoxColumn
-        '
-        Me.RegisteredOnDataGridViewTextBoxColumn.DataPropertyName = "registeredOn"
-        Me.RegisteredOnDataGridViewTextBoxColumn.HeaderText = "registeredOn"
-        Me.RegisteredOnDataGridViewTextBoxColumn.Name = "RegisteredOnDataGridViewTextBoxColumn"
-        '
-        'LastLoginDataGridViewTextBoxColumn
-        '
-        Me.LastLoginDataGridViewTextBoxColumn.DataPropertyName = "lastLogin"
-        Me.LastLoginDataGridViewTextBoxColumn.HeaderText = "lastLogin"
-        Me.LastLoginDataGridViewTextBoxColumn.Name = "LastLoginDataGridViewTextBoxColumn"
-        '
-        'PositionDataGridViewTextBoxColumn
-        '
-        Me.PositionDataGridViewTextBoxColumn.DataPropertyName = "position"
-        Me.PositionDataGridViewTextBoxColumn.HeaderText = "position"
-        Me.PositionDataGridViewTextBoxColumn.Name = "PositionDataGridViewTextBoxColumn"
         '
         'lblshowname
         '
@@ -187,6 +154,56 @@ Partial Class UpdateStaff
         Me.TextBox2.Size = New System.Drawing.Size(161, 32)
         Me.TextBox2.TabIndex = 9
         '
+        'EntityCommand1
+        '
+        Me.EntityCommand1.CommandTimeout = 0
+        Me.EntityCommand1.CommandTree = Nothing
+        Me.EntityCommand1.Connection = Nothing
+        Me.EntityCommand1.EnablePlanCaching = True
+        Me.EntityCommand1.Transaction = Nothing
+        '
+        'StaffIDDataGridViewTextBoxColumn
+        '
+        Me.StaffIDDataGridViewTextBoxColumn.DataPropertyName = "staffID"
+        Me.StaffIDDataGridViewTextBoxColumn.HeaderText = "staffID"
+        Me.StaffIDDataGridViewTextBoxColumn.Name = "StaffIDDataGridViewTextBoxColumn"
+        Me.StaffIDDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'NameDataGridViewTextBoxColumn
+        '
+        Me.NameDataGridViewTextBoxColumn.DataPropertyName = "name"
+        Me.NameDataGridViewTextBoxColumn.HeaderText = "name"
+        Me.NameDataGridViewTextBoxColumn.Name = "NameDataGridViewTextBoxColumn"
+        Me.NameDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'PasswordDataGridViewTextBoxColumn
+        '
+        Me.PasswordDataGridViewTextBoxColumn.DataPropertyName = "password"
+        Me.PasswordDataGridViewTextBoxColumn.HeaderText = "password"
+        Me.PasswordDataGridViewTextBoxColumn.Name = "PasswordDataGridViewTextBoxColumn"
+        Me.PasswordDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'RegisteredOnDataGridViewTextBoxColumn
+        '
+        Me.RegisteredOnDataGridViewTextBoxColumn.DataPropertyName = "registeredOn"
+        Me.RegisteredOnDataGridViewTextBoxColumn.HeaderText = "registeredOn"
+        Me.RegisteredOnDataGridViewTextBoxColumn.Name = "RegisteredOnDataGridViewTextBoxColumn"
+        Me.RegisteredOnDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'LastLoginDataGridViewTextBoxColumn
+        '
+        Me.LastLoginDataGridViewTextBoxColumn.DataPropertyName = "lastLogin"
+        Me.LastLoginDataGridViewTextBoxColumn.HeaderText = "lastLogin"
+        Me.LastLoginDataGridViewTextBoxColumn.Name = "LastLoginDataGridViewTextBoxColumn"
+        Me.LastLoginDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'PositionDataGridViewTextBoxColumn
+        '
+        Me.PositionDataGridViewTextBoxColumn.DataPropertyName = "position"
+        Me.PositionDataGridViewTextBoxColumn.HeaderText = "position"
+        Me.PositionDataGridViewTextBoxColumn.Name = "PositionDataGridViewTextBoxColumn"
+        Me.PositionDataGridViewTextBoxColumn.ReadOnly = True
+        '
         'UpdateStaff
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -207,8 +224,8 @@ Partial Class UpdateStaff
         Me.Text = "Update Employee Details"
         Me.TextAlign = MetroFramework.Forms.MetroFormTextAlign.Center
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.EconsaveDBDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.StaffBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.EconsaveDBDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -223,14 +240,15 @@ Partial Class UpdateStaff
     Friend WithEvents EconsaveDBDataSet As EconsaveDBDataSet
     Friend WithEvents StaffBindingSource As BindingSource
     Friend WithEvents StaffTableAdapter As EconsaveDBDataSetTableAdapters.StaffTableAdapter
+    Friend WithEvents lblshowname As Label
+    Friend WithEvents lblShwID As Label
+    Friend WithEvents MenuStrip1 As MenuStrip
+    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents EntityCommand1 As Entity.Core.EntityClient.EntityCommand
     Friend WithEvents StaffIDDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents NameDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents PasswordDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents RegisteredOnDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents LastLoginDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents PositionDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents lblshowname As Label
-    Friend WithEvents lblShwID As Label
-    Friend WithEvents MenuStrip1 As MenuStrip
-    Friend WithEvents TextBox2 As TextBox
 End Class

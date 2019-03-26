@@ -100,3 +100,5 @@ C:\Users\Hiko\Documents\GitHub\Econsave-POS\Econsave-POS\bin\Debug\MetroFramewor
 C:\Users\Hiko\Documents\GitHub\Econsave-POS\Econsave-POS\bin\Debug\EntityFramework.xml
 C:\Users\Hiko\Documents\GitHub\Econsave-POS\Econsave-POS\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\Hiko\Documents\GitHub\Econsave-POS\Econsave-POS\obj\Debug\Econsave-POS.vbproj.CopyComplete
+C:\Users\User\Documents\GitHub\Econsave-POS\Econsave-POS\obj\Debug\Econsave_POS.History.resources
+C:\Users\User\Documents\GitHub\Econsave-POS\Econsave-POS\obj\Debug\Econsave_POS.Login.resources
