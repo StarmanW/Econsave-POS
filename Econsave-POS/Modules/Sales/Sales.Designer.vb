@@ -26,13 +26,16 @@ Partial Class Sales
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.MenuStrip2 = New System.Windows.Forms.MenuStrip()
         Me.SalesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ItemManagementToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AddNewItemToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DisplayItemListToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ProfileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.Panel2 = New System.Windows.Forms.Panel()
         Me.MetroButton1 = New MetroFramework.Controls.MetroButton()
         Me.MetroButton2 = New MetroFramework.Controls.MetroButton()
         Me.Tota = New MetroFramework.Controls.MetroLabel()
@@ -41,9 +44,11 @@ Partial Class Sales
         Me.lblCategory = New MetroFramework.Controls.MetroLabel()
         Me.cmbCategory = New MetroFramework.Controls.MetroComboBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.DataGridView2 = New System.Windows.Forms.DataGridView()
         Me.MenuStrip2.SuspendLayout()
         CType(Me.EconsaveDBDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'MenuStrip2
@@ -89,15 +94,6 @@ Partial Class Sales
         Me.ProfileToolStripMenuItem.Name = "ProfileToolStripMenuItem"
         Me.ProfileToolStripMenuItem.Size = New System.Drawing.Size(70, 27)
         Me.ProfileToolStripMenuItem.Text = "Profile"
-        '
-        'Panel2
-        '
-        Me.Panel2.BackColor = System.Drawing.Color.White
-        Me.Panel2.Location = New System.Drawing.Point(600, 163)
-        Me.Panel2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(407, 322)
-        Me.Panel2.TabIndex = 4
         '
         'MetroButton1
         '
@@ -153,7 +149,7 @@ Partial Class Sales
         Me.MetroLabel1.Text = "RM 29.50"
         Me.MetroLabel1.TextAlign = System.Drawing.ContentAlignment.TopRight
         '
-        'EconsaveDBDataSet1
+        'EconsaveDBDataSet
         '
         Me.EconsaveDBDataSet.DataSetName = "EconsaveDBDataSet1"
         Me.EconsaveDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
@@ -234,11 +230,66 @@ Partial Class Sales
         Me.DataGridView1.Size = New System.Drawing.Size(517, 518)
         Me.DataGridView1.TabIndex = 0
         '
+        'DataGridView2
+        '
+        Me.DataGridView2.AllowUserToAddRows = False
+        Me.DataGridView2.AllowUserToDeleteRows = False
+        Me.DataGridView2.AllowUserToResizeRows = False
+        DataGridViewCellStyle5.BackColor = System.Drawing.Color.White
+        Me.DataGridView2.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle5
+        Me.DataGridView2.BackgroundColor = System.Drawing.Color.White
+        Me.DataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.DataGridView2.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None
+        Me.DataGridView2.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle6.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.DodgerBlue
+        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView2.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle6
+        Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle7.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(219, Byte), Integer))
+        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DataGridView2.DefaultCellStyle = DataGridViewCellStyle7
+        Me.DataGridView2.GridColor = System.Drawing.Color.White
+        Me.DataGridView2.Location = New System.Drawing.Point(643, 163)
+        Me.DataGridView2.Margin = New System.Windows.Forms.Padding(4)
+        Me.DataGridView2.MultiSelect = False
+        Me.DataGridView2.Name = "DataGridView2"
+        Me.DataGridView2.ReadOnly = True
+        Me.DataGridView2.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView2.RowHeadersDefaultCellStyle = DataGridViewCellStyle8
+        Me.DataGridView2.RowHeadersVisible = False
+        Me.DataGridView2.RowHeadersWidth = 45
+        Me.DataGridView2.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
+        Me.DataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.DataGridView2.ShowCellErrors = False
+        Me.DataGridView2.ShowCellToolTips = False
+        Me.DataGridView2.ShowEditingIcon = False
+        Me.DataGridView2.ShowRowErrors = False
+        Me.DataGridView2.Size = New System.Drawing.Size(353, 372)
+        Me.DataGridView2.TabIndex = 12
+        '
         'Sales
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1112, 756)
+        Me.Controls.Add(Me.DataGridView2)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.lblCategory)
         Me.Controls.Add(Me.cmbCategory)
@@ -246,7 +297,6 @@ Partial Class Sales
         Me.Controls.Add(Me.Tota)
         Me.Controls.Add(Me.MetroButton2)
         Me.Controls.Add(Me.MetroButton1)
-        Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.MenuStrip2)
         Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Name = "Sales"
@@ -257,6 +307,7 @@ Partial Class Sales
         Me.MenuStrip2.PerformLayout()
         CType(Me.EconsaveDBDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -268,7 +319,6 @@ Partial Class Sales
     Friend WithEvents AddNewItemToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents DisplayItemListToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ProfileToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents Panel2 As Panel
     Friend WithEvents MetroButton1 As MetroFramework.Controls.MetroButton
     Friend WithEvents MetroButton2 As MetroFramework.Controls.MetroButton
     Friend WithEvents Tota As MetroFramework.Controls.MetroLabel
@@ -277,4 +327,5 @@ Partial Class Sales
     Friend WithEvents lblCategory As MetroFramework.Controls.MetroLabel
     Friend WithEvents cmbCategory As MetroFramework.Controls.MetroComboBox
     Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents DataGridView2 As DataGridView
 End Class

@@ -1,12 +1,16 @@
 ﻿Public Class Sales
+    Private selectedItem As New List(Of Item)
+    Private db As New EconsaveDataClassesDataContext()
+    Private itemList As List(Of Item) = (From i In db.Items Select i).ToList
+
     Private Sub Sales_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Dim db As New EconsaveDataClassesDataContext()
-        Dim rs = From i In db.Items Select
-                                        ItemID = i.itemID,
-                                        Name = i.name,
-                                        Category = i.Category.categoryName,
-                                        Price = i.price
-        DataGridView1.DataSource = rs
+        Dim rs = From i In itemList Select
+                                ItemID = i.itemID,
+                                Name = i.name,
+                                Category = i.Category.categoryName,
+                                Price = i.price
+
+        DataGridView1.DataSource = rs.ToList
 
         DataGridView1.Columns(3).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
         DataGridView1.Columns(3).DefaultCellStyle.Format = "N2"
@@ -14,13 +18,19 @@
         DataGridView1.AutoSizeColumnsMode = CType(DataGridViewAutoSizeColumnMode.Fill, DataGridViewAutoSizeColumnsMode)
     End Sub
 
-
-
     Private Sub DataGridView1_CellMouseDoubleClick(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellMouseEventArgs) Handles DataGridView1.CellMouseDoubleClick
         If e.RowIndex >= 0 AndAlso e.ColumnIndex >= 0 Then
             Dim selectedRow = DataGridView1.Rows(e.RowIndex)
-            MessageBox.Show(CType(DataGridView1.Item(0, selectedRow.Index).Value, String))
+
+            For i = 0 To itemList.Count - 1
+                If itemList(i).itemID = (DataGridView1.Item(0, selectedRow.Index).Value).ToString Then
+                    selectedItem.Add(itemList(i))
+                End If
+            Next
+            'selectedItem.Add((DataGridView1.Item(0, selectedRow.Index).Value).ToString)
         End If
+
+        UpdateSelectItemList()
     End Sub
 
     Public Sub New()
@@ -68,4 +78,25 @@
         DataGridView1.DataSource = rs
     End Sub
 
+    Private Sub DataGridView2_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView2.CellContentClick
+
+    End Sub
+
+    Private Sub UpdateSelectItemList()
+        Dim db As New EconsaveDataClassesDataContext()
+        Dim rs As New Object
+
+
+
+        rs = (From i In selectedItem Select
+                            ItemID = i.itemID,
+                            Name = i.name,
+                            Price = i.price).ToList
+
+        DataGridView2.DataSource = rs
+    End Sub
+
+    Private Sub SortSelectedItems()
+
+    End Sub
 End Class

@@ -35,18 +35,20 @@ Partial Class DisplayItem
         Me.itemDGV.AllowUserToResizeRows = False
         Me.itemDGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.itemDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.itemDGV.Location = New System.Drawing.Point(23, 94)
+        Me.itemDGV.Location = New System.Drawing.Point(31, 116)
+        Me.itemDGV.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.itemDGV.Name = "itemDGV"
-        Me.itemDGV.Size = New System.Drawing.Size(851, 331)
+        Me.itemDGV.Size = New System.Drawing.Size(1135, 407)
         Me.itemDGV.TabIndex = 0
         '
         'cmbCategory
         '
         Me.cmbCategory.FormattingEnabled = True
-        Me.cmbCategory.ItemHeight = 23
-        Me.cmbCategory.Location = New System.Drawing.Point(115, 59)
+        Me.cmbCategory.ItemHeight = 24
+        Me.cmbCategory.Location = New System.Drawing.Point(153, 73)
+        Me.cmbCategory.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.cmbCategory.Name = "cmbCategory"
-        Me.cmbCategory.Size = New System.Drawing.Size(203, 29)
+        Me.cmbCategory.Size = New System.Drawing.Size(269, 30)
         Me.cmbCategory.TabIndex = 1
         Me.cmbCategory.UseSelectable = True
         '
@@ -54,9 +56,10 @@ Partial Class DisplayItem
         '
         Me.lblCategory.AutoSize = True
         Me.lblCategory.FontSize = MetroFramework.MetroLabelSize.Tall
-        Me.lblCategory.Location = New System.Drawing.Point(24, 59)
+        Me.lblCategory.Location = New System.Drawing.Point(32, 73)
+        Me.lblCategory.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblCategory.Name = "lblCategory"
-        Me.lblCategory.Size = New System.Drawing.Size(85, 25)
+        Me.lblCategory.Size = New System.Drawing.Size(91, 25)
         Me.lblCategory.TabIndex = 2
         Me.lblCategory.Text = "Category:"
         '
@@ -66,13 +69,15 @@ Partial Class DisplayItem
         '
         'DisplayItem
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(897, 450)
+        Me.ClientSize = New System.Drawing.Size(1196, 554)
         Me.Controls.Add(Me.lblCategory)
         Me.Controls.Add(Me.cmbCategory)
         Me.Controls.Add(Me.itemDGV)
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "DisplayItem"
+        Me.Padding = New System.Windows.Forms.Padding(27, 74, 27, 25)
         Me.Text = "Display Item"
         CType(Me.itemDGV, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
