@@ -15,7 +15,7 @@ Public Class AddItem
 
     ' Sub routine to generate item ID
     Private Sub GenerateItemID(db As EconsaveDataClassesDataContext)
-        txtItemID.Text = (db.Items.Count + 1).ToString("D6")
+        txtItemID.Text = $"IT{(db.Items.Count + 1).ToString("D6")}"
     End Sub
 
     ' Sub routine to initialize category combo box
@@ -65,7 +65,7 @@ Public Class AddItem
                 db.SubmitChanges()
 
                 ' Display successful message
-                MessageBox.Show($"Item ({newItem.name}) has been successfully added!", "Item Added", MessageBoxButtons.OKCancel)
+                MessageBox.Show($"Item ({newItem.name}) has been successfully added!", "Item Added", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
                 ' Generate new Item ID
                 GenerateItemID(db)
@@ -92,4 +92,11 @@ Public Class AddItem
 
         Return hasError
     End Function
+
+    Private Sub DisplayItemListToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DisplayItemListToolStripMenuItem.Click
+        Me.Hide()
+        DisplayItem.ShowDialog()
+        DisplayItem.Close()
+        Me.Show()
+    End Sub
 End Class

@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class DisplayItem
+Partial Class DisplayStaff
     Inherits MetroFramework.Forms.MetroForm
 
     'Form overrides dispose to clean up the component list.
@@ -22,54 +22,16 @@ Partial Class DisplayItem
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.itemDGV = New System.Windows.Forms.DataGridView()
-        Me.cmbCategory = New MetroFramework.Controls.MetroComboBox()
-        Me.lblCategory = New MetroFramework.Controls.MetroLabel()
-        Me.MetroLabel1 = New MetroFramework.Controls.MetroLabel()
+        Me.StaffTableAdapter = New Econsave_POS.EconsaveDBDataSetTableAdapters.StaffTableAdapter()
         Me.txtSearchBox = New MetroFramework.Controls.MetroTextBox()
+        Me.MetroLabel1 = New MetroFramework.Controls.MetroLabel()
+        Me.itemDGV = New System.Windows.Forms.DataGridView()
         CType(Me.itemDGV, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'itemDGV
+        'StaffTableAdapter
         '
-        Me.itemDGV.AllowUserToResizeColumns = False
-        Me.itemDGV.AllowUserToResizeRows = False
-        Me.itemDGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.itemDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.itemDGV.Location = New System.Drawing.Point(23, 104)
-        Me.itemDGV.Name = "itemDGV"
-        Me.itemDGV.Size = New System.Drawing.Size(851, 331)
-        Me.itemDGV.TabIndex = 0
-        '
-        'cmbCategory
-        '
-        Me.cmbCategory.FormattingEnabled = True
-        Me.cmbCategory.ItemHeight = 23
-        Me.cmbCategory.Location = New System.Drawing.Point(428, 61)
-        Me.cmbCategory.Name = "cmbCategory"
-        Me.cmbCategory.Size = New System.Drawing.Size(203, 29)
-        Me.cmbCategory.TabIndex = 5
-        Me.cmbCategory.UseSelectable = True
-        '
-        'lblCategory
-        '
-        Me.lblCategory.AutoSize = True
-        Me.lblCategory.FontSize = MetroFramework.MetroLabelSize.Tall
-        Me.lblCategory.Location = New System.Drawing.Point(337, 60)
-        Me.lblCategory.Name = "lblCategory"
-        Me.lblCategory.Size = New System.Drawing.Size(85, 25)
-        Me.lblCategory.TabIndex = 2
-        Me.lblCategory.Text = "Category:"
-        '
-        'MetroLabel1
-        '
-        Me.MetroLabel1.AutoSize = True
-        Me.MetroLabel1.FontSize = MetroFramework.MetroLabelSize.Tall
-        Me.MetroLabel1.Location = New System.Drawing.Point(23, 60)
-        Me.MetroLabel1.Name = "MetroLabel1"
-        Me.MetroLabel1.Size = New System.Drawing.Size(67, 25)
-        Me.MetroLabel1.TabIndex = 3
-        Me.MetroLabel1.Text = "Search:"
+        Me.StaffTableAdapter.ClearBeforeFill = True
         '
         'txtSearchBox
         '
@@ -87,7 +49,7 @@ Partial Class DisplayItem
         Me.txtSearchBox.CustomButton.Visible = False
         Me.txtSearchBox.FontSize = MetroFramework.MetroTextBoxSize.Medium
         Me.txtSearchBox.Lines = New String(-1) {}
-        Me.txtSearchBox.Location = New System.Drawing.Point(96, 60)
+        Me.txtSearchBox.Location = New System.Drawing.Point(96, 63)
         Me.txtSearchBox.MaxLength = 32767
         Me.txtSearchBox.Name = "txtSearchBox"
         Me.txtSearchBox.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -97,34 +59,51 @@ Partial Class DisplayItem
         Me.txtSearchBox.SelectionStart = 0
         Me.txtSearchBox.ShortcutsEnabled = True
         Me.txtSearchBox.Size = New System.Drawing.Size(235, 30)
-        Me.txtSearchBox.TabIndex = 4
+        Me.txtSearchBox.TabIndex = 7
         Me.txtSearchBox.UseSelectable = True
         Me.txtSearchBox.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
         Me.txtSearchBox.WaterMarkFont = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel)
         '
-        'DisplayItem
+        'MetroLabel1
+        '
+        Me.MetroLabel1.AutoSize = True
+        Me.MetroLabel1.FontSize = MetroFramework.MetroLabelSize.Tall
+        Me.MetroLabel1.Location = New System.Drawing.Point(23, 63)
+        Me.MetroLabel1.Name = "MetroLabel1"
+        Me.MetroLabel1.Size = New System.Drawing.Size(67, 25)
+        Me.MetroLabel1.TabIndex = 6
+        Me.MetroLabel1.Text = "Search:"
+        '
+        'itemDGV
+        '
+        Me.itemDGV.AllowUserToResizeColumns = False
+        Me.itemDGV.AllowUserToResizeRows = False
+        Me.itemDGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.itemDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.itemDGV.Location = New System.Drawing.Point(23, 109)
+        Me.itemDGV.Name = "itemDGV"
+        Me.itemDGV.Size = New System.Drawing.Size(851, 331)
+        Me.itemDGV.TabIndex = 5
+        '
+        'DisplayStaff
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(897, 460)
+        Me.ClientSize = New System.Drawing.Size(902, 463)
         Me.Controls.Add(Me.txtSearchBox)
         Me.Controls.Add(Me.MetroLabel1)
-        Me.Controls.Add(Me.lblCategory)
-        Me.Controls.Add(Me.cmbCategory)
         Me.Controls.Add(Me.itemDGV)
         Me.MaximizeBox = False
-        Me.Name = "DisplayItem"
+        Me.Name = "DisplayStaff"
         Me.Resizable = False
-        Me.Text = "Display Item"
+        Me.Text = "Employee Details"
         CType(Me.itemDGV, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents itemDGV As DataGridView
-    Friend WithEvents cmbCategory As MetroFramework.Controls.MetroComboBox
-    Friend WithEvents lblCategory As MetroFramework.Controls.MetroLabel
-    Friend WithEvents MetroLabel1 As MetroFramework.Controls.MetroLabel
+    Friend WithEvents StaffTableAdapter As EconsaveDBDataSetTableAdapters.StaffTableAdapter
     Friend WithEvents txtSearchBox As MetroFramework.Controls.MetroTextBox
+    Friend WithEvents MetroLabel1 As MetroFramework.Controls.MetroLabel
+    Friend WithEvents itemDGV As DataGridView
 End Class

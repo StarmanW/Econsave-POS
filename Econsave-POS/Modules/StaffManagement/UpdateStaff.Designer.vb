@@ -23,232 +23,253 @@ Partial Class UpdateStaff
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Me.lblSearchKey = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.lblstaffid = New System.Windows.Forms.Label()
-        Me.lblstaffname = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.StaffBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.EconsaveDBDataSet = New Econsave_POS.EconsaveDBDataSet()
-        Me.StaffTableAdapter = New Econsave_POS.EconsaveDBDataSetTableAdapters.StaffTableAdapter()
-        Me.lblshowname = New System.Windows.Forms.Label()
-        Me.lblShwID = New System.Windows.Forms.Label()
-        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.EntityCommand1 = New System.Data.Entity.Core.EntityClient.EntityCommand()
-        Me.StaffIDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.NameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.PasswordDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.RegisteredOnDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.LastLoginDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.PositionDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.StaffBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.EconsaveDBDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.btnExit = New MetroFramework.Controls.MetroButton()
+        Me.btnUpdateItem = New MetroFramework.Controls.MetroButton()
+        Me.radManager = New MetroFramework.Controls.MetroRadioButton()
+        Me.txtPassword = New MetroFramework.Controls.MetroTextBox()
+        Me.txtStaffName = New MetroFramework.Controls.MetroTextBox()
+        Me.txtStaffID = New MetroFramework.Controls.MetroTextBox()
+        Me.lblPrice = New System.Windows.Forms.Label()
+        Me.lblDescription = New System.Windows.Forms.Label()
+        Me.lblItemName = New System.Windows.Forms.Label()
+        Me.lblStaffID = New System.Windows.Forms.Label()
+        Me.radCashier = New MetroFramework.Controls.MetroRadioButton()
+        Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
+        CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'lblSearchKey
+        'btnExit
         '
-        Me.lblSearchKey.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblSearchKey.Location = New System.Drawing.Point(217, 119)
-        Me.lblSearchKey.Name = "lblSearchKey"
-        Me.lblSearchKey.Size = New System.Drawing.Size(69, 23)
-        Me.lblSearchKey.TabIndex = 0
-        Me.lblSearchKey.Text = "Search : "
+        Me.btnExit.BackColor = System.Drawing.Color.Red
+        Me.btnExit.DialogResult = System.Windows.Forms.DialogResult.Cancel
+        Me.btnExit.FontSize = MetroFramework.MetroButtonSize.Medium
+        Me.btnExit.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.btnExit.Location = New System.Drawing.Point(292, 282)
+        Me.btnExit.Name = "btnExit"
+        Me.btnExit.Size = New System.Drawing.Size(184, 43)
+        Me.btnExit.TabIndex = 15
+        Me.btnExit.Text = "E&xit"
+        Me.btnExit.Theme = MetroFramework.MetroThemeStyle.Light
+        Me.btnExit.UseCustomBackColor = True
+        Me.btnExit.UseCustomForeColor = True
+        Me.btnExit.UseSelectable = True
         '
-        'TextBox1
+        'btnUpdateItem
         '
-        Me.TextBox1.Location = New System.Drawing.Point(292, 112)
-        Me.TextBox1.Multiline = True
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(202, 30)
-        Me.TextBox1.TabIndex = 1
-        Me.TextBox1.Tag = ""
+        Me.btnUpdateItem.BackColor = System.Drawing.Color.Green
+        Me.btnUpdateItem.DialogResult = System.Windows.Forms.DialogResult.Cancel
+        Me.btnUpdateItem.FontSize = MetroFramework.MetroButtonSize.Medium
+        Me.btnUpdateItem.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.btnUpdateItem.Location = New System.Drawing.Point(62, 282)
+        Me.btnUpdateItem.Name = "btnUpdateItem"
+        Me.btnUpdateItem.Size = New System.Drawing.Size(185, 43)
+        Me.btnUpdateItem.TabIndex = 14
+        Me.btnUpdateItem.Text = "&Update Details"
+        Me.btnUpdateItem.UseCustomBackColor = True
+        Me.btnUpdateItem.UseCustomForeColor = True
+        Me.btnUpdateItem.UseSelectable = True
         '
-        'lblstaffid
+        'radManager
         '
-        Me.lblstaffid.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblstaffid.Location = New System.Drawing.Point(16, 175)
-        Me.lblstaffid.Name = "lblstaffid"
-        Me.lblstaffid.Size = New System.Drawing.Size(80, 23)
-        Me.lblstaffid.TabIndex = 2
-        Me.lblstaffid.Text = "Staff ID : "
+        Me.radManager.AutoSize = True
+        Me.radManager.FontSize = MetroFramework.MetroCheckBoxSize.Tall
+        Me.radManager.Location = New System.Drawing.Point(143, 240)
+        Me.radManager.Name = "radManager"
+        Me.radManager.Size = New System.Drawing.Size(98, 25)
+        Me.radManager.TabIndex = 10
+        Me.radManager.Text = "Manager"
+        Me.radManager.UseSelectable = True
         '
-        'lblstaffname
+        'txtPassword
         '
-        Me.lblstaffname.AutoSize = True
-        Me.lblstaffname.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblstaffname.Location = New System.Drawing.Point(23, 232)
-        Me.lblstaffname.Name = "lblstaffname"
-        Me.lblstaffname.Size = New System.Drawing.Size(61, 19)
-        Me.lblstaffname.TabIndex = 3
-        Me.lblstaffname.Text = "Name :"
         '
-        'Label1
         '
-        Me.Label1.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(16, 275)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(80, 23)
-        Me.Label1.TabIndex = 4
-        Me.Label1.Text = "Psotion : "
         '
-        'DataGridView1
+        Me.txtPassword.CustomButton.Image = Nothing
+        Me.txtPassword.CustomButton.Location = New System.Drawing.Point(315, 2)
+        Me.txtPassword.CustomButton.Name = ""
+        Me.txtPassword.CustomButton.Size = New System.Drawing.Size(25, 25)
+        Me.txtPassword.CustomButton.Style = MetroFramework.MetroColorStyle.Blue
+        Me.txtPassword.CustomButton.TabIndex = 1
+        Me.txtPassword.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
+        Me.txtPassword.CustomButton.UseSelectable = True
+        Me.txtPassword.CustomButton.Visible = False
+        Me.txtPassword.FontSize = MetroFramework.MetroTextBoxSize.Medium
+        Me.txtPassword.Lines = New String(-1) {}
+        Me.txtPassword.Location = New System.Drawing.Point(133, 179)
+        Me.txtPassword.MaxLength = 32767
+        Me.txtPassword.Name = "txtPassword"
+        Me.txtPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.txtPassword.ScrollBars = System.Windows.Forms.ScrollBars.None
+        Me.txtPassword.SelectedText = ""
+        Me.txtPassword.SelectionLength = 0
+        Me.txtPassword.SelectionStart = 0
+        Me.txtPassword.ShortcutsEnabled = True
+        Me.txtPassword.Size = New System.Drawing.Size(343, 30)
+        Me.txtPassword.TabIndex = 9
+        Me.txtPassword.UseSelectable = True
+        Me.txtPassword.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
+        Me.txtPassword.WaterMarkFont = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel)
         '
-        Me.DataGridView1.AllowUserToAddRows = False
-        Me.DataGridView1.AllowUserToDeleteRows = False
-        Me.DataGridView1.AutoGenerateColumns = False
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.StaffIDDataGridViewTextBoxColumn, Me.NameDataGridViewTextBoxColumn, Me.PasswordDataGridViewTextBoxColumn, Me.RegisteredOnDataGridViewTextBoxColumn, Me.LastLoginDataGridViewTextBoxColumn, Me.PositionDataGridViewTextBoxColumn})
-        Me.DataGridView1.DataSource = Me.StaffBindingSource
-        Me.DataGridView1.Location = New System.Drawing.Point(11, 325)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(646, 181)
-        Me.DataGridView1.TabIndex = 5
+        'txtStaffName
         '
-        'StaffBindingSource
         '
-        Me.StaffBindingSource.DataMember = "Staff"
-        Me.StaffBindingSource.DataSource = Me.EconsaveDBDataSet
         '
-        'EconsaveDBDataSet
         '
-        Me.EconsaveDBDataSet.DataSetName = "EconsaveDBDataSet"
-        Me.EconsaveDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        Me.txtStaffName.CustomButton.Image = Nothing
+        Me.txtStaffName.CustomButton.Location = New System.Drawing.Point(315, 2)
+        Me.txtStaffName.CustomButton.Name = ""
+        Me.txtStaffName.CustomButton.Size = New System.Drawing.Size(25, 25)
+        Me.txtStaffName.CustomButton.Style = MetroFramework.MetroColorStyle.Blue
+        Me.txtStaffName.CustomButton.TabIndex = 1
+        Me.txtStaffName.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
+        Me.txtStaffName.CustomButton.UseSelectable = True
+        Me.txtStaffName.CustomButton.Visible = False
+        Me.txtStaffName.FontSize = MetroFramework.MetroTextBoxSize.Medium
+        Me.txtStaffName.Lines = New String(-1) {}
+        Me.txtStaffName.Location = New System.Drawing.Point(133, 124)
+        Me.txtStaffName.MaxLength = 32767
+        Me.txtStaffName.Name = "txtStaffName"
+        Me.txtStaffName.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txtStaffName.ScrollBars = System.Windows.Forms.ScrollBars.None
+        Me.txtStaffName.SelectedText = ""
+        Me.txtStaffName.SelectionLength = 0
+        Me.txtStaffName.SelectionStart = 0
+        Me.txtStaffName.ShortcutsEnabled = True
+        Me.txtStaffName.Size = New System.Drawing.Size(343, 30)
+        Me.txtStaffName.TabIndex = 8
+        Me.txtStaffName.UseSelectable = True
+        Me.txtStaffName.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
+        Me.txtStaffName.WaterMarkFont = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel)
         '
-        'StaffTableAdapter
+        'txtStaffID
         '
-        Me.StaffTableAdapter.ClearBeforeFill = True
         '
-        'lblshowname
         '
-        Me.lblshowname.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.lblshowname.Location = New System.Drawing.Point(114, 219)
-        Me.lblshowname.Name = "lblshowname"
-        Me.lblshowname.Size = New System.Drawing.Size(161, 32)
-        Me.lblshowname.TabIndex = 6
         '
-        'lblShwID
+        Me.txtStaffID.CustomButton.Image = Nothing
+        Me.txtStaffID.CustomButton.Location = New System.Drawing.Point(315, 2)
+        Me.txtStaffID.CustomButton.Name = ""
+        Me.txtStaffID.CustomButton.Size = New System.Drawing.Size(25, 25)
+        Me.txtStaffID.CustomButton.Style = MetroFramework.MetroColorStyle.Blue
+        Me.txtStaffID.CustomButton.TabIndex = 1
+        Me.txtStaffID.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
+        Me.txtStaffID.CustomButton.UseSelectable = True
+        Me.txtStaffID.CustomButton.Visible = False
+        Me.txtStaffID.FontSize = MetroFramework.MetroTextBoxSize.Medium
+        Me.txtStaffID.Lines = New String(-1) {}
+        Me.txtStaffID.Location = New System.Drawing.Point(133, 76)
+        Me.txtStaffID.MaxLength = 32767
+        Me.txtStaffID.Name = "txtStaffID"
+        Me.txtStaffID.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txtStaffID.ReadOnly = True
+        Me.txtStaffID.ScrollBars = System.Windows.Forms.ScrollBars.None
+        Me.txtStaffID.SelectedText = ""
+        Me.txtStaffID.SelectionLength = 0
+        Me.txtStaffID.SelectionStart = 0
+        Me.txtStaffID.ShortcutsEnabled = True
+        Me.txtStaffID.Size = New System.Drawing.Size(343, 30)
+        Me.txtStaffID.TabIndex = 1
+        Me.txtStaffID.UseSelectable = True
+        Me.txtStaffID.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
+        Me.txtStaffID.WaterMarkFont = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel)
         '
-        Me.lblShwID.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.lblShwID.Location = New System.Drawing.Point(115, 169)
-        Me.lblShwID.Name = "lblShwID"
-        Me.lblShwID.Size = New System.Drawing.Size(160, 29)
-        Me.lblShwID.TabIndex = 7
+        'lblPrice
         '
-        'MenuStrip1
+        Me.lblPrice.Anchor = System.Windows.Forms.AnchorStyles.Right
+        Me.lblPrice.AutoSize = True
+        Me.lblPrice.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblPrice.Location = New System.Drawing.Point(58, 240)
+        Me.lblPrice.Name = "lblPrice"
+        Me.lblPrice.Size = New System.Drawing.Size(69, 20)
+        Me.lblPrice.TabIndex = 7
+        Me.lblPrice.Text = "Position:"
         '
-        Me.MenuStrip1.AutoSize = False
-        Me.MenuStrip1.Location = New System.Drawing.Point(20, 60)
-        Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(625, 29)
-        Me.MenuStrip1.TabIndex = 8
-        Me.MenuStrip1.Text = "MenuStrip1"
+        'lblDescription
         '
-        'TextBox2
+        Me.lblDescription.Anchor = System.Windows.Forms.AnchorStyles.Right
+        Me.lblDescription.AutoSize = True
+        Me.lblDescription.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblDescription.Location = New System.Drawing.Point(45, 179)
+        Me.lblDescription.Name = "lblDescription"
+        Me.lblDescription.Size = New System.Drawing.Size(82, 20)
+        Me.lblDescription.TabIndex = 6
+        Me.lblDescription.Text = "Password:"
         '
-        Me.TextBox2.Location = New System.Drawing.Point(114, 275)
-        Me.TextBox2.Multiline = True
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(161, 32)
-        Me.TextBox2.TabIndex = 9
+        'lblItemName
         '
-        'EntityCommand1
+        Me.lblItemName.Anchor = System.Windows.Forms.AnchorStyles.Right
+        Me.lblItemName.AutoSize = True
+        Me.lblItemName.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblItemName.Location = New System.Drawing.Point(33, 124)
+        Me.lblItemName.Name = "lblItemName"
+        Me.lblItemName.Size = New System.Drawing.Size(94, 20)
+        Me.lblItemName.TabIndex = 5
+        Me.lblItemName.Text = "Staff Name:"
         '
-        Me.EntityCommand1.CommandTimeout = 0
-        Me.EntityCommand1.CommandTree = Nothing
-        Me.EntityCommand1.Connection = Nothing
-        Me.EntityCommand1.EnablePlanCaching = True
-        Me.EntityCommand1.Transaction = Nothing
+        'lblStaffID
         '
-        'StaffIDDataGridViewTextBoxColumn
+        Me.lblStaffID.Anchor = System.Windows.Forms.AnchorStyles.Right
+        Me.lblStaffID.AutoSize = True
+        Me.lblStaffID.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblStaffID.Location = New System.Drawing.Point(58, 76)
+        Me.lblStaffID.Name = "lblStaffID"
+        Me.lblStaffID.Size = New System.Drawing.Size(69, 20)
+        Me.lblStaffID.TabIndex = 4
+        Me.lblStaffID.Text = "Staff ID:"
         '
-        Me.StaffIDDataGridViewTextBoxColumn.DataPropertyName = "staffID"
-        Me.StaffIDDataGridViewTextBoxColumn.HeaderText = "staffID"
-        Me.StaffIDDataGridViewTextBoxColumn.Name = "StaffIDDataGridViewTextBoxColumn"
-        Me.StaffIDDataGridViewTextBoxColumn.ReadOnly = True
+        'radCashier
         '
-        'NameDataGridViewTextBoxColumn
+        Me.radCashier.AutoSize = True
+        Me.radCashier.FontSize = MetroFramework.MetroCheckBoxSize.Tall
+        Me.radCashier.Location = New System.Drawing.Point(247, 240)
+        Me.radCashier.Name = "radCashier"
+        Me.radCashier.Size = New System.Drawing.Size(85, 25)
+        Me.radCashier.TabIndex = 11
+        Me.radCashier.Text = "Cashier"
+        Me.radCashier.UseSelectable = True
         '
-        Me.NameDataGridViewTextBoxColumn.DataPropertyName = "name"
-        Me.NameDataGridViewTextBoxColumn.HeaderText = "name"
-        Me.NameDataGridViewTextBoxColumn.Name = "NameDataGridViewTextBoxColumn"
-        Me.NameDataGridViewTextBoxColumn.ReadOnly = True
+        'ErrorProvider1
         '
-        'PasswordDataGridViewTextBoxColumn
-        '
-        Me.PasswordDataGridViewTextBoxColumn.DataPropertyName = "password"
-        Me.PasswordDataGridViewTextBoxColumn.HeaderText = "password"
-        Me.PasswordDataGridViewTextBoxColumn.Name = "PasswordDataGridViewTextBoxColumn"
-        Me.PasswordDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'RegisteredOnDataGridViewTextBoxColumn
-        '
-        Me.RegisteredOnDataGridViewTextBoxColumn.DataPropertyName = "registeredOn"
-        Me.RegisteredOnDataGridViewTextBoxColumn.HeaderText = "registeredOn"
-        Me.RegisteredOnDataGridViewTextBoxColumn.Name = "RegisteredOnDataGridViewTextBoxColumn"
-        Me.RegisteredOnDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'LastLoginDataGridViewTextBoxColumn
-        '
-        Me.LastLoginDataGridViewTextBoxColumn.DataPropertyName = "lastLogin"
-        Me.LastLoginDataGridViewTextBoxColumn.HeaderText = "lastLogin"
-        Me.LastLoginDataGridViewTextBoxColumn.Name = "LastLoginDataGridViewTextBoxColumn"
-        Me.LastLoginDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'PositionDataGridViewTextBoxColumn
-        '
-        Me.PositionDataGridViewTextBoxColumn.DataPropertyName = "position"
-        Me.PositionDataGridViewTextBoxColumn.HeaderText = "position"
-        Me.PositionDataGridViewTextBoxColumn.Name = "PositionDataGridViewTextBoxColumn"
-        Me.PositionDataGridViewTextBoxColumn.ReadOnly = True
+        Me.ErrorProvider1.ContainerControl = Me
         '
         'UpdateStaff
         '
+        Me.AcceptButton = Me.btnUpdateItem
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(665, 546)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.lblShwID)
-        Me.Controls.Add(Me.lblshowname)
-        Me.Controls.Add(Me.DataGridView1)
-        Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.lblstaffname)
-        Me.Controls.Add(Me.lblstaffid)
-        Me.Controls.Add(Me.TextBox1)
-        Me.Controls.Add(Me.lblSearchKey)
-        Me.Controls.Add(Me.MenuStrip1)
-        Me.MainMenuStrip = Me.MenuStrip1
+        Me.CancelButton = Me.btnExit
+        Me.ClientSize = New System.Drawing.Size(518, 349)
+        Me.Controls.Add(Me.radManager)
+        Me.Controls.Add(Me.lblPrice)
+        Me.Controls.Add(Me.lblDescription)
+        Me.Controls.Add(Me.txtPassword)
+        Me.Controls.Add(Me.lblItemName)
+        Me.Controls.Add(Me.lblStaffID)
+        Me.Controls.Add(Me.radCashier)
+        Me.Controls.Add(Me.btnExit)
+        Me.Controls.Add(Me.txtStaffName)
+        Me.Controls.Add(Me.txtStaffID)
+        Me.Controls.Add(Me.btnUpdateItem)
+        Me.MaximizeBox = False
         Me.Name = "UpdateStaff"
-        Me.Text = "Update Employee Details"
-        Me.TextAlign = MetroFramework.Forms.MetroFormTextAlign.Center
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.StaffBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.EconsaveDBDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Resizable = False
+        Me.Text = "Update Staff Details"
+        CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents lblSearchKey As Label
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents lblstaffid As Label
-    Friend WithEvents lblstaffname As Label
-    Friend WithEvents Label1 As Label
-    Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents EconsaveDBDataSet As EconsaveDBDataSet
-    Friend WithEvents StaffBindingSource As BindingSource
-    Friend WithEvents StaffTableAdapter As EconsaveDBDataSetTableAdapters.StaffTableAdapter
-    Friend WithEvents lblshowname As Label
-    Friend WithEvents lblShwID As Label
-    Friend WithEvents MenuStrip1 As MenuStrip
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents EntityCommand1 As Entity.Core.EntityClient.EntityCommand
-    Friend WithEvents StaffIDDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents NameDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents PasswordDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents RegisteredOnDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents LastLoginDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents PositionDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents btnExit As MetroFramework.Controls.MetroButton
+    Friend WithEvents btnUpdateItem As MetroFramework.Controls.MetroButton
+    Friend WithEvents radManager As MetroFramework.Controls.MetroRadioButton
+    Friend WithEvents txtPassword As MetroFramework.Controls.MetroTextBox
+    Friend WithEvents txtStaffName As MetroFramework.Controls.MetroTextBox
+    Friend WithEvents txtStaffID As MetroFramework.Controls.MetroTextBox
+    Friend WithEvents lblPrice As Label
+    Friend WithEvents lblDescription As Label
+    Friend WithEvents lblItemName As Label
+    Friend WithEvents lblStaffID As Label
+    Friend WithEvents radCashier As MetroFramework.Controls.MetroRadioButton
+    Friend WithEvents ErrorProvider1 As ErrorProvider
 End Class

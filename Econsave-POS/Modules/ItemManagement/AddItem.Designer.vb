@@ -39,10 +39,10 @@ Partial Class AddItem
         Me.lblItemName = New System.Windows.Forms.Label()
         Me.lblItemID = New System.Windows.Forms.Label()
         Me.numStockQuantity = New System.Windows.Forms.NumericUpDown()
-        Me.txtItemName = New MetroFramework.Controls.MetroTextBox()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
-        Me.txtDescription = New MetroFramework.Controls.MetroTextBox()
+        Me.txtItemName = New MetroFramework.Controls.MetroTextBox()
         Me.cmbCategory = New MetroFramework.Controls.MetroComboBox()
+        Me.txtDescription = New MetroFramework.Controls.MetroTextBox()
         Me.MetroComboBox1 = New MetroFramework.Controls.MetroComboBox()
         Me.btnAddItem = New MetroFramework.Controls.MetroButton()
         Me.btnClear = New MetroFramework.Controls.MetroButton()
@@ -81,13 +81,15 @@ Partial Class AddItem
         'AddNewItemToolStripMenuItem
         '
         Me.AddNewItemToolStripMenuItem.Name = "AddNewItemToolStripMenuItem"
-        Me.AddNewItemToolStripMenuItem.Size = New System.Drawing.Size(179, 24)
+        Me.AddNewItemToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.A), System.Windows.Forms.Keys)
+        Me.AddNewItemToolStripMenuItem.Size = New System.Drawing.Size(230, 24)
         Me.AddNewItemToolStripMenuItem.Text = "Add New Item"
         '
         'DisplayItemListToolStripMenuItem
         '
         Me.DisplayItemListToolStripMenuItem.Name = "DisplayItemListToolStripMenuItem"
-        Me.DisplayItemListToolStripMenuItem.Size = New System.Drawing.Size(179, 24)
+        Me.DisplayItemListToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.D), System.Windows.Forms.Keys)
+        Me.DisplayItemListToolStripMenuItem.Size = New System.Drawing.Size(230, 24)
         Me.DisplayItemListToolStripMenuItem.Text = "Display Item List"
         '
         'ProfileToolStripMenuItem
@@ -107,9 +109,9 @@ Partial Class AddItem
         '
         '
         Me.txtItemID.CustomButton.Image = Nothing
-        Me.txtItemID.CustomButton.Location = New System.Drawing.Point(272, 2)
+        Me.txtItemID.CustomButton.Location = New System.Drawing.Point(363, 2)
         Me.txtItemID.CustomButton.Name = ""
-        Me.txtItemID.CustomButton.Size = New System.Drawing.Size(14, 15)
+        Me.txtItemID.CustomButton.Size = New System.Drawing.Size(19, 19)
         Me.txtItemID.CustomButton.Style = MetroFramework.MetroColorStyle.Blue
         Me.txtItemID.CustomButton.TabIndex = 1
         Me.txtItemID.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
@@ -128,8 +130,7 @@ Partial Class AddItem
         Me.txtItemID.SelectionStart = 0
         Me.txtItemID.ShortcutsEnabled = True
         Me.txtItemID.Size = New System.Drawing.Size(385, 24)
-        Me.txtItemID.TabIndex = 6
-        Me.txtItemID.TabStop = False
+        Me.txtItemID.TabIndex = 1
         Me.txtItemID.UseSelectable = True
         Me.txtItemID.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
         Me.txtItemID.WaterMarkFont = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel)
@@ -143,7 +144,7 @@ Partial Class AddItem
         Me.numPrice.Maximum = New Decimal(New Integer() {100000, 0, 0, 0})
         Me.numPrice.Name = "numPrice"
         Me.numPrice.Size = New System.Drawing.Size(384, 26)
-        Me.numPrice.TabIndex = 13
+        Me.numPrice.TabIndex = 4
         Me.numPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'lblCategory
@@ -220,41 +221,8 @@ Partial Class AddItem
         Me.numStockQuantity.Maximum = New Decimal(New Integer() {100000, 0, 0, 0})
         Me.numStockQuantity.Name = "numStockQuantity"
         Me.numStockQuantity.Size = New System.Drawing.Size(384, 26)
-        Me.numStockQuantity.TabIndex = 14
+        Me.numStockQuantity.TabIndex = 5
         Me.numStockQuantity.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-        '
-        'txtItemName
-        '
-        '
-        '
-        '
-        Me.txtItemName.CustomButton.Image = Nothing
-        Me.txtItemName.CustomButton.Location = New System.Drawing.Point(271, 1)
-        Me.txtItemName.CustomButton.Name = ""
-        Me.txtItemName.CustomButton.Size = New System.Drawing.Size(17, 19)
-        Me.txtItemName.CustomButton.Style = MetroFramework.MetroColorStyle.Blue
-        Me.txtItemName.CustomButton.TabIndex = 1
-        Me.txtItemName.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
-        Me.txtItemName.CustomButton.UseSelectable = True
-        Me.txtItemName.CustomButton.Visible = False
-        Me.txtItemName.FontSize = MetroFramework.MetroTextBoxSize.Medium
-        Me.txtItemName.Lines = New String(-1) {}
-        Me.txtItemName.Location = New System.Drawing.Point(125, 34)
-        Me.txtItemName.MaxLength = 32767
-        Me.txtItemName.Name = "txtItemName"
-        Me.txtItemName.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.txtItemName.ReadOnly = True
-        Me.txtItemName.ScrollBars = System.Windows.Forms.ScrollBars.None
-        Me.txtItemName.SelectedText = ""
-        Me.txtItemName.SelectionLength = 0
-        Me.txtItemName.SelectionStart = 0
-        Me.txtItemName.ShortcutsEnabled = True
-        Me.txtItemName.Size = New System.Drawing.Size(385, 25)
-        Me.txtItemName.TabIndex = 16
-        Me.txtItemName.TabStop = False
-        Me.txtItemName.UseSelectable = True
-        Me.txtItemName.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
-        Me.txtItemName.WaterMarkFont = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel)
         '
         'TableLayoutPanel1
         '
@@ -262,7 +230,6 @@ Partial Class AddItem
         Me.TableLayoutPanel1.ColumnCount = 2
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 22.62119!))
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 77.37881!))
-        Me.TableLayoutPanel1.Controls.Add(Me.txtDescription, 1, 2)
         Me.TableLayoutPanel1.Controls.Add(Me.txtItemName, 1, 1)
         Me.TableLayoutPanel1.Controls.Add(Me.numStockQuantity, 1, 4)
         Me.TableLayoutPanel1.Controls.Add(Me.lblItemID, 0, 0)
@@ -274,6 +241,7 @@ Partial Class AddItem
         Me.TableLayoutPanel1.Controls.Add(Me.numPrice, 1, 3)
         Me.TableLayoutPanel1.Controls.Add(Me.txtItemID, 1, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.cmbCategory, 1, 5)
+        Me.TableLayoutPanel1.Controls.Add(Me.txtDescription, 1, 2)
         Me.TableLayoutPanel1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TableLayoutPanel1.Location = New System.Drawing.Point(21, 104)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
@@ -287,15 +255,57 @@ Partial Class AddItem
         Me.TableLayoutPanel1.Size = New System.Drawing.Size(543, 312)
         Me.TableLayoutPanel1.TabIndex = 2
         '
+        'txtItemName
+        '
+        '
+        '
+        '
+        Me.txtItemName.CustomButton.Image = Nothing
+        Me.txtItemName.CustomButton.Location = New System.Drawing.Point(361, 1)
+        Me.txtItemName.CustomButton.Name = ""
+        Me.txtItemName.CustomButton.Size = New System.Drawing.Size(23, 23)
+        Me.txtItemName.CustomButton.Style = MetroFramework.MetroColorStyle.Blue
+        Me.txtItemName.CustomButton.TabIndex = 1
+        Me.txtItemName.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
+        Me.txtItemName.CustomButton.UseSelectable = True
+        Me.txtItemName.CustomButton.Visible = False
+        Me.txtItemName.FontSize = MetroFramework.MetroTextBoxSize.Medium
+        Me.txtItemName.Lines = New String(-1) {}
+        Me.txtItemName.Location = New System.Drawing.Point(125, 34)
+        Me.txtItemName.MaxLength = 32767
+        Me.txtItemName.Name = "txtItemName"
+        Me.txtItemName.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txtItemName.ScrollBars = System.Windows.Forms.ScrollBars.None
+        Me.txtItemName.SelectedText = ""
+        Me.txtItemName.SelectionLength = 0
+        Me.txtItemName.SelectionStart = 0
+        Me.txtItemName.ShortcutsEnabled = True
+        Me.txtItemName.Size = New System.Drawing.Size(385, 25)
+        Me.txtItemName.TabIndex = 2
+        Me.txtItemName.UseSelectable = True
+        Me.txtItemName.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
+        Me.txtItemName.WaterMarkFont = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel)
+        '
+        'cmbCategory
+        '
+        Me.cmbCategory.Anchor = System.Windows.Forms.AnchorStyles.Left
+        Me.cmbCategory.FormattingEnabled = True
+        Me.cmbCategory.ItemHeight = 23
+        Me.cmbCategory.Location = New System.Drawing.Point(125, 274)
+        Me.cmbCategory.Name = "cmbCategory"
+        Me.cmbCategory.Size = New System.Drawing.Size(384, 29)
+        Me.cmbCategory.TabIndex = 6
+        Me.cmbCategory.UseSelectable = True
+        '
         'txtDescription
         '
         '
         '
         '
         Me.txtDescription.CustomButton.Image = Nothing
-        Me.txtDescription.CustomButton.Location = New System.Drawing.Point(208, 2)
+        Me.txtDescription.CustomButton.Location = New System.Drawing.Point(277, 2)
         Me.txtDescription.CustomButton.Name = ""
-        Me.txtDescription.CustomButton.Size = New System.Drawing.Size(79, 85)
+        Me.txtDescription.CustomButton.Size = New System.Drawing.Size(105, 105)
         Me.txtDescription.CustomButton.Style = MetroFramework.MetroColorStyle.Blue
         Me.txtDescription.CustomButton.TabIndex = 1
         Me.txtDescription.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
@@ -308,29 +318,16 @@ Partial Class AddItem
         Me.txtDescription.Multiline = True
         Me.txtDescription.Name = "txtDescription"
         Me.txtDescription.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.txtDescription.ReadOnly = True
         Me.txtDescription.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
         Me.txtDescription.SelectedText = ""
         Me.txtDescription.SelectionLength = 0
         Me.txtDescription.SelectionStart = 0
         Me.txtDescription.ShortcutsEnabled = True
         Me.txtDescription.Size = New System.Drawing.Size(385, 110)
-        Me.txtDescription.TabIndex = 17
-        Me.txtDescription.TabStop = False
+        Me.txtDescription.TabIndex = 3
         Me.txtDescription.UseSelectable = True
         Me.txtDescription.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
         Me.txtDescription.WaterMarkFont = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel)
-        '
-        'cmbCategory
-        '
-        Me.cmbCategory.Anchor = System.Windows.Forms.AnchorStyles.Left
-        Me.cmbCategory.FormattingEnabled = True
-        Me.cmbCategory.ItemHeight = 23
-        Me.cmbCategory.Location = New System.Drawing.Point(125, 273)
-        Me.cmbCategory.Name = "cmbCategory"
-        Me.cmbCategory.Size = New System.Drawing.Size(384, 29)
-        Me.cmbCategory.TabIndex = 18
-        Me.cmbCategory.UseSelectable = True
         '
         'MetroComboBox1
         '
@@ -373,6 +370,7 @@ Partial Class AddItem
         '
         'AddItem
         '
+        Me.AcceptButton = Me.btnAddItem
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange
@@ -408,7 +406,6 @@ Partial Class AddItem
     Friend WithEvents ErrorProvider1 As ErrorProvider
     Friend WithEvents MetroComboBox1 As MetroFramework.Controls.MetroComboBox
     Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
-    Friend WithEvents txtItemName As MetroFramework.Controls.MetroTextBox
     Friend WithEvents numStockQuantity As NumericUpDown
     Friend WithEvents lblItemID As Label
     Friend WithEvents lblItemName As Label
@@ -422,4 +419,5 @@ Partial Class AddItem
     Friend WithEvents btnAddItem As MetroFramework.Controls.MetroButton
     Friend WithEvents btnClear As MetroFramework.Controls.MetroButton
     Friend WithEvents txtDescription As MetroFramework.Controls.MetroTextBox
+    Friend WithEvents txtItemName As MetroFramework.Controls.MetroTextBox
 End Class
