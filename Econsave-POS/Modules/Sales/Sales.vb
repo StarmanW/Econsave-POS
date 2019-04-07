@@ -45,8 +45,8 @@
 
         DataGridView1.DataSource = rs
 
-        DataGridView1.Columns(0).Width = 50
-        DataGridView1.Columns(1).Width = 180
+        DataGridView1.Columns(0).Width = 60
+        DataGridView1.Columns(1).Width = 170
         DataGridView1.Columns(2).Width = 95
         DataGridView1.Columns(3).Width = 65
 
@@ -64,8 +64,8 @@
 
         DataGridView2.DataSource = dt
 
-        DataGridView2.Columns(0).Width = 50
-        DataGridView2.Columns(1).Width = 140
+        DataGridView2.Columns(0).Width = 60
+        DataGridView2.Columns(1).Width = 130
         DataGridView2.Columns(2).Width = 65
         DataGridView2.Columns(3).Width = 85
         DataGridView2.Columns(4).Width = 85
@@ -73,6 +73,8 @@
         DataGridView2.Columns(1).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
         'DataGridView2.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells
         'DataGridView2.AutoSizeColumnsMode = CType(DataGridViewAutoSizeColumnMode.Fill, DataGridViewAutoSizeColumnsMode)
+
+        MetroLabel4.Text = transaction.transactionID
     End Sub
 
     Private Sub DataGridView1_CellMouseDoubleClick(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellMouseEventArgs) Handles DataGridView1.CellMouseDoubleClick
@@ -204,8 +206,8 @@
         DataGridView2.DataSource = vbNull
         DataGridView2.DataSource = rs
 
-        DataGridView2.Columns(0).Width = 50
-        DataGridView2.Columns(1).Width = 140
+        DataGridView2.Columns(0).Width = 60
+        DataGridView2.Columns(1).Width = 130
         DataGridView2.Columns(2).Width = 65
         DataGridView2.Columns(3).Width = 85
         DataGridView2.Columns(4).Width = 85
