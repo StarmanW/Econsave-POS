@@ -1,4 +1,4 @@
-﻿Partial Class EconsaveDBDataSet
-    Partial Public Class ItemDataTable
-    End Class
+﻿
+
+Partial Public Class EconsaveDBDataSet
 End Class
