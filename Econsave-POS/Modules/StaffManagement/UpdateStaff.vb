@@ -17,7 +17,7 @@ Public Class UpdateStaff
 
         txtStaffID.Text = staff.staffID
         txtStaffName.Text = staff.name
-        If staff.position = 1 Then
+        If staff.position = "Cashier" Then
             radManager.Checked = True
         Else
             radCashier.Checked = True
@@ -44,9 +44,9 @@ Public Class UpdateStaff
 
                 ' Update position according to checked radio button 
                 If radManager.Checked Then
-                    staff.position = 1
+                    staff.position = "Manager"
                 Else
-                    staff.position = 2
+                    staff.position = "Cashier"
                 End If
 
                 ' Update item and save changes

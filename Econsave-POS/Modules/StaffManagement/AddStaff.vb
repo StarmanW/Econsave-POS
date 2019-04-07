@@ -42,9 +42,9 @@ Public Class AddStaff
                 regEmp.name = txtName.Text
                 regEmp.password = SHA.GenerateSHA256String(txtConfirmPassword.Text)
                 If radManager.Checked Then
-                    regEmp.position = 1
+                    regEmp.position = "Manager"
                 Else
-                    regEmp.position = 2
+                    regEmp.position = "Cashier"
                 End If
                 regEmp.registeredOn = DateTime.Now
                 ' Add new emp and save changes

@@ -50,7 +50,7 @@
       <Column Name="password" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
       <Column Name="registeredOn" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
       <Column Name="lastLogin" Type="System.DateTime" DbType="Date" CanBeNull="true" />
-      <Column Name="position" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="position" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
       <Association Name="Staff_Transaction" Member="Transactions" ThisKey="staffID" OtherKey="staffID" Type="Transaction" />
     </Type>
   </Table>

@@ -945,7 +945,7 @@ Partial Public Class Staff
 	
 	Private _lastLogin As System.Nullable(Of Date)
 	
-	Private _position As Integer
+	Private _position As String
 	
 	Private _Transactions As EntitySet(Of Transaction)
 	
@@ -976,7 +976,7 @@ Partial Public Class Staff
     End Sub
     Partial Private Sub OnlastLoginChanged()
     End Sub
-    Partial Private Sub OnpositionChanging(value As Integer)
+    Partial Private Sub OnpositionChanging(value As String)
     End Sub
     Partial Private Sub OnpositionChanged()
     End Sub
@@ -1069,14 +1069,13 @@ Partial Public Class Staff
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_position", DbType:="Int NOT NULL")>  _
-	Public Property position() As Integer
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_position", DbType:="VarChar(20) NOT NULL", CanBeNull:=false)>  _
+	Public Property position() As String
 		Get
 			Return Me._position
 		End Get
 		Set
-			If ((Me._position = value)  _
-						= false) Then
+			If (String.Equals(Me._position, value) = false) Then
 				Me.OnpositionChanging(value)
 				Me.SendPropertyChanging
 				Me._position = value

@@ -129,13 +129,6 @@
     <Compile Include="EconsaveDBDataSet.vb">
       <DependentUpon>EconsaveDBDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Form1.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.vb">
-      <DependentUpon>Form1.vb</DependentUpon>
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Modules\ItemManagement\AddItem.Designer.vb">
       <DependentUpon>AddItem.vb</DependentUpon>
     </Compile>
@@ -146,6 +139,12 @@
       <DependentUpon>DisplayItem.vb</DependentUpon>
     </Compile>
     <Compile Include="Modules\ItemManagement\DisplayItem.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\ItemManagement\StockReport.Designer.vb">
+      <DependentUpon>StockReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\ItemManagement\StockReport.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Modules\ItemManagement\UpdateItem.Designer.vb">
@@ -166,6 +165,12 @@
     <Compile Include="Modules\Login\Login.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Modules\ManagerForm.Designer.vb">
+      <DependentUpon>ManagerForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\ManagerForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Modules\Sales\Sales.Designer.vb">
       <DependentUpon>Sales.vb</DependentUpon>
     </Compile>
@@ -182,6 +187,12 @@
       <DependentUpon>DisplayStaff.vb</DependentUpon>
     </Compile>
     <Compile Include="Modules\StaffManagement\DisplayStaff.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\StaffManagement\MonthlyStaffTransaction.Designer.vb">
+      <DependentUpon>MonthlyStaffTransaction.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\StaffManagement\MonthlyStaffTransaction.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Modules\StaffManagement\UpdateStaff.Designer.vb">
@@ -208,14 +219,14 @@
     <Compile Include="Utilities\SHA.vb" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Modules\ItemManagement\AddItem.resx">
       <DependentUpon>AddItem.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Modules\ItemManagement\DisplayItem.resx">
       <DependentUpon>DisplayItem.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\ItemManagement\StockReport.resx">
+      <DependentUpon>StockReport.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Modules\ItemManagement\UpdateItem.resx">
       <DependentUpon>UpdateItem.vb</DependentUpon>
@@ -226,6 +237,9 @@
     <EmbeddedResource Include="Modules\Login\Login.resx">
       <DependentUpon>Login.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Modules\ManagerForm.resx">
+      <DependentUpon>ManagerForm.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Modules\Sales\Sales.resx">
       <DependentUpon>Sales.vb</DependentUpon>
     </EmbeddedResource>
@@ -234,6 +248,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Modules\StaffManagement\DisplayStaff.resx">
       <DependentUpon>DisplayStaff.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\StaffManagement\MonthlyStaffTransaction.resx">
+      <DependentUpon>MonthlyStaffTransaction.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Modules\StaffManagement\UpdateStaff.resx">
       <DependentUpon>UpdateStaff.vb</DependentUpon>

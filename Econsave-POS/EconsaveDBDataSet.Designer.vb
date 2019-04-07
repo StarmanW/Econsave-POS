@@ -1871,7 +1871,7 @@ Partial Public Class EconsaveDBDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Overloads Function AddStaffRow(ByVal staffID As String, ByVal name As String, ByVal password As String, ByVal registeredOn As Date, ByVal lastLogin As Date, ByVal position As Integer) As StaffRow
+        Public Overloads Function AddStaffRow(ByVal staffID As String, ByVal name As String, ByVal password As String, ByVal registeredOn As Date, ByVal lastLogin As Date, ByVal position As String) As StaffRow
             Dim rowStaffRow As StaffRow = CType(Me.NewRow,StaffRow)
             Dim columnValuesArray() As Object = New Object() {staffID, name, password, registeredOn, lastLogin, position}
             rowStaffRow.ItemArray = columnValuesArray
@@ -1923,7 +1923,7 @@ Partial Public Class EconsaveDBDataSet
             MyBase.Columns.Add(Me.columnregisteredOn)
             Me.columnlastLogin = New Global.System.Data.DataColumn("lastLogin", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnlastLogin)
-            Me.columnposition = New Global.System.Data.DataColumn("position", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            Me.columnposition = New Global.System.Data.DataColumn("position", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnposition)
             Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnstaffID}, true))
             Me.columnstaffID.AllowDBNull = false
@@ -1935,6 +1935,7 @@ Partial Public Class EconsaveDBDataSet
             Me.columnpassword.MaxLength = 255
             Me.columnregisteredOn.AllowDBNull = false
             Me.columnposition.AllowDBNull = false
+            Me.columnposition.MaxLength = 20
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -2514,9 +2515,9 @@ Partial Public Class EconsaveDBDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Property position() As Integer
+        Public Property position() As String
             Get
-                Return CType(Me(Me.tableStaff.positionColumn),Integer)
+                Return CType(Me(Me.tableStaff.positionColumn),String)
             End Get
             Set
                 Me(Me.tableStaff.positionColumn) = value
@@ -4438,7 +4439,7 @@ Namespace EconsaveDBDataSetTableAdapters
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_registeredOn", Global.System.Data.SqlDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "registeredOn", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_lastLogin", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "lastLogin", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_lastLogin", Global.System.Data.SqlDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "lastLogin", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_position", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "position", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_position", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "position", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.InsertCommand.Connection = Me.Connection
             Me._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Staff] ([staffID], [name], [password], [registeredOn], [lastLo"& _ 
@@ -4451,7 +4452,7 @@ Namespace EconsaveDBDataSetTableAdapters
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@password", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "password", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@registeredOn", Global.System.Data.SqlDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "registeredOn", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@lastLogin", Global.System.Data.SqlDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "lastLogin", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@position", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "position", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@position", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "position", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.UpdateCommand.Connection = Me.Connection
             Me._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[Staff] SET [staffID] = @staffID, [name] = @name, [password] = @pass"& _ 
@@ -4467,14 +4468,14 @@ Namespace EconsaveDBDataSetTableAdapters
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@password", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "password", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@registeredOn", Global.System.Data.SqlDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "registeredOn", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@lastLogin", Global.System.Data.SqlDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "lastLogin", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@position", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "position", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@position", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "position", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_staffID", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "staffID", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_name", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "name", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_password", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "password", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_registeredOn", Global.System.Data.SqlDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "registeredOn", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_lastLogin", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "lastLogin", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_lastLogin", Global.System.Data.SqlDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "lastLogin", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_position", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "position", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_position", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "position", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -4550,7 +4551,7 @@ Namespace EconsaveDBDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Delete, true)>  _
-        Public Overloads Overridable Function Delete(ByVal Original_staffID As String, ByVal Original_name As String, ByVal Original_password As String, ByVal Original_registeredOn As Date, ByVal Original_lastLogin As Global.System.Nullable(Of Date), ByVal Original_position As Integer) As Integer
+        Public Overloads Overridable Function Delete(ByVal Original_staffID As String, ByVal Original_name As String, ByVal Original_password As String, ByVal Original_registeredOn As Date, ByVal Original_lastLogin As Global.System.Nullable(Of Date), ByVal Original_position As String) As Integer
             If (Original_staffID Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("Original_staffID")
             Else
@@ -4574,7 +4575,11 @@ Namespace EconsaveDBDataSetTableAdapters
                 Me.Adapter.DeleteCommand.Parameters(4).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(5).Value = Global.System.DBNull.Value
             End If
-            Me.Adapter.DeleteCommand.Parameters(6).Value = CType(Original_position,Integer)
+            If (Original_position Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("Original_position")
+            Else
+                Me.Adapter.DeleteCommand.Parameters(6).Value = CType(Original_position,String)
+            End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.DeleteCommand.Connection.State
             If ((Me.Adapter.DeleteCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -4594,7 +4599,7 @@ Namespace EconsaveDBDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, true)>  _
-        Public Overloads Overridable Function Insert(ByVal staffID As String, ByVal name As String, ByVal password As String, ByVal registeredOn As Date, ByVal lastLogin As Global.System.Nullable(Of Date), ByVal position As Integer) As Integer
+        Public Overloads Overridable Function Insert(ByVal staffID As String, ByVal name As String, ByVal password As String, ByVal registeredOn As Date, ByVal lastLogin As Global.System.Nullable(Of Date), ByVal position As String) As Integer
             If (staffID Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("staffID")
             Else
@@ -4616,7 +4621,11 @@ Namespace EconsaveDBDataSetTableAdapters
             Else
                 Me.Adapter.InsertCommand.Parameters(4).Value = Global.System.DBNull.Value
             End If
-            Me.Adapter.InsertCommand.Parameters(5).Value = CType(position,Integer)
+            If (position Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("position")
+            Else
+                Me.Adapter.InsertCommand.Parameters(5).Value = CType(position,String)
+            End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.InsertCommand.Connection.State
             If ((Me.Adapter.InsertCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -4636,7 +4645,7 @@ Namespace EconsaveDBDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
-        Public Overloads Overridable Function Update(ByVal staffID As String, ByVal name As String, ByVal password As String, ByVal registeredOn As Date, ByVal lastLogin As Global.System.Nullable(Of Date), ByVal position As Integer, ByVal Original_staffID As String, ByVal Original_name As String, ByVal Original_password As String, ByVal Original_registeredOn As Date, ByVal Original_lastLogin As Global.System.Nullable(Of Date), ByVal Original_position As Integer) As Integer
+        Public Overloads Overridable Function Update(ByVal staffID As String, ByVal name As String, ByVal password As String, ByVal registeredOn As Date, ByVal lastLogin As Global.System.Nullable(Of Date), ByVal position As String, ByVal Original_staffID As String, ByVal Original_name As String, ByVal Original_password As String, ByVal Original_registeredOn As Date, ByVal Original_lastLogin As Global.System.Nullable(Of Date), ByVal Original_position As String) As Integer
             If (staffID Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("staffID")
             Else
@@ -4658,7 +4667,11 @@ Namespace EconsaveDBDataSetTableAdapters
             Else
                 Me.Adapter.UpdateCommand.Parameters(4).Value = Global.System.DBNull.Value
             End If
-            Me.Adapter.UpdateCommand.Parameters(5).Value = CType(position,Integer)
+            If (position Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("position")
+            Else
+                Me.Adapter.UpdateCommand.Parameters(5).Value = CType(position,String)
+            End If
             If (Original_staffID Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("Original_staffID")
             Else
@@ -4682,7 +4695,11 @@ Namespace EconsaveDBDataSetTableAdapters
                 Me.Adapter.UpdateCommand.Parameters(10).Value = CType(1,Object)
                 Me.Adapter.UpdateCommand.Parameters(11).Value = Global.System.DBNull.Value
             End If
-            Me.Adapter.UpdateCommand.Parameters(12).Value = CType(Original_position,Integer)
+            If (Original_position Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("Original_position")
+            Else
+                Me.Adapter.UpdateCommand.Parameters(12).Value = CType(Original_position,String)
+            End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.UpdateCommand.Connection.State
             If ((Me.Adapter.UpdateCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -4702,7 +4719,7 @@ Namespace EconsaveDBDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
-        Public Overloads Overridable Function Update(ByVal name As String, ByVal password As String, ByVal registeredOn As Date, ByVal lastLogin As Global.System.Nullable(Of Date), ByVal position As Integer, ByVal Original_staffID As String, ByVal Original_name As String, ByVal Original_password As String, ByVal Original_registeredOn As Date, ByVal Original_lastLogin As Global.System.Nullable(Of Date), ByVal Original_position As Integer) As Integer
+        Public Overloads Overridable Function Update(ByVal name As String, ByVal password As String, ByVal registeredOn As Date, ByVal lastLogin As Global.System.Nullable(Of Date), ByVal position As String, ByVal Original_staffID As String, ByVal Original_name As String, ByVal Original_password As String, ByVal Original_registeredOn As Date, ByVal Original_lastLogin As Global.System.Nullable(Of Date), ByVal Original_position As String) As Integer
             Return Me.Update(Original_staffID, name, password, registeredOn, lastLogin, position, Original_staffID, Original_name, Original_password, Original_registeredOn, Original_lastLogin, Original_position)
         End Function
     End Class

@@ -37,7 +37,7 @@ Public Class Login
                 If staff Is Nothing Then
                     MessageBox.Show("Invalid staff ID or password, please try again.", "Invalid Credentials", MessageBoxButtons.OK, MessageBoxIcon.Warning)
                 Else
-                    If staff.position = 1 Then
+                    If staff.position = "Manager" Then
                         Me.Hide()
                         ManagerForm.ShowDialog()
                         ManagerForm.Close()
