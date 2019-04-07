@@ -60,7 +60,7 @@ Partial Class Sales
         Me.MenuStrip2.Location = New System.Drawing.Point(20, 74)
         Me.MenuStrip2.Name = "MenuStrip2"
         Me.MenuStrip2.Padding = New System.Windows.Forms.Padding(8, 4, 0, 4)
-        Me.MenuStrip2.Size = New System.Drawing.Size(1072, 35)
+        Me.MenuStrip2.Size = New System.Drawing.Size(1230, 35)
         Me.MenuStrip2.TabIndex = 2
         Me.MenuStrip2.Text = "MenuStrip2"
         '
@@ -101,7 +101,7 @@ Partial Class Sales
         Me.MetroButton1.FontSize = MetroFramework.MetroButtonSize.Tall
         Me.MetroButton1.FontWeight = MetroFramework.MetroButtonWeight.Regular
         Me.MetroButton1.ForeColor = System.Drawing.Color.Black
-        Me.MetroButton1.Location = New System.Drawing.Point(835, 627)
+        Me.MetroButton1.Location = New System.Drawing.Point(974, 627)
         Me.MetroButton1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.MetroButton1.Name = "MetroButton1"
         Me.MetroButton1.Size = New System.Drawing.Size(161, 54)
@@ -117,7 +117,7 @@ Partial Class Sales
         Me.MetroButton2.FontSize = MetroFramework.MetroButtonSize.Tall
         Me.MetroButton2.FontWeight = MetroFramework.MetroButtonWeight.Regular
         Me.MetroButton2.ForeColor = System.Drawing.Color.Black
-        Me.MetroButton2.Location = New System.Drawing.Point(643, 627)
+        Me.MetroButton2.Location = New System.Drawing.Point(782, 627)
         Me.MetroButton2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.MetroButton2.Name = "MetroButton2"
         Me.MetroButton2.Size = New System.Drawing.Size(161, 54)
@@ -131,7 +131,7 @@ Partial Class Sales
         '
         Me.Tota.FontSize = MetroFramework.MetroLabelSize.Tall
         Me.Tota.FontWeight = MetroFramework.MetroLabelWeight.Regular
-        Me.Tota.Location = New System.Drawing.Point(653, 562)
+        Me.Tota.Location = New System.Drawing.Point(792, 562)
         Me.Tota.Name = "Tota"
         Me.Tota.Size = New System.Drawing.Size(115, 30)
         Me.Tota.TabIndex = 8
@@ -142,7 +142,7 @@ Partial Class Sales
         '
         Me.MetroLabel1.FontSize = MetroFramework.MetroLabelSize.Tall
         Me.MetroLabel1.FontWeight = MetroFramework.MetroLabelWeight.Regular
-        Me.MetroLabel1.Location = New System.Drawing.Point(769, 562)
+        Me.MetroLabel1.Location = New System.Drawing.Point(908, 562)
         Me.MetroLabel1.Name = "MetroLabel1"
         Me.MetroLabel1.Size = New System.Drawing.Size(149, 30)
         Me.MetroLabel1.TabIndex = 9
@@ -259,7 +259,7 @@ Partial Class Sales
         DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
         Me.DataGridView2.DefaultCellStyle = DataGridViewCellStyle7
         Me.DataGridView2.GridColor = System.Drawing.Color.White
-        Me.DataGridView2.Location = New System.Drawing.Point(643, 163)
+        Me.DataGridView2.Location = New System.Drawing.Point(679, 163)
         Me.DataGridView2.Margin = New System.Windows.Forms.Padding(4)
         Me.DataGridView2.MultiSelect = False
         Me.DataGridView2.Name = "DataGridView2"
@@ -281,14 +281,14 @@ Partial Class Sales
         Me.DataGridView2.ShowCellToolTips = False
         Me.DataGridView2.ShowEditingIcon = False
         Me.DataGridView2.ShowRowErrors = False
-        Me.DataGridView2.Size = New System.Drawing.Size(353, 372)
+        Me.DataGridView2.Size = New System.Drawing.Size(567, 370)
         Me.DataGridView2.TabIndex = 12
         '
         'Sales
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1112, 756)
+        Me.ClientSize = New System.Drawing.Size(1270, 756)
         Me.Controls.Add(Me.DataGridView2)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.lblCategory)
