@@ -1,0 +1,259 @@
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+Partial Class DailySalesReport
+    Inherits MetroFramework.Forms.MetroForm
+
+    'Form overrides dispose to clean up the component list.
+    <System.Diagnostics.DebuggerNonUserCode()> _
+    Protected Overrides Sub Dispose(ByVal disposing As Boolean)
+        Try
+            If disposing AndAlso components IsNot Nothing Then
+                components.Dispose()
+            End If
+        Finally
+            MyBase.Dispose(disposing)
+        End Try
+    End Sub
+
+    'Required by the Windows Form Designer
+    Private components As System.ComponentModel.IContainer
+
+    'NOTE: The following procedure is required by the Windows Form Designer
+    'It can be modified using the Windows Form Designer.  
+    'Do not modify it using the code editor.
+    <System.Diagnostics.DebuggerStepThrough()> _
+    Private Sub InitializeComponent()
+        Me.MetroButton2 = New MetroFramework.Controls.MetroButton()
+        Me.btnClose = New MetroFramework.Controls.MetroButton()
+        Me.dgvDailySales = New System.Windows.Forms.DataGridView()
+        Me.Metrolbl = New MetroFramework.Controls.MetroLabel()
+        Me.cboTransaction = New MetroFramework.Controls.MetroComboBox()
+        Me.MetroDatelbl = New MetroFramework.Controls.MetroLabel()
+        Me.cboDate = New MetroFramework.Controls.MetroComboBox()
+        Me.MetroLabel1 = New MetroFramework.Controls.MetroLabel()
+        Me.MetroLabel2 = New MetroFramework.Controls.MetroLabel()
+        Me.lblTransaction = New MetroFramework.Controls.MetroLabel()
+        Me.lblDate = New MetroFramework.Controls.MetroLabel()
+        Me.lblByStaff = New MetroFramework.Controls.MetroLabel()
+        Me.MetroLabel3 = New MetroFramework.Controls.MetroLabel()
+        Me.MetroLabel4 = New MetroFramework.Controls.MetroLabel()
+        Me.lblTotalSales = New MetroFramework.Controls.MetroLabel()
+        CType(Me.dgvDailySales, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.SuspendLayout()
+        '
+        'MetroButton2
+        '
+        Me.MetroButton2.BackColor = System.Drawing.SystemColors.Highlight
+        Me.MetroButton2.DialogResult = System.Windows.Forms.DialogResult.Cancel
+        Me.MetroButton2.FontSize = MetroFramework.MetroButtonSize.Tall
+        Me.MetroButton2.ForeColor = System.Drawing.Color.White
+        Me.MetroButton2.Location = New System.Drawing.Point(538, 689)
+        Me.MetroButton2.Margin = New System.Windows.Forms.Padding(5)
+        Me.MetroButton2.Name = "MetroButton2"
+        Me.MetroButton2.Size = New System.Drawing.Size(488, 45)
+        Me.MetroButton2.TabIndex = 10
+        Me.MetroButton2.Text = "&Print"
+        Me.MetroButton2.UseCustomBackColor = True
+        Me.MetroButton2.UseCustomForeColor = True
+        Me.MetroButton2.UseSelectable = True
+        '
+        'btnClose
+        '
+        Me.btnClose.BackColor = System.Drawing.Color.ForestGreen
+        Me.btnClose.DialogResult = System.Windows.Forms.DialogResult.Cancel
+        Me.btnClose.FontSize = MetroFramework.MetroButtonSize.Tall
+        Me.btnClose.ForeColor = System.Drawing.Color.White
+        Me.btnClose.Location = New System.Drawing.Point(32, 689)
+        Me.btnClose.Margin = New System.Windows.Forms.Padding(5)
+        Me.btnClose.Name = "btnClose"
+        Me.btnClose.Size = New System.Drawing.Size(488, 45)
+        Me.btnClose.TabIndex = 9
+        Me.btnClose.Text = "&Close"
+        Me.btnClose.UseCustomBackColor = True
+        Me.btnClose.UseCustomForeColor = True
+        Me.btnClose.UseSelectable = True
+        '
+        'dgvDailySales
+        '
+        Me.dgvDailySales.AllowUserToResizeColumns = False
+        Me.dgvDailySales.AllowUserToResizeRows = False
+        Me.dgvDailySales.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.dgvDailySales.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvDailySales.Location = New System.Drawing.Point(32, 264)
+        Me.dgvDailySales.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
+        Me.dgvDailySales.Name = "dgvDailySales"
+        Me.dgvDailySales.Size = New System.Drawing.Size(994, 404)
+        Me.dgvDailySales.TabIndex = 8
+        '
+        'Metrolbl
+        '
+        Me.Metrolbl.AutoSize = True
+        Me.Metrolbl.FontSize = MetroFramework.MetroLabelSize.Tall
+        Me.Metrolbl.Location = New System.Drawing.Point(464, 64)
+        Me.Metrolbl.Margin = New System.Windows.Forms.Padding(7, 0, 7, 0)
+        Me.Metrolbl.Name = "Metrolbl"
+        Me.Metrolbl.Size = New System.Drawing.Size(101, 25)
+        Me.Metrolbl.TabIndex = 11
+        Me.Metrolbl.Text = "Transaction:"
+        '
+        'cboTransaction
+        '
+        Me.cboTransaction.FormattingEnabled = True
+        Me.cboTransaction.ItemHeight = 23
+        Me.cboTransaction.Location = New System.Drawing.Point(579, 64)
+        Me.cboTransaction.Margin = New System.Windows.Forms.Padding(7)
+        Me.cboTransaction.Name = "cboTransaction"
+        Me.cboTransaction.Size = New System.Drawing.Size(169, 29)
+        Me.cboTransaction.TabIndex = 14
+        Me.cboTransaction.UseSelectable = True
+        '
+        'MetroDatelbl
+        '
+        Me.MetroDatelbl.AutoSize = True
+        Me.MetroDatelbl.FontSize = MetroFramework.MetroLabelSize.Tall
+        Me.MetroDatelbl.Location = New System.Drawing.Point(41, 64)
+        Me.MetroDatelbl.Margin = New System.Windows.Forms.Padding(7, 0, 7, 0)
+        Me.MetroDatelbl.Name = "MetroDatelbl"
+        Me.MetroDatelbl.Size = New System.Drawing.Size(51, 25)
+        Me.MetroDatelbl.TabIndex = 13
+        Me.MetroDatelbl.Text = "Date:"
+        '
+        'cboDate
+        '
+        Me.cboDate.FormattingEnabled = True
+        Me.cboDate.ItemHeight = 23
+        Me.cboDate.Location = New System.Drawing.Point(99, 64)
+        Me.cboDate.Margin = New System.Windows.Forms.Padding(7)
+        Me.cboDate.Name = "cboDate"
+        Me.cboDate.Size = New System.Drawing.Size(337, 29)
+        Me.cboDate.TabIndex = 12
+        Me.cboDate.UseSelectable = True
+        '
+        'MetroLabel1
+        '
+        Me.MetroLabel1.AutoSize = True
+        Me.MetroLabel1.FontSize = MetroFramework.MetroLabelSize.Tall
+        Me.MetroLabel1.Location = New System.Drawing.Point(41, 112)
+        Me.MetroLabel1.Name = "MetroLabel1"
+        Me.MetroLabel1.Size = New System.Drawing.Size(122, 25)
+        Me.MetroLabel1.TabIndex = 15
+        Me.MetroLabel1.Text = "Transaction ID:"
+        '
+        'MetroLabel2
+        '
+        Me.MetroLabel2.AutoSize = True
+        Me.MetroLabel2.FontSize = MetroFramework.MetroLabelSize.Tall
+        Me.MetroLabel2.Location = New System.Drawing.Point(41, 147)
+        Me.MetroLabel2.Name = "MetroLabel2"
+        Me.MetroLabel2.Size = New System.Drawing.Size(51, 25)
+        Me.MetroLabel2.TabIndex = 16
+        Me.MetroLabel2.Text = "Date:"
+        '
+        'lblTransaction
+        '
+        Me.lblTransaction.AutoSize = True
+        Me.lblTransaction.FontSize = MetroFramework.MetroLabelSize.Tall
+        Me.lblTransaction.Location = New System.Drawing.Point(169, 112)
+        Me.lblTransaction.Name = "lblTransaction"
+        Me.lblTransaction.Size = New System.Drawing.Size(19, 25)
+        Me.lblTransaction.TabIndex = 18
+        Me.lblTransaction.Text = "-"
+        '
+        'lblDate
+        '
+        Me.lblDate.AutoSize = True
+        Me.lblDate.FontSize = MetroFramework.MetroLabelSize.Tall
+        Me.lblDate.Location = New System.Drawing.Point(98, 147)
+        Me.lblDate.Name = "lblDate"
+        Me.lblDate.Size = New System.Drawing.Size(19, 25)
+        Me.lblDate.TabIndex = 19
+        Me.lblDate.Text = "-"
+        '
+        'lblByStaff
+        '
+        Me.lblByStaff.AutoSize = True
+        Me.lblByStaff.FontSize = MetroFramework.MetroLabelSize.Tall
+        Me.lblByStaff.Location = New System.Drawing.Point(219, 184)
+        Me.lblByStaff.Name = "lblByStaff"
+        Me.lblByStaff.Size = New System.Drawing.Size(19, 25)
+        Me.lblByStaff.TabIndex = 20
+        Me.lblByStaff.Text = "-"
+        '
+        'MetroLabel3
+        '
+        Me.MetroLabel3.AutoSize = True
+        Me.MetroLabel3.FontSize = MetroFramework.MetroLabelSize.Tall
+        Me.MetroLabel3.Location = New System.Drawing.Point(41, 184)
+        Me.MetroLabel3.Name = "MetroLabel3"
+        Me.MetroLabel3.Size = New System.Drawing.Size(172, 25)
+        Me.MetroLabel3.TabIndex = 17
+        Me.MetroLabel3.Text = "Transaction Made by:"
+        '
+        'MetroLabel4
+        '
+        Me.MetroLabel4.AutoSize = True
+        Me.MetroLabel4.FontSize = MetroFramework.MetroLabelSize.Tall
+        Me.MetroLabel4.Location = New System.Drawing.Point(41, 218)
+        Me.MetroLabel4.Name = "MetroLabel4"
+        Me.MetroLabel4.Size = New System.Drawing.Size(93, 25)
+        Me.MetroLabel4.TabIndex = 21
+        Me.MetroLabel4.Text = "Total Sales:"
+        '
+        'lblTotalSales
+        '
+        Me.lblTotalSales.AutoSize = True
+        Me.lblTotalSales.FontSize = MetroFramework.MetroLabelSize.Tall
+        Me.lblTotalSales.Location = New System.Drawing.Point(140, 218)
+        Me.lblTotalSales.Name = "lblTotalSales"
+        Me.lblTotalSales.Size = New System.Drawing.Size(19, 25)
+        Me.lblTotalSales.TabIndex = 22
+        Me.lblTotalSales.Text = "-"
+        '
+        'DailySalesReport
+        '
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.ClientSize = New System.Drawing.Size(1061, 764)
+        Me.Controls.Add(Me.lblTotalSales)
+        Me.Controls.Add(Me.MetroLabel4)
+        Me.Controls.Add(Me.lblByStaff)
+        Me.Controls.Add(Me.lblDate)
+        Me.Controls.Add(Me.lblTransaction)
+        Me.Controls.Add(Me.MetroLabel3)
+        Me.Controls.Add(Me.MetroLabel2)
+        Me.Controls.Add(Me.MetroLabel1)
+        Me.Controls.Add(Me.MetroDatelbl)
+        Me.Controls.Add(Me.cboDate)
+        Me.Controls.Add(Me.Metrolbl)
+        Me.Controls.Add(Me.cboTransaction)
+        Me.Controls.Add(Me.MetroButton2)
+        Me.Controls.Add(Me.btnClose)
+        Me.Controls.Add(Me.dgvDailySales)
+        Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Margin = New System.Windows.Forms.Padding(4)
+        Me.MaximizeBox = False
+        Me.Name = "DailySalesReport"
+        Me.Padding = New System.Windows.Forms.Padding(27, 74, 27, 25)
+        Me.Resizable = False
+        Me.Text = "Daily Sales Report"
+        CType(Me.dgvDailySales, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.ResumeLayout(False)
+        Me.PerformLayout()
+
+    End Sub
+
+    Friend WithEvents MetroButton2 As MetroFramework.Controls.MetroButton
+    Friend WithEvents btnClose As MetroFramework.Controls.MetroButton
+    Friend WithEvents dgvDailySales As DataGridView
+    Friend WithEvents Metrolbl As MetroFramework.Controls.MetroLabel
+    Friend WithEvents cboTransaction As MetroFramework.Controls.MetroComboBox
+    Friend WithEvents MetroDatelbl As MetroFramework.Controls.MetroLabel
+    Friend WithEvents cboDate As MetroFramework.Controls.MetroComboBox
+    Friend WithEvents MetroLabel1 As MetroFramework.Controls.MetroLabel
+    Friend WithEvents MetroLabel2 As MetroFramework.Controls.MetroLabel
+    Friend WithEvents lblTransaction As MetroFramework.Controls.MetroLabel
+    Friend WithEvents lblDate As MetroFramework.Controls.MetroLabel
+    Friend WithEvents lblByStaff As MetroFramework.Controls.MetroLabel
+    Friend WithEvents MetroLabel3 As MetroFramework.Controls.MetroLabel
+    Friend WithEvents MetroLabel4 As MetroFramework.Controls.MetroLabel
+    Friend WithEvents lblTotalSales As MetroFramework.Controls.MetroLabel
+End Class
