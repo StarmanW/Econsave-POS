@@ -41,7 +41,7 @@ Public Class AddItem
 
     ' Sub routine to handle add button
     Private Sub btnAddItem_Click(sender As Object, e As EventArgs) Handles btnAddItem.Click
-        If Not isValidFields() Then
+        If isValidFields() Then
             Using db As New EconsaveDataClassesDataContext()
                 Dim itemCategory As String = CType(cmbCategory.SelectedItem, String)
                 Dim newItem As New Item()
@@ -76,21 +76,21 @@ Public Class AddItem
     ' Function to validate field inputs
     Private Function isValidFields() As Boolean
         Dim textRegex As New Regex("^[A-z0-9\s\-\@\#\$\%\&\*\(\)\[\]\'\:\,\.\|]+$")
-        Dim hasError As Boolean = False
+        Dim validData As Boolean = True
 
         ErrorProvider1.Clear()
 
         If Not textRegex.IsMatch(txtItemName.Text) Then
             ErrorProvider1.SetError(txtItemName, "Please ensure the item name is not blank.")
-            hasError = True
+            validData = False
         End If
 
         If Not textRegex.IsMatch(txtDescription.Text) Then
             ErrorProvider1.SetError(txtDescription, "Please ensure the item description is not blank.")
-            hasError = True
+            validData = False
         End If
 
-        Return hasError
+        Return validData
     End Function
 
     Private Sub DisplayItemListToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DisplayItemListToolStripMenuItem.Click

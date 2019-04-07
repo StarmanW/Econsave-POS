@@ -39,7 +39,8 @@ Partial Class DisplayStaff
         '
         '
         Me.txtSearchBox.CustomButton.Image = Nothing
-        Me.txtSearchBox.CustomButton.Location = New System.Drawing.Point(207, 2)
+        Me.txtSearchBox.CustomButton.Location = New System.Drawing.Point(324, 2)
+        Me.txtSearchBox.CustomButton.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtSearchBox.CustomButton.Name = ""
         Me.txtSearchBox.CustomButton.Size = New System.Drawing.Size(25, 25)
         Me.txtSearchBox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue
@@ -49,7 +50,8 @@ Partial Class DisplayStaff
         Me.txtSearchBox.CustomButton.Visible = False
         Me.txtSearchBox.FontSize = MetroFramework.MetroTextBoxSize.Medium
         Me.txtSearchBox.Lines = New String(-1) {}
-        Me.txtSearchBox.Location = New System.Drawing.Point(96, 63)
+        Me.txtSearchBox.Location = New System.Drawing.Point(109, 97)
+        Me.txtSearchBox.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtSearchBox.MaxLength = 32767
         Me.txtSearchBox.Name = "txtSearchBox"
         Me.txtSearchBox.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -58,7 +60,7 @@ Partial Class DisplayStaff
         Me.txtSearchBox.SelectionLength = 0
         Me.txtSearchBox.SelectionStart = 0
         Me.txtSearchBox.ShortcutsEnabled = True
-        Me.txtSearchBox.Size = New System.Drawing.Size(235, 30)
+        Me.txtSearchBox.Size = New System.Drawing.Size(352, 30)
         Me.txtSearchBox.TabIndex = 7
         Me.txtSearchBox.UseSelectable = True
         Me.txtSearchBox.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
@@ -68,7 +70,8 @@ Partial Class DisplayStaff
         '
         Me.MetroLabel1.AutoSize = True
         Me.MetroLabel1.FontSize = MetroFramework.MetroLabelSize.Tall
-        Me.MetroLabel1.Location = New System.Drawing.Point(23, 63)
+        Me.MetroLabel1.Location = New System.Drawing.Point(34, 97)
+        Me.MetroLabel1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.MetroLabel1.Name = "MetroLabel1"
         Me.MetroLabel1.Size = New System.Drawing.Size(67, 25)
         Me.MetroLabel1.TabIndex = 6
@@ -80,21 +83,25 @@ Partial Class DisplayStaff
         Me.itemDGV.AllowUserToResizeRows = False
         Me.itemDGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.itemDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.itemDGV.Location = New System.Drawing.Point(23, 109)
+        Me.itemDGV.Location = New System.Drawing.Point(34, 143)
+        Me.itemDGV.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.itemDGV.Name = "itemDGV"
-        Me.itemDGV.Size = New System.Drawing.Size(851, 331)
+        Me.itemDGV.Size = New System.Drawing.Size(1276, 509)
         Me.itemDGV.TabIndex = 5
         '
         'DisplayStaff
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(902, 463)
+        Me.ClientSize = New System.Drawing.Size(1353, 704)
         Me.Controls.Add(Me.txtSearchBox)
         Me.Controls.Add(Me.MetroLabel1)
         Me.Controls.Add(Me.itemDGV)
+        Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.MaximizeBox = False
         Me.Name = "DisplayStaff"
+        Me.Padding = New System.Windows.Forms.Padding(30, 92, 30, 31)
         Me.Resizable = False
         Me.Text = "Employee Details"
         CType(Me.itemDGV, System.ComponentModel.ISupportInitialize).EndInit()

@@ -44,7 +44,7 @@ Public Class UpdateItem
     End Sub
 
     Private Sub btnUpdateItem_Click(sender As Object, e As EventArgs) Handles btnUpdateItem.Click
-        If Not isValidFields() Then
+        If isValidFields() Then
             Using db As New EconsaveDataClassesDataContext()
                 Dim item = (From i In db.Items
                             Where i.itemID = DisplayItem.itemID
@@ -76,20 +76,20 @@ Public Class UpdateItem
     ' Function to validate field inputs
     Private Function isValidFields() As Boolean
         Dim textRegex As New Regex("^[A-z0-9\s\-\@\#\$\%\&\*\(\)\[\]\'\:\,\.\|]+$")
-        Dim hasError As Boolean = False
+        Dim validData As Boolean = True
 
         ErrorProvider1.Clear()
 
         If Not textRegex.IsMatch(txtItemName.Text) Then
             ErrorProvider1.SetError(txtItemName, "Please ensure the item name is not blank.")
-            hasError = True
+            validData = False
         End If
 
         If Not textRegex.IsMatch(txtDescription.Text) Then
             ErrorProvider1.SetError(txtDescription, "Please ensure the item description is not blank.")
-            hasError = True
+            validData = False
         End If
 
-        Return hasError
+        Return validData
     End Function
 End Class

@@ -33,7 +33,7 @@ Public Class AddStaff
 
     ' Register btn click event handler
     Private Sub btnRegisterStaff_Click(sender As Object, e As EventArgs) Handles btnRegisterStaff.Click
-        If Not isValidFields() Then
+        If isValidFields() Then
             'Database
             Using db As New EconsaveDataClassesDataContext()
                 Dim regEmp As New Staff
@@ -46,7 +46,7 @@ Public Class AddStaff
                 Else
                     regEmp.position = 2
                 End If
-                regEmp.registeredOn = DateAndTime.Now
+                regEmp.registeredOn = DateTime.Now
                 ' Add new emp and save changes
                 db.Staffs.InsertOnSubmit(regEmp)
                 db.SubmitChanges()
@@ -56,6 +56,7 @@ Public Class AddStaff
                 GenerateID(db)
             End Using
         End If
+        Me.DialogResult = DialogResult.None
     End Sub
 
     ' Clear btn click event handler
@@ -66,30 +67,31 @@ Public Class AddStaff
         lblDialogbox.Text = ""
         lblDialogBoxPassword.Text = ""
         radManager.Checked = True
+        Me.DialogResult = DialogResult.None
     End Sub
 
     ' Function to validate field inputs
     Private Function isValidFields() As Boolean
         Dim textRegex As New Regex("^[A-z0-9\s\-\@\#\$\%\&\*\(\)\[\]\'\:\,\.\|]+$")
-        Dim hasError As Boolean = False
+        Dim validData As Boolean = True
 
         ErrorProvider1.Clear()
 
         If Not textRegex.IsMatch(txtName.Text) Then
             ErrorProvider1.SetError(txtName, "Required To Fill In")
-            hasError = True
+            validData = False
         End If
 
         If Not textRegex.IsMatch(txtPassword.Text) Then
             ErrorProvider1.SetError(txtPassword, "Required To Set Password.")
-            hasError = True
+            validData = False
         End If
 
         If Not textRegex.IsMatch(txtConfirmPassword.Text) Then
             ErrorProvider1.SetError(txtConfirmPassword, "Confirm password must not be empty.")
-            hasError = True
+            validData = False
         End If
-        Return hasError
+        Return validData
     End Function
 
     Private Sub txtConfirmPassword_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtConfirmPassword.KeyPress

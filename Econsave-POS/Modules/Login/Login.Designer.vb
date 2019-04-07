@@ -1,6 +1,6 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Login
-    Inherits System.Windows.Forms.Form
+    Inherits MetroFramework.Forms.MetroForm
 
     'Form overrides dispose to clean up the component list.
     <System.Diagnostics.DebuggerNonUserCode()>
@@ -24,149 +24,161 @@ Partial Class Login
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Login))
-        Me.lblId = New System.Windows.Forms.Label()
-        Me.lblPassword = New System.Windows.Forms.Label()
-        Me.txtId = New System.Windows.Forms.TextBox()
-        Me.txtPassword = New System.Windows.Forms.TextBox()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.txtStaffID = New MetroFramework.Controls.MetroTextBox()
+        Me.lblStaffID = New MetroFramework.Controls.MetroLabel()
+        Me.lblStaffPassword = New MetroFramework.Controls.MetroLabel()
+        Me.txtPassword = New MetroFramework.Controls.MetroTextBox()
+        Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.btnLogin = New System.Windows.Forms.Button()
-        Me.btnHistory = New System.Windows.Forms.Button()
-        Me.epId = New System.Windows.Forms.ErrorProvider(Me.components)
-        Me.epPassword = New System.Windows.Forms.ErrorProvider(Me.components)
-        Me.epWrongId = New System.Windows.Forms.ErrorProvider(Me.components)
-        Me.epWrongPassword = New System.Windows.Forms.ErrorProvider(Me.components)
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.epId, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.epPassword, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.epWrongId, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.epWrongPassword, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'lblId
+        'txtStaffID
         '
-        Me.lblId.AutoSize = True
-        Me.lblId.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
-        Me.lblId.Location = New System.Drawing.Point(177, 249)
-        Me.lblId.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
-        Me.lblId.Name = "lblId"
-        Me.lblId.Size = New System.Drawing.Size(37, 25)
-        Me.lblId.TabIndex = 0
-        Me.lblId.Text = "ID:"
         '
-        'lblPassword
         '
-        Me.lblPassword.AutoSize = True
-        Me.lblPassword.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
-        Me.lblPassword.Location = New System.Drawing.Point(177, 302)
-        Me.lblPassword.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
-        Me.lblPassword.Name = "lblPassword"
-        Me.lblPassword.Size = New System.Drawing.Size(104, 25)
-        Me.lblPassword.TabIndex = 1
-        Me.lblPassword.Text = "Password:"
         '
-        'txtId
+        Me.txtStaffID.CustomButton.Image = Nothing
+        Me.txtStaffID.CustomButton.Location = New System.Drawing.Point(357, 2)
+        Me.txtStaffID.CustomButton.Name = ""
+        Me.txtStaffID.CustomButton.Size = New System.Drawing.Size(25, 25)
+        Me.txtStaffID.CustomButton.Style = MetroFramework.MetroColorStyle.Blue
+        Me.txtStaffID.CustomButton.TabIndex = 1
+        Me.txtStaffID.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
+        Me.txtStaffID.CustomButton.UseSelectable = True
+        Me.txtStaffID.CustomButton.Visible = False
+        Me.txtStaffID.FontSize = MetroFramework.MetroTextBoxSize.Medium
+        Me.txtStaffID.Lines = New String(-1) {}
+        Me.txtStaffID.Location = New System.Drawing.Point(147, 193)
+        Me.txtStaffID.MaxLength = 32767
+        Me.txtStaffID.Name = "txtStaffID"
+        Me.txtStaffID.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txtStaffID.ScrollBars = System.Windows.Forms.ScrollBars.None
+        Me.txtStaffID.SelectedText = ""
+        Me.txtStaffID.SelectionLength = 0
+        Me.txtStaffID.SelectionStart = 0
+        Me.txtStaffID.ShortcutsEnabled = True
+        Me.txtStaffID.Size = New System.Drawing.Size(385, 30)
+        Me.txtStaffID.TabIndex = 7
+        Me.txtStaffID.UseSelectable = True
+        Me.txtStaffID.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
+        Me.txtStaffID.WaterMarkFont = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel)
         '
-        Me.txtId.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-        Me.txtId.Location = New System.Drawing.Point(295, 249)
-        Me.txtId.Margin = New System.Windows.Forms.Padding(5)
-        Me.txtId.Name = "txtId"
-        Me.txtId.Size = New System.Drawing.Size(385, 30)
-        Me.txtId.TabIndex = 2
+        'lblStaffID
+        '
+        Me.lblStaffID.AutoSize = True
+        Me.lblStaffID.FontSize = MetroFramework.MetroLabelSize.Tall
+        Me.lblStaffID.FontWeight = MetroFramework.MetroLabelWeight.Bold
+        Me.lblStaffID.Location = New System.Drawing.Point(49, 193)
+        Me.lblStaffID.Name = "lblStaffID"
+        Me.lblStaffID.Size = New System.Drawing.Size(82, 25)
+        Me.lblStaffID.TabIndex = 8
+        Me.lblStaffID.Text = "Staff ID:"
+        '
+        'lblStaffPassword
+        '
+        Me.lblStaffPassword.AutoSize = True
+        Me.lblStaffPassword.FontSize = MetroFramework.MetroLabelSize.Tall
+        Me.lblStaffPassword.FontWeight = MetroFramework.MetroLabelWeight.Bold
+        Me.lblStaffPassword.Location = New System.Drawing.Point(34, 243)
+        Me.lblStaffPassword.Name = "lblStaffPassword"
+        Me.lblStaffPassword.Size = New System.Drawing.Size(97, 25)
+        Me.lblStaffPassword.TabIndex = 9
+        Me.lblStaffPassword.Text = "Password:"
         '
         'txtPassword
         '
-        Me.txtPassword.Location = New System.Drawing.Point(295, 299)
-        Me.txtPassword.Margin = New System.Windows.Forms.Padding(5)
+        '
+        '
+        '
+        Me.txtPassword.CustomButton.Image = Nothing
+        Me.txtPassword.CustomButton.Location = New System.Drawing.Point(357, 2)
+        Me.txtPassword.CustomButton.Name = ""
+        Me.txtPassword.CustomButton.Size = New System.Drawing.Size(25, 25)
+        Me.txtPassword.CustomButton.Style = MetroFramework.MetroColorStyle.Blue
+        Me.txtPassword.CustomButton.TabIndex = 1
+        Me.txtPassword.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
+        Me.txtPassword.CustomButton.UseSelectable = True
+        Me.txtPassword.CustomButton.Visible = False
+        Me.txtPassword.FontSize = MetroFramework.MetroTextBoxSize.Medium
+        Me.txtPassword.Lines = New String(-1) {}
+        Me.txtPassword.Location = New System.Drawing.Point(147, 238)
+        Me.txtPassword.MaxLength = 32767
         Me.txtPassword.Name = "txtPassword"
         Me.txtPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.txtPassword.ScrollBars = System.Windows.Forms.ScrollBars.None
+        Me.txtPassword.SelectedText = ""
+        Me.txtPassword.SelectionLength = 0
+        Me.txtPassword.SelectionStart = 0
+        Me.txtPassword.ShortcutsEnabled = True
         Me.txtPassword.Size = New System.Drawing.Size(385, 30)
-        Me.txtPassword.TabIndex = 3
+        Me.txtPassword.TabIndex = 10
+        Me.txtPassword.UseSelectable = True
+        Me.txtPassword.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
+        Me.txtPassword.WaterMarkFont = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel)
+        '
+        'ErrorProvider1
+        '
+        Me.ErrorProvider1.ContainerControl = Me
+        '
+        'btnLogin
+        '
+        Me.btnLogin.BackColor = System.Drawing.Color.ForestGreen
+        Me.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnLogin.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnLogin.ForeColor = System.Drawing.Color.White
+        Me.btnLogin.Image = Global.Econsave_POS.My.Resources.Resources.cbvoi_qjprf_6
+        Me.btnLogin.Location = New System.Drawing.Point(147, 287)
+        Me.btnLogin.Name = "btnLogin"
+        Me.btnLogin.Size = New System.Drawing.Size(385, 45)
+        Me.btnLogin.TabIndex = 5
+        Me.btnLogin.Text = "Login"
+        Me.btnLogin.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnLogin.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.btnLogin.UseVisualStyleBackColor = False
         '
         'PictureBox1
         '
         Me.PictureBox1.Image = Global.Econsave_POS.My.Resources.Resources.Econsave_logo
-        Me.PictureBox1.Location = New System.Drawing.Point(197, 112)
+        Me.PictureBox1.Location = New System.Drawing.Point(49, 65)
         Me.PictureBox1.Margin = New System.Windows.Forms.Padding(5)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(483, 102)
         Me.PictureBox1.TabIndex = 4
         Me.PictureBox1.TabStop = False
         '
-        'btnLogin
-        '
-        Me.btnLogin.Image = Global.Econsave_POS.My.Resources.Resources.cbvoi_qjprf_6
-        Me.btnLogin.Location = New System.Drawing.Point(295, 351)
-        Me.btnLogin.Name = "btnLogin"
-        Me.btnLogin.Size = New System.Drawing.Size(175, 41)
-        Me.btnLogin.TabIndex = 5
-        Me.btnLogin.Text = "Login"
-        Me.btnLogin.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.btnLogin.UseVisualStyleBackColor = True
-        '
-        'btnHistory
-        '
-        Me.btnHistory.Image = Global.Econsave_POS.My.Resources.Resources.cb4e4_ot9m3_6
-        Me.btnHistory.Location = New System.Drawing.Point(505, 351)
-        Me.btnHistory.Name = "btnHistory"
-        Me.btnHistory.Size = New System.Drawing.Size(175, 41)
-        Me.btnHistory.TabIndex = 6
-        Me.btnHistory.Text = "&History"
-        Me.btnHistory.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.btnHistory.UseVisualStyleBackColor = True
-        '
-        'epId
-        '
-        Me.epId.ContainerControl = Me
-        '
-        'epPassword
-        '
-        Me.epPassword.ContainerControl = Me
-        '
-        'epWrongId
-        '
-        Me.epWrongId.ContainerControl = Me
-        '
-        'epWrongPassword
-        '
-        Me.epWrongPassword.ContainerControl = Me
-        '
         'Login
         '
         Me.AcceptButton = Me.btnLogin
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(13.0!, 25.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(836, 492)
-        Me.Controls.Add(Me.btnHistory)
+        Me.ClientSize = New System.Drawing.Size(586, 376)
+        Me.Controls.Add(Me.txtPassword)
+        Me.Controls.Add(Me.lblStaffPassword)
+        Me.Controls.Add(Me.lblStaffID)
+        Me.Controls.Add(Me.txtStaffID)
         Me.Controls.Add(Me.btnLogin)
         Me.Controls.Add(Me.PictureBox1)
-        Me.Controls.Add(Me.txtPassword)
-        Me.Controls.Add(Me.txtId)
-        Me.Controls.Add(Me.lblPassword)
-        Me.Controls.Add(Me.lblId)
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(5)
+        Me.MaximizeBox = False
         Me.Name = "Login"
+        Me.Resizable = False
         Me.Text = "Login"
+        CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.epId, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.epPassword, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.epWrongId, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.epWrongPassword, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents lblId As Label
-    Friend WithEvents lblPassword As Label
-    Friend WithEvents txtId As TextBox
-    Friend WithEvents txtPassword As TextBox
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents btnLogin As Button
-    Friend WithEvents btnHistory As Button
-    Friend WithEvents epId As ErrorProvider
-    Friend WithEvents epPassword As ErrorProvider
-    Friend WithEvents epWrongId As ErrorProvider
-    Friend WithEvents epWrongPassword As ErrorProvider
+    Friend WithEvents txtPassword As MetroFramework.Controls.MetroTextBox
+    Friend WithEvents lblStaffPassword As MetroFramework.Controls.MetroLabel
+    Friend WithEvents lblStaffID As MetroFramework.Controls.MetroLabel
+    Friend WithEvents txtStaffID As MetroFramework.Controls.MetroTextBox
+    Friend WithEvents ErrorProvider1 As ErrorProvider
 End Class

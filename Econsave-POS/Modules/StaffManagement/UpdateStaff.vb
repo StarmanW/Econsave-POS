@@ -29,7 +29,7 @@ Public Class UpdateStaff
     End Sub
 
     Private Sub btnUpdateItem_Click(sender As Object, e As EventArgs) Handles btnUpdateItem.Click
-        If Not isValidFields() Then
+        If isValidFields() Then
             Using db As New EconsaveDataClassesDataContext()
                 Dim staff = (From s In db.Staffs
                              Where s.staffID = DisplayStaff.staffID
@@ -62,15 +62,15 @@ Public Class UpdateStaff
     ' Function to validate field inputs
     Private Function isValidFields() As Boolean
         Dim textRegex As New Regex("^[A-z0-9\s\-\@\#\$\%\&\*\(\)\[\]\'\:\,\.\|]+$")
-        Dim hasError As Boolean = False
+        Dim validData As Boolean = True
 
         ErrorProvider1.Clear()
 
         If Not textRegex.IsMatch(txtStaffName.Text) Then
             ErrorProvider1.SetError(txtStaffName, "Staff name required.")
-            hasError = True
+            validData = False
         End If
 
-        Return hasError
+        Return validData
     End Function
 End Class
