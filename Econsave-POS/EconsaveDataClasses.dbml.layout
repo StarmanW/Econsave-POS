@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="EconsaveDataClasses">
+  <DataContextMoniker Name="/EconsaveDataClassesDataContext" />
+  <nestedChildShapes>
+    <classShape Id="2bd28d08-0b27-4092-8731-44ac82e9ab5c" absoluteBounds="0.75, 5.875, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/EconsaveDataClassesDataContext/Category" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2664049e-47cd-469b-abef-687423a72f84" absoluteBounds="0.765, 6.335, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ea991e15-9a1b-42a1-9366-c747c0ac6395" absoluteBounds="3.5, 1.125, 2, 1.5785953776041664">
+      <DataClassMoniker Name="/EconsaveDataClassesDataContext/Transaction" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c7e00b25-58fc-4474-ab41-36491e5957d4" absoluteBounds="3.515, 1.585, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="049474f9-aaec-4d93-b33b-d77d513d07c6" absoluteBounds="3.5, 5.25, 2, 2.5401025390625005">
+      <DataClassMoniker Name="/EconsaveDataClassesDataContext/Item" />
+      <nestedChildShapes>
+        <elementListCompartment Id="fdf0a206-960a-49ba-b6a5-3b4b7a029787" absoluteBounds="3.515, 5.71, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="42e91939-f4b6-4834-bb55-4e914a39729c" absoluteBounds="6.25, 1, 2, 1.7708968098958329">
+      <DataClassMoniker Name="/EconsaveDataClassesDataContext/ItemSale" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4ea0db11-697b-403a-83fe-56a88b95f201" absoluteBounds="6.265, 1.46, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="aed61cd6-71cb-4887-9989-ea04fd85de7b" absoluteBounds="0.75, 0.875, 2, 1.9631982421875">
+      <DataClassMoniker Name="/EconsaveDataClassesDataContext/Staff" />
+      <nestedChildShapes>
+        <elementListCompartment Id="abdf0837-5aa4-4ebc-a594-0fd64ac9a765" absoluteBounds="0.765, 1.335, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 6.47199625651042); (3.5 : 6.47199625651042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EconsaveDataClassesDataContext/Category/Category_Item" />
+      <nodes>
+        <classShapeMoniker Id="2bd28d08-0b27-4092-8731-44ac82e9ab5c" />
+        <classShapeMoniker Id="049474f9-aaec-4d93-b33b-d77d513d07c6" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 6.52005126953125); (7.25 : 6.52005126953125); (7.25 : 2.77089680989583)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EconsaveDataClassesDataContext/Item/Item_ItemSale" />
+      <nodes>
+        <classShapeMoniker Id="049474f9-aaec-4d93-b33b-d77d513d07c6" />
+        <classShapeMoniker Id="42e91939-f4b6-4834-bb55-4e914a39729c" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 1.91429768880208); (6.25 : 1.91429768880208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EconsaveDataClassesDataContext/Transaction/Transaction_ItemSale" />
+      <nodes>
+        <classShapeMoniker Id="ea991e15-9a1b-42a1-9366-c747c0ac6395" />
+        <classShapeMoniker Id="42e91939-f4b6-4834-bb55-4e914a39729c" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 1.91429768880208); (3.5 : 1.91429768880208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EconsaveDataClassesDataContext/Staff/Staff_Transaction" />
+      <nodes>
+        <classShapeMoniker Id="aed61cd6-71cb-4887-9989-ea04fd85de7b" />
+        <classShapeMoniker Id="ea991e15-9a1b-42a1-9366-c747c0ac6395" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
