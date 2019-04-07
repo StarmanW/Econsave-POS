@@ -13,6 +13,19 @@
         Return (db.ItemSales.Count + 1).ToString("D6")
     End Function
 
+    Private Sub Sales_Closing(sender As Object, e As EventArgs) Handles MyBase.Closing
+        If transaction.totalPrice = 0 Then
+            clearSelectedItems()
+
+            db.Transactions.DeleteOnSubmit(transaction)
+            db.SubmitChanges()
+        End If
+    End Sub
+
+    Private Sub CreateNewTransaction()
+
+    End Sub
+
     Private Sub Sales_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         With transaction
             .transactionID = GenerateTransactionID()
@@ -21,33 +34,45 @@
             .createdOn = Today
         End With
 
-        '============================================
         db.Transactions.InsertOnSubmit(transaction)
         db.SubmitChanges()
 
-        Dim rs = From i In itemList Select
+        Dim rs = From i In db.Items Select
                                 ID = i.itemID,
                                 Name = i.name,
                                 Category = i.Category.categoryName,
                                 Price = i.price
 
-        DataGridView1.DataSource = rs.ToList
+        DataGridView1.DataSource = rs
+
+        DataGridView1.Columns(0).Width = 50
+        DataGridView1.Columns(1).Width = 180
+        DataGridView1.Columns(2).Width = 95
+        DataGridView1.Columns(3).Width = 65
 
         DataGridView1.Columns(3).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
         DataGridView1.Columns(3).DefaultCellStyle.Format = "N2"
-        DataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells
-        DataGridView1.AutoSizeColumnsMode = CType(DataGridViewAutoSizeColumnMode.Fill, DataGridViewAutoSizeColumnsMode)
+        'DataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells
+        'DataGridView1.AutoSizeColumnsMode = CType(DataGridViewAutoSizeColumnMode.Fill, DataGridViewAutoSizeColumnsMode)
 
         Dim dt As New DataTable
         dt.Columns.Add("ID")
+        dt.Columns.Add("Name")
+        dt.Columns.Add("Price")
         dt.Columns.Add("Quantity")
         dt.Columns.Add("Subtotal")
 
         DataGridView2.DataSource = dt
 
+        DataGridView2.Columns(0).Width = 50
+        DataGridView2.Columns(1).Width = 140
+        DataGridView2.Columns(2).Width = 65
+        DataGridView2.Columns(3).Width = 85
+        DataGridView2.Columns(4).Width = 85
+
         DataGridView2.Columns(1).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
-        DataGridView2.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells
-        DataGridView2.AutoSizeColumnsMode = CType(DataGridViewAutoSizeColumnMode.Fill, DataGridViewAutoSizeColumnsMode)
+        'DataGridView2.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells
+        'DataGridView2.AutoSizeColumnsMode = CType(DataGridViewAutoSizeColumnMode.Fill, DataGridViewAutoSizeColumnsMode)
     End Sub
 
     Private Sub DataGridView1_CellMouseDoubleClick(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellMouseEventArgs) Handles DataGridView1.CellMouseDoubleClick
@@ -98,7 +123,7 @@
             If itemSale Is Nothing Then
                 Dim newItemSale As New ItemSale
                 With newItemSale
-                    
+                    .itemSaleID = GenerateItemSaleID()
                     .itemID = selectedItemID
                     .transactionID = transaction.transactionID
                     .quantity = 1
@@ -111,13 +136,13 @@
                 db.SubmitChanges()
             Else
                 itemSale.quantity += 1
-                    itemSale.subtotal += itemSale.Item.price
-                    db.SubmitChanges()
-                End If
+                itemSale.subtotal += itemSale.Item.price
+                db.SubmitChanges()
             End If
-        'End If
+        End If
 
         UpdateSelectItemList()
+        UpdateTotalPrice()
     End Sub
 
     Public Sub New()
@@ -165,28 +190,104 @@
         DataGridView1.DataSource = rs
     End Sub
 
-    Private Sub DataGridView2_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView2.CellContentClick
-
-    End Sub
-
     Private Sub UpdateSelectItemList()
         Dim db As New EconsaveDataClassesDataContext()
         Dim rs As New Object
 
-        rs = (From i In db.ItemSales Select
+        rs = From i In db.ItemSales Where i.transactionID = transaction.transactionID Select
                             ID = i.itemID,
                             Name = i.Item.name,
                             Price = i.Item.price,
                             Quantity = i.quantity,
-                            Subtotal = i.subtotal).ToList
+                            Subtotal = i.subtotal
 
         DataGridView2.DataSource = vbNull
         DataGridView2.DataSource = rs
 
-        DataGridView2.Columns(1).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
+        DataGridView2.Columns(0).Width = 50
+        DataGridView2.Columns(1).Width = 140
+        DataGridView2.Columns(2).Width = 65
+        DataGridView2.Columns(3).Width = 85
+        DataGridView2.Columns(4).Width = 85
+
         DataGridView2.Columns(2).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
         DataGridView2.Columns(2).DefaultCellStyle.Format = "N2"
-        DataGridView2.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells
-        DataGridView2.AutoSizeColumnsMode = CType(DataGridViewAutoSizeColumnMode.Fill, DataGridViewAutoSizeColumnsMode)
+
+        DataGridView2.Columns(3).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
+        DataGridView2.Columns(4).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
+        DataGridView2.Columns(4).DefaultCellStyle.Format = "N2"
+
+        'DataGridView2.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells
+        'DataGridView2.AutoSizeColumnsMode = CType(DataGridViewAutoSizeColumnMode.Fill, DataGridViewAutoSizeColumnsMode)
+    End Sub
+
+    Private Sub DataGridView2_CellMouseDoubleClick(sender As Object, e As DataGridViewCellMouseEventArgs) Handles DataGridView2.CellMouseDoubleClick
+        If e.RowIndex >= 0 AndAlso e.ColumnIndex >= 0 Then
+            Dim selectedRow = DataGridView2.Rows(e.RowIndex)
+            Dim selectedItemID = DataGridView2.Item(0, selectedRow.Index).Value.ToString
+            DataGridView2.Item(0, 1).Value.ToString()
+
+            Dim itemSale = db.ItemSales.Where(Function(i) i.transactionID = transaction.transactionID And i.itemID = selectedItemID).FirstOrDefault
+
+            If itemSale.quantity < 2 Then
+                db.ItemSales.DeleteOnSubmit(itemSale)
+                db.SubmitChanges()
+            Else
+                itemSale.quantity -= 1
+                itemSale.subtotal -= itemSale.Item.price
+                db.SubmitChanges()
+            End If
+        End If
+
+        UpdateSelectItemList()
+        UpdateTotalPrice()
+    End Sub
+
+    Private Sub UpdateTotalPrice()
+        Dim total As Double
+
+        For i = 0 To DataGridView2.Rows.Count - 1
+            total += CDbl(DataGridView2.Item(4, i).Value)
+        Next
+
+        MetroLabel1.Text = Format(total, "0.00")
+    End Sub
+
+    Private Sub MetroButton1_Click(sender As Object, e As EventArgs) Handles MetroButton1.Click
+        clearSelectedItems()
+        MetroLabel1.Text = "0.00"
+    End Sub
+
+    Private Sub clearSelectedItems()
+        Dim itemSale = db.ItemSales.Where(Function(i) i.transactionID = transaction.transactionID).ToList
+
+        db.ItemSales.DeleteAllOnSubmit(itemSale)
+        db.SubmitChanges()
+
+        UpdateSelectItemList()
+    End Sub
+
+    Private Sub MetroButton2_Click(sender As Object, e As EventArgs) Handles MetroButton2.Click
+        Dim result As Integer = MessageBox.Show("Confirm Submission?", "", MessageBoxButtons.OKCancel)
+
+        If result = DialogResult.OK Then
+            transaction.totalPrice = CDbl(MetroLabel1.Text)
+            db.SubmitChanges()
+
+            Dim newTransaction As New Transaction
+
+            With newTransaction
+                .transactionID = GenerateTransactionID()
+                .staffID = db.Staffs.ToList(0).staffID
+                .totalPrice = 0
+                .createdOn = Today
+            End With
+
+            db.Transactions.InsertOnSubmit(newTransaction)
+            transaction = newTransaction
+            db.SubmitChanges()
+            UpdateSelectItemList()
+            MetroLabel1.Text = "0.00"
+        End If
     End Sub
 End Class
