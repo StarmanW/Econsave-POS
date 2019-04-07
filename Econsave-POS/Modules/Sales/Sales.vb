@@ -22,10 +22,6 @@
         End If
     End Sub
 
-    Private Sub CreateNewTransaction()
-
-    End Sub
-
     Private Sub Sales_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         With transaction
             .transactionID = GenerateTransactionID()
@@ -145,6 +141,7 @@
 
         UpdateSelectItemList()
         UpdateTotalPrice()
+        UpdateTransaction()
     End Sub
 
     Public Sub New()
@@ -227,7 +224,6 @@
         If e.RowIndex >= 0 AndAlso e.ColumnIndex >= 0 Then
             Dim selectedRow = DataGridView2.Rows(e.RowIndex)
             Dim selectedItemID = DataGridView2.Item(0, selectedRow.Index).Value.ToString
-            DataGridView2.Item(0, 1).Value.ToString()
 
             Dim itemSale = db.ItemSales.Where(Function(i) i.transactionID = transaction.transactionID And i.itemID = selectedItemID).FirstOrDefault
 
@@ -243,6 +239,7 @@
 
         UpdateSelectItemList()
         UpdateTotalPrice()
+        UpdateTransaction()
     End Sub
 
     Private Sub UpdateTotalPrice()
@@ -258,6 +255,7 @@
     Private Sub MetroButton1_Click(sender As Object, e As EventArgs) Handles MetroButton1.Click
         clearSelectedItems()
         MetroLabel1.Text = "0.00"
+        UpdateTransaction()
     End Sub
 
     Private Sub clearSelectedItems()
@@ -267,14 +265,14 @@
         db.SubmitChanges()
 
         UpdateSelectItemList()
+
     End Sub
 
     Private Sub MetroButton2_Click(sender As Object, e As EventArgs) Handles MetroButton2.Click
         Dim result As Integer = MessageBox.Show("Confirm Submission?", "", MessageBoxButtons.OKCancel)
 
         If result = DialogResult.OK Then
-            transaction.totalPrice = CDbl(MetroLabel1.Text)
-            db.SubmitChanges()
+            UpdateTransaction()
 
             Dim newTransaction As New Transaction
 
@@ -288,8 +286,15 @@
             db.Transactions.InsertOnSubmit(newTransaction)
             transaction = newTransaction
             db.SubmitChanges()
+
             UpdateSelectItemList()
             MetroLabel1.Text = "0.00"
+            MetroLabel4.Text = transaction.transactionID
         End If
+    End Sub
+
+    Private Sub UpdateTransaction()
+        transaction.totalPrice = CDbl(MetroLabel1.Text)
+        db.SubmitChanges()
     End Sub
 End Class
