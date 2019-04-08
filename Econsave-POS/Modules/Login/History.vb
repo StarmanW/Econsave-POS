@@ -19,7 +19,6 @@ Public Class History
         staffList = db.Staffs.ToList
     End Sub
 
-
     'Display All Log In Record
     Private Sub Display_Record(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim db As New EconsaveDataClassesDataContext()
@@ -52,7 +51,6 @@ Public Class History
                 dataDateLastLogin = (staffList(dataNum).lastLogin.ToString).Substring(0, 9)
                 dataDateRegister = (staffList(dataNum).registeredOn.ToString).Substring(0, 9)
             Else
-
                 dataDateLastLogin = (staffList(dataNum).lastLogin.ToString).Substring(0, 10)
                 dataDateRegister = (staffList(dataNum).registeredOn.ToString).Substring(0, 10)
             End If
@@ -140,14 +138,11 @@ Public Class History
     Private Sub btnReset_Click(sender As Object, e As EventArgs) Handles btnReset.Click
         Display_Record(sender, e)
         txtSearch.ResetText()
-
-
     End Sub
 
     Private bitmap As Bitmap
 
     Private Sub btnPrint_Click(sender As Object, e As EventArgs) Handles btnPrint.Click
-
         Dim height As Integer = historyDataGV.Height
         historyDataGV.Height = historyDataGV.RowCount * historyDataGV.RowTemplate.Height
         bitmap = New Bitmap(Me.historyDataGV.Width, Me.historyDataGV.Height)
@@ -156,8 +151,6 @@ Public Class History
         PrintPreviewDialog1.PrintPreviewControl.Zoom = 2
         PrintPreviewDialog1.ShowDialog()
         historyDataGV.Height = height
-
-
     End Sub
 
     Private Sub PrintDocument1_PrintPage(sender As Object, e As Printing.PrintPageEventArgs) Handles PrintDocument1.PrintPage

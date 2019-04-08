@@ -297,4 +297,8 @@
         transaction.totalPrice = CDbl(MetroLabel1.Text)
         db.SubmitChanges()
     End Sub
+
+    Private Sub ProfileToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ProfileToolStripMenuItem.Click
+        Me.Hide()
+    End Sub
 End Class

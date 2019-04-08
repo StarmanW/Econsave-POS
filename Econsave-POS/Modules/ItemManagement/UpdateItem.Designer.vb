@@ -51,11 +51,12 @@ Partial Class UpdateItem
         '
         Me.btnUpdateItem.BackColor = System.Drawing.Color.Green
         Me.btnUpdateItem.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.btnUpdateItem.FontSize = MetroFramework.MetroButtonSize.Medium
+        Me.btnUpdateItem.FontSize = MetroFramework.MetroButtonSize.Tall
         Me.btnUpdateItem.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.btnUpdateItem.Location = New System.Drawing.Point(140, 384)
+        Me.btnUpdateItem.Location = New System.Drawing.Point(364, 472)
+        Me.btnUpdateItem.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnUpdateItem.Name = "btnUpdateItem"
-        Me.btnUpdateItem.Size = New System.Drawing.Size(185, 43)
+        Me.btnUpdateItem.Size = New System.Drawing.Size(176, 53)
         Me.btnUpdateItem.TabIndex = 10
         Me.btnUpdateItem.Text = "&Update Item"
         Me.btnUpdateItem.UseCustomBackColor = True
@@ -81,16 +82,17 @@ Partial Class UpdateItem
         Me.TableLayoutPanel1.Controls.Add(Me.cmbCategory, 1, 5)
         Me.TableLayoutPanel1.Controls.Add(Me.txtDescription, 1, 2)
         Me.TableLayoutPanel1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(23, 63)
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(31, 78)
+        Me.TableLayoutPanel1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 6
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 48.27586!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 51.72414!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 117.0!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 42.0!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 42.0!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 46.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(526, 312)
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 144.0!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 52.0!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 52.0!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 57.0!))
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(701, 384)
         Me.TableLayoutPanel1.TabIndex = 9
         '
         'txtItemName
@@ -99,9 +101,10 @@ Partial Class UpdateItem
         '
         '
         Me.txtItemName.CustomButton.Image = Nothing
-        Me.txtItemName.CustomButton.Location = New System.Drawing.Point(361, 1)
+        Me.txtItemName.CustomButton.Location = New System.Drawing.Point(644, 1)
+        Me.txtItemName.CustomButton.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtItemName.CustomButton.Name = ""
-        Me.txtItemName.CustomButton.Size = New System.Drawing.Size(23, 23)
+        Me.txtItemName.CustomButton.Size = New System.Drawing.Size(39, 36)
         Me.txtItemName.CustomButton.Style = MetroFramework.MetroColorStyle.Blue
         Me.txtItemName.CustomButton.TabIndex = 1
         Me.txtItemName.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
@@ -109,7 +112,8 @@ Partial Class UpdateItem
         Me.txtItemName.CustomButton.Visible = False
         Me.txtItemName.FontSize = MetroFramework.MetroTextBoxSize.Medium
         Me.txtItemName.Lines = New String(-1) {}
-        Me.txtItemName.Location = New System.Drawing.Point(121, 34)
+        Me.txtItemName.Location = New System.Drawing.Point(162, 42)
+        Me.txtItemName.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtItemName.MaxLength = 32767
         Me.txtItemName.Name = "txtItemName"
         Me.txtItemName.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -118,7 +122,7 @@ Partial Class UpdateItem
         Me.txtItemName.SelectionLength = 0
         Me.txtItemName.SelectionStart = 0
         Me.txtItemName.ShortcutsEnabled = True
-        Me.txtItemName.Size = New System.Drawing.Size(385, 25)
+        Me.txtItemName.Size = New System.Drawing.Size(513, 31)
         Me.txtItemName.TabIndex = 2
         Me.txtItemName.UseSelectable = True
         Me.txtItemName.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
@@ -128,10 +132,11 @@ Partial Class UpdateItem
         '
         Me.numStockQuantity.Anchor = System.Windows.Forms.AnchorStyles.Left
         Me.numStockQuantity.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.numStockQuantity.Location = New System.Drawing.Point(121, 231)
+        Me.numStockQuantity.Location = New System.Drawing.Point(162, 285)
+        Me.numStockQuantity.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.numStockQuantity.Maximum = New Decimal(New Integer() {100000, 0, 0, 0})
         Me.numStockQuantity.Name = "numStockQuantity"
-        Me.numStockQuantity.Size = New System.Drawing.Size(384, 26)
+        Me.numStockQuantity.Size = New System.Drawing.Size(512, 30)
         Me.numStockQuantity.TabIndex = 5
         Me.numStockQuantity.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
@@ -139,10 +144,11 @@ Partial Class UpdateItem
         '
         Me.lblItemID.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.lblItemID.AutoSize = True
-        Me.lblItemID.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblItemID.Location = New System.Drawing.Point(49, 5)
+        Me.lblItemID.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblItemID.Location = New System.Drawing.Point(83, 7)
+        Me.lblItemID.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblItemID.Name = "lblItemID"
-        Me.lblItemID.Size = New System.Drawing.Size(66, 20)
+        Me.lblItemID.Size = New System.Drawing.Size(71, 23)
         Me.lblItemID.TabIndex = 4
         Me.lblItemID.Text = "Item ID:"
         '
@@ -150,10 +156,11 @@ Partial Class UpdateItem
         '
         Me.lblItemName.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.lblItemName.AutoSize = True
-        Me.lblItemName.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblItemName.Location = New System.Drawing.Point(24, 37)
+        Me.lblItemName.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblItemName.Location = New System.Drawing.Point(54, 46)
+        Me.lblItemName.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblItemName.Name = "lblItemName"
-        Me.lblItemName.Size = New System.Drawing.Size(91, 20)
+        Me.lblItemName.Size = New System.Drawing.Size(100, 23)
         Me.lblItemName.TabIndex = 5
         Me.lblItemName.Text = "Item Name:"
         '
@@ -161,10 +168,11 @@ Partial Class UpdateItem
         '
         Me.lblDescription.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.lblDescription.AutoSize = True
-        Me.lblDescription.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblDescription.Location = New System.Drawing.Point(22, 112)
+        Me.lblDescription.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblDescription.Location = New System.Drawing.Point(54, 138)
+        Me.lblDescription.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblDescription.Name = "lblDescription"
-        Me.lblDescription.Size = New System.Drawing.Size(93, 20)
+        Me.lblDescription.Size = New System.Drawing.Size(100, 23)
         Me.lblDescription.TabIndex = 6
         Me.lblDescription.Text = "Description:"
         '
@@ -172,10 +180,11 @@ Partial Class UpdateItem
         '
         Me.lblPrice.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.lblPrice.AutoSize = True
-        Me.lblPrice.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblPrice.Location = New System.Drawing.Point(67, 192)
+        Me.lblPrice.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblPrice.Location = New System.Drawing.Point(103, 236)
+        Me.lblPrice.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblPrice.Name = "lblPrice"
-        Me.lblPrice.Size = New System.Drawing.Size(48, 20)
+        Me.lblPrice.Size = New System.Drawing.Size(51, 23)
         Me.lblPrice.TabIndex = 7
         Me.lblPrice.Text = "Price:"
         '
@@ -183,10 +192,11 @@ Partial Class UpdateItem
         '
         Me.lblStockQuantity.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.lblStockQuantity.AutoSize = True
-        Me.lblStockQuantity.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblStockQuantity.Location = New System.Drawing.Point(43, 224)
+        Me.lblStockQuantity.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblStockQuantity.Location = New System.Drawing.Point(29, 288)
+        Me.lblStockQuantity.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblStockQuantity.Name = "lblStockQuantity"
-        Me.lblStockQuantity.Size = New System.Drawing.Size(72, 40)
+        Me.lblStockQuantity.Size = New System.Drawing.Size(125, 23)
         Me.lblStockQuantity.TabIndex = 8
         Me.lblStockQuantity.Text = "Stock Quantity:"
         '
@@ -194,10 +204,11 @@ Partial Class UpdateItem
         '
         Me.lblCategory.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.lblCategory.AutoSize = True
-        Me.lblCategory.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblCategory.Location = New System.Drawing.Point(38, 278)
+        Me.lblCategory.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblCategory.Location = New System.Drawing.Point(71, 343)
+        Me.lblCategory.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblCategory.Name = "lblCategory"
-        Me.lblCategory.Size = New System.Drawing.Size(77, 20)
+        Me.lblCategory.Size = New System.Drawing.Size(83, 23)
         Me.lblCategory.TabIndex = 9
         Me.lblCategory.Text = "Category:"
         '
@@ -206,10 +217,11 @@ Partial Class UpdateItem
         Me.numPrice.Anchor = System.Windows.Forms.AnchorStyles.Left
         Me.numPrice.DecimalPlaces = 2
         Me.numPrice.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.numPrice.Location = New System.Drawing.Point(121, 189)
+        Me.numPrice.Location = New System.Drawing.Point(162, 233)
+        Me.numPrice.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.numPrice.Maximum = New Decimal(New Integer() {100000, 0, 0, 0})
         Me.numPrice.Name = "numPrice"
-        Me.numPrice.Size = New System.Drawing.Size(384, 26)
+        Me.numPrice.Size = New System.Drawing.Size(512, 30)
         Me.numPrice.TabIndex = 4
         Me.numPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
@@ -219,9 +231,10 @@ Partial Class UpdateItem
         '
         '
         Me.txtItemID.CustomButton.Image = Nothing
-        Me.txtItemID.CustomButton.Location = New System.Drawing.Point(363, 2)
+        Me.txtItemID.CustomButton.Location = New System.Drawing.Point(647, 2)
+        Me.txtItemID.CustomButton.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtItemID.CustomButton.Name = ""
-        Me.txtItemID.CustomButton.Size = New System.Drawing.Size(19, 19)
+        Me.txtItemID.CustomButton.Size = New System.Drawing.Size(33, 31)
         Me.txtItemID.CustomButton.Style = MetroFramework.MetroColorStyle.Blue
         Me.txtItemID.CustomButton.TabIndex = 1
         Me.txtItemID.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
@@ -229,7 +242,8 @@ Partial Class UpdateItem
         Me.txtItemID.CustomButton.Visible = False
         Me.txtItemID.FontSize = MetroFramework.MetroTextBoxSize.Medium
         Me.txtItemID.Lines = New String(-1) {}
-        Me.txtItemID.Location = New System.Drawing.Point(121, 3)
+        Me.txtItemID.Location = New System.Drawing.Point(162, 4)
+        Me.txtItemID.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtItemID.MaxLength = 32767
         Me.txtItemID.Name = "txtItemID"
         Me.txtItemID.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -239,7 +253,7 @@ Partial Class UpdateItem
         Me.txtItemID.SelectionLength = 0
         Me.txtItemID.SelectionStart = 0
         Me.txtItemID.ShortcutsEnabled = True
-        Me.txtItemID.Size = New System.Drawing.Size(385, 24)
+        Me.txtItemID.Size = New System.Drawing.Size(513, 30)
         Me.txtItemID.TabIndex = 1
         Me.txtItemID.UseSelectable = True
         Me.txtItemID.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
@@ -249,10 +263,11 @@ Partial Class UpdateItem
         '
         Me.cmbCategory.Anchor = System.Windows.Forms.AnchorStyles.Left
         Me.cmbCategory.FormattingEnabled = True
-        Me.cmbCategory.ItemHeight = 23
-        Me.cmbCategory.Location = New System.Drawing.Point(121, 274)
+        Me.cmbCategory.ItemHeight = 24
+        Me.cmbCategory.Location = New System.Drawing.Point(162, 340)
+        Me.cmbCategory.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.cmbCategory.Name = "cmbCategory"
-        Me.cmbCategory.Size = New System.Drawing.Size(384, 29)
+        Me.cmbCategory.Size = New System.Drawing.Size(511, 30)
         Me.cmbCategory.TabIndex = 6
         Me.cmbCategory.UseSelectable = True
         '
@@ -262,9 +277,10 @@ Partial Class UpdateItem
         '
         '
         Me.txtDescription.CustomButton.Image = Nothing
-        Me.txtDescription.CustomButton.Location = New System.Drawing.Point(277, 2)
+        Me.txtDescription.CustomButton.Location = New System.Drawing.Point(505, 1)
+        Me.txtDescription.CustomButton.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtDescription.CustomButton.Name = ""
-        Me.txtDescription.CustomButton.Size = New System.Drawing.Size(105, 105)
+        Me.txtDescription.CustomButton.Size = New System.Drawing.Size(177, 164)
         Me.txtDescription.CustomButton.Style = MetroFramework.MetroColorStyle.Blue
         Me.txtDescription.CustomButton.TabIndex = 1
         Me.txtDescription.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
@@ -272,7 +288,8 @@ Partial Class UpdateItem
         Me.txtDescription.CustomButton.Visible = False
         Me.txtDescription.FontSize = MetroFramework.MetroTextBoxSize.Medium
         Me.txtDescription.Lines = New String(-1) {}
-        Me.txtDescription.Location = New System.Drawing.Point(121, 67)
+        Me.txtDescription.Location = New System.Drawing.Point(162, 82)
+        Me.txtDescription.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtDescription.MaxLength = 32767
         Me.txtDescription.Multiline = True
         Me.txtDescription.Name = "txtDescription"
@@ -282,7 +299,7 @@ Partial Class UpdateItem
         Me.txtDescription.SelectionLength = 0
         Me.txtDescription.SelectionStart = 0
         Me.txtDescription.ShortcutsEnabled = True
-        Me.txtDescription.Size = New System.Drawing.Size(385, 110)
+        Me.txtDescription.Size = New System.Drawing.Size(513, 135)
         Me.txtDescription.TabIndex = 3
         Me.txtDescription.UseSelectable = True
         Me.txtDescription.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
@@ -292,11 +309,12 @@ Partial Class UpdateItem
         '
         Me.btnExit.BackColor = System.Drawing.Color.Red
         Me.btnExit.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.btnExit.FontSize = MetroFramework.MetroButtonSize.Medium
+        Me.btnExit.FontSize = MetroFramework.MetroButtonSize.Tall
         Me.btnExit.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.btnExit.Location = New System.Drawing.Point(345, 384)
+        Me.btnExit.Location = New System.Drawing.Point(561, 472)
+        Me.btnExit.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnExit.Name = "btnExit"
-        Me.btnExit.Size = New System.Drawing.Size(184, 43)
+        Me.btnExit.Size = New System.Drawing.Size(143, 53)
         Me.btnExit.TabIndex = 12
         Me.btnExit.Text = "E&xit"
         Me.btnExit.Theme = MetroFramework.MetroThemeStyle.Light
@@ -315,15 +333,17 @@ Partial Class UpdateItem
         'UpdateItem
         '
         Me.AcceptButton = Me.btnUpdateItem
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.CancelButton = Me.btnExit
-        Me.ClientSize = New System.Drawing.Size(584, 450)
+        Me.ClientSize = New System.Drawing.Size(779, 554)
         Me.Controls.Add(Me.btnExit)
         Me.Controls.Add(Me.btnUpdateItem)
         Me.Controls.Add(Me.TableLayoutPanel1)
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.MaximizeBox = False
         Me.Name = "UpdateItem"
+        Me.Padding = New System.Windows.Forms.Padding(27, 74, 27, 25)
         Me.Resizable = False
         Me.Text = "Update Item"
         Me.TableLayoutPanel1.ResumeLayout(False)

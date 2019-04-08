@@ -23,9 +23,6 @@ Partial Class AddItem
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Me.MenuStrip2 = New System.Windows.Forms.MenuStrip()
-        Me.SalesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ProfileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.txtItemID = New MetroFramework.Controls.MetroTextBox()
         Me.numPrice = New System.Windows.Forms.NumericUpDown()
@@ -43,38 +40,14 @@ Partial Class AddItem
         Me.MetroComboBox1 = New MetroFramework.Controls.MetroComboBox()
         Me.btnAddItem = New MetroFramework.Controls.MetroButton()
         Me.btnClear = New MetroFramework.Controls.MetroButton()
-        Me.LogoutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.MenuStrip2.SuspendLayout()
+        Me.MenuStrip2 = New System.Windows.Forms.MenuStrip()
+        Me.ProfileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.numPrice, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.numStockQuantity, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TableLayoutPanel1.SuspendLayout()
+        Me.MenuStrip2.SuspendLayout()
         Me.SuspendLayout()
-        '
-        'MenuStrip2
-        '
-        Me.MenuStrip2.Font = New System.Drawing.Font("Segoe UI", 10.0!)
-        Me.MenuStrip2.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.MenuStrip2.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ProfileToolStripMenuItem, Me.SalesToolStripMenuItem})
-        Me.MenuStrip2.Location = New System.Drawing.Point(21, 60)
-        Me.MenuStrip2.Name = "MenuStrip2"
-        Me.MenuStrip2.Padding = New System.Windows.Forms.Padding(6, 3, 0, 3)
-        Me.MenuStrip2.Size = New System.Drawing.Size(549, 29)
-        Me.MenuStrip2.TabIndex = 1
-        Me.MenuStrip2.Text = "MenuStrip2"
-        '
-        'SalesToolStripMenuItem
-        '
-        Me.SalesToolStripMenuItem.Name = "SalesToolStripMenuItem"
-        Me.SalesToolStripMenuItem.Size = New System.Drawing.Size(51, 23)
-        Me.SalesToolStripMenuItem.Text = "Sales"
-        '
-        'ProfileToolStripMenuItem
-        '
-        Me.ProfileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.LogoutToolStripMenuItem})
-        Me.ProfileToolStripMenuItem.Name = "ProfileToolStripMenuItem"
-        Me.ProfileToolStripMenuItem.Size = New System.Drawing.Size(41, 23)
-        Me.ProfileToolStripMenuItem.Text = "File"
         '
         'ErrorProvider1
         '
@@ -87,9 +60,10 @@ Partial Class AddItem
         '
         '
         Me.txtItemID.CustomButton.Image = Nothing
-        Me.txtItemID.CustomButton.Location = New System.Drawing.Point(363, 2)
+        Me.txtItemID.CustomButton.Location = New System.Drawing.Point(485, 2)
+        Me.txtItemID.CustomButton.Margin = New System.Windows.Forms.Padding(4)
         Me.txtItemID.CustomButton.Name = ""
-        Me.txtItemID.CustomButton.Size = New System.Drawing.Size(19, 19)
+        Me.txtItemID.CustomButton.Size = New System.Drawing.Size(25, 25)
         Me.txtItemID.CustomButton.Style = MetroFramework.MetroColorStyle.Blue
         Me.txtItemID.CustomButton.TabIndex = 1
         Me.txtItemID.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
@@ -97,7 +71,8 @@ Partial Class AddItem
         Me.txtItemID.CustomButton.Visible = False
         Me.txtItemID.FontSize = MetroFramework.MetroTextBoxSize.Medium
         Me.txtItemID.Lines = New String(-1) {}
-        Me.txtItemID.Location = New System.Drawing.Point(125, 3)
+        Me.txtItemID.Location = New System.Drawing.Point(167, 4)
+        Me.txtItemID.Margin = New System.Windows.Forms.Padding(4)
         Me.txtItemID.MaxLength = 32767
         Me.txtItemID.Name = "txtItemID"
         Me.txtItemID.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -107,7 +82,7 @@ Partial Class AddItem
         Me.txtItemID.SelectionLength = 0
         Me.txtItemID.SelectionStart = 0
         Me.txtItemID.ShortcutsEnabled = True
-        Me.txtItemID.Size = New System.Drawing.Size(385, 24)
+        Me.txtItemID.Size = New System.Drawing.Size(513, 30)
         Me.txtItemID.TabIndex = 1
         Me.txtItemID.UseSelectable = True
         Me.txtItemID.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
@@ -118,10 +93,11 @@ Partial Class AddItem
         Me.numPrice.Anchor = System.Windows.Forms.AnchorStyles.Left
         Me.numPrice.DecimalPlaces = 2
         Me.numPrice.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.numPrice.Location = New System.Drawing.Point(125, 189)
+        Me.numPrice.Location = New System.Drawing.Point(167, 233)
+        Me.numPrice.Margin = New System.Windows.Forms.Padding(4)
         Me.numPrice.Maximum = New Decimal(New Integer() {100000, 0, 0, 0})
         Me.numPrice.Name = "numPrice"
-        Me.numPrice.Size = New System.Drawing.Size(384, 26)
+        Me.numPrice.Size = New System.Drawing.Size(512, 30)
         Me.numPrice.TabIndex = 4
         Me.numPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
@@ -129,10 +105,11 @@ Partial Class AddItem
         '
         Me.lblCategory.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.lblCategory.AutoSize = True
-        Me.lblCategory.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblCategory.Location = New System.Drawing.Point(42, 278)
+        Me.lblCategory.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblCategory.Location = New System.Drawing.Point(76, 343)
+        Me.lblCategory.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblCategory.Name = "lblCategory"
-        Me.lblCategory.Size = New System.Drawing.Size(77, 20)
+        Me.lblCategory.Size = New System.Drawing.Size(83, 23)
         Me.lblCategory.TabIndex = 9
         Me.lblCategory.Text = "Category:"
         '
@@ -140,10 +117,11 @@ Partial Class AddItem
         '
         Me.lblStockQuantity.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.lblStockQuantity.AutoSize = True
-        Me.lblStockQuantity.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblStockQuantity.Location = New System.Drawing.Point(47, 224)
+        Me.lblStockQuantity.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblStockQuantity.Location = New System.Drawing.Point(34, 288)
+        Me.lblStockQuantity.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblStockQuantity.Name = "lblStockQuantity"
-        Me.lblStockQuantity.Size = New System.Drawing.Size(72, 40)
+        Me.lblStockQuantity.Size = New System.Drawing.Size(125, 23)
         Me.lblStockQuantity.TabIndex = 8
         Me.lblStockQuantity.Text = "Stock Quantity:"
         '
@@ -151,10 +129,11 @@ Partial Class AddItem
         '
         Me.lblPrice.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.lblPrice.AutoSize = True
-        Me.lblPrice.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblPrice.Location = New System.Drawing.Point(71, 192)
+        Me.lblPrice.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblPrice.Location = New System.Drawing.Point(108, 236)
+        Me.lblPrice.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblPrice.Name = "lblPrice"
-        Me.lblPrice.Size = New System.Drawing.Size(48, 20)
+        Me.lblPrice.Size = New System.Drawing.Size(51, 23)
         Me.lblPrice.TabIndex = 7
         Me.lblPrice.Text = "Price:"
         '
@@ -162,10 +141,11 @@ Partial Class AddItem
         '
         Me.lblDescription.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.lblDescription.AutoSize = True
-        Me.lblDescription.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblDescription.Location = New System.Drawing.Point(26, 112)
+        Me.lblDescription.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblDescription.Location = New System.Drawing.Point(59, 138)
+        Me.lblDescription.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblDescription.Name = "lblDescription"
-        Me.lblDescription.Size = New System.Drawing.Size(93, 20)
+        Me.lblDescription.Size = New System.Drawing.Size(100, 23)
         Me.lblDescription.TabIndex = 6
         Me.lblDescription.Text = "Description:"
         '
@@ -173,10 +153,11 @@ Partial Class AddItem
         '
         Me.lblItemName.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.lblItemName.AutoSize = True
-        Me.lblItemName.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblItemName.Location = New System.Drawing.Point(28, 37)
+        Me.lblItemName.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblItemName.Location = New System.Drawing.Point(59, 46)
+        Me.lblItemName.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblItemName.Name = "lblItemName"
-        Me.lblItemName.Size = New System.Drawing.Size(91, 20)
+        Me.lblItemName.Size = New System.Drawing.Size(100, 23)
         Me.lblItemName.TabIndex = 5
         Me.lblItemName.Text = "Item Name:"
         '
@@ -184,10 +165,11 @@ Partial Class AddItem
         '
         Me.lblItemID.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.lblItemID.AutoSize = True
-        Me.lblItemID.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblItemID.Location = New System.Drawing.Point(53, 5)
+        Me.lblItemID.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblItemID.Location = New System.Drawing.Point(88, 7)
+        Me.lblItemID.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblItemID.Name = "lblItemID"
-        Me.lblItemID.Size = New System.Drawing.Size(66, 20)
+        Me.lblItemID.Size = New System.Drawing.Size(71, 23)
         Me.lblItemID.TabIndex = 4
         Me.lblItemID.Text = "Item ID:"
         '
@@ -195,10 +177,11 @@ Partial Class AddItem
         '
         Me.numStockQuantity.Anchor = System.Windows.Forms.AnchorStyles.Left
         Me.numStockQuantity.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.numStockQuantity.Location = New System.Drawing.Point(125, 231)
+        Me.numStockQuantity.Location = New System.Drawing.Point(167, 285)
+        Me.numStockQuantity.Margin = New System.Windows.Forms.Padding(4)
         Me.numStockQuantity.Maximum = New Decimal(New Integer() {100000, 0, 0, 0})
         Me.numStockQuantity.Name = "numStockQuantity"
-        Me.numStockQuantity.Size = New System.Drawing.Size(384, 26)
+        Me.numStockQuantity.Size = New System.Drawing.Size(512, 30)
         Me.numStockQuantity.TabIndex = 5
         Me.numStockQuantity.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
@@ -221,16 +204,17 @@ Partial Class AddItem
         Me.TableLayoutPanel1.Controls.Add(Me.cmbCategory, 1, 5)
         Me.TableLayoutPanel1.Controls.Add(Me.txtDescription, 1, 2)
         Me.TableLayoutPanel1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(21, 104)
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(28, 128)
+        Me.TableLayoutPanel1.Margin = New System.Windows.Forms.Padding(4)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 6
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 48.27586!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 51.72414!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 117.0!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 42.0!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 42.0!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 46.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(543, 312)
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 144.0!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 52.0!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 52.0!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 57.0!))
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(724, 384)
         Me.TableLayoutPanel1.TabIndex = 2
         '
         'txtItemName
@@ -239,9 +223,10 @@ Partial Class AddItem
         '
         '
         Me.txtItemName.CustomButton.Image = Nothing
-        Me.txtItemName.CustomButton.Location = New System.Drawing.Point(361, 1)
+        Me.txtItemName.CustomButton.Location = New System.Drawing.Point(483, 1)
+        Me.txtItemName.CustomButton.Margin = New System.Windows.Forms.Padding(4)
         Me.txtItemName.CustomButton.Name = ""
-        Me.txtItemName.CustomButton.Size = New System.Drawing.Size(23, 23)
+        Me.txtItemName.CustomButton.Size = New System.Drawing.Size(29, 29)
         Me.txtItemName.CustomButton.Style = MetroFramework.MetroColorStyle.Blue
         Me.txtItemName.CustomButton.TabIndex = 1
         Me.txtItemName.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
@@ -249,7 +234,8 @@ Partial Class AddItem
         Me.txtItemName.CustomButton.Visible = False
         Me.txtItemName.FontSize = MetroFramework.MetroTextBoxSize.Medium
         Me.txtItemName.Lines = New String(-1) {}
-        Me.txtItemName.Location = New System.Drawing.Point(125, 34)
+        Me.txtItemName.Location = New System.Drawing.Point(167, 42)
+        Me.txtItemName.Margin = New System.Windows.Forms.Padding(4)
         Me.txtItemName.MaxLength = 32767
         Me.txtItemName.Name = "txtItemName"
         Me.txtItemName.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -258,7 +244,7 @@ Partial Class AddItem
         Me.txtItemName.SelectionLength = 0
         Me.txtItemName.SelectionStart = 0
         Me.txtItemName.ShortcutsEnabled = True
-        Me.txtItemName.Size = New System.Drawing.Size(385, 25)
+        Me.txtItemName.Size = New System.Drawing.Size(513, 31)
         Me.txtItemName.TabIndex = 2
         Me.txtItemName.UseSelectable = True
         Me.txtItemName.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
@@ -268,10 +254,11 @@ Partial Class AddItem
         '
         Me.cmbCategory.Anchor = System.Windows.Forms.AnchorStyles.Left
         Me.cmbCategory.FormattingEnabled = True
-        Me.cmbCategory.ItemHeight = 23
-        Me.cmbCategory.Location = New System.Drawing.Point(125, 274)
+        Me.cmbCategory.ItemHeight = 24
+        Me.cmbCategory.Location = New System.Drawing.Point(167, 340)
+        Me.cmbCategory.Margin = New System.Windows.Forms.Padding(4)
         Me.cmbCategory.Name = "cmbCategory"
-        Me.cmbCategory.Size = New System.Drawing.Size(384, 29)
+        Me.cmbCategory.Size = New System.Drawing.Size(511, 30)
         Me.cmbCategory.TabIndex = 6
         Me.cmbCategory.UseSelectable = True
         '
@@ -281,9 +268,10 @@ Partial Class AddItem
         '
         '
         Me.txtDescription.CustomButton.Image = Nothing
-        Me.txtDescription.CustomButton.Location = New System.Drawing.Point(277, 2)
+        Me.txtDescription.CustomButton.Location = New System.Drawing.Point(379, 1)
+        Me.txtDescription.CustomButton.Margin = New System.Windows.Forms.Padding(4)
         Me.txtDescription.CustomButton.Name = ""
-        Me.txtDescription.CustomButton.Size = New System.Drawing.Size(105, 105)
+        Me.txtDescription.CustomButton.Size = New System.Drawing.Size(133, 133)
         Me.txtDescription.CustomButton.Style = MetroFramework.MetroColorStyle.Blue
         Me.txtDescription.CustomButton.TabIndex = 1
         Me.txtDescription.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
@@ -291,7 +279,8 @@ Partial Class AddItem
         Me.txtDescription.CustomButton.Visible = False
         Me.txtDescription.FontSize = MetroFramework.MetroTextBoxSize.Medium
         Me.txtDescription.Lines = New String(-1) {}
-        Me.txtDescription.Location = New System.Drawing.Point(125, 67)
+        Me.txtDescription.Location = New System.Drawing.Point(167, 82)
+        Me.txtDescription.Margin = New System.Windows.Forms.Padding(4)
         Me.txtDescription.MaxLength = 32767
         Me.txtDescription.Multiline = True
         Me.txtDescription.Name = "txtDescription"
@@ -301,7 +290,7 @@ Partial Class AddItem
         Me.txtDescription.SelectionLength = 0
         Me.txtDescription.SelectionStart = 0
         Me.txtDescription.ShortcutsEnabled = True
-        Me.txtDescription.Size = New System.Drawing.Size(385, 110)
+        Me.txtDescription.Size = New System.Drawing.Size(513, 135)
         Me.txtDescription.TabIndex = 3
         Me.txtDescription.UseSelectable = True
         Me.txtDescription.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
@@ -311,20 +300,22 @@ Partial Class AddItem
         '
         Me.MetroComboBox1.FormattingEnabled = True
         Me.MetroComboBox1.ItemHeight = 23
-        Me.MetroComboBox1.Location = New System.Drawing.Point(621, 267)
+        Me.MetroComboBox1.Location = New System.Drawing.Point(828, 329)
+        Me.MetroComboBox1.Margin = New System.Windows.Forms.Padding(4)
         Me.MetroComboBox1.Name = "MetroComboBox1"
-        Me.MetroComboBox1.Size = New System.Drawing.Size(8, 29)
+        Me.MetroComboBox1.Size = New System.Drawing.Size(9, 29)
         Me.MetroComboBox1.TabIndex = 6
         Me.MetroComboBox1.UseSelectable = True
         '
         'btnAddItem
         '
         Me.btnAddItem.BackColor = System.Drawing.Color.Green
-        Me.btnAddItem.FontSize = MetroFramework.MetroButtonSize.Medium
+        Me.btnAddItem.FontSize = MetroFramework.MetroButtonSize.Tall
         Me.btnAddItem.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.btnAddItem.Location = New System.Drawing.Point(146, 422)
+        Me.btnAddItem.Location = New System.Drawing.Point(371, 520)
+        Me.btnAddItem.Margin = New System.Windows.Forms.Padding(4)
         Me.btnAddItem.Name = "btnAddItem"
-        Me.btnAddItem.Size = New System.Drawing.Size(185, 43)
+        Me.btnAddItem.Size = New System.Drawing.Size(179, 53)
         Me.btnAddItem.TabIndex = 7
         Me.btnAddItem.Text = "&Add New Item"
         Me.btnAddItem.UseCustomBackColor = True
@@ -334,11 +325,12 @@ Partial Class AddItem
         'btnClear
         '
         Me.btnClear.BackColor = System.Drawing.SystemColors.Highlight
-        Me.btnClear.FontSize = MetroFramework.MetroButtonSize.Medium
+        Me.btnClear.FontSize = MetroFramework.MetroButtonSize.Tall
         Me.btnClear.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.btnClear.Location = New System.Drawing.Point(346, 422)
+        Me.btnClear.Location = New System.Drawing.Point(572, 520)
+        Me.btnClear.Margin = New System.Windows.Forms.Padding(4)
         Me.btnClear.Name = "btnClear"
-        Me.btnClear.Size = New System.Drawing.Size(184, 43)
+        Me.btnClear.Size = New System.Drawing.Size(134, 53)
         Me.btnClear.TabIndex = 8
         Me.btnClear.Text = "&Clear"
         Me.btnClear.Theme = MetroFramework.MetroThemeStyle.Light
@@ -346,44 +338,54 @@ Partial Class AddItem
         Me.btnClear.UseCustomForeColor = True
         Me.btnClear.UseSelectable = True
         '
-        'LogoutToolStripMenuItem
+        'MenuStrip2
         '
-        Me.LogoutToolStripMenuItem.Name = "LogoutToolStripMenuItem"
-        Me.LogoutToolStripMenuItem.Size = New System.Drawing.Size(180, 24)
-        Me.LogoutToolStripMenuItem.Text = "Logout"
+        Me.MenuStrip2.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.MenuStrip2.ImageScalingSize = New System.Drawing.Size(20, 20)
+        Me.MenuStrip2.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ProfileToolStripMenuItem})
+        Me.MenuStrip2.Location = New System.Drawing.Point(28, 74)
+        Me.MenuStrip2.Name = "MenuStrip2"
+        Me.MenuStrip2.Padding = New System.Windows.Forms.Padding(8, 4, 0, 4)
+        Me.MenuStrip2.Size = New System.Drawing.Size(732, 35)
+        Me.MenuStrip2.TabIndex = 24
+        Me.MenuStrip2.Text = "MenuStrip2"
+        '
+        'ProfileToolStripMenuItem
+        '
+        Me.ProfileToolStripMenuItem.Name = "ProfileToolStripMenuItem"
+        Me.ProfileToolStripMenuItem.Size = New System.Drawing.Size(76, 27)
+        Me.ProfileToolStripMenuItem.Text = "Logout"
         '
         'AddItem
         '
         Me.AcceptButton = Me.btnAddItem
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange
-        Me.ClientSize = New System.Drawing.Size(591, 486)
+        Me.ClientSize = New System.Drawing.Size(788, 598)
+        Me.Controls.Add(Me.MenuStrip2)
         Me.Controls.Add(Me.btnClear)
         Me.Controls.Add(Me.btnAddItem)
         Me.Controls.Add(Me.MetroComboBox1)
         Me.Controls.Add(Me.TableLayoutPanel1)
-        Me.Controls.Add(Me.MenuStrip2)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.MaximizeBox = False
-        Me.MaximumSize = New System.Drawing.Size(591, 486)
-        Me.MinimumSize = New System.Drawing.Size(591, 486)
+        Me.MaximumSize = New System.Drawing.Size(788, 598)
+        Me.MinimumSize = New System.Drawing.Size(788, 598)
         Me.Name = "AddItem"
-        Me.Padding = New System.Windows.Forms.Padding(21, 60, 21, 20)
+        Me.Padding = New System.Windows.Forms.Padding(28, 74, 28, 25)
         Me.Text = "Add New Item"
-        Me.MenuStrip2.ResumeLayout(False)
-        Me.MenuStrip2.PerformLayout()
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.numPrice, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.numStockQuantity, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TableLayoutPanel1.ResumeLayout(False)
         Me.TableLayoutPanel1.PerformLayout()
+        Me.MenuStrip2.ResumeLayout(False)
+        Me.MenuStrip2.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents MenuStrip2 As MenuStrip
-    Friend WithEvents SalesToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents ProfileToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ErrorProvider1 As ErrorProvider
     Friend WithEvents MetroComboBox1 As MetroFramework.Controls.MetroComboBox
     Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
@@ -401,5 +403,6 @@ Partial Class AddItem
     Friend WithEvents btnClear As MetroFramework.Controls.MetroButton
     Friend WithEvents txtDescription As MetroFramework.Controls.MetroTextBox
     Friend WithEvents txtItemName As MetroFramework.Controls.MetroTextBox
-    Friend WithEvents LogoutToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents MenuStrip2 As MenuStrip
+    Friend WithEvents ProfileToolStripMenuItem As ToolStripMenuItem
 End Class

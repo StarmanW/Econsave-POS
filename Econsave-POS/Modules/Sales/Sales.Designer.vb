@@ -31,12 +31,6 @@ Partial Class Sales
         Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Sales))
-        Me.MenuStrip2 = New System.Windows.Forms.MenuStrip()
-        Me.SalesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ItemManagementToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.AddNewItemToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.DisplayItemListToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ProfileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Tota = New MetroFramework.Controls.MetroLabel()
         Me.MetroLabel1 = New MetroFramework.Controls.MetroLabel()
         Me.EconsaveDBDataSet = New Econsave_POS.EconsaveDBDataSet()
@@ -49,55 +43,13 @@ Partial Class Sales
         Me.MetroButton1 = New MetroFramework.Controls.MetroButton()
         Me.MetroLabel3 = New MetroFramework.Controls.MetroLabel()
         Me.MetroLabel4 = New MetroFramework.Controls.MetroLabel()
-        Me.MenuStrip2.SuspendLayout()
+        Me.MenuStrip2 = New System.Windows.Forms.MenuStrip()
+        Me.ProfileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         CType(Me.EconsaveDBDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.MenuStrip2.SuspendLayout()
         Me.SuspendLayout()
-        '
-        'MenuStrip2
-        '
-        Me.MenuStrip2.Font = New System.Drawing.Font("Segoe UI", 10.0!)
-        Me.MenuStrip2.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.MenuStrip2.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SalesToolStripMenuItem, Me.ItemManagementToolStripMenuItem, Me.ProfileToolStripMenuItem})
-        Me.MenuStrip2.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow
-        Me.MenuStrip2.Location = New System.Drawing.Point(20, 74)
-        Me.MenuStrip2.Name = "MenuStrip2"
-        Me.MenuStrip2.Padding = New System.Windows.Forms.Padding(8, 4, 0, 4)
-        Me.MenuStrip2.Size = New System.Drawing.Size(1230, 35)
-        Me.MenuStrip2.TabIndex = 2
-        Me.MenuStrip2.Text = "MenuStrip2"
-        '
-        'SalesToolStripMenuItem
-        '
-        Me.SalesToolStripMenuItem.Name = "SalesToolStripMenuItem"
-        Me.SalesToolStripMenuItem.Size = New System.Drawing.Size(60, 27)
-        Me.SalesToolStripMenuItem.Text = "Sales"
-        '
-        'ItemManagementToolStripMenuItem
-        '
-        Me.ItemManagementToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AddNewItemToolStripMenuItem, Me.DisplayItemListToolStripMenuItem})
-        Me.ItemManagementToolStripMenuItem.Name = "ItemManagementToolStripMenuItem"
-        Me.ItemManagementToolStripMenuItem.Size = New System.Drawing.Size(164, 27)
-        Me.ItemManagementToolStripMenuItem.Text = "Item Management"
-        '
-        'AddNewItemToolStripMenuItem
-        '
-        Me.AddNewItemToolStripMenuItem.Name = "AddNewItemToolStripMenuItem"
-        Me.AddNewItemToolStripMenuItem.Size = New System.Drawing.Size(210, 28)
-        Me.AddNewItemToolStripMenuItem.Text = "Add New Item"
-        '
-        'DisplayItemListToolStripMenuItem
-        '
-        Me.DisplayItemListToolStripMenuItem.Name = "DisplayItemListToolStripMenuItem"
-        Me.DisplayItemListToolStripMenuItem.Size = New System.Drawing.Size(210, 28)
-        Me.DisplayItemListToolStripMenuItem.Text = "Display Item List"
-        '
-        'ProfileToolStripMenuItem
-        '
-        Me.ProfileToolStripMenuItem.Name = "ProfileToolStripMenuItem"
-        Me.ProfileToolStripMenuItem.Size = New System.Drawing.Size(70, 27)
-        Me.ProfileToolStripMenuItem.Text = "Profile"
         '
         'Tota
         '
@@ -312,11 +264,30 @@ Partial Class Sales
         Me.MetroLabel4.Size = New System.Drawing.Size(269, 33)
         Me.MetroLabel4.TabIndex = 19
         '
+        'MenuStrip2
+        '
+        Me.MenuStrip2.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.MenuStrip2.ImageScalingSize = New System.Drawing.Size(20, 20)
+        Me.MenuStrip2.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ProfileToolStripMenuItem})
+        Me.MenuStrip2.Location = New System.Drawing.Point(20, 74)
+        Me.MenuStrip2.Name = "MenuStrip2"
+        Me.MenuStrip2.Padding = New System.Windows.Forms.Padding(8, 4, 0, 4)
+        Me.MenuStrip2.Size = New System.Drawing.Size(1230, 35)
+        Me.MenuStrip2.TabIndex = 24
+        Me.MenuStrip2.Text = "MenuStrip2"
+        '
+        'ProfileToolStripMenuItem
+        '
+        Me.ProfileToolStripMenuItem.Name = "ProfileToolStripMenuItem"
+        Me.ProfileToolStripMenuItem.Size = New System.Drawing.Size(76, 27)
+        Me.ProfileToolStripMenuItem.Text = "&Logout"
+        '
         'Sales
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1270, 797)
+        Me.Controls.Add(Me.MenuStrip2)
         Me.Controls.Add(Me.MetroLabel4)
         Me.Controls.Add(Me.MetroLabel3)
         Me.Controls.Add(Me.MetroButton1)
@@ -328,29 +299,21 @@ Partial Class Sales
         Me.Controls.Add(Me.cmbCategory)
         Me.Controls.Add(Me.MetroLabel1)
         Me.Controls.Add(Me.Tota)
-        Me.Controls.Add(Me.MenuStrip2)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Name = "Sales"
         Me.Padding = New System.Windows.Forms.Padding(20, 74, 20, 20)
         Me.Text = "Sales"
         Me.Theme = MetroFramework.MetroThemeStyle.[Default]
-        Me.MenuStrip2.ResumeLayout(False)
-        Me.MenuStrip2.PerformLayout()
         CType(Me.EconsaveDBDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.MenuStrip2.ResumeLayout(False)
+        Me.MenuStrip2.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents MenuStrip2 As MenuStrip
-    Friend WithEvents SalesToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents ItemManagementToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents AddNewItemToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents DisplayItemListToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents ProfileToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents Tota As MetroFramework.Controls.MetroLabel
     Friend WithEvents MetroLabel1 As MetroFramework.Controls.MetroLabel
     Friend WithEvents EconsaveDBDataSet As EconsaveDBDataSet
@@ -363,4 +326,6 @@ Partial Class Sales
     Friend WithEvents MetroButton1 As MetroFramework.Controls.MetroButton
     Friend WithEvents MetroLabel3 As MetroFramework.Controls.MetroLabel
     Friend WithEvents MetroLabel4 As MetroFramework.Controls.MetroLabel
+    Friend WithEvents MenuStrip2 As MenuStrip
+    Friend WithEvents ProfileToolStripMenuItem As ToolStripMenuItem
 End Class
