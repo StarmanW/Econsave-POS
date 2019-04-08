@@ -12,7 +12,7 @@ Public Class ForgetPassword
                     Dim newPass = RandomString(r)
                     staff.password = SHA.GenerateSHA256String(newPass)
                     db.SubmitChanges()
-                    MessageBox.Show($"New password for {staff.name} ({staff.staffID}) is {newPass}.{vbNewLine}The password has been copied to clipboard.", "New Password", MessageBoxButtons.OK, MessageBoxIcon.Information))
+                    MessageBox.Show($"New password for {staff.name} ({staff.staffID}) is {newPass}.{vbNewLine}The password has been copied to clipboard.", "New Password", MessageBoxButtons.OK, MessageBoxIcon.Information)
                     Clipboard.SetText(CStr(newPass))
                 Catch ex As Exception
                     MsgBox(ex.ToString)
