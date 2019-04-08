@@ -22,6 +22,8 @@ Partial Class DailySalesReport
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(DailySalesReport))
         Me.MetroButton2 = New MetroFramework.Controls.MetroButton()
         Me.btnClose = New MetroFramework.Controls.MetroButton()
@@ -50,11 +52,11 @@ Partial Class DailySalesReport
         Me.MetroButton2.Enabled = False
         Me.MetroButton2.FontSize = MetroFramework.MetroButtonSize.Tall
         Me.MetroButton2.ForeColor = System.Drawing.Color.White
-        Me.MetroButton2.Location = New System.Drawing.Point(538, 689)
+        Me.MetroButton2.Location = New System.Drawing.Point(895, 694)
         Me.MetroButton2.Margin = New System.Windows.Forms.Padding(5)
         Me.MetroButton2.Name = "MetroButton2"
-        Me.MetroButton2.Size = New System.Drawing.Size(488, 45)
-        Me.MetroButton2.TabIndex = 10
+        Me.MetroButton2.Size = New System.Drawing.Size(131, 53)
+        Me.MetroButton2.TabIndex = 3
         Me.MetroButton2.Text = "&Print"
         Me.MetroButton2.UseCustomBackColor = True
         Me.MetroButton2.UseCustomForeColor = True
@@ -66,11 +68,11 @@ Partial Class DailySalesReport
         Me.btnClose.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.btnClose.FontSize = MetroFramework.MetroButtonSize.Tall
         Me.btnClose.ForeColor = System.Drawing.Color.White
-        Me.btnClose.Location = New System.Drawing.Point(32, 689)
+        Me.btnClose.Location = New System.Drawing.Point(736, 694)
         Me.btnClose.Margin = New System.Windows.Forms.Padding(5)
         Me.btnClose.Name = "btnClose"
-        Me.btnClose.Size = New System.Drawing.Size(488, 45)
-        Me.btnClose.TabIndex = 9
+        Me.btnClose.Size = New System.Drawing.Size(131, 53)
+        Me.btnClose.TabIndex = 2
         Me.btnClose.Text = "&Close"
         Me.btnClose.UseCustomBackColor = True
         Me.btnClose.UseCustomForeColor = True
@@ -78,13 +80,38 @@ Partial Class DailySalesReport
         '
         'dgvDailySales
         '
+        Me.dgvDailySales.AllowUserToAddRows = False
+        Me.dgvDailySales.AllowUserToDeleteRows = False
         Me.dgvDailySales.AllowUserToResizeColumns = False
         Me.dgvDailySales.AllowUserToResizeRows = False
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.dgvDailySales.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
         Me.dgvDailySales.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.dgvDailySales.BackgroundColor = System.Drawing.Color.White
+        Me.dgvDailySales.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.dgvDailySales.CausesValidation = False
+        Me.dgvDailySales.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None
+        Me.dgvDailySales.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
         Me.dgvDailySales.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.DodgerBlue
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvDailySales.DefaultCellStyle = DataGridViewCellStyle2
         Me.dgvDailySales.Location = New System.Drawing.Point(32, 264)
         Me.dgvDailySales.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
+        Me.dgvDailySales.MultiSelect = False
         Me.dgvDailySales.Name = "dgvDailySales"
+        Me.dgvDailySales.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        Me.dgvDailySales.RowHeadersVisible = False
+        Me.dgvDailySales.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
+        Me.dgvDailySales.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.dgvDailySales.ShowCellErrors = False
+        Me.dgvDailySales.ShowCellToolTips = False
+        Me.dgvDailySales.ShowEditingIcon = False
         Me.dgvDailySales.Size = New System.Drawing.Size(994, 404)
         Me.dgvDailySales.TabIndex = 8
         '
@@ -107,7 +134,7 @@ Partial Class DailySalesReport
         Me.cboTransaction.Margin = New System.Windows.Forms.Padding(7)
         Me.cboTransaction.Name = "cboTransaction"
         Me.cboTransaction.Size = New System.Drawing.Size(169, 30)
-        Me.cboTransaction.TabIndex = 14
+        Me.cboTransaction.TabIndex = 1
         Me.cboTransaction.UseSelectable = True
         '
         'MetroDatelbl
@@ -129,7 +156,7 @@ Partial Class DailySalesReport
         Me.cboDate.Margin = New System.Windows.Forms.Padding(7)
         Me.cboDate.Name = "cboDate"
         Me.cboDate.Size = New System.Drawing.Size(337, 30)
-        Me.cboDate.TabIndex = 12
+        Me.cboDate.TabIndex = 0
         Me.cboDate.UseSelectable = True
         '
         'MetroLabel1

@@ -12,6 +12,28 @@ Public Class DailySalesReport
                 cboDate.Items.Add(d)
             Next
         End Using
+
+        Dim dt As New DataTable
+        dt.Columns.Add("ID")
+        dt.Columns.Add("Name")
+        dt.Columns.Add("Price")
+        dt.Columns.Add("Quantity")
+        dt.Columns.Add("Subtotal")
+
+        dgvDailySales.DataSource = dt
+
+        dgvDailySales.Columns(0).Width = 60
+        dgvDailySales.Columns(1).Width = 130
+        dgvDailySales.Columns(2).Width = 65
+        dgvDailySales.Columns(3).Width = 85
+        dgvDailySales.Columns(4).Width = 85
+
+        dgvDailySales.Columns(2).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
+        dgvDailySales.Columns(2).DefaultCellStyle.Format = "N2"
+
+        dgvDailySales.Columns(3).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
+        dgvDailySales.Columns(4).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
+        dgvDailySales.Columns(4).DefaultCellStyle.Format = "N2"
     End Sub
 
     Private Sub btnClose_Click(sender As Object, e As EventArgs) Handles btnClose.Click
@@ -19,6 +41,19 @@ Public Class DailySalesReport
     End Sub
 
     Private Sub cmbTransaction_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboTransaction.SelectedIndexChanged
+        dgvDailySales.Columns(0).Width = 60
+        dgvDailySales.Columns(1).Width = 130
+        dgvDailySales.Columns(2).Width = 65
+        dgvDailySales.Columns(3).Width = 85
+        dgvDailySales.Columns(4).Width = 85
+
+        dgvDailySales.Columns(2).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
+        dgvDailySales.Columns(2).DefaultCellStyle.Format = "N2"
+
+        dgvDailySales.Columns(3).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
+        dgvDailySales.Columns(4).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
+        dgvDailySales.Columns(4).DefaultCellStyle.Format = "N2"
+
         Using db As New EconsaveDataClassesDataContext()
             Dim transaction = (From t In db.Transactions
                                Where t.transactionID Is cboTransaction.SelectedItem
@@ -33,10 +68,10 @@ Public Class DailySalesReport
             dgvDailySales.DataSource = From itmSls In db.ItemSales
                                        Where itmSls.transactionID = cboTransaction.SelectedItem.ToString()
                                        Select
-                                           Item_ID = itmSls.itemID,
-                                           Item_Name = itmSls.Item.name,
-                                           Price_per_Unit = itmSls.Item.price,
-                                           Quantity_Sold = itmSls.quantity,
+                                           ID = itmSls.itemID,
+                                           Name = itmSls.Item.name,
+                                           Price = itmSls.Item.price,
+                                           Quantity = itmSls.quantity,
                                            Subtotal = itmSls.subtotal
         End Using
 
@@ -67,6 +102,7 @@ Public Class DailySalesReport
     Private Sub doc_PrintPage(sender As Object, e As Printing.PrintPageEventArgs) Handles doc.PrintPage
         Dim db As New EconsaveDataClassesDataContext()
         Dim itemSaleList As List(Of ItemSale) = (From i In db.ItemSales Where i.transactionID = cboTransaction.SelectedItem.ToString).ToList
+        Dim staff As Staff = (From i In db.Staffs Where i.staffID = Login.staffId Select i).FirstOrDefault
 
         Dim fontHeader As New Font("Calibri", 24, FontStyle.Bold)
         Dim fontSubHeader As New Font("Calibri", 12)
@@ -76,7 +112,7 @@ Public Class DailySalesReport
         Dim header As String = "Daily Sales Report"
         Dim subHeader As String = String.Format(
             "Printed on {0:dd-MMMM-yyyy hh:mm:ss tt}" & vbNewLine &
-            "Prepared by", DateTime.Now
+            "Prepared by {1,0} ( {2,0} )", DateTime.Now, staff.name, staff.staffID
         )
 
         Dim body As New StringBuilder()

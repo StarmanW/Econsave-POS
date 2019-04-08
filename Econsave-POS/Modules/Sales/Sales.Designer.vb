@@ -144,7 +144,7 @@ Partial Class Sales
         Me.cmbCategory.Margin = New System.Windows.Forms.Padding(4)
         Me.cmbCategory.Name = "cmbCategory"
         Me.cmbCategory.Size = New System.Drawing.Size(269, 30)
-        Me.cmbCategory.TabIndex = 10
+        Me.cmbCategory.TabIndex = 1
         Me.cmbCategory.UseSelectable = True
         '
         'DataGridView1
@@ -199,6 +199,7 @@ Partial Class Sales
         Me.DataGridView1.ShowEditingIcon = False
         Me.DataGridView1.ShowRowErrors = False
         Me.DataGridView1.Size = New System.Drawing.Size(517, 518)
+        Me.DataGridView1.StandardTab = True
         Me.DataGridView1.TabIndex = 0
         '
         'DataGridView2
@@ -253,7 +254,8 @@ Partial Class Sales
         Me.DataGridView2.ShowEditingIcon = False
         Me.DataGridView2.ShowRowErrors = False
         Me.DataGridView2.Size = New System.Drawing.Size(567, 370)
-        Me.DataGridView2.TabIndex = 12
+        Me.DataGridView2.StandardTab = True
+        Me.DataGridView2.TabIndex = 2
         '
         'MetroLabel2
         '
@@ -267,24 +269,30 @@ Partial Class Sales
         '
         'MetroButton2
         '
+        Me.MetroButton2.BackColor = System.Drawing.Color.ForestGreen
         Me.MetroButton2.FontSize = MetroFramework.MetroButtonSize.Tall
-        Me.MetroButton2.FontWeight = MetroFramework.MetroButtonWeight.Light
+        Me.MetroButton2.ForeColor = System.Drawing.Color.White
         Me.MetroButton2.Location = New System.Drawing.Point(790, 694)
         Me.MetroButton2.Name = "MetroButton2"
         Me.MetroButton2.Size = New System.Drawing.Size(161, 61)
-        Me.MetroButton2.TabIndex = 16
+        Me.MetroButton2.TabIndex = 3
         Me.MetroButton2.Text = "&Submit"
+        Me.MetroButton2.UseCustomBackColor = True
+        Me.MetroButton2.UseCustomForeColor = True
         Me.MetroButton2.UseSelectable = True
         '
         'MetroButton1
         '
+        Me.MetroButton1.BackColor = System.Drawing.SystemColors.Highlight
         Me.MetroButton1.FontSize = MetroFramework.MetroButtonSize.Tall
-        Me.MetroButton1.FontWeight = MetroFramework.MetroButtonWeight.Light
+        Me.MetroButton1.ForeColor = System.Drawing.Color.White
         Me.MetroButton1.Location = New System.Drawing.Point(972, 694)
         Me.MetroButton1.Name = "MetroButton1"
         Me.MetroButton1.Size = New System.Drawing.Size(161, 61)
-        Me.MetroButton1.TabIndex = 17
+        Me.MetroButton1.TabIndex = 4
         Me.MetroButton1.Text = "C&lear"
+        Me.MetroButton1.UseCustomBackColor = True
+        Me.MetroButton1.UseCustomForeColor = True
         Me.MetroButton1.UseSelectable = True
         '
         'MetroLabel3
