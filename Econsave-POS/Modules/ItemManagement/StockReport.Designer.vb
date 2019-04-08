@@ -24,12 +24,14 @@ Partial Class StockReport
     Private Sub InitializeComponent()
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(StockReport))
         Me.dgvStockReport = New System.Windows.Forms.DataGridView()
         Me.MetroButton2 = New MetroFramework.Controls.MetroButton()
         Me.MetroButton1 = New MetroFramework.Controls.MetroButton()
         Me.lblCategory = New MetroFramework.Controls.MetroLabel()
         Me.cmbCategory = New MetroFramework.Controls.MetroComboBox()
+        Me.doc = New System.Drawing.Printing.PrintDocument()
+        Me.dlgPrintPreview = New System.Windows.Forms.PrintPreviewDialog()
         CType(Me.dgvStockReport, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -46,23 +48,15 @@ Partial Class StockReport
         Me.dgvStockReport.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dgvStockReport.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None
         Me.dgvStockReport.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvStockReport.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.dgvStockReport.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.DodgerBlue
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgvStockReport.DefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.DodgerBlue
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvStockReport.DefaultCellStyle = DataGridViewCellStyle2
         Me.dgvStockReport.Location = New System.Drawing.Point(32, 111)
         Me.dgvStockReport.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
         Me.dgvStockReport.MultiSelect = False
@@ -80,10 +74,10 @@ Partial Class StockReport
         Me.MetroButton2.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.MetroButton2.FontSize = MetroFramework.MetroButtonSize.Tall
         Me.MetroButton2.ForeColor = System.Drawing.Color.White
-        Me.MetroButton2.Location = New System.Drawing.Point(928, 523)
+        Me.MetroButton2.Location = New System.Drawing.Point(551, 534)
         Me.MetroButton2.Margin = New System.Windows.Forms.Padding(4)
         Me.MetroButton2.Name = "MetroButton2"
-        Me.MetroButton2.Size = New System.Drawing.Size(124, 56)
+        Me.MetroButton2.Size = New System.Drawing.Size(500, 45)
         Me.MetroButton2.TabIndex = 5
         Me.MetroButton2.Text = "&Print"
         Me.MetroButton2.UseCustomBackColor = True
@@ -96,10 +90,10 @@ Partial Class StockReport
         Me.MetroButton1.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.MetroButton1.FontSize = MetroFramework.MetroButtonSize.Tall
         Me.MetroButton1.ForeColor = System.Drawing.Color.White
-        Me.MetroButton1.Location = New System.Drawing.Point(779, 523)
+        Me.MetroButton1.Location = New System.Drawing.Point(31, 534)
         Me.MetroButton1.Margin = New System.Windows.Forms.Padding(4)
         Me.MetroButton1.Name = "MetroButton1"
-        Me.MetroButton1.Size = New System.Drawing.Size(124, 56)
+        Me.MetroButton1.Size = New System.Drawing.Size(500, 45)
         Me.MetroButton1.TabIndex = 4
         Me.MetroButton1.Text = "&Close"
         Me.MetroButton1.UseCustomBackColor = True
@@ -113,24 +107,40 @@ Partial Class StockReport
         Me.lblCategory.Location = New System.Drawing.Point(32, 65)
         Me.lblCategory.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
         Me.lblCategory.Name = "lblCategory"
-        Me.lblCategory.Size = New System.Drawing.Size(91, 25)
+        Me.lblCategory.Size = New System.Drawing.Size(85, 25)
         Me.lblCategory.TabIndex = 6
         Me.lblCategory.Text = "Category:"
         '
         'cmbCategory
         '
         Me.cmbCategory.FormattingEnabled = True
-        Me.cmbCategory.ItemHeight = 24
+        Me.cmbCategory.ItemHeight = 23
         Me.cmbCategory.Location = New System.Drawing.Point(127, 65)
         Me.cmbCategory.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
         Me.cmbCategory.Name = "cmbCategory"
-        Me.cmbCategory.Size = New System.Drawing.Size(401, 30)
+        Me.cmbCategory.Size = New System.Drawing.Size(401, 29)
         Me.cmbCategory.TabIndex = 7
         Me.cmbCategory.UseSelectable = True
         '
+        'doc
+        '
+        Me.doc.DocumentName = "Daily Sales Report"
+        Me.doc.OriginAtMargins = True
+        '
+        'dlgPrintPreview
+        '
+        Me.dlgPrintPreview.AutoScrollMargin = New System.Drawing.Size(0, 0)
+        Me.dlgPrintPreview.AutoScrollMinSize = New System.Drawing.Size(0, 0)
+        Me.dlgPrintPreview.ClientSize = New System.Drawing.Size(400, 300)
+        Me.dlgPrintPreview.Enabled = True
+        Me.dlgPrintPreview.Icon = CType(resources.GetObject("dlgPrintPreview.Icon"), System.Drawing.Icon)
+        Me.dlgPrintPreview.Name = "dlgPrintPreview"
+        Me.dlgPrintPreview.UseAntiAlias = True
+        Me.dlgPrintPreview.Visible = False
+        '
         'StockReport
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.CancelButton = Me.MetroButton1
         Me.ClientSize = New System.Drawing.Size(1091, 619)
@@ -157,4 +167,6 @@ Partial Class StockReport
     Friend WithEvents MetroButton1 As MetroFramework.Controls.MetroButton
     Friend WithEvents lblCategory As MetroFramework.Controls.MetroLabel
     Friend WithEvents cmbCategory As MetroFramework.Controls.MetroComboBox
+    Friend WithEvents doc As Printing.PrintDocument
+    Friend WithEvents dlgPrintPreview As PrintPreviewDialog
 End Class
