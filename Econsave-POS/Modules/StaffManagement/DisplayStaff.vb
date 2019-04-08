@@ -15,6 +15,7 @@
         itemDGV.DataSource = rs
     End Sub
 
+    ' Display staff details 
     Private Sub itemDGV_CellMouseDoubleClick(sender As Object, e As DataGridViewCellMouseEventArgs) Handles itemDGV.CellMouseDoubleClick
         If e.RowIndex >= 0 AndAlso e.ColumnIndex >= 0 Then
             Dim selectedRow = itemDGV.Rows(e.RowIndex)
@@ -25,6 +26,7 @@
         End If
     End Sub
 
+    ' Search function
     Private Sub txtSearchBox_KeyUp(sender As Object, e As KeyEventArgs) Handles txtSearchBox.KeyUp
         Dim searchStr = txtSearchBox.Text
         Dim db As New EconsaveDataClassesDataContext()

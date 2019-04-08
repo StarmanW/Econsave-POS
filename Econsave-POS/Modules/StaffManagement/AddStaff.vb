@@ -18,7 +18,7 @@ Public Class AddStaff
         txtStaffID.Text = $"MN{(db.Staffs.Count + 1).ToString("D4")}"
     End Sub
 
-
+    ' Generate Staff ID 
     Private Sub radCashier_CheckedChanged(sender As Object, e As EventArgs) Handles radCashier.CheckedChanged
         Using db As New EconsaveDataClassesDataContext()
             txtStaffID.Text = $"CS{(db.Staffs.Count + 1).ToString("D4")}"
@@ -94,14 +94,7 @@ Public Class AddStaff
         Return validData
     End Function
 
-    Private Sub txtConfirmPassword_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtConfirmPassword.KeyPress
-
-    End Sub
-
-    Private Sub txtPassword_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtPassword.KeyPress
-
-    End Sub
-
+    ' Check Password length
     Private Sub txtPassword_KeyUp(sender As Object, e As KeyEventArgs) Handles txtPassword.KeyUp
         If txtPassword.Text.Length < 8 Then
             lblDialogBoxPassword.Text = "Password must be at least 9 digits/characters."

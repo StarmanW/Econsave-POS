@@ -28,6 +28,7 @@ Public Class UpdateStaff
         Me.Close()
     End Sub
 
+    ' update staff
     Private Sub btnUpdateItem_Click(sender As Object, e As EventArgs) Handles btnUpdateItem.Click
         If isValidFields() Then
             Using db As New EconsaveDataClassesDataContext()
