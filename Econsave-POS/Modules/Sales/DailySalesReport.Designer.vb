@@ -22,8 +22,8 @@ Partial Class DailySalesReport
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(DailySalesReport))
         Me.MetroButton2 = New MetroFramework.Controls.MetroButton()
         Me.btnClose = New MetroFramework.Controls.MetroButton()
@@ -59,7 +59,7 @@ Partial Class DailySalesReport
         Me.MetroButton2.Margin = New System.Windows.Forms.Padding(5)
         Me.MetroButton2.Name = "MetroButton2"
         Me.MetroButton2.Size = New System.Drawing.Size(131, 53)
-        Me.MetroButton2.TabIndex = 3
+        Me.MetroButton2.TabIndex = 4
         Me.MetroButton2.Text = "&Print"
         Me.MetroButton2.UseCustomBackColor = True
         Me.MetroButton2.UseCustomForeColor = True
@@ -75,7 +75,7 @@ Partial Class DailySalesReport
         Me.btnClose.Margin = New System.Windows.Forms.Padding(5)
         Me.btnClose.Name = "btnClose"
         Me.btnClose.Size = New System.Drawing.Size(131, 53)
-        Me.btnClose.TabIndex = 2
+        Me.btnClose.TabIndex = 3
         Me.btnClose.Text = "&Close"
         Me.btnClose.UseCustomBackColor = True
         Me.btnClose.UseCustomForeColor = True
@@ -87,8 +87,8 @@ Partial Class DailySalesReport
         Me.dgvDailySales.AllowUserToDeleteRows = False
         Me.dgvDailySales.AllowUserToResizeColumns = False
         Me.dgvDailySales.AllowUserToResizeRows = False
-        DataGridViewCellStyle3.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.dgvDailySales.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.dgvDailySales.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
         Me.dgvDailySales.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgvDailySales.BackgroundColor = System.Drawing.Color.White
         Me.dgvDailySales.BorderStyle = System.Windows.Forms.BorderStyle.None
@@ -96,14 +96,14 @@ Partial Class DailySalesReport
         Me.dgvDailySales.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None
         Me.dgvDailySales.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
         Me.dgvDailySales.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.DodgerBlue
-        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgvDailySales.DefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.DodgerBlue
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvDailySales.DefaultCellStyle = DataGridViewCellStyle2
         Me.dgvDailySales.Location = New System.Drawing.Point(35, 325)
         Me.dgvDailySales.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
         Me.dgvDailySales.MultiSelect = False
@@ -116,7 +116,8 @@ Partial Class DailySalesReport
         Me.dgvDailySales.ShowCellToolTips = False
         Me.dgvDailySales.ShowEditingIcon = False
         Me.dgvDailySales.Size = New System.Drawing.Size(994, 404)
-        Me.dgvDailySales.TabIndex = 8
+        Me.dgvDailySales.StandardTab = True
+        Me.dgvDailySales.TabIndex = 2
         '
         'Metrolbl
         '

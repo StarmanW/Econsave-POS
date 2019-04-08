@@ -303,6 +303,7 @@ Partial Class Sales
         Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Name = "Sales"
         Me.Padding = New System.Windows.Forms.Padding(20, 74, 20, 20)
+        Me.Resizable = False
         Me.Text = "Sales"
         Me.Theme = MetroFramework.MetroThemeStyle.[Default]
         CType(Me.EconsaveDBDataSet, System.ComponentModel.ISupportInitialize).EndInit()
