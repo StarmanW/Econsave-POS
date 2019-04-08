@@ -1,7 +1,7 @@
 ﻿Public Class Login
     Dim id As String
     Dim password As String
-    Dim staffId As String
+    Friend staffId As String
     Dim staffPassword As String
     Dim staffPosition As String
     Dim position As String
@@ -9,11 +9,7 @@
     Dim Authorize As Form
 
     Public Sub New()
-
         InitializeComponent()
-
-
-
     End Sub
 
     Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
@@ -50,10 +46,10 @@
                 epWrongPassword.SetError(txtPassword, "Invalid Password!")
 
             ElseIf staffId.Equals(id) = True And staffPassword.Equals(password) = True And staffPosition = "Manager" Then
-                MessageBox.Show("I Am Manager")
+                'MessageBox.Show("I Am Manager")
 
             ElseIf staffId.Equals(id) = True And staffPassword.Equals(password) = True And staffPosition = "Cashier" Then
-                MessageBox.Show("I Am Cashier")
+                'MessageBox.Show("I Am Cashier")
 
             End If
 
