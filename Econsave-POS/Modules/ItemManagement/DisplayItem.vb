@@ -28,15 +28,17 @@
     Private Sub DisplayItem_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim db As New EconsaveDataClassesDataContext()
         Dim rs = From i In db.Items Select
-                                        Item_ID = i.itemID,
-                                        Item_Name = i.name,
+                                        ID = i.itemID,
+                                        Name = i.name,
                                         Description = i.description,
                                         Category = i.Category.categoryName,
-                                        Price_per_Unit = i.price,
-                                        Stock_Quantity = i.stockQuantity,
+                                        Price = Format(i.price, "0.00"),
+                                        Quantity = i.stockQuantity,
                                         Created_On = i.createdOn,
                                         Last_Update = i.lastUpdate
         itemDGV.DataSource = rs
+        itemDGV.Columns(4).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
+        itemDGV.Columns(5).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
     End Sub
 
     Private Sub cmbCategory_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbCategory.SelectedIndexChanged
@@ -45,28 +47,30 @@
 
         If cmbCategory.SelectedIndex = 0 Then
             rs = From i In db.Items Select
-                                        Item_ID = i.itemID,
-                                        Item_Name = i.name,
+                                        ID = i.itemID,
+                                        Name = i.name,
                                         Description = i.description,
                                         Category = i.Category.categoryName,
-                                        Price_per_Unit = i.price,
-                                        Stock_Quantity = i.stockQuantity,
+                                        Price = Format(i.price, "0.00"),
+                                        Quantity = i.stockQuantity,
                                         Created_On = i.createdOn,
                                         Last_Update = i.lastUpdate
         Else
             Dim itemCategory = CType(cmbCategory.SelectedItem, String)
             rs = From i In db.Items Where i.Category.categoryName = itemCategory Select
-                                        Item_ID = i.itemID,
-                                        Item_Name = i.name,
+                                        ID = i.itemID,
+                                        Name = i.name,
                                         Description = i.description,
                                         Category = i.Category.categoryName,
-                                        Price_per_Unit = i.price,
-                                        Stock_Quantity = i.stockQuantity,
+                                        Price = Format(i.price, "0.00"),
+                                        Quantity = i.stockQuantity,
                                         Created_On = i.createdOn,
                                         Last_Update = i.lastUpdate
         End If
 
         itemDGV.DataSource = rs
+        itemDGV.Columns(4).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
+        itemDGV.Columns(5).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
     End Sub
 
     Private Sub itemDGV_CellMouseDoubleClick(sender As Object, e As DataGridViewCellMouseEventArgs) Handles itemDGV.CellMouseDoubleClick
@@ -88,51 +92,54 @@
         If Not searchStr.Equals("") Then
             If cmbCategory.SelectedIndex = 0 Then
                 rs = From i In db.Items Where i.description.Contains(searchStr) Or i.name.Contains(searchStr) Select
-                                        Item_ID = i.itemID,
-                                        Item_Name = i.name,
+                                        ID = i.itemID,
+                                        Name = i.name,
                                         Description = i.description,
                                         Category = i.Category.categoryName,
-                                        Price_per_Unit = i.price,
-                                        Stock_Quantity = i.stockQuantity,
+                                        Price = Format(i.price, "0.00"),
+                                        Quantity = i.stockQuantity,
                                         Created_On = i.createdOn,
                                         Last_Update = i.lastUpdate
             Else
                 Dim itemCategory = CType(cmbCategory.SelectedItem, String)
                 rs = From i In db.Items Where i.Category.categoryName = itemCategory And (i.description.Contains(searchStr) Or i.name.Contains(searchStr)) Select
-                                        Item_ID = i.itemID,
-                                        Item_Name = i.name,
+                                        ID = i.itemID,
+                                        Name = i.name,
                                         Description = i.description,
                                         Category = i.Category.categoryName,
-                                        Price_per_Unit = i.price,
-                                        Stock_Quantity = i.stockQuantity,
+                                        Price = Format(i.price, "0.00"),
+                                        Quantity = i.stockQuantity,
                                         Created_On = i.createdOn,
                                         Last_Update = i.lastUpdate
             End If
         Else
             If cmbCategory.SelectedIndex = 0 Then
                 rs = From i In db.Items Select
-                                        Item_ID = i.itemID,
-                                        Item_Name = i.name,
+                                        ID = i.itemID,
+                                        Name = i.name,
                                         Description = i.description,
                                         Category = i.Category.categoryName,
-                                        Price_per_Unit = i.price,
-                                        Stock_Quantity = i.stockQuantity,
+                                        Price = Format(i.price, "0.00"),
+                                        Quantity = i.stockQuantity,
                                         Created_On = i.createdOn,
                                         Last_Update = i.lastUpdate
             Else
                 Dim itemCategory = CType(cmbCategory.SelectedItem, String)
                 rs = From i In db.Items Where i.Category.categoryName = itemCategory Select
-                                        Item_ID = i.itemID,
-                                        Item_Name = i.name,
+                                        ID = i.itemID,
+                                        Name = i.name,
                                         Description = i.description,
                                         Category = i.Category.categoryName,
-                                        Price_per_Unit = i.price,
-                                        Stock_Quantity = i.stockQuantity,
+                                        Price = Format(i.price, "0.00"),
+                                        Quantity = i.stockQuantity,
                                         Created_On = i.createdOn,
                                         Last_Update = i.lastUpdate
             End If
         End If
         itemDGV.DataSource = rs
+
+        itemDGV.Columns(4).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
+        itemDGV.Columns(5).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
     End Sub
 
     Private Sub MetroButton1_Click(sender As Object, e As EventArgs) Handles MetroButton1.Click

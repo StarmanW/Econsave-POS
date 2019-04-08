@@ -24,6 +24,9 @@ Partial Class History
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(History))
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txtSearch = New System.Windows.Forms.TextBox()
         Me.btnPrint = New System.Windows.Forms.Button()
@@ -42,43 +45,47 @@ Partial Class History
         '
         'Label1
         '
-        Me.Label1.Location = New System.Drawing.Point(59, 60)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
+        Me.Label1.Location = New System.Drawing.Point(79, 74)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(7, 0, 7, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(90, 30)
+        Me.Label1.Size = New System.Drawing.Size(120, 37)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "Search :"
         '
         'txtSearch
         '
-        Me.txtSearch.Location = New System.Drawing.Point(165, 60)
+        Me.txtSearch.Location = New System.Drawing.Point(220, 74)
+        Me.txtSearch.Margin = New System.Windows.Forms.Padding(4)
         Me.txtSearch.Name = "txtSearch"
-        Me.txtSearch.Size = New System.Drawing.Size(389, 20)
+        Me.txtSearch.Size = New System.Drawing.Size(517, 22)
         Me.txtSearch.TabIndex = 2
         '
         'btnPrint
         '
-        Me.btnPrint.Location = New System.Drawing.Point(560, 104)
+        Me.btnPrint.Location = New System.Drawing.Point(747, 128)
+        Me.btnPrint.Margin = New System.Windows.Forms.Padding(4)
         Me.btnPrint.Name = "btnPrint"
-        Me.btnPrint.Size = New System.Drawing.Size(86, 30)
+        Me.btnPrint.Size = New System.Drawing.Size(115, 37)
         Me.btnPrint.TabIndex = 8
         Me.btnPrint.Text = "Print"
         Me.btnPrint.UseVisualStyleBackColor = True
         '
         'btnReset
         '
-        Me.btnReset.Location = New System.Drawing.Point(652, 54)
+        Me.btnReset.Location = New System.Drawing.Point(869, 66)
+        Me.btnReset.Margin = New System.Windows.Forms.Padding(4)
         Me.btnReset.Name = "btnReset"
-        Me.btnReset.Size = New System.Drawing.Size(86, 30)
+        Me.btnReset.Size = New System.Drawing.Size(115, 37)
         Me.btnReset.TabIndex = 7
         Me.btnReset.Text = "Reset"
         Me.btnReset.UseVisualStyleBackColor = True
         '
         'btnSearch
         '
-        Me.btnSearch.Location = New System.Drawing.Point(560, 54)
+        Me.btnSearch.Location = New System.Drawing.Point(747, 66)
+        Me.btnSearch.Margin = New System.Windows.Forms.Padding(4)
         Me.btnSearch.Name = "btnSearch"
-        Me.btnSearch.Size = New System.Drawing.Size(86, 30)
+        Me.btnSearch.Size = New System.Drawing.Size(115, 37)
         Me.btnSearch.TabIndex = 6
         Me.btnSearch.Text = "Search"
         Me.btnSearch.UseVisualStyleBackColor = True
@@ -114,26 +121,55 @@ Partial Class History
         '
         Me.historyDataGV.AllowUserToAddRows = False
         Me.historyDataGV.AllowUserToDeleteRows = False
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.historyDataGV.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        Me.historyDataGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.historyDataGV.BackgroundColor = System.Drawing.Color.White
+        Me.historyDataGV.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.historyDataGV.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None
+        Me.historyDataGV.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.historyDataGV.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.historyDataGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.historyDataGV.Location = New System.Drawing.Point(62, 161)
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.DodgerBlue
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.historyDataGV.DefaultCellStyle = DataGridViewCellStyle3
+        Me.historyDataGV.Location = New System.Drawing.Point(83, 198)
+        Me.historyDataGV.Margin = New System.Windows.Forms.Padding(4)
+        Me.historyDataGV.MultiSelect = False
         Me.historyDataGV.Name = "historyDataGV"
         Me.historyDataGV.ReadOnly = True
+        Me.historyDataGV.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        Me.historyDataGV.RowHeadersVisible = False
         Me.historyDataGV.RowTemplate.Height = 24
-        Me.historyDataGV.Size = New System.Drawing.Size(650, 301)
+        Me.historyDataGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.historyDataGV.Size = New System.Drawing.Size(867, 370)
         Me.historyDataGV.TabIndex = 9
         '
         'History
         '
         Me.AcceptButton = Me.btnSearch
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(747, 496)
+        Me.ClientSize = New System.Drawing.Size(996, 610)
         Me.Controls.Add(Me.historyDataGV)
         Me.Controls.Add(Me.btnPrint)
         Me.Controls.Add(Me.btnReset)
         Me.Controls.Add(Me.btnSearch)
         Me.Controls.Add(Me.txtSearch)
         Me.Controls.Add(Me.Label1)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "History"
         Me.Text = "History"
         CType(Me.EconsaveDBDataSet, System.ComponentModel.ISupportInitialize).EndInit()

@@ -22,6 +22,8 @@ Partial Class StockReport
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.dgvStockReport = New System.Windows.Forms.DataGridView()
         Me.MetroButton2 = New MetroFramework.Controls.MetroButton()
         Me.MetroButton1 = New MetroFramework.Controls.MetroButton()
@@ -32,13 +34,34 @@ Partial Class StockReport
         '
         'dgvStockReport
         '
+        Me.dgvStockReport.AllowUserToAddRows = False
+        Me.dgvStockReport.AllowUserToDeleteRows = False
         Me.dgvStockReport.AllowUserToResizeColumns = False
         Me.dgvStockReport.AllowUserToResizeRows = False
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.dgvStockReport.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
         Me.dgvStockReport.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.dgvStockReport.BackgroundColor = System.Drawing.Color.White
+        Me.dgvStockReport.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.dgvStockReport.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None
+        Me.dgvStockReport.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
         Me.dgvStockReport.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.DodgerBlue
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvStockReport.DefaultCellStyle = DataGridViewCellStyle2
         Me.dgvStockReport.Location = New System.Drawing.Point(32, 111)
         Me.dgvStockReport.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
+        Me.dgvStockReport.MultiSelect = False
         Me.dgvStockReport.Name = "dgvStockReport"
+        Me.dgvStockReport.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        Me.dgvStockReport.RowHeadersVisible = False
+        Me.dgvStockReport.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
+        Me.dgvStockReport.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgvStockReport.Size = New System.Drawing.Size(1020, 404)
         Me.dgvStockReport.TabIndex = 2
         '
@@ -81,24 +104,24 @@ Partial Class StockReport
         Me.lblCategory.Location = New System.Drawing.Point(32, 65)
         Me.lblCategory.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
         Me.lblCategory.Name = "lblCategory"
-        Me.lblCategory.Size = New System.Drawing.Size(85, 25)
+        Me.lblCategory.Size = New System.Drawing.Size(91, 25)
         Me.lblCategory.TabIndex = 6
         Me.lblCategory.Text = "Category:"
         '
         'cmbCategory
         '
         Me.cmbCategory.FormattingEnabled = True
-        Me.cmbCategory.ItemHeight = 23
+        Me.cmbCategory.ItemHeight = 24
         Me.cmbCategory.Location = New System.Drawing.Point(127, 65)
         Me.cmbCategory.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
         Me.cmbCategory.Name = "cmbCategory"
-        Me.cmbCategory.Size = New System.Drawing.Size(401, 29)
+        Me.cmbCategory.Size = New System.Drawing.Size(401, 30)
         Me.cmbCategory.TabIndex = 7
         Me.cmbCategory.UseSelectable = True
         '
         'StockReport
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.CancelButton = Me.MetroButton1
         Me.ClientSize = New System.Drawing.Size(1091, 619)

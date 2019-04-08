@@ -22,6 +22,8 @@ Partial Class DisplayItem
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.itemDGV = New System.Windows.Forms.DataGridView()
         Me.cmbCategory = New MetroFramework.Controls.MetroComboBox()
         Me.lblCategory = New MetroFramework.Controls.MetroLabel()
@@ -33,24 +35,44 @@ Partial Class DisplayItem
         '
         'itemDGV
         '
+        Me.itemDGV.AllowUserToAddRows = False
+        Me.itemDGV.AllowUserToDeleteRows = False
         Me.itemDGV.AllowUserToResizeColumns = False
         Me.itemDGV.AllowUserToResizeRows = False
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.itemDGV.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
         Me.itemDGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.itemDGV.BackgroundColor = System.Drawing.Color.White
+        Me.itemDGV.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.itemDGV.CausesValidation = False
+        Me.itemDGV.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None
+        Me.itemDGV.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
         Me.itemDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.DodgerBlue
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.itemDGV.DefaultCellStyle = DataGridViewCellStyle2
         Me.itemDGV.Location = New System.Drawing.Point(25, 101)
         Me.itemDGV.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.itemDGV.Name = "itemDGV"
+        Me.itemDGV.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        Me.itemDGV.RowHeadersVisible = False
+        Me.itemDGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.itemDGV.Size = New System.Drawing.Size(1276, 509)
         Me.itemDGV.TabIndex = 0
         '
         'cmbCategory
         '
         Me.cmbCategory.FormattingEnabled = True
-        Me.cmbCategory.ItemHeight = 23
+        Me.cmbCategory.ItemHeight = 24
         Me.cmbCategory.Location = New System.Drawing.Point(584, 62)
         Me.cmbCategory.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.cmbCategory.Name = "cmbCategory"
-        Me.cmbCategory.Size = New System.Drawing.Size(302, 29)
+        Me.cmbCategory.Size = New System.Drawing.Size(302, 30)
         Me.cmbCategory.TabIndex = 5
         Me.cmbCategory.UseSelectable = True
         '
@@ -61,7 +83,7 @@ Partial Class DisplayItem
         Me.lblCategory.Location = New System.Drawing.Point(491, 62)
         Me.lblCategory.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblCategory.Name = "lblCategory"
-        Me.lblCategory.Size = New System.Drawing.Size(85, 25)
+        Me.lblCategory.Size = New System.Drawing.Size(91, 25)
         Me.lblCategory.TabIndex = 2
         Me.lblCategory.Text = "Category:"
         '
@@ -72,7 +94,7 @@ Partial Class DisplayItem
         Me.MetroLabel1.Location = New System.Drawing.Point(25, 62)
         Me.MetroLabel1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.MetroLabel1.Name = "MetroLabel1"
-        Me.MetroLabel1.Size = New System.Drawing.Size(67, 25)
+        Me.MetroLabel1.Size = New System.Drawing.Size(68, 25)
         Me.MetroLabel1.TabIndex = 3
         Me.MetroLabel1.Text = "Search:"
         '
@@ -114,9 +136,9 @@ Partial Class DisplayItem
         Me.MetroButton1.BackColor = System.Drawing.Color.ForestGreen
         Me.MetroButton1.FontSize = MetroFramework.MetroButtonSize.Tall
         Me.MetroButton1.ForeColor = System.Drawing.Color.White
-        Me.MetroButton1.Location = New System.Drawing.Point(926, 618)
+        Me.MetroButton1.Location = New System.Drawing.Point(1165, 618)
         Me.MetroButton1.Name = "MetroButton1"
-        Me.MetroButton1.Size = New System.Drawing.Size(375, 45)
+        Me.MetroButton1.Size = New System.Drawing.Size(136, 45)
         Me.MetroButton1.TabIndex = 6
         Me.MetroButton1.Text = "&Close"
         Me.MetroButton1.UseCustomBackColor = True
@@ -125,7 +147,7 @@ Partial Class DisplayItem
         '
         'DisplayItem
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(12.0!, 25.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1346, 687)
         Me.Controls.Add(Me.MetroButton1)

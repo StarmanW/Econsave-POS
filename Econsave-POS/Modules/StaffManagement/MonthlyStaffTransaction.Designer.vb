@@ -22,6 +22,8 @@ Partial Class MonthlyStaffTransaction
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.dgvStaffMonthlyTrans = New System.Windows.Forms.DataGridView()
         Me.MetroButton2 = New MetroFramework.Controls.MetroButton()
         Me.btnClose = New MetroFramework.Controls.MetroButton()
@@ -32,13 +34,34 @@ Partial Class MonthlyStaffTransaction
         '
         'dgvStaffMonthlyTrans
         '
+        Me.dgvStaffMonthlyTrans.AllowUserToAddRows = False
+        Me.dgvStaffMonthlyTrans.AllowUserToDeleteRows = False
         Me.dgvStaffMonthlyTrans.AllowUserToResizeColumns = False
         Me.dgvStaffMonthlyTrans.AllowUserToResizeRows = False
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.dgvStaffMonthlyTrans.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
         Me.dgvStaffMonthlyTrans.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.dgvStaffMonthlyTrans.BackgroundColor = System.Drawing.Color.White
+        Me.dgvStaffMonthlyTrans.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.dgvStaffMonthlyTrans.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None
+        Me.dgvStaffMonthlyTrans.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
         Me.dgvStaffMonthlyTrans.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.DodgerBlue
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvStaffMonthlyTrans.DefaultCellStyle = DataGridViewCellStyle2
         Me.dgvStaffMonthlyTrans.Location = New System.Drawing.Point(34, 102)
         Me.dgvStaffMonthlyTrans.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.dgvStaffMonthlyTrans.MultiSelect = False
         Me.dgvStaffMonthlyTrans.Name = "dgvStaffMonthlyTrans"
+        Me.dgvStaffMonthlyTrans.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        Me.dgvStaffMonthlyTrans.RowHeadersVisible = False
+        Me.dgvStaffMonthlyTrans.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
+        Me.dgvStaffMonthlyTrans.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgvStaffMonthlyTrans.Size = New System.Drawing.Size(839, 509)
         Me.dgvStaffMonthlyTrans.TabIndex = 1
         '
@@ -80,24 +103,24 @@ Partial Class MonthlyStaffTransaction
         Me.MetroLabel1.FontSize = MetroFramework.MetroLabelSize.Tall
         Me.MetroLabel1.Location = New System.Drawing.Point(33, 63)
         Me.MetroLabel1.Name = "MetroLabel1"
-        Me.MetroLabel1.Size = New System.Drawing.Size(66, 25)
+        Me.MetroLabel1.Size = New System.Drawing.Size(69, 25)
         Me.MetroLabel1.TabIndex = 8
         Me.MetroLabel1.Text = "Month:"
         '
         'cboMonth
         '
         Me.cboMonth.FormattingEnabled = True
-        Me.cboMonth.ItemHeight = 23
+        Me.cboMonth.ItemHeight = 24
         Me.cboMonth.Items.AddRange(New Object() {"January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"})
         Me.cboMonth.Location = New System.Drawing.Point(105, 63)
         Me.cboMonth.Name = "cboMonth"
-        Me.cboMonth.Size = New System.Drawing.Size(249, 29)
+        Me.cboMonth.Size = New System.Drawing.Size(249, 30)
         Me.cboMonth.TabIndex = 9
         Me.cboMonth.UseSelectable = True
         '
         'MonthlyStaffTransaction
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 18.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 22.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.CancelButton = Me.btnClose
         Me.ClientSize = New System.Drawing.Size(910, 687)

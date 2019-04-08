@@ -20,6 +20,8 @@
                                                   Staff_Name = t.Staff.name,
                                                   Total_Transaction = t.transactionID.ToArray.Length
         End Using
+
+        dgvStaffMonthlyTrans.Columns(2).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
     End Sub
 
     Private Sub btnClose_Click(sender As Object, e As EventArgs) Handles btnClose.Click

@@ -5,12 +5,15 @@
             InitializeCategoryBox(db)
             dgvStockReport.DataSource = From i In db.Items
                                         Select
-                                            Item_ID = i.itemID,
-                                            Item_Name = i.name,
-                                            Price_per_Unit = i.price,
-                                            Quanity_Available = i.stockQuantity,
+                                            ID = i.itemID,
+                                            Name = i.name,
+                                            Price = Format(i.price, "0.00"),
+                                            Quanity = i.stockQuantity,
                                             Status = i.status
         End Using
+
+        dgvStockReport.Columns(2).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
+        dgvStockReport.Columns(3).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
     End Sub
 
     ' Sub routine to initialize category combo box
@@ -33,24 +36,27 @@
         If cmbCategory.SelectedIndex = 0 Then
             rs = From i In db.Items
                  Select
-                    Item_ID = i.itemID,
-                    Item_Name = i.name,
-                    Price_per_Unit = i.price,
-                    Quanity_Available = i.stockQuantity,
+                    ID = i.itemID,
+                    Name = i.name,
+                    Price = Format(i.price, "0.00"),
+                    Quanity = i.stockQuantity,
                     Status = i.status
         Else
             Dim itemCategory = CType(cmbCategory.SelectedItem, String)
             rs = From i In db.Items
                  Where i.Category.categoryName = itemCategory
                  Select
-                    Item_ID = i.itemID,
-                    Item_Name = i.name,
-                    Price_per_Unit = i.price,
-                    Quanity_Available = i.stockQuantity,
+                    ID = i.itemID,
+                    Name = i.name,
+                    Price = Format(i.price, "0.00"),
+                    Quanity = i.stockQuantity,
                     Status = i.status
         End If
 
         dgvStockReport.DataSource = rs
+
+        dgvStockReport.Columns(2).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
+        dgvStockReport.Columns(3).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
     End Sub
 
     Private Sub MetroButton1_Click(sender As Object, e As EventArgs) Handles MetroButton1.Click

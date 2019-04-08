@@ -24,12 +24,11 @@ Public Class History
     Private Sub Display_Record(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim db As New EconsaveDataClassesDataContext()
         Dim rs = From i In db.Staffs Select
-                                         i.staffID,
-                                         i.name,
-                                         i.position,
-                                         i.registeredOn,
-                                         i.lastLogin
-
+                                         ID = i.staffID,
+                                         Name = i.name,
+                                         Position = i.position,
+                                         Registered_On = i.registeredOn,
+                                         Last_Login = i.lastLogin
 
         historyDataGV.DataSource = rs
     End Sub
@@ -66,11 +65,11 @@ Public Class History
 
                 Dim Data = From i In db.Staffs Where i.lastLogin = Date.Parse(search)
                            Select
-                                         i.staffID,
-                                         i.name,
-                                         i.position,
-                                         i.registeredOn,
-                                         i.lastLogin
+                                         ID = i.staffID,
+                                         Name = i.name,
+                                         Position = i.position,
+                                         Registered_On = i.registeredOn,
+                                         Last_Login = i.lastLogin
 
 
                 historyDataGV.DataSource = Data
@@ -81,11 +80,11 @@ Public Class History
 
                 Dim Data = From i In db.Staffs Where i.registeredOn = Date.Parse(search)
                            Select
-                                         i.staffID,
-                                         i.name,
-                                         i.position,
-                                         i.registeredOn,
-                                         i.lastLogin
+                                         ID = i.staffID,
+                                         Name = i.name,
+                                         Position = i.position,
+                                         Registered_On = i.registeredOn,
+                                         Last_Login = i.lastLogin
 
                 historyDataGV.DataSource = Data
 
@@ -95,11 +94,11 @@ Public Class History
 
                 Dim Data = From i In db.Staffs Where i.name = search
                            Select
-                                         i.staffID,
-                                         i.name,
-                                         i.position,
-                                         i.registeredOn,
-                                         i.lastLogin
+                                         ID = i.staffID,
+                                         Name = i.name,
+                                         Position = i.position,
+                                         Registered_On = i.registeredOn,
+                                         Last_Login = i.lastLogin
 
                 historyDataGV.DataSource = Data
 
@@ -109,11 +108,11 @@ Public Class History
 
                 Dim Data = From i In db.Staffs Where i.staffID = search
                            Select
-                                         i.staffID,
-                                         i.name,
-                                         i.position,
-                                         i.registeredOn,
-                                         i.lastLogin
+                                         ID = i.staffID,
+                                         Name = i.name,
+                                         Position = i.position,
+                                         Registered_On = i.registeredOn,
+                                         Last_Login = i.lastLogin
 
                 historyDataGV.DataSource = Data
 
@@ -122,11 +121,11 @@ Public Class History
             If String.Compare(search.ToString, dataPosition) = 0 Then
                 Dim Data = From i In db.Staffs Where i.position = search
                            Select
-                                         i.staffID,
-                                         i.name,
-                                         i.position,
-                                         i.registeredOn,
-                                         i.lastLogin
+                                         ID = i.staffID,
+                                         Name = i.name,
+                                         Position = i.position,
+                                         Registered_On = i.registeredOn,
+                                         Last_Login = i.lastLogin
 
                 historyDataGV.DataSource = Data
 

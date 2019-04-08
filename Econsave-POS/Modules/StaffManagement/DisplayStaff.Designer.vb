@@ -22,6 +22,8 @@ Partial Class DisplayStaff
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.StaffTableAdapter = New Econsave_POS.EconsaveDBDataSetTableAdapters.StaffTableAdapter()
         Me.txtSearchBox = New MetroFramework.Controls.MetroTextBox()
         Me.MetroLabel1 = New MetroFramework.Controls.MetroLabel()
@@ -73,25 +75,44 @@ Partial Class DisplayStaff
         Me.MetroLabel1.Location = New System.Drawing.Point(34, 97)
         Me.MetroLabel1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.MetroLabel1.Name = "MetroLabel1"
-        Me.MetroLabel1.Size = New System.Drawing.Size(67, 25)
+        Me.MetroLabel1.Size = New System.Drawing.Size(68, 25)
         Me.MetroLabel1.TabIndex = 6
         Me.MetroLabel1.Text = "Search:"
         '
         'itemDGV
         '
+        Me.itemDGV.AllowUserToAddRows = False
+        Me.itemDGV.AllowUserToDeleteRows = False
         Me.itemDGV.AllowUserToResizeColumns = False
         Me.itemDGV.AllowUserToResizeRows = False
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.itemDGV.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
         Me.itemDGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.itemDGV.BackgroundColor = System.Drawing.Color.White
+        Me.itemDGV.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.itemDGV.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None
+        Me.itemDGV.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
         Me.itemDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.DodgerBlue
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.itemDGV.DefaultCellStyle = DataGridViewCellStyle2
         Me.itemDGV.Location = New System.Drawing.Point(34, 143)
         Me.itemDGV.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.itemDGV.Name = "itemDGV"
+        Me.itemDGV.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        Me.itemDGV.RowHeadersVisible = False
+        Me.itemDGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.itemDGV.Size = New System.Drawing.Size(1276, 509)
         Me.itemDGV.TabIndex = 5
         '
         'DisplayStaff
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(12.0!, 25.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1353, 704)
         Me.Controls.Add(Me.txtSearchBox)

@@ -4,6 +4,7 @@
 
     Private Sub DisplayItem_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim db As New EconsaveDataClassesDataContext()
+
         Dim rs = From s In db.Staffs
                  Select Staff_ID = s.staffID,
                      Name = s.name,
