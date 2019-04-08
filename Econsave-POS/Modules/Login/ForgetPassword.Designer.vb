@@ -1,6 +1,6 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
 Partial Class ForgetPassword
-    Inherits System.Windows.Forms.Form
+    Inherits MetroFramework.Forms.MetroForm
 
     'Form overrides dispose to clean up the component list.
     <System.Diagnostics.DebuggerNonUserCode()> _
@@ -22,74 +22,79 @@ Partial Class ForgetPassword
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.lblId = New System.Windows.Forms.Label()
-        Me.lblEmail = New System.Windows.Forms.Label()
-        Me.txtId = New System.Windows.Forms.TextBox()
-        Me.txtEmail = New System.Windows.Forms.TextBox()
-        Me.btnSubmit = New System.Windows.Forms.Button()
+        Me.MetroLabel1 = New MetroFramework.Controls.MetroLabel()
+        Me.txtId = New MetroFramework.Controls.MetroTextBox()
+        Me.btnSubmit = New MetroFramework.Controls.MetroButton()
         Me.SuspendLayout()
         '
-        'lblId
+        'MetroLabel1
         '
-        Me.lblId.AutoSize = True
-        Me.lblId.Location = New System.Drawing.Point(42, 74)
-        Me.lblId.Name = "lblId"
-        Me.lblId.Size = New System.Drawing.Size(24, 13)
-        Me.lblId.TabIndex = 4
-        Me.lblId.Text = "ID :"
-        '
-        'lblEmail
-        '
-        Me.lblEmail.AutoSize = True
-        Me.lblEmail.Location = New System.Drawing.Point(42, 110)
-        Me.lblEmail.Name = "lblEmail"
-        Me.lblEmail.Size = New System.Drawing.Size(38, 13)
-        Me.lblEmail.TabIndex = 5
-        Me.lblEmail.Text = "Email :"
+        Me.MetroLabel1.AutoSize = True
+        Me.MetroLabel1.Location = New System.Drawing.Point(67, 79)
+        Me.MetroLabel1.Name = "MetroLabel1"
+        Me.MetroLabel1.Size = New System.Drawing.Size(24, 19)
+        Me.MetroLabel1.TabIndex = 9
+        Me.MetroLabel1.Text = "ID:"
         '
         'txtId
         '
-        Me.txtId.Location = New System.Drawing.Point(93, 74)
+        '
+        '
+        '
+        Me.txtId.CustomButton.Image = Nothing
+        Me.txtId.CustomButton.Location = New System.Drawing.Point(152, 1)
+        Me.txtId.CustomButton.Name = ""
+        Me.txtId.CustomButton.Size = New System.Drawing.Size(21, 21)
+        Me.txtId.CustomButton.Style = MetroFramework.MetroColorStyle.Blue
+        Me.txtId.CustomButton.TabIndex = 1
+        Me.txtId.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
+        Me.txtId.CustomButton.UseSelectable = True
+        Me.txtId.CustomButton.Visible = False
+        Me.txtId.Lines = New String(-1) {}
+        Me.txtId.Location = New System.Drawing.Point(107, 79)
+        Me.txtId.MaxLength = 32767
         Me.txtId.Name = "txtId"
-        Me.txtId.Size = New System.Drawing.Size(200, 20)
-        Me.txtId.TabIndex = 7
-        '
-        'txtEmail
-        '
-        Me.txtEmail.Location = New System.Drawing.Point(93, 107)
-        Me.txtEmail.Name = "txtEmail"
-        Me.txtEmail.Size = New System.Drawing.Size(200, 20)
-        Me.txtEmail.TabIndex = 6
+        Me.txtId.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txtId.ScrollBars = System.Windows.Forms.ScrollBars.None
+        Me.txtId.SelectedText = ""
+        Me.txtId.SelectionLength = 0
+        Me.txtId.SelectionStart = 0
+        Me.txtId.ShortcutsEnabled = True
+        Me.txtId.Size = New System.Drawing.Size(174, 23)
+        Me.txtId.TabIndex = 11
+        Me.txtId.UseSelectable = True
+        Me.txtId.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
+        Me.txtId.WaterMarkFont = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel)
         '
         'btnSubmit
         '
-        Me.btnSubmit.Location = New System.Drawing.Point(299, 105)
+        Me.btnSubmit.BackColor = System.Drawing.Color.ForestGreen
+        Me.btnSubmit.FontSize = MetroFramework.MetroButtonSize.Medium
+        Me.btnSubmit.ForeColor = System.Drawing.Color.White
+        Me.btnSubmit.Location = New System.Drawing.Point(107, 117)
         Me.btnSubmit.Name = "btnSubmit"
-        Me.btnSubmit.Size = New System.Drawing.Size(75, 23)
-        Me.btnSubmit.TabIndex = 8
+        Me.btnSubmit.Size = New System.Drawing.Size(174, 41)
+        Me.btnSubmit.TabIndex = 13
         Me.btnSubmit.Text = "Submit"
-        Me.btnSubmit.UseVisualStyleBackColor = True
+        Me.btnSubmit.UseCustomBackColor = True
+        Me.btnSubmit.UseCustomForeColor = True
+        Me.btnSubmit.UseSelectable = True
         '
         'ForgetPassword
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(395, 196)
+        Me.ClientSize = New System.Drawing.Size(313, 181)
         Me.Controls.Add(Me.btnSubmit)
         Me.Controls.Add(Me.txtId)
-        Me.Controls.Add(Me.txtEmail)
-        Me.Controls.Add(Me.lblEmail)
-        Me.Controls.Add(Me.lblId)
+        Me.Controls.Add(Me.MetroLabel1)
         Me.Name = "ForgetPassword"
-        Me.Text = "ForgetPassword"
+        Me.Text = "Reset Password"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents lblId As Label
-    Friend WithEvents lblEmail As Label
-    Friend WithEvents txtId As TextBox
-    Friend WithEvents txtEmail As TextBox
-    Friend WithEvents btnSubmit As Button
+    Friend WithEvents MetroLabel1 As MetroFramework.Controls.MetroLabel
+    Friend WithEvents txtId As MetroFramework.Controls.MetroTextBox
+    Friend WithEvents btnSubmit As MetroFramework.Controls.MetroButton
 End Class

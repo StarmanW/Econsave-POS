@@ -31,4 +31,9 @@
         MonthlyStaffTransaction.ShowDialog()
         MonthlyStaffTransaction.Close()
     End Sub
+
+    Private Sub ResetPasswordToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ResetPasswordToolStripMenuItem.Click
+        ForgetPassword.ShowDialog()
+        ForgetPassword.Close()
+    End Sub
 End Class

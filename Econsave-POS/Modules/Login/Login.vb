@@ -1,103 +1,61 @@
-﻿Public Class Login
+﻿Imports System.Text.RegularExpressions
+Imports Econsave_POS.CodeShare.Cryptography
+
+Public Class Login
     Dim id As String
     Dim password As String
     Friend staffId As String
     Dim staffPassword As String
-    Dim staffPosition As String
-    Dim position As String
-    Dim dataNum As Integer
-    Dim Authorize As Form
 
-    Public Sub New()
-        InitializeComponent()
-    End Sub
+    Private Function isValidDataField() As Boolean
+        Dim textRegex As New Regex("^[A-z0-9\s\-\@\#\$\%\&\*\(\)\[\]\'\:\,\.\|]+$")
+        Dim validData As Boolean = True
+
+        ErrorProvider1.Clear()
+
+        If Not textRegex.IsMatch(txtStaffID.Text) Then
+            ErrorProvider1.SetError(txtStaffID, "Please enter staff ID.")
+            validData = False
+        End If
+
+        If Not textRegex.IsMatch(txtPassword.Text) Then
+            ErrorProvider1.SetError(txtPassword, "Please enter passwrod.")
+            validData = False
+        End If
+
+        Return validData
+    End Function
 
     Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
+        If isValidDataField() Then
+            staffId = txtStaffID.Text
+            password = SHA.GenerateSHA256String(txtPassword.Text)
 
-        id = txtId.Text
-        password = txtPassword.Text
-
-        'Retrieve Data
-        Dim db As New EconsaveDataClassesDataContext()  'connect database
-        'db.Staffs.Where(Function(s) s.staffID = "CS0001").FirstOrDefault() 'retrieve only one value
-
-        Dim staffList As List(Of Staff)  ' = db.Staffs.ToList()  'create a list based on staff
-        staffList = db.Staffs.ToList
-
-        'For i = 0 To db.Staffs.Count        'staffList(i).staffID = i is refer to which row and staffID is what i looking for
-        '    staffList(i).staffID
-        'Next
-
-        'Validation
-
-        Do Until dataNum = db.Staffs.Count
-
-            staffId = staffList(dataNum).staffID
-            staffPassword = staffList(dataNum).password
-            staffPosition = staffList(dataNum).position
-
-
-            If txtId.Text = "" Or txtPassword.Text = "" Then
-                epId.SetError(txtId, "User ID Is Required For Login!")
-                epPassword.SetError(txtPassword, "Password Is Required For Login!")
-
-            ElseIf staffId.Equals(id) = False Or staffPassword.Equals(password) = False Then
-                epWrongId.SetError(txtId, "Invalid Id!")
-                epWrongPassword.SetError(txtPassword, "Invalid Password!")
-
-            ElseIf staffId.Equals(id) = True And staffPassword.Equals(password) = True And staffPosition = "Manager" Then
-                'MessageBox.Show("I Am Manager")
-
-            ElseIf staffId.Equals(id) = True And staffPassword.Equals(password) = True And staffPosition = "Cashier" Then
-                'MessageBox.Show("I Am Cashier")
-
-            End If
-
-            dataNum += 1
-
-        Loop
-
-        dataNum = 0
-
+            'Retrieve Data
+            Using db As New EconsaveDataClassesDataContext()
+                Dim staff = db.Staffs.Where(Function(s) s.staffID = staffId AndAlso s.password = password).FirstOrDefault()
+                If staff Is Nothing Then
+                    MessageBox.Show("Invalid staff ID or password, please try again.", "Invalid Credentials", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                Else
+                    staff.lastLogin = DateTime.Now
+                    db.SubmitChanges()
+                    Me.Hide()
+                    If staff.position = "Manager" Then
+                        ManagerForm.ShowDialog()
+                        ManagerForm.Close()
+                    Else
+                        Sales.ShowDialog()
+                        Sales.Close()
+                    End If
+                    Me.Show()
+                End If
+            End Using
+        End If
     End Sub
 
-    Private Sub ForgetPasswordToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ForgetPasswordToolStripMenuItem.Click
-        Authorize = New Authorize()
-        Authorize.Show()
-    End Sub
-
-    Private Sub ChangeBackgroundToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ChangeBackgroundToolStripMenuItem.Click
-
-        Dim color1 = New ColorDialog
-        With color1
-            .Color = txtId.ForeColor
-            .Color = BackColor
-            .ShowDialog() 'confirm 
-            txtId.ForeColor = .Color
-            BackColor = .Color
-        End With
-
-    End Sub
-
-    Private Sub ResetToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ResetToolStripMenuItem.Click
-
-        txtId.Text = ""
-        txtPassword.Text = ""
-        txtId.ForeColor = Color.Empty
-        BackColor = Color.White
-
-    End Sub
-
-    Private Sub SearchHistoryToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SearchHistoryToolStripMenuItem.Click
+    ' Show history
+    Private Sub btnHistory_Click(sender As Object, e As EventArgs)
         Dim showHistory = New History()
         History.Show()
     End Sub
-
-    Private Sub AboutUsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AboutUsToolStripMenuItem.Click
-        Dim AboutUs = New AboutUs()
-        AboutUs.Show()
-
-    End Sub
-
-
 End Class
