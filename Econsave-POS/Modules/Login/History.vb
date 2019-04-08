@@ -70,7 +70,6 @@ Public Class History
                                          Registered_On = i.registeredOn,
                                          Last_Login = i.lastLogin
 
-
                 historyDataGV.DataSource = Data
 
             End If
