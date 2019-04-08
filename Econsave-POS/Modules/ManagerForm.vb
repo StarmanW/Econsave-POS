@@ -19,7 +19,8 @@
     End Sub
 
     Private Sub DailySalesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DailySalesToolStripMenuItem.Click
-
+        DailySalesReport.ShowDialog()
+        DailySalesReport.Close()
     End Sub
 
     Private Sub StockReportToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles StockReportToolStripMenuItem.Click

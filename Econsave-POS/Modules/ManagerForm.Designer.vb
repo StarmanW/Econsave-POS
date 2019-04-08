@@ -28,22 +28,24 @@ Partial Class ManagerForm
         Me.StaffManagementToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AddStaffToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DisplayStaffToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ResetPasswordToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ReportsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.LoginHistoryToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DailySalesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.StockReportToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MonthlyStaffTransactionToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ResetPasswordToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'MenuStrip1
         '
         Me.MenuStrip1.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.MenuStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.StaffManagementToolStripMenuItem, Me.ReportsToolStripMenuItem})
-        Me.MenuStrip1.Location = New System.Drawing.Point(20, 60)
+        Me.MenuStrip1.Location = New System.Drawing.Point(27, 74)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(881, 27)
+        Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(8, 2, 0, 2)
+        Me.MenuStrip1.Size = New System.Drawing.Size(1174, 31)
         Me.MenuStrip1.TabIndex = 0
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -51,42 +53,49 @@ Partial Class ManagerForm
         '
         Me.FileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.LogoutToolStripMenuItem})
         Me.FileToolStripMenuItem.Name = "FileToolStripMenuItem"
-        Me.FileToolStripMenuItem.Size = New System.Drawing.Size(41, 23)
+        Me.FileToolStripMenuItem.Size = New System.Drawing.Size(47, 27)
         Me.FileToolStripMenuItem.Text = "File"
         '
         'LogoutToolStripMenuItem
         '
         Me.LogoutToolStripMenuItem.Name = "LogoutToolStripMenuItem"
         Me.LogoutToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.L), System.Windows.Forms.Keys)
-        Me.LogoutToolStripMenuItem.Size = New System.Drawing.Size(180, 24)
+        Me.LogoutToolStripMenuItem.Size = New System.Drawing.Size(197, 28)
         Me.LogoutToolStripMenuItem.Text = "Logout"
         '
         'StaffManagementToolStripMenuItem
         '
         Me.StaffManagementToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AddStaffToolStripMenuItem, Me.DisplayStaffToolStripMenuItem, Me.ResetPasswordToolStripMenuItem})
         Me.StaffManagementToolStripMenuItem.Name = "StaffManagementToolStripMenuItem"
-        Me.StaffManagementToolStripMenuItem.Size = New System.Drawing.Size(134, 23)
+        Me.StaffManagementToolStripMenuItem.Size = New System.Drawing.Size(162, 27)
         Me.StaffManagementToolStripMenuItem.Text = "Staff Management"
         '
         'AddStaffToolStripMenuItem
         '
         Me.AddStaffToolStripMenuItem.Name = "AddStaffToolStripMenuItem"
         Me.AddStaffToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.A), System.Windows.Forms.Keys)
-        Me.AddStaffToolStripMenuItem.Size = New System.Drawing.Size(222, 24)
+        Me.AddStaffToolStripMenuItem.Size = New System.Drawing.Size(261, 28)
         Me.AddStaffToolStripMenuItem.Text = "Add Staff"
         '
         'DisplayStaffToolStripMenuItem
         '
         Me.DisplayStaffToolStripMenuItem.Name = "DisplayStaffToolStripMenuItem"
         Me.DisplayStaffToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.D), System.Windows.Forms.Keys)
-        Me.DisplayStaffToolStripMenuItem.Size = New System.Drawing.Size(222, 24)
+        Me.DisplayStaffToolStripMenuItem.Size = New System.Drawing.Size(261, 28)
         Me.DisplayStaffToolStripMenuItem.Text = "Display Staff"
+        '
+        'ResetPasswordToolStripMenuItem
+        '
+        Me.ResetPasswordToolStripMenuItem.Name = "ResetPasswordToolStripMenuItem"
+        Me.ResetPasswordToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.R), System.Windows.Forms.Keys)
+        Me.ResetPasswordToolStripMenuItem.Size = New System.Drawing.Size(261, 28)
+        Me.ResetPasswordToolStripMenuItem.Text = "Reset Password"
         '
         'ReportsToolStripMenuItem
         '
         Me.ReportsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.LoginHistoryToolStripMenuItem, Me.DailySalesToolStripMenuItem, Me.StockReportToolStripMenuItem, Me.MonthlyStaffTransactionToolStripMenuItem})
         Me.ReportsToolStripMenuItem.Name = "ReportsToolStripMenuItem"
-        Me.ReportsToolStripMenuItem.Size = New System.Drawing.Size(68, 23)
+        Me.ReportsToolStripMenuItem.Size = New System.Drawing.Size(80, 27)
         Me.ReportsToolStripMenuItem.Text = "Reports"
         '
         'LoginHistoryToolStripMenuItem
@@ -94,7 +103,7 @@ Partial Class ManagerForm
         Me.LoginHistoryToolStripMenuItem.Name = "LoginHistoryToolStripMenuItem"
         Me.LoginHistoryToolStripMenuItem.ShortcutKeys = CType(((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Shift) _
             Or System.Windows.Forms.Keys.L), System.Windows.Forms.Keys)
-        Me.LoginHistoryToolStripMenuItem.Size = New System.Drawing.Size(325, 24)
+        Me.LoginHistoryToolStripMenuItem.Size = New System.Drawing.Size(389, 28)
         Me.LoginHistoryToolStripMenuItem.Text = "Login History"
         '
         'DailySalesToolStripMenuItem
@@ -102,7 +111,7 @@ Partial Class ManagerForm
         Me.DailySalesToolStripMenuItem.Name = "DailySalesToolStripMenuItem"
         Me.DailySalesToolStripMenuItem.ShortcutKeys = CType(((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Shift) _
             Or System.Windows.Forms.Keys.D), System.Windows.Forms.Keys)
-        Me.DailySalesToolStripMenuItem.Size = New System.Drawing.Size(325, 24)
+        Me.DailySalesToolStripMenuItem.Size = New System.Drawing.Size(389, 28)
         Me.DailySalesToolStripMenuItem.Text = "Daily Sales"
         '
         'StockReportToolStripMenuItem
@@ -110,7 +119,7 @@ Partial Class ManagerForm
         Me.StockReportToolStripMenuItem.Name = "StockReportToolStripMenuItem"
         Me.StockReportToolStripMenuItem.ShortcutKeys = CType(((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Shift) _
             Or System.Windows.Forms.Keys.S), System.Windows.Forms.Keys)
-        Me.StockReportToolStripMenuItem.Size = New System.Drawing.Size(325, 24)
+        Me.StockReportToolStripMenuItem.Size = New System.Drawing.Size(389, 28)
         Me.StockReportToolStripMenuItem.Text = "Stock"
         '
         'MonthlyStaffTransactionToolStripMenuItem
@@ -118,25 +127,20 @@ Partial Class ManagerForm
         Me.MonthlyStaffTransactionToolStripMenuItem.Name = "MonthlyStaffTransactionToolStripMenuItem"
         Me.MonthlyStaffTransactionToolStripMenuItem.ShortcutKeys = CType(((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Shift) _
             Or System.Windows.Forms.Keys.M), System.Windows.Forms.Keys)
-        Me.MonthlyStaffTransactionToolStripMenuItem.Size = New System.Drawing.Size(325, 24)
+        Me.MonthlyStaffTransactionToolStripMenuItem.Size = New System.Drawing.Size(389, 28)
         Me.MonthlyStaffTransactionToolStripMenuItem.Text = "Monthly Staff Transaction"
-        '
-        'ResetPasswordToolStripMenuItem
-        '
-        Me.ResetPasswordToolStripMenuItem.Name = "ResetPasswordToolStripMenuItem"
-        Me.ResetPasswordToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.R), System.Windows.Forms.Keys)
-        Me.ResetPasswordToolStripMenuItem.Size = New System.Drawing.Size(222, 24)
-        Me.ResetPasswordToolStripMenuItem.Text = "Reset Password"
         '
         'ManagerForm
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(921, 561)
+        Me.ClientSize = New System.Drawing.Size(1228, 690)
         Me.Controls.Add(Me.MenuStrip1)
         Me.MainMenuStrip = Me.MenuStrip1
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "ManagerForm"
-        Me.Text = "ManagerForm"
+        Me.Padding = New System.Windows.Forms.Padding(27, 74, 27, 25)
+        Me.Text = "Manager Form"
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
         Me.ResumeLayout(False)
