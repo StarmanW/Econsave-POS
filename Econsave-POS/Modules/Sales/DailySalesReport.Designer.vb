@@ -24,7 +24,6 @@ Partial Class DailySalesReport
     Private Sub InitializeComponent()
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(DailySalesReport))
         Me.MetroButton2 = New MetroFramework.Controls.MetroButton()
         Me.btnClose = New MetroFramework.Controls.MetroButton()
@@ -96,23 +95,15 @@ Partial Class DailySalesReport
         Me.dgvDailySales.CausesValidation = False
         Me.dgvDailySales.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None
         Me.dgvDailySales.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvDailySales.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.dgvDailySales.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.DodgerBlue
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgvDailySales.DefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.DodgerBlue
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvDailySales.DefaultCellStyle = DataGridViewCellStyle2
         Me.dgvDailySales.Location = New System.Drawing.Point(35, 325)
         Me.dgvDailySales.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
         Me.dgvDailySales.MultiSelect = False
@@ -135,18 +126,18 @@ Partial Class DailySalesReport
         Me.Metrolbl.Location = New System.Drawing.Point(467, 125)
         Me.Metrolbl.Margin = New System.Windows.Forms.Padding(7, 0, 7, 0)
         Me.Metrolbl.Name = "Metrolbl"
-        Me.Metrolbl.Size = New System.Drawing.Size(103, 25)
+        Me.Metrolbl.Size = New System.Drawing.Size(101, 25)
         Me.Metrolbl.TabIndex = 11
         Me.Metrolbl.Text = "Transaction:"
         '
         'cboTransaction
         '
         Me.cboTransaction.FormattingEnabled = True
-        Me.cboTransaction.ItemHeight = 24
+        Me.cboTransaction.ItemHeight = 23
         Me.cboTransaction.Location = New System.Drawing.Point(582, 125)
         Me.cboTransaction.Margin = New System.Windows.Forms.Padding(7)
         Me.cboTransaction.Name = "cboTransaction"
-        Me.cboTransaction.Size = New System.Drawing.Size(169, 30)
+        Me.cboTransaction.Size = New System.Drawing.Size(169, 29)
         Me.cboTransaction.TabIndex = 1
         Me.cboTransaction.UseSelectable = True
         '
@@ -157,18 +148,18 @@ Partial Class DailySalesReport
         Me.MetroDatelbl.Location = New System.Drawing.Point(44, 125)
         Me.MetroDatelbl.Margin = New System.Windows.Forms.Padding(7, 0, 7, 0)
         Me.MetroDatelbl.Name = "MetroDatelbl"
-        Me.MetroDatelbl.Size = New System.Drawing.Size(54, 25)
+        Me.MetroDatelbl.Size = New System.Drawing.Size(51, 25)
         Me.MetroDatelbl.TabIndex = 13
         Me.MetroDatelbl.Text = "Date:"
         '
         'cboDate
         '
         Me.cboDate.FormattingEnabled = True
-        Me.cboDate.ItemHeight = 24
+        Me.cboDate.ItemHeight = 23
         Me.cboDate.Location = New System.Drawing.Point(102, 125)
         Me.cboDate.Margin = New System.Windows.Forms.Padding(7)
         Me.cboDate.Name = "cboDate"
-        Me.cboDate.Size = New System.Drawing.Size(337, 30)
+        Me.cboDate.Size = New System.Drawing.Size(337, 29)
         Me.cboDate.TabIndex = 0
         Me.cboDate.UseSelectable = True
         '
@@ -178,7 +169,7 @@ Partial Class DailySalesReport
         Me.MetroLabel1.FontSize = MetroFramework.MetroLabelSize.Tall
         Me.MetroLabel1.Location = New System.Drawing.Point(44, 173)
         Me.MetroLabel1.Name = "MetroLabel1"
-        Me.MetroLabel1.Size = New System.Drawing.Size(125, 25)
+        Me.MetroLabel1.Size = New System.Drawing.Size(122, 25)
         Me.MetroLabel1.TabIndex = 15
         Me.MetroLabel1.Text = "Transaction ID:"
         '
@@ -188,7 +179,7 @@ Partial Class DailySalesReport
         Me.MetroLabel2.FontSize = MetroFramework.MetroLabelSize.Tall
         Me.MetroLabel2.Location = New System.Drawing.Point(44, 208)
         Me.MetroLabel2.Name = "MetroLabel2"
-        Me.MetroLabel2.Size = New System.Drawing.Size(54, 25)
+        Me.MetroLabel2.Size = New System.Drawing.Size(51, 25)
         Me.MetroLabel2.TabIndex = 16
         Me.MetroLabel2.Text = "Date:"
         '
@@ -198,7 +189,7 @@ Partial Class DailySalesReport
         Me.lblTransaction.FontSize = MetroFramework.MetroLabelSize.Tall
         Me.lblTransaction.Location = New System.Drawing.Point(237, 173)
         Me.lblTransaction.Name = "lblTransaction"
-        Me.lblTransaction.Size = New System.Drawing.Size(20, 25)
+        Me.lblTransaction.Size = New System.Drawing.Size(19, 25)
         Me.lblTransaction.TabIndex = 18
         Me.lblTransaction.Text = "-"
         '
@@ -208,7 +199,7 @@ Partial Class DailySalesReport
         Me.lblDate.FontSize = MetroFramework.MetroLabelSize.Tall
         Me.lblDate.Location = New System.Drawing.Point(237, 208)
         Me.lblDate.Name = "lblDate"
-        Me.lblDate.Size = New System.Drawing.Size(20, 25)
+        Me.lblDate.Size = New System.Drawing.Size(19, 25)
         Me.lblDate.TabIndex = 19
         Me.lblDate.Text = "-"
         '
@@ -218,7 +209,7 @@ Partial Class DailySalesReport
         Me.lblByStaff.FontSize = MetroFramework.MetroLabelSize.Tall
         Me.lblByStaff.Location = New System.Drawing.Point(237, 245)
         Me.lblByStaff.Name = "lblByStaff"
-        Me.lblByStaff.Size = New System.Drawing.Size(20, 25)
+        Me.lblByStaff.Size = New System.Drawing.Size(19, 25)
         Me.lblByStaff.TabIndex = 20
         Me.lblByStaff.Text = "-"
         '
@@ -228,7 +219,7 @@ Partial Class DailySalesReport
         Me.MetroLabel3.FontSize = MetroFramework.MetroLabelSize.Tall
         Me.MetroLabel3.Location = New System.Drawing.Point(44, 245)
         Me.MetroLabel3.Name = "MetroLabel3"
-        Me.MetroLabel3.Size = New System.Drawing.Size(179, 25)
+        Me.MetroLabel3.Size = New System.Drawing.Size(172, 25)
         Me.MetroLabel3.TabIndex = 17
         Me.MetroLabel3.Text = "Transaction Made by:"
         '
@@ -238,7 +229,7 @@ Partial Class DailySalesReport
         Me.MetroLabel4.FontSize = MetroFramework.MetroLabelSize.Tall
         Me.MetroLabel4.Location = New System.Drawing.Point(44, 279)
         Me.MetroLabel4.Name = "MetroLabel4"
-        Me.MetroLabel4.Size = New System.Drawing.Size(97, 25)
+        Me.MetroLabel4.Size = New System.Drawing.Size(93, 25)
         Me.MetroLabel4.TabIndex = 21
         Me.MetroLabel4.Text = "Total Sales:"
         '
@@ -248,7 +239,7 @@ Partial Class DailySalesReport
         Me.lblTotalSales.FontSize = MetroFramework.MetroLabelSize.Tall
         Me.lblTotalSales.Location = New System.Drawing.Point(237, 279)
         Me.lblTotalSales.Name = "lblTotalSales"
-        Me.lblTotalSales.Size = New System.Drawing.Size(20, 25)
+        Me.lblTotalSales.Size = New System.Drawing.Size(19, 25)
         Me.lblTotalSales.TabIndex = 22
         Me.lblTotalSales.Text = "-"
         '
@@ -276,19 +267,19 @@ Partial Class DailySalesReport
         Me.MenuStrip2.Location = New System.Drawing.Point(27, 74)
         Me.MenuStrip2.Name = "MenuStrip2"
         Me.MenuStrip2.Padding = New System.Windows.Forms.Padding(8, 4, 0, 4)
-        Me.MenuStrip2.Size = New System.Drawing.Size(1007, 35)
+        Me.MenuStrip2.Size = New System.Drawing.Size(1007, 31)
         Me.MenuStrip2.TabIndex = 23
         Me.MenuStrip2.Text = "MenuStrip2"
         '
         'ProfileToolStripMenuItem
         '
         Me.ProfileToolStripMenuItem.Name = "ProfileToolStripMenuItem"
-        Me.ProfileToolStripMenuItem.Size = New System.Drawing.Size(76, 27)
+        Me.ProfileToolStripMenuItem.Size = New System.Drawing.Size(65, 23)
         Me.ProfileToolStripMenuItem.Text = "Logout"
         '
         'DailySalesReport
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1061, 825)
         Me.Controls.Add(Me.MenuStrip2)
@@ -308,6 +299,7 @@ Partial Class DailySalesReport
         Me.Controls.Add(Me.btnClose)
         Me.Controls.Add(Me.dgvDailySales)
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.MaximizeBox = False
         Me.Name = "DailySalesReport"

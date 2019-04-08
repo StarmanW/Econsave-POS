@@ -24,6 +24,7 @@ Partial Class DisplayItem
     Private Sub InitializeComponent()
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(DisplayItem))
         Me.itemDGV = New System.Windows.Forms.DataGridView()
         Me.cmbCategory = New MetroFramework.Controls.MetroComboBox()
         Me.lblCategory = New MetroFramework.Controls.MetroLabel()
@@ -50,7 +51,7 @@ Partial Class DisplayItem
         Me.itemDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
         DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.DodgerBlue
         DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
@@ -68,11 +69,11 @@ Partial Class DisplayItem
         'cmbCategory
         '
         Me.cmbCategory.FormattingEnabled = True
-        Me.cmbCategory.ItemHeight = 24
+        Me.cmbCategory.ItemHeight = 23
         Me.cmbCategory.Location = New System.Drawing.Point(584, 62)
         Me.cmbCategory.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.cmbCategory.Name = "cmbCategory"
-        Me.cmbCategory.Size = New System.Drawing.Size(302, 30)
+        Me.cmbCategory.Size = New System.Drawing.Size(302, 29)
         Me.cmbCategory.TabIndex = 5
         Me.cmbCategory.UseSelectable = True
         '
@@ -83,7 +84,7 @@ Partial Class DisplayItem
         Me.lblCategory.Location = New System.Drawing.Point(491, 62)
         Me.lblCategory.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblCategory.Name = "lblCategory"
-        Me.lblCategory.Size = New System.Drawing.Size(91, 25)
+        Me.lblCategory.Size = New System.Drawing.Size(85, 25)
         Me.lblCategory.TabIndex = 2
         Me.lblCategory.Text = "Category:"
         '
@@ -94,7 +95,7 @@ Partial Class DisplayItem
         Me.MetroLabel1.Location = New System.Drawing.Point(25, 62)
         Me.MetroLabel1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.MetroLabel1.Name = "MetroLabel1"
-        Me.MetroLabel1.Size = New System.Drawing.Size(68, 25)
+        Me.MetroLabel1.Size = New System.Drawing.Size(67, 25)
         Me.MetroLabel1.TabIndex = 3
         Me.MetroLabel1.Text = "Search:"
         '
@@ -147,7 +148,7 @@ Partial Class DisplayItem
         '
         'DisplayItem
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(12.0!, 25.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1346, 687)
         Me.Controls.Add(Me.MetroButton1)
@@ -157,6 +158,7 @@ Partial Class DisplayItem
         Me.Controls.Add(Me.cmbCategory)
         Me.Controls.Add(Me.itemDGV)
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.MaximizeBox = False
         Me.Name = "DisplayItem"

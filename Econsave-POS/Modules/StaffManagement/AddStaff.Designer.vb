@@ -23,6 +23,7 @@ Partial Class AddStaff
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(AddStaff))
         Me.lblName = New System.Windows.Forms.Label()
         Me.lblPosition = New System.Windows.Forms.Label()
         Me.lblstaff = New System.Windows.Forms.Label()
@@ -210,6 +211,39 @@ Partial Class AddStaff
         Me.txtName.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
         Me.txtName.WaterMarkFont = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel)
         '
+
+        'txtStaffID
+        '
+        '
+        '
+        '
+        Me.txtStaffID.CustomButton.Image = Nothing
+        Me.txtStaffID.CustomButton.Location = New System.Drawing.Point(146, 2)
+        Me.txtStaffID.CustomButton.Name = ""
+        Me.txtStaffID.CustomButton.Size = New System.Drawing.Size(19, 20)
+        Me.txtStaffID.CustomButton.Style = MetroFramework.MetroColorStyle.Blue
+        Me.txtStaffID.CustomButton.TabIndex = 1
+        Me.txtStaffID.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
+        Me.txtStaffID.CustomButton.UseSelectable = True
+        Me.txtStaffID.CustomButton.Visible = False
+        Me.txtStaffID.FontSize = MetroFramework.MetroTextBoxSize.Medium
+        Me.txtStaffID.Lines = New String(-1) {}
+        Me.txtStaffID.Location = New System.Drawing.Point(166, 37)
+        Me.txtStaffID.MaxLength = 32767
+        Me.txtStaffID.Name = "txtStaffID"
+        Me.txtStaffID.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txtStaffID.ReadOnly = True
+        Me.txtStaffID.ScrollBars = System.Windows.Forms.ScrollBars.None
+        Me.txtStaffID.SelectedText = ""
+        Me.txtStaffID.SelectionLength = 0
+        Me.txtStaffID.SelectionStart = 0
+        Me.txtStaffID.ShortcutsEnabled = True
+        Me.txtStaffID.Size = New System.Drawing.Size(223, 30)
+        Me.txtStaffID.TabIndex = 1
+        Me.txtStaffID.UseSelectable = True
+        Me.txtStaffID.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
+        Me.txtStaffID.WaterMarkFont = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel)
+        '
         'lblDialogBoxPassword
         '
         Me.lblDialogBoxPassword.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -305,9 +339,15 @@ Partial Class AddStaff
         Me.btnRegisterStaff.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.btnRegisterStaff.FontSize = MetroFramework.MetroButtonSize.Tall
         Me.btnRegisterStaff.ForeColor = System.Drawing.SystemColors.ControlLightLight
+
         Me.btnRegisterStaff.Location = New System.Drawing.Point(109, 400)
         Me.btnRegisterStaff.Name = "btnRegisterStaff"
         Me.btnRegisterStaff.Size = New System.Drawing.Size(129, 48)
+
+        Me.btnRegisterStaff.Location = New System.Drawing.Point(116, 400)
+        Me.btnRegisterStaff.Name = "btnRegisterStaff"
+        Me.btnRegisterStaff.Size = New System.Drawing.Size(104, 48)
+
         Me.btnRegisterStaff.TabIndex = 10
         Me.btnRegisterStaff.Text = "&Register Staff"
         Me.btnRegisterStaff.UseCustomBackColor = True
@@ -320,7 +360,11 @@ Partial Class AddStaff
         Me.btnClear.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.btnClear.FontSize = MetroFramework.MetroButtonSize.Tall
         Me.btnClear.ForeColor = System.Drawing.SystemColors.ControlLightLight
+
         Me.btnClear.Location = New System.Drawing.Point(263, 400)
+
+        Me.btnClear.Location = New System.Drawing.Point(242, 400)
+
         Me.btnClear.Name = "btnClear"
         Me.btnClear.Size = New System.Drawing.Size(104, 48)
         Me.btnClear.TabIndex = 11
@@ -346,6 +390,9 @@ Partial Class AddStaff
         Me.Controls.Add(Me.btnClear)
         Me.Controls.Add(Me.btnRegisterStaff)
         Me.Controls.Add(Me.grpEmployee)
+
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+
         Me.MaximizeBox = False
         Me.Name = "AddStaff"
         Me.Resizable = False

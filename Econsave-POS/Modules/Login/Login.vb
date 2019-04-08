@@ -37,6 +37,10 @@ Public Class Login
                 If staff Is Nothing Then
                     MessageBox.Show("Invalid staff ID or password, please try again.", "Invalid Credentials", MessageBoxButtons.OK, MessageBoxIcon.Warning)
                 Else
+                    txtPassword.ResetText()
+                    txtStaffID.ResetText()
+                    txtStaffID.Select()
+
                     staff.lastLogin = DateTime.Now
                     db.SubmitChanges()
                     Me.Hide()

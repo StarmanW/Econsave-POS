@@ -70,10 +70,10 @@ Partial Class Login
         '
         Me.lblStaffID.AutoSize = True
         Me.lblStaffID.FontSize = MetroFramework.MetroLabelSize.Tall
-        Me.lblStaffID.FontWeight = MetroFramework.MetroLabelWeight.Bold
+        Me.lblStaffID.FontWeight = MetroFramework.MetroLabelWeight.Regular
         Me.lblStaffID.Location = New System.Drawing.Point(49, 193)
         Me.lblStaffID.Name = "lblStaffID"
-        Me.lblStaffID.Size = New System.Drawing.Size(82, 25)
+        Me.lblStaffID.Size = New System.Drawing.Size(84, 25)
         Me.lblStaffID.TabIndex = 8
         Me.lblStaffID.Text = "Staff ID:"
         '
@@ -81,10 +81,10 @@ Partial Class Login
         '
         Me.lblStaffPassword.AutoSize = True
         Me.lblStaffPassword.FontSize = MetroFramework.MetroLabelSize.Tall
-        Me.lblStaffPassword.FontWeight = MetroFramework.MetroLabelWeight.Bold
+        Me.lblStaffPassword.FontWeight = MetroFramework.MetroLabelWeight.Regular
         Me.lblStaffPassword.Location = New System.Drawing.Point(34, 243)
         Me.lblStaffPassword.Name = "lblStaffPassword"
-        Me.lblStaffPassword.Size = New System.Drawing.Size(97, 25)
+        Me.lblStaffPassword.Size = New System.Drawing.Size(102, 25)
         Me.lblStaffPassword.TabIndex = 9
         Me.lblStaffPassword.Text = "Password:"
         '
@@ -152,7 +152,7 @@ Partial Class Login
         'Login
         '
         Me.AcceptButton = Me.btnLogin
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(13.0!, 25.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(586, 376)
         Me.Controls.Add(Me.txtPassword)

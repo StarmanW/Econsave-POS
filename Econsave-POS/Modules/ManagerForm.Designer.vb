@@ -22,24 +22,26 @@ Partial Class ManagerForm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ManagerForm))
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.LogoutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.StaffManagementToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AddStaffToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DisplayStaffToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ResetPasswordToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ReportsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.LoginHistoryToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DailySalesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.StockReportToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MonthlyStaffTransactionToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ResetPasswordToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'MenuStrip1
         '
         Me.MenuStrip1.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.MenuStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.StaffManagementToolStripMenuItem, Me.ReportsToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(20, 60)
         Me.MenuStrip1.Name = "MenuStrip1"
@@ -58,7 +60,7 @@ Partial Class ManagerForm
         '
         Me.LogoutToolStripMenuItem.Name = "LogoutToolStripMenuItem"
         Me.LogoutToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.L), System.Windows.Forms.Keys)
-        Me.LogoutToolStripMenuItem.Size = New System.Drawing.Size(180, 24)
+        Me.LogoutToolStripMenuItem.Size = New System.Drawing.Size(170, 24)
         Me.LogoutToolStripMenuItem.Text = "Logout"
         '
         'StaffManagementToolStripMenuItem
@@ -81,6 +83,13 @@ Partial Class ManagerForm
         Me.DisplayStaffToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.D), System.Windows.Forms.Keys)
         Me.DisplayStaffToolStripMenuItem.Size = New System.Drawing.Size(222, 24)
         Me.DisplayStaffToolStripMenuItem.Text = "Display Staff"
+        '
+        'ResetPasswordToolStripMenuItem
+        '
+        Me.ResetPasswordToolStripMenuItem.Name = "ResetPasswordToolStripMenuItem"
+        Me.ResetPasswordToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.R), System.Windows.Forms.Keys)
+        Me.ResetPasswordToolStripMenuItem.Size = New System.Drawing.Size(222, 24)
+        Me.ResetPasswordToolStripMenuItem.Text = "Reset Password"
         '
         'ReportsToolStripMenuItem
         '
@@ -121,22 +130,18 @@ Partial Class ManagerForm
         Me.MonthlyStaffTransactionToolStripMenuItem.Size = New System.Drawing.Size(325, 24)
         Me.MonthlyStaffTransactionToolStripMenuItem.Text = "Monthly Staff Transaction"
         '
-        'ResetPasswordToolStripMenuItem
-        '
-        Me.ResetPasswordToolStripMenuItem.Name = "ResetPasswordToolStripMenuItem"
-        Me.ResetPasswordToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.R), System.Windows.Forms.Keys)
-        Me.ResetPasswordToolStripMenuItem.Size = New System.Drawing.Size(222, 24)
-        Me.ResetPasswordToolStripMenuItem.Text = "Reset Password"
-        '
         'ManagerForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(921, 561)
         Me.Controls.Add(Me.MenuStrip1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MainMenuStrip = Me.MenuStrip1
+        Me.MaximizeBox = False
         Me.Name = "ManagerForm"
-        Me.Text = "ManagerForm"
+        Me.Resizable = False
+        Me.Text = "Manager Form"
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
         Me.ResumeLayout(False)
