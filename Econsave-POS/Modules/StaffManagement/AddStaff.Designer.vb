@@ -23,6 +23,7 @@ Partial Class AddStaff
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(AddStaff))
         Me.lblName = New System.Windows.Forms.Label()
         Me.lblPosition = New System.Windows.Forms.Label()
         Me.lblstaff = New System.Windows.Forms.Label()
@@ -60,30 +61,27 @@ Partial Class AddStaff
         'lblName
         '
         Me.lblName.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblName.Location = New System.Drawing.Point(136, 123)
-        Me.lblName.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblName.Location = New System.Drawing.Point(102, 100)
         Me.lblName.Name = "lblName"
-        Me.lblName.Size = New System.Drawing.Size(88, 28)
+        Me.lblName.Size = New System.Drawing.Size(66, 23)
         Me.lblName.TabIndex = 0
         Me.lblName.Text = "Name:"
         '
         'lblPosition
         '
         Me.lblPosition.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblPosition.Location = New System.Drawing.Point(120, 336)
-        Me.lblPosition.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblPosition.Location = New System.Drawing.Point(90, 273)
         Me.lblPosition.Name = "lblPosition"
-        Me.lblPosition.Size = New System.Drawing.Size(104, 28)
+        Me.lblPosition.Size = New System.Drawing.Size(78, 23)
         Me.lblPosition.TabIndex = 0
         Me.lblPosition.Text = "Position :"
         '
         'lblstaff
         '
         Me.lblstaff.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblstaff.Location = New System.Drawing.Point(121, 55)
-        Me.lblstaff.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblstaff.Location = New System.Drawing.Point(91, 45)
         Me.lblstaff.Name = "lblstaff"
-        Me.lblstaff.Size = New System.Drawing.Size(103, 28)
+        Me.lblstaff.Size = New System.Drawing.Size(77, 23)
         Me.lblstaff.TabIndex = 0
         Me.lblstaff.Text = "Staff ID:"
         '
@@ -91,10 +89,9 @@ Partial Class AddStaff
         '
         Me.lblPassword.AutoSize = True
         Me.lblPassword.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblPassword.Location = New System.Drawing.Point(109, 183)
-        Me.lblPassword.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblPassword.Location = New System.Drawing.Point(82, 149)
         Me.lblPassword.Name = "lblPassword"
-        Me.lblPassword.Size = New System.Drawing.Size(89, 23)
+        Me.lblPassword.Size = New System.Drawing.Size(74, 19)
         Me.lblPassword.TabIndex = 0
         Me.lblPassword.Text = "Password :"
         '
@@ -114,11 +111,9 @@ Partial Class AddStaff
         Me.grpEmployee.Controls.Add(Me.lblPassword)
         Me.grpEmployee.Controls.Add(Me.lblName)
         Me.grpEmployee.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.grpEmployee.Location = New System.Drawing.Point(31, 91)
-        Me.grpEmployee.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.grpEmployee.Location = New System.Drawing.Point(23, 74)
         Me.grpEmployee.Name = "grpEmployee"
-        Me.grpEmployee.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.grpEmployee.Size = New System.Drawing.Size(553, 374)
+        Me.grpEmployee.Size = New System.Drawing.Size(415, 304)
         Me.grpEmployee.TabIndex = 0
         Me.grpEmployee.TabStop = False
         Me.grpEmployee.Text = "Employee Details"
@@ -129,10 +124,9 @@ Partial Class AddStaff
         '
         '
         Me.txtConfirmPassword.CustomButton.Image = Nothing
-        Me.txtConfirmPassword.CustomButton.Location = New System.Drawing.Point(348, 1)
-        Me.txtConfirmPassword.CustomButton.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtConfirmPassword.CustomButton.Location = New System.Drawing.Point(146, 2)
         Me.txtConfirmPassword.CustomButton.Name = ""
-        Me.txtConfirmPassword.CustomButton.Size = New System.Drawing.Size(47, 43)
+        Me.txtConfirmPassword.CustomButton.Size = New System.Drawing.Size(19, 20)
         Me.txtConfirmPassword.CustomButton.Style = MetroFramework.MetroColorStyle.Blue
         Me.txtConfirmPassword.CustomButton.TabIndex = 1
         Me.txtConfirmPassword.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
@@ -140,8 +134,7 @@ Partial Class AddStaff
         Me.txtConfirmPassword.CustomButton.Visible = False
         Me.txtConfirmPassword.FontSize = MetroFramework.MetroTextBoxSize.Medium
         Me.txtConfirmPassword.Lines = New String(-1) {}
-        Me.txtConfirmPassword.Location = New System.Drawing.Point(221, 257)
-        Me.txtConfirmPassword.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtConfirmPassword.Location = New System.Drawing.Point(166, 209)
         Me.txtConfirmPassword.MaxLength = 32767
         Me.txtConfirmPassword.Name = "txtConfirmPassword"
         Me.txtConfirmPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
@@ -150,7 +143,7 @@ Partial Class AddStaff
         Me.txtConfirmPassword.SelectionLength = 0
         Me.txtConfirmPassword.SelectionStart = 0
         Me.txtConfirmPassword.ShortcutsEnabled = True
-        Me.txtConfirmPassword.Size = New System.Drawing.Size(297, 37)
+        Me.txtConfirmPassword.Size = New System.Drawing.Size(223, 30)
         Me.txtConfirmPassword.TabIndex = 4
         Me.txtConfirmPassword.UseSelectable = True
         Me.txtConfirmPassword.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
@@ -162,10 +155,9 @@ Partial Class AddStaff
         '
         '
         Me.txtPassword.CustomButton.Image = Nothing
-        Me.txtPassword.CustomButton.Location = New System.Drawing.Point(348, 1)
-        Me.txtPassword.CustomButton.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtPassword.CustomButton.Location = New System.Drawing.Point(146, 2)
         Me.txtPassword.CustomButton.Name = ""
-        Me.txtPassword.CustomButton.Size = New System.Drawing.Size(47, 43)
+        Me.txtPassword.CustomButton.Size = New System.Drawing.Size(19, 20)
         Me.txtPassword.CustomButton.Style = MetroFramework.MetroColorStyle.Blue
         Me.txtPassword.CustomButton.TabIndex = 1
         Me.txtPassword.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
@@ -173,8 +165,7 @@ Partial Class AddStaff
         Me.txtPassword.CustomButton.Visible = False
         Me.txtPassword.FontSize = MetroFramework.MetroTextBoxSize.Medium
         Me.txtPassword.Lines = New String(-1) {}
-        Me.txtPassword.Location = New System.Drawing.Point(221, 183)
-        Me.txtPassword.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtPassword.Location = New System.Drawing.Point(166, 149)
         Me.txtPassword.MaxLength = 32767
         Me.txtPassword.Name = "txtPassword"
         Me.txtPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
@@ -183,7 +174,7 @@ Partial Class AddStaff
         Me.txtPassword.SelectionLength = 0
         Me.txtPassword.SelectionStart = 0
         Me.txtPassword.ShortcutsEnabled = True
-        Me.txtPassword.Size = New System.Drawing.Size(297, 37)
+        Me.txtPassword.Size = New System.Drawing.Size(223, 30)
         Me.txtPassword.TabIndex = 3
         Me.txtPassword.UseSelectable = True
         Me.txtPassword.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
@@ -195,10 +186,9 @@ Partial Class AddStaff
         '
         '
         Me.txtName.CustomButton.Image = Nothing
-        Me.txtName.CustomButton.Location = New System.Drawing.Point(348, 1)
-        Me.txtName.CustomButton.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtName.CustomButton.Location = New System.Drawing.Point(146, 2)
         Me.txtName.CustomButton.Name = ""
-        Me.txtName.CustomButton.Size = New System.Drawing.Size(47, 43)
+        Me.txtName.CustomButton.Size = New System.Drawing.Size(19, 20)
         Me.txtName.CustomButton.Style = MetroFramework.MetroColorStyle.Blue
         Me.txtName.CustomButton.TabIndex = 1
         Me.txtName.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
@@ -206,8 +196,7 @@ Partial Class AddStaff
         Me.txtName.CustomButton.Visible = False
         Me.txtName.FontSize = MetroFramework.MetroTextBoxSize.Medium
         Me.txtName.Lines = New String(-1) {}
-        Me.txtName.Location = New System.Drawing.Point(221, 114)
-        Me.txtName.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtName.Location = New System.Drawing.Point(166, 93)
         Me.txtName.MaxLength = 32767
         Me.txtName.Name = "txtName"
         Me.txtName.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -216,7 +205,7 @@ Partial Class AddStaff
         Me.txtName.SelectionLength = 0
         Me.txtName.SelectionStart = 0
         Me.txtName.ShortcutsEnabled = True
-        Me.txtName.Size = New System.Drawing.Size(297, 37)
+        Me.txtName.Size = New System.Drawing.Size(223, 30)
         Me.txtName.TabIndex = 2
         Me.txtName.UseSelectable = True
         Me.txtName.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
@@ -228,10 +217,9 @@ Partial Class AddStaff
         '
         '
         Me.txtStaffID.CustomButton.Image = Nothing
-        Me.txtStaffID.CustomButton.Location = New System.Drawing.Point(348, 1)
-        Me.txtStaffID.CustomButton.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtStaffID.CustomButton.Location = New System.Drawing.Point(146, 2)
         Me.txtStaffID.CustomButton.Name = ""
-        Me.txtStaffID.CustomButton.Size = New System.Drawing.Size(47, 43)
+        Me.txtStaffID.CustomButton.Size = New System.Drawing.Size(19, 20)
         Me.txtStaffID.CustomButton.Style = MetroFramework.MetroColorStyle.Blue
         Me.txtStaffID.CustomButton.TabIndex = 1
         Me.txtStaffID.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
@@ -239,8 +227,7 @@ Partial Class AddStaff
         Me.txtStaffID.CustomButton.Visible = False
         Me.txtStaffID.FontSize = MetroFramework.MetroTextBoxSize.Medium
         Me.txtStaffID.Lines = New String(-1) {}
-        Me.txtStaffID.Location = New System.Drawing.Point(221, 46)
-        Me.txtStaffID.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtStaffID.Location = New System.Drawing.Point(166, 37)
         Me.txtStaffID.MaxLength = 32767
         Me.txtStaffID.Name = "txtStaffID"
         Me.txtStaffID.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -250,7 +237,7 @@ Partial Class AddStaff
         Me.txtStaffID.SelectionLength = 0
         Me.txtStaffID.SelectionStart = 0
         Me.txtStaffID.ShortcutsEnabled = True
-        Me.txtStaffID.Size = New System.Drawing.Size(297, 37)
+        Me.txtStaffID.Size = New System.Drawing.Size(223, 30)
         Me.txtStaffID.TabIndex = 1
         Me.txtStaffID.UseSelectable = True
         Me.txtStaffID.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
@@ -259,20 +246,18 @@ Partial Class AddStaff
         'lblDialogBoxPassword
         '
         Me.lblDialogBoxPassword.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblDialogBoxPassword.Location = New System.Drawing.Point(217, 224)
-        Me.lblDialogBoxPassword.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblDialogBoxPassword.Location = New System.Drawing.Point(163, 182)
         Me.lblDialogBoxPassword.Name = "lblDialogBoxPassword"
-        Me.lblDialogBoxPassword.Size = New System.Drawing.Size(317, 30)
+        Me.lblDialogBoxPassword.Size = New System.Drawing.Size(238, 24)
         Me.lblDialogBoxPassword.TabIndex = 21
         '
         'radCashier
         '
         Me.radCashier.AutoSize = True
         Me.radCashier.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.radCashier.Location = New System.Drawing.Point(344, 337)
-        Me.radCashier.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.radCashier.Location = New System.Drawing.Point(258, 274)
         Me.radCashier.Name = "radCashier"
-        Me.radCashier.Size = New System.Drawing.Size(87, 27)
+        Me.radCashier.Size = New System.Drawing.Size(72, 23)
         Me.radCashier.TabIndex = 6
         Me.radCashier.TabStop = True
         Me.radCashier.Text = "Cashier"
@@ -283,10 +268,9 @@ Partial Class AddStaff
         Me.radManager.AutoSize = True
         Me.radManager.Checked = True
         Me.radManager.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.radManager.Location = New System.Drawing.Point(216, 337)
-        Me.radManager.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.radManager.Location = New System.Drawing.Point(162, 274)
         Me.radManager.Name = "radManager"
-        Me.radManager.Size = New System.Drawing.Size(99, 27)
+        Me.radManager.Size = New System.Drawing.Size(82, 23)
         Me.radManager.TabIndex = 5
         Me.radManager.TabStop = True
         Me.radManager.Text = "Manager"
@@ -295,20 +279,18 @@ Partial Class AddStaff
         'lblDialogbox
         '
         Me.lblDialogbox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblDialogbox.Location = New System.Drawing.Point(221, 298)
-        Me.lblDialogbox.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblDialogbox.Location = New System.Drawing.Point(166, 242)
         Me.lblDialogbox.Name = "lblDialogbox"
-        Me.lblDialogbox.Size = New System.Drawing.Size(297, 25)
+        Me.lblDialogbox.Size = New System.Drawing.Size(223, 20)
         Me.lblDialogbox.TabIndex = 17
         '
         'lblconfirmpassword
         '
         Me.lblconfirmpassword.AutoSize = True
         Me.lblconfirmpassword.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblconfirmpassword.Location = New System.Drawing.Point(43, 257)
-        Me.lblconfirmpassword.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblconfirmpassword.Location = New System.Drawing.Point(32, 209)
         Me.lblconfirmpassword.Name = "lblconfirmpassword"
-        Me.lblconfirmpassword.Size = New System.Drawing.Size(155, 23)
+        Me.lblconfirmpassword.Size = New System.Drawing.Size(127, 19)
         Me.lblconfirmpassword.TabIndex = 0
         Me.lblconfirmpassword.Text = "Confirm Password :"
         '
@@ -356,10 +338,9 @@ Partial Class AddStaff
         Me.btnRegisterStaff.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.btnRegisterStaff.FontSize = MetroFramework.MetroButtonSize.Tall
         Me.btnRegisterStaff.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.btnRegisterStaff.Location = New System.Drawing.Point(154, 492)
-        Me.btnRegisterStaff.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnRegisterStaff.Location = New System.Drawing.Point(116, 400)
         Me.btnRegisterStaff.Name = "btnRegisterStaff"
-        Me.btnRegisterStaff.Size = New System.Drawing.Size(139, 59)
+        Me.btnRegisterStaff.Size = New System.Drawing.Size(104, 48)
         Me.btnRegisterStaff.TabIndex = 10
         Me.btnRegisterStaff.Text = "&Register Staff"
         Me.btnRegisterStaff.UseCustomBackColor = True
@@ -372,10 +353,9 @@ Partial Class AddStaff
         Me.btnClear.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.btnClear.FontSize = MetroFramework.MetroButtonSize.Tall
         Me.btnClear.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.btnClear.Location = New System.Drawing.Point(323, 492)
-        Me.btnClear.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnClear.Location = New System.Drawing.Point(242, 400)
         Me.btnClear.Name = "btnClear"
-        Me.btnClear.Size = New System.Drawing.Size(139, 59)
+        Me.btnClear.Size = New System.Drawing.Size(104, 48)
         Me.btnClear.TabIndex = 11
         Me.btnClear.Text = "&Clear"
         Me.btnClear.UseCustomBackColor = True
@@ -385,16 +365,15 @@ Partial Class AddStaff
         'AddStaff
         '
         Me.AcceptButton = Me.btnRegisterStaff
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(615, 596)
+        Me.ClientSize = New System.Drawing.Size(461, 484)
         Me.Controls.Add(Me.btnClear)
         Me.Controls.Add(Me.btnRegisterStaff)
         Me.Controls.Add(Me.grpEmployee)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.Name = "AddStaff"
-        Me.Padding = New System.Windows.Forms.Padding(27, 74, 27, 25)
         Me.Resizable = False
         Me.Text = "Register New Employee "
         Me.grpEmployee.ResumeLayout(False)

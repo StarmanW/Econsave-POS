@@ -55,9 +55,10 @@ Partial Class Sales
         '
         Me.Tota.FontSize = MetroFramework.MetroLabelSize.Tall
         Me.Tota.ForeColor = System.Drawing.Color.DimGray
-        Me.Tota.Location = New System.Drawing.Point(790, 636)
+        Me.Tota.Location = New System.Drawing.Point(592, 517)
+        Me.Tota.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Tota.Name = "Tota"
-        Me.Tota.Size = New System.Drawing.Size(115, 30)
+        Me.Tota.Size = New System.Drawing.Size(86, 24)
         Me.Tota.TabIndex = 8
         Me.Tota.Text = "Total : "
         Me.Tota.TextAlign = System.Drawing.ContentAlignment.TopRight
@@ -66,9 +67,10 @@ Partial Class Sales
         '
         Me.MetroLabel1.FontSize = MetroFramework.MetroLabelSize.Tall
         Me.MetroLabel1.ForeColor = System.Drawing.Color.DimGray
-        Me.MetroLabel1.Location = New System.Drawing.Point(972, 636)
+        Me.MetroLabel1.Location = New System.Drawing.Point(729, 517)
+        Me.MetroLabel1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.MetroLabel1.Name = "MetroLabel1"
-        Me.MetroLabel1.Size = New System.Drawing.Size(103, 30)
+        Me.MetroLabel1.Size = New System.Drawing.Size(77, 24)
         Me.MetroLabel1.TabIndex = 9
         Me.MetroLabel1.Text = "0.00"
         Me.MetroLabel1.TextAlign = System.Drawing.ContentAlignment.TopRight
@@ -81,21 +83,19 @@ Partial Class Sales
         'lblCategory
         '
         Me.lblCategory.FontSize = MetroFramework.MetroLabelSize.Tall
-        Me.lblCategory.Location = New System.Drawing.Point(18, 192)
-        Me.lblCategory.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblCategory.Location = New System.Drawing.Point(14, 156)
         Me.lblCategory.Name = "lblCategory"
-        Me.lblCategory.Size = New System.Drawing.Size(166, 41)
+        Me.lblCategory.Size = New System.Drawing.Size(124, 33)
         Me.lblCategory.TabIndex = 11
         Me.lblCategory.Text = "Category"
         '
         'cmbCategory
         '
         Me.cmbCategory.FormattingEnabled = True
-        Me.cmbCategory.ItemHeight = 24
-        Me.cmbCategory.Location = New System.Drawing.Point(196, 197)
-        Me.cmbCategory.Margin = New System.Windows.Forms.Padding(4)
+        Me.cmbCategory.ItemHeight = 23
+        Me.cmbCategory.Location = New System.Drawing.Point(147, 160)
         Me.cmbCategory.Name = "cmbCategory"
-        Me.cmbCategory.Size = New System.Drawing.Size(269, 30)
+        Me.cmbCategory.Size = New System.Drawing.Size(203, 29)
         Me.cmbCategory.TabIndex = 1
         Me.cmbCategory.UseSelectable = True
         '
@@ -128,8 +128,7 @@ Partial Class Sales
         DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
         Me.DataGridView1.DefaultCellStyle = DataGridViewCellStyle3
         Me.DataGridView1.GridColor = System.Drawing.Color.White
-        Me.DataGridView1.Location = New System.Drawing.Point(41, 237)
-        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(4)
+        Me.DataGridView1.Location = New System.Drawing.Point(31, 193)
         Me.DataGridView1.MultiSelect = False
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
@@ -150,7 +149,7 @@ Partial Class Sales
         Me.DataGridView1.ShowCellToolTips = False
         Me.DataGridView1.ShowEditingIcon = False
         Me.DataGridView1.ShowRowErrors = False
-        Me.DataGridView1.Size = New System.Drawing.Size(517, 518)
+        Me.DataGridView1.Size = New System.Drawing.Size(388, 421)
         Me.DataGridView1.StandardTab = True
         Me.DataGridView1.TabIndex = 0
         '
@@ -183,8 +182,7 @@ Partial Class Sales
         DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
         Me.DataGridView2.DefaultCellStyle = DataGridViewCellStyle7
         Me.DataGridView2.GridColor = System.Drawing.Color.White
-        Me.DataGridView2.Location = New System.Drawing.Point(677, 237)
-        Me.DataGridView2.Margin = New System.Windows.Forms.Padding(4)
+        Me.DataGridView2.Location = New System.Drawing.Point(508, 193)
         Me.DataGridView2.MultiSelect = False
         Me.DataGridView2.Name = "DataGridView2"
         Me.DataGridView2.ReadOnly = True
@@ -205,7 +203,7 @@ Partial Class Sales
         Me.DataGridView2.ShowCellToolTips = False
         Me.DataGridView2.ShowEditingIcon = False
         Me.DataGridView2.ShowRowErrors = False
-        Me.DataGridView2.Size = New System.Drawing.Size(567, 370)
+        Me.DataGridView2.Size = New System.Drawing.Size(425, 301)
         Me.DataGridView2.StandardTab = True
         Me.DataGridView2.TabIndex = 2
         '
@@ -213,9 +211,10 @@ Partial Class Sales
         '
         Me.MetroLabel2.FontSize = MetroFramework.MetroLabelSize.Tall
         Me.MetroLabel2.ForeColor = System.Drawing.Color.DimGray
-        Me.MetroLabel2.Location = New System.Drawing.Point(911, 636)
+        Me.MetroLabel2.Location = New System.Drawing.Point(683, 517)
+        Me.MetroLabel2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.MetroLabel2.Name = "MetroLabel2"
-        Me.MetroLabel2.Size = New System.Drawing.Size(67, 30)
+        Me.MetroLabel2.Size = New System.Drawing.Size(50, 24)
         Me.MetroLabel2.TabIndex = 13
         Me.MetroLabel2.Text = "RM"
         '
@@ -224,9 +223,10 @@ Partial Class Sales
         Me.MetroButton2.BackColor = System.Drawing.Color.ForestGreen
         Me.MetroButton2.FontSize = MetroFramework.MetroButtonSize.Tall
         Me.MetroButton2.ForeColor = System.Drawing.Color.White
-        Me.MetroButton2.Location = New System.Drawing.Point(790, 694)
+        Me.MetroButton2.Location = New System.Drawing.Point(592, 564)
+        Me.MetroButton2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.MetroButton2.Name = "MetroButton2"
-        Me.MetroButton2.Size = New System.Drawing.Size(161, 61)
+        Me.MetroButton2.Size = New System.Drawing.Size(121, 50)
         Me.MetroButton2.TabIndex = 3
         Me.MetroButton2.Text = "&Submit"
         Me.MetroButton2.UseCustomBackColor = True
@@ -238,9 +238,10 @@ Partial Class Sales
         Me.MetroButton1.BackColor = System.Drawing.SystemColors.Highlight
         Me.MetroButton1.FontSize = MetroFramework.MetroButtonSize.Tall
         Me.MetroButton1.ForeColor = System.Drawing.Color.White
-        Me.MetroButton1.Location = New System.Drawing.Point(972, 694)
+        Me.MetroButton1.Location = New System.Drawing.Point(729, 564)
+        Me.MetroButton1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.MetroButton1.Name = "MetroButton1"
-        Me.MetroButton1.Size = New System.Drawing.Size(161, 61)
+        Me.MetroButton1.Size = New System.Drawing.Size(121, 50)
         Me.MetroButton1.TabIndex = 4
         Me.MetroButton1.Text = "C&lear"
         Me.MetroButton1.UseCustomBackColor = True
@@ -250,18 +251,20 @@ Partial Class Sales
         'MetroLabel3
         '
         Me.MetroLabel3.FontSize = MetroFramework.MetroLabelSize.Tall
-        Me.MetroLabel3.Location = New System.Drawing.Point(18, 138)
+        Me.MetroLabel3.Location = New System.Drawing.Point(14, 112)
+        Me.MetroLabel3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.MetroLabel3.Name = "MetroLabel3"
-        Me.MetroLabel3.Size = New System.Drawing.Size(172, 36)
+        Me.MetroLabel3.Size = New System.Drawing.Size(129, 29)
         Me.MetroLabel3.TabIndex = 18
         Me.MetroLabel3.Text = "Transaction ID"
         '
         'MetroLabel4
         '
         Me.MetroLabel4.FontSize = MetroFramework.MetroLabelSize.Tall
-        Me.MetroLabel4.Location = New System.Drawing.Point(196, 138)
+        Me.MetroLabel4.Location = New System.Drawing.Point(147, 112)
+        Me.MetroLabel4.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.MetroLabel4.Name = "MetroLabel4"
-        Me.MetroLabel4.Size = New System.Drawing.Size(269, 33)
+        Me.MetroLabel4.Size = New System.Drawing.Size(202, 27)
         Me.MetroLabel4.TabIndex = 19
         '
         'MenuStrip2
@@ -269,24 +272,24 @@ Partial Class Sales
         Me.MenuStrip2.Font = New System.Drawing.Font("Segoe UI", 10.0!)
         Me.MenuStrip2.ImageScalingSize = New System.Drawing.Size(20, 20)
         Me.MenuStrip2.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ProfileToolStripMenuItem})
-        Me.MenuStrip2.Location = New System.Drawing.Point(20, 74)
+        Me.MenuStrip2.Location = New System.Drawing.Point(15, 60)
         Me.MenuStrip2.Name = "MenuStrip2"
-        Me.MenuStrip2.Padding = New System.Windows.Forms.Padding(8, 4, 0, 4)
-        Me.MenuStrip2.Size = New System.Drawing.Size(1230, 35)
+        Me.MenuStrip2.Padding = New System.Windows.Forms.Padding(6, 3, 0, 3)
+        Me.MenuStrip2.Size = New System.Drawing.Size(922, 29)
         Me.MenuStrip2.TabIndex = 24
         Me.MenuStrip2.Text = "MenuStrip2"
         '
         'ProfileToolStripMenuItem
         '
         Me.ProfileToolStripMenuItem.Name = "ProfileToolStripMenuItem"
-        Me.ProfileToolStripMenuItem.Size = New System.Drawing.Size(76, 27)
+        Me.ProfileToolStripMenuItem.Size = New System.Drawing.Size(65, 23)
         Me.ProfileToolStripMenuItem.Text = "&Logout"
         '
         'Sales
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1270, 797)
+        Me.ClientSize = New System.Drawing.Size(952, 648)
         Me.Controls.Add(Me.MenuStrip2)
         Me.Controls.Add(Me.MetroLabel4)
         Me.Controls.Add(Me.MetroLabel3)
@@ -300,9 +303,10 @@ Partial Class Sales
         Me.Controls.Add(Me.MetroLabel1)
         Me.Controls.Add(Me.Tota)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.MaximizeBox = False
         Me.Name = "Sales"
-        Me.Padding = New System.Windows.Forms.Padding(20, 74, 20, 20)
+        Me.Padding = New System.Windows.Forms.Padding(15, 60, 15, 16)
         Me.Resizable = False
         Me.Text = "Sales"
         Me.Theme = MetroFramework.MetroThemeStyle.[Default]

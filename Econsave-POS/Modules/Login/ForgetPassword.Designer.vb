@@ -22,6 +22,7 @@ Partial Class ForgetPassword
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ForgetPassword))
         Me.MetroLabel1 = New MetroFramework.Controls.MetroLabel()
         Me.txtId = New MetroFramework.Controls.MetroTextBox()
         Me.btnSubmit = New MetroFramework.Controls.MetroButton()
@@ -88,7 +89,10 @@ Partial Class ForgetPassword
         Me.Controls.Add(Me.btnSubmit)
         Me.Controls.Add(Me.txtId)
         Me.Controls.Add(Me.MetroLabel1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.MaximizeBox = False
         Me.Name = "ForgetPassword"
+        Me.Resizable = False
         Me.Text = "Reset Password"
         Me.ResumeLayout(False)
         Me.PerformLayout()

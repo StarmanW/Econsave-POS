@@ -23,6 +23,7 @@ Partial Class UpdateStaff
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(UpdateStaff))
         Me.btnExit = New MetroFramework.Controls.MetroButton()
         Me.btnUpdateItem = New MetroFramework.Controls.MetroButton()
         Me.radManager = New MetroFramework.Controls.MetroRadioButton()
@@ -251,6 +252,7 @@ Partial Class UpdateStaff
         Me.Controls.Add(Me.txtStaffName)
         Me.Controls.Add(Me.txtStaffID)
         Me.Controls.Add(Me.btnUpdateItem)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.Name = "UpdateStaff"
         Me.Resizable = False

@@ -24,9 +24,9 @@ Partial Class History
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(History))
         Me.EconsaveDBDataSet = New Econsave_POS.EconsaveDBDataSet()
         Me.EconsaveDBDataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
@@ -57,32 +57,31 @@ Partial Class History
         '
         Me.historyDataGV.AllowUserToAddRows = False
         Me.historyDataGV.AllowUserToDeleteRows = False
-        DataGridViewCellStyle4.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.historyDataGV.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.historyDataGV.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
         Me.historyDataGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.historyDataGV.BackgroundColor = System.Drawing.Color.White
         Me.historyDataGV.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.historyDataGV.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None
         Me.historyDataGV.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle5.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.historyDataGV.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle5
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.historyDataGV.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.historyDataGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle6.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.DodgerBlue
-        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.historyDataGV.DefaultCellStyle = DataGridViewCellStyle6
-        Me.historyDataGV.Location = New System.Drawing.Point(83, 198)
-        Me.historyDataGV.Margin = New System.Windows.Forms.Padding(4)
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.DodgerBlue
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.historyDataGV.DefaultCellStyle = DataGridViewCellStyle3
+        Me.historyDataGV.Location = New System.Drawing.Point(62, 161)
         Me.historyDataGV.MultiSelect = False
         Me.historyDataGV.Name = "historyDataGV"
         Me.historyDataGV.ReadOnly = True
@@ -90,16 +89,17 @@ Partial Class History
         Me.historyDataGV.RowHeadersVisible = False
         Me.historyDataGV.RowTemplate.Height = 24
         Me.historyDataGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.historyDataGV.Size = New System.Drawing.Size(867, 370)
+        Me.historyDataGV.Size = New System.Drawing.Size(650, 301)
         Me.historyDataGV.TabIndex = 9
         '
         'MetroLabel1
         '
         Me.MetroLabel1.AutoSize = True
         Me.MetroLabel1.FontSize = MetroFramework.MetroLabelSize.Tall
-        Me.MetroLabel1.Location = New System.Drawing.Point(83, 74)
+        Me.MetroLabel1.Location = New System.Drawing.Point(62, 60)
+        Me.MetroLabel1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.MetroLabel1.Name = "MetroLabel1"
-        Me.MetroLabel1.Size = New System.Drawing.Size(73, 25)
+        Me.MetroLabel1.Size = New System.Drawing.Size(72, 25)
         Me.MetroLabel1.TabIndex = 10
         Me.MetroLabel1.Text = "Search :"
         '
@@ -109,16 +109,18 @@ Partial Class History
         '
         '
         Me.txtSearch.CustomButton.Image = Nothing
-        Me.txtSearch.CustomButton.Location = New System.Drawing.Point(446, 1)
+        Me.txtSearch.CustomButton.Location = New System.Drawing.Point(250, 1)
+        Me.txtSearch.CustomButton.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtSearch.CustomButton.Name = ""
-        Me.txtSearch.CustomButton.Size = New System.Drawing.Size(21, 21)
+        Me.txtSearch.CustomButton.Size = New System.Drawing.Size(13, 14)
         Me.txtSearch.CustomButton.Style = MetroFramework.MetroColorStyle.Blue
         Me.txtSearch.CustomButton.TabIndex = 1
         Me.txtSearch.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
         Me.txtSearch.CustomButton.UseSelectable = True
         Me.txtSearch.CustomButton.Visible = False
         Me.txtSearch.Lines = New String(-1) {}
-        Me.txtSearch.Location = New System.Drawing.Point(221, 74)
+        Me.txtSearch.Location = New System.Drawing.Point(166, 60)
+        Me.txtSearch.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtSearch.MaxLength = 32767
         Me.txtSearch.Name = "txtSearch"
         Me.txtSearch.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -127,7 +129,7 @@ Partial Class History
         Me.txtSearch.SelectionLength = 0
         Me.txtSearch.SelectionStart = 0
         Me.txtSearch.ShortcutsEnabled = True
-        Me.txtSearch.Size = New System.Drawing.Size(468, 23)
+        Me.txtSearch.Size = New System.Drawing.Size(351, 19)
         Me.txtSearch.TabIndex = 11
         Me.txtSearch.UseSelectable = True
         Me.txtSearch.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
@@ -138,9 +140,10 @@ Partial Class History
         Me.btnSearch.BackColor = System.Drawing.Color.ForestGreen
         Me.btnSearch.FontSize = MetroFramework.MetroButtonSize.Tall
         Me.btnSearch.ForeColor = System.Drawing.Color.White
-        Me.btnSearch.Location = New System.Drawing.Point(720, 63)
+        Me.btnSearch.Location = New System.Drawing.Point(540, 51)
+        Me.btnSearch.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.btnSearch.Name = "btnSearch"
-        Me.btnSearch.Size = New System.Drawing.Size(107, 51)
+        Me.btnSearch.Size = New System.Drawing.Size(80, 41)
         Me.btnSearch.TabIndex = 12
         Me.btnSearch.Text = "&Search"
         Me.btnSearch.UseCustomBackColor = True
@@ -152,9 +155,10 @@ Partial Class History
         Me.btnReset.BackColor = System.Drawing.Color.Red
         Me.btnReset.FontSize = MetroFramework.MetroButtonSize.Tall
         Me.btnReset.ForeColor = System.Drawing.Color.White
-        Me.btnReset.Location = New System.Drawing.Point(843, 63)
+        Me.btnReset.Location = New System.Drawing.Point(632, 51)
+        Me.btnReset.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.btnReset.Name = "btnReset"
-        Me.btnReset.Size = New System.Drawing.Size(107, 51)
+        Me.btnReset.Size = New System.Drawing.Size(80, 41)
         Me.btnReset.TabIndex = 13
         Me.btnReset.Text = "&Reset"
         Me.btnReset.UseCustomBackColor = True
@@ -166,9 +170,10 @@ Partial Class History
         Me.btnPrint.BackColor = System.Drawing.SystemColors.Highlight
         Me.btnPrint.FontSize = MetroFramework.MetroButtonSize.Tall
         Me.btnPrint.ForeColor = System.Drawing.Color.White
-        Me.btnPrint.Location = New System.Drawing.Point(843, 586)
+        Me.btnPrint.Location = New System.Drawing.Point(632, 476)
+        Me.btnPrint.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.btnPrint.Name = "btnPrint"
-        Me.btnPrint.Size = New System.Drawing.Size(107, 51)
+        Me.btnPrint.Size = New System.Drawing.Size(80, 41)
         Me.btnPrint.TabIndex = 14
         Me.btnPrint.Text = "&Print"
         Me.btnPrint.UseCustomBackColor = True
@@ -193,17 +198,20 @@ Partial Class History
         '
         'History
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(999, 646)
+        Me.ClientSize = New System.Drawing.Size(749, 525)
         Me.Controls.Add(Me.btnPrint)
         Me.Controls.Add(Me.btnReset)
         Me.Controls.Add(Me.btnSearch)
         Me.Controls.Add(Me.txtSearch)
         Me.Controls.Add(Me.MetroLabel1)
         Me.Controls.Add(Me.historyDataGV)
-        Me.Margin = New System.Windows.Forms.Padding(4)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.MaximizeBox = False
         Me.Name = "History"
+        Me.Padding = New System.Windows.Forms.Padding(15, 49, 15, 16)
+        Me.Resizable = False
         Me.Text = "History"
         CType(Me.EconsaveDBDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.EconsaveDBDataSetBindingSource, System.ComponentModel.ISupportInitialize).EndInit()

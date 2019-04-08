@@ -150,6 +150,7 @@ Partial Class StockReport
         Me.Controls.Add(Me.MetroButton1)
         Me.Controls.Add(Me.dgvStockReport)
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.MaximizeBox = False
         Me.Name = "StockReport"

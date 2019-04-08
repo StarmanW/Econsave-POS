@@ -23,8 +23,15 @@ Partial Class UpdateItem
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(UpdateItem))
         Me.btnUpdateItem = New MetroFramework.Controls.MetroButton()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
+        Me.MetroLabel6 = New MetroFramework.Controls.MetroLabel()
+        Me.MetroLabel5 = New MetroFramework.Controls.MetroLabel()
+        Me.MetroLabel4 = New MetroFramework.Controls.MetroLabel()
+        Me.MetroLabel3 = New MetroFramework.Controls.MetroLabel()
+        Me.MetroLabel2 = New MetroFramework.Controls.MetroLabel()
+        Me.MetroLabel1 = New MetroFramework.Controls.MetroLabel()
         Me.txtItemName = New MetroFramework.Controls.MetroTextBox()
         Me.numStockQuantity = New System.Windows.Forms.NumericUpDown()
         Me.numPrice = New System.Windows.Forms.NumericUpDown()
@@ -34,12 +41,6 @@ Partial Class UpdateItem
         Me.btnExit = New MetroFramework.Controls.MetroButton()
         Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.ErrorProvider2 = New System.Windows.Forms.ErrorProvider(Me.components)
-        Me.MetroLabel1 = New MetroFramework.Controls.MetroLabel()
-        Me.MetroLabel2 = New MetroFramework.Controls.MetroLabel()
-        Me.MetroLabel3 = New MetroFramework.Controls.MetroLabel()
-        Me.MetroLabel4 = New MetroFramework.Controls.MetroLabel()
-        Me.MetroLabel5 = New MetroFramework.Controls.MetroLabel()
-        Me.MetroLabel6 = New MetroFramework.Controls.MetroLabel()
         Me.TableLayoutPanel1.SuspendLayout()
         CType(Me.numStockQuantity, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.numPrice, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -92,6 +93,72 @@ Partial Class UpdateItem
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 46.0!))
         Me.TableLayoutPanel1.Size = New System.Drawing.Size(526, 312)
         Me.TableLayoutPanel1.TabIndex = 9
+        '
+        'MetroLabel6
+        '
+        Me.MetroLabel6.Anchor = System.Windows.Forms.AnchorStyles.Right
+        Me.MetroLabel6.AutoSize = True
+        Me.MetroLabel6.FontSize = MetroFramework.MetroLabelSize.Tall
+        Me.MetroLabel6.Location = New System.Drawing.Point(54, 276)
+        Me.MetroLabel6.Name = "MetroLabel6"
+        Me.MetroLabel6.Size = New System.Drawing.Size(85, 25)
+        Me.MetroLabel6.TabIndex = 18
+        Me.MetroLabel6.Text = "Category:"
+        '
+        'MetroLabel5
+        '
+        Me.MetroLabel5.Anchor = System.Windows.Forms.AnchorStyles.Right
+        Me.MetroLabel5.AutoSize = True
+        Me.MetroLabel5.FontSize = MetroFramework.MetroLabelSize.Tall
+        Me.MetroLabel5.Location = New System.Drawing.Point(13, 231)
+        Me.MetroLabel5.Name = "MetroLabel5"
+        Me.MetroLabel5.Size = New System.Drawing.Size(126, 25)
+        Me.MetroLabel5.TabIndex = 17
+        Me.MetroLabel5.Text = "Stock Quantity:"
+        '
+        'MetroLabel4
+        '
+        Me.MetroLabel4.Anchor = System.Windows.Forms.AnchorStyles.Right
+        Me.MetroLabel4.AutoSize = True
+        Me.MetroLabel4.FontSize = MetroFramework.MetroLabelSize.Tall
+        Me.MetroLabel4.Location = New System.Drawing.Point(86, 189)
+        Me.MetroLabel4.Name = "MetroLabel4"
+        Me.MetroLabel4.Size = New System.Drawing.Size(53, 25)
+        Me.MetroLabel4.TabIndex = 16
+        Me.MetroLabel4.Text = "Price:"
+        '
+        'MetroLabel3
+        '
+        Me.MetroLabel3.Anchor = System.Windows.Forms.AnchorStyles.Right
+        Me.MetroLabel3.AutoSize = True
+        Me.MetroLabel3.FontSize = MetroFramework.MetroLabelSize.Tall
+        Me.MetroLabel3.Location = New System.Drawing.Point(38, 110)
+        Me.MetroLabel3.Name = "MetroLabel3"
+        Me.MetroLabel3.Size = New System.Drawing.Size(101, 25)
+        Me.MetroLabel3.TabIndex = 15
+        Me.MetroLabel3.Text = "Description:"
+        '
+        'MetroLabel2
+        '
+        Me.MetroLabel2.Anchor = System.Windows.Forms.AnchorStyles.Right
+        Me.MetroLabel2.AutoSize = True
+        Me.MetroLabel2.FontSize = MetroFramework.MetroLabelSize.Tall
+        Me.MetroLabel2.Location = New System.Drawing.Point(39, 35)
+        Me.MetroLabel2.Name = "MetroLabel2"
+        Me.MetroLabel2.Size = New System.Drawing.Size(100, 25)
+        Me.MetroLabel2.TabIndex = 14
+        Me.MetroLabel2.Text = "Item Name:"
+        '
+        'MetroLabel1
+        '
+        Me.MetroLabel1.Anchor = System.Windows.Forms.AnchorStyles.Right
+        Me.MetroLabel1.AutoSize = True
+        Me.MetroLabel1.FontSize = MetroFramework.MetroLabelSize.Tall
+        Me.MetroLabel1.Location = New System.Drawing.Point(69, 3)
+        Me.MetroLabel1.Name = "MetroLabel1"
+        Me.MetroLabel1.Size = New System.Drawing.Size(70, 25)
+        Me.MetroLabel1.TabIndex = 13
+        Me.MetroLabel1.Text = "Item ID:"
         '
         'txtItemName
         '
@@ -246,72 +313,6 @@ Partial Class UpdateItem
         '
         Me.ErrorProvider2.ContainerControl = Me
         '
-        'MetroLabel1
-        '
-        Me.MetroLabel1.Anchor = System.Windows.Forms.AnchorStyles.Right
-        Me.MetroLabel1.AutoSize = True
-        Me.MetroLabel1.FontSize = MetroFramework.MetroLabelSize.Tall
-        Me.MetroLabel1.Location = New System.Drawing.Point(69, 3)
-        Me.MetroLabel1.Name = "MetroLabel1"
-        Me.MetroLabel1.Size = New System.Drawing.Size(70, 25)
-        Me.MetroLabel1.TabIndex = 13
-        Me.MetroLabel1.Text = "Item ID:"
-        '
-        'MetroLabel2
-        '
-        Me.MetroLabel2.Anchor = System.Windows.Forms.AnchorStyles.Right
-        Me.MetroLabel2.AutoSize = True
-        Me.MetroLabel2.FontSize = MetroFramework.MetroLabelSize.Tall
-        Me.MetroLabel2.Location = New System.Drawing.Point(39, 35)
-        Me.MetroLabel2.Name = "MetroLabel2"
-        Me.MetroLabel2.Size = New System.Drawing.Size(100, 25)
-        Me.MetroLabel2.TabIndex = 14
-        Me.MetroLabel2.Text = "Item Name:"
-        '
-        'MetroLabel3
-        '
-        Me.MetroLabel3.Anchor = System.Windows.Forms.AnchorStyles.Right
-        Me.MetroLabel3.AutoSize = True
-        Me.MetroLabel3.FontSize = MetroFramework.MetroLabelSize.Tall
-        Me.MetroLabel3.Location = New System.Drawing.Point(38, 110)
-        Me.MetroLabel3.Name = "MetroLabel3"
-        Me.MetroLabel3.Size = New System.Drawing.Size(101, 25)
-        Me.MetroLabel3.TabIndex = 15
-        Me.MetroLabel3.Text = "Description:"
-        '
-        'MetroLabel4
-        '
-        Me.MetroLabel4.Anchor = System.Windows.Forms.AnchorStyles.Right
-        Me.MetroLabel4.AutoSize = True
-        Me.MetroLabel4.FontSize = MetroFramework.MetroLabelSize.Tall
-        Me.MetroLabel4.Location = New System.Drawing.Point(86, 189)
-        Me.MetroLabel4.Name = "MetroLabel4"
-        Me.MetroLabel4.Size = New System.Drawing.Size(53, 25)
-        Me.MetroLabel4.TabIndex = 16
-        Me.MetroLabel4.Text = "Price:"
-        '
-        'MetroLabel5
-        '
-        Me.MetroLabel5.Anchor = System.Windows.Forms.AnchorStyles.Right
-        Me.MetroLabel5.AutoSize = True
-        Me.MetroLabel5.FontSize = MetroFramework.MetroLabelSize.Tall
-        Me.MetroLabel5.Location = New System.Drawing.Point(13, 231)
-        Me.MetroLabel5.Name = "MetroLabel5"
-        Me.MetroLabel5.Size = New System.Drawing.Size(126, 25)
-        Me.MetroLabel5.TabIndex = 17
-        Me.MetroLabel5.Text = "Stock Quantity:"
-        '
-        'MetroLabel6
-        '
-        Me.MetroLabel6.Anchor = System.Windows.Forms.AnchorStyles.Right
-        Me.MetroLabel6.AutoSize = True
-        Me.MetroLabel6.FontSize = MetroFramework.MetroLabelSize.Tall
-        Me.MetroLabel6.Location = New System.Drawing.Point(54, 276)
-        Me.MetroLabel6.Name = "MetroLabel6"
-        Me.MetroLabel6.Size = New System.Drawing.Size(85, 25)
-        Me.MetroLabel6.TabIndex = 18
-        Me.MetroLabel6.Text = "Category:"
-        '
         'UpdateItem
         '
         Me.AcceptButton = Me.btnUpdateItem
@@ -322,6 +323,7 @@ Partial Class UpdateItem
         Me.Controls.Add(Me.btnExit)
         Me.Controls.Add(Me.btnUpdateItem)
         Me.Controls.Add(Me.TableLayoutPanel1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.Name = "UpdateItem"
         Me.Resizable = False
