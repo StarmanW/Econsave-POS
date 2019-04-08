@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
 Partial Class Login
-    Inherits MetroFramework.Forms.MetroForm
+    Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()>
+    <System.Diagnostics.DebuggerNonUserCode()> _
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,165 +20,208 @@ Partial Class Login
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()>
+    <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Login))
-        Me.txtStaffID = New MetroFramework.Controls.MetroTextBox()
-        Me.lblStaffID = New MetroFramework.Controls.MetroLabel()
-        Me.lblStaffPassword = New MetroFramework.Controls.MetroLabel()
-        Me.txtPassword = New MetroFramework.Controls.MetroTextBox()
-        Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.lblId = New System.Windows.Forms.Label()
+        Me.lblPassword = New System.Windows.Forms.Label()
+        Me.txtId = New System.Windows.Forms.TextBox()
+        Me.txtPassword = New System.Windows.Forms.TextBox()
+        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
+        Me.HistoryToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SearchHistoryToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.OptionToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ChangeBackgroundToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ResetToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ForgetPasswordToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AboutUsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.btnLogin = New System.Windows.Forms.Button()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.epId = New System.Windows.Forms.ErrorProvider(Me.components)
+        Me.epPassword = New System.Windows.Forms.ErrorProvider(Me.components)
+        Me.epWrongPassword = New System.Windows.Forms.ErrorProvider(Me.components)
+        Me.epWrongId = New System.Windows.Forms.ErrorProvider(Me.components)
+        Me.ColorDialog1 = New System.Windows.Forms.ColorDialog()
+        Me.MenuStrip1.SuspendLayout()
+        CType(Me.epId, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.epPassword, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.epWrongPassword, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.epWrongId, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'txtStaffID
+        'Label1
         '
+        Me.Label1.Image = Global.Econsave_POS.My.Resources.Resources.Econsave_logo
+        Me.Label1.Location = New System.Drawing.Point(64, 84)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(452, 111)
+        Me.Label1.TabIndex = 0
         '
+        'lblId
         '
+        Me.lblId.Location = New System.Drawing.Point(99, 221)
+        Me.lblId.Name = "lblId"
+        Me.lblId.Size = New System.Drawing.Size(100, 23)
+        Me.lblId.TabIndex = 1
+        Me.lblId.Text = "Login :"
         '
-        Me.txtStaffID.CustomButton.Image = Nothing
-        Me.txtStaffID.CustomButton.Location = New System.Drawing.Point(357, 2)
-        Me.txtStaffID.CustomButton.Name = ""
-        Me.txtStaffID.CustomButton.Size = New System.Drawing.Size(25, 25)
-        Me.txtStaffID.CustomButton.Style = MetroFramework.MetroColorStyle.Blue
-        Me.txtStaffID.CustomButton.TabIndex = 1
-        Me.txtStaffID.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
-        Me.txtStaffID.CustomButton.UseSelectable = True
-        Me.txtStaffID.CustomButton.Visible = False
-        Me.txtStaffID.FontSize = MetroFramework.MetroTextBoxSize.Medium
-        Me.txtStaffID.Lines = New String(-1) {}
-        Me.txtStaffID.Location = New System.Drawing.Point(147, 193)
-        Me.txtStaffID.MaxLength = 32767
-        Me.txtStaffID.Name = "txtStaffID"
-        Me.txtStaffID.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.txtStaffID.ScrollBars = System.Windows.Forms.ScrollBars.None
-        Me.txtStaffID.SelectedText = ""
-        Me.txtStaffID.SelectionLength = 0
-        Me.txtStaffID.SelectionStart = 0
-        Me.txtStaffID.ShortcutsEnabled = True
-        Me.txtStaffID.Size = New System.Drawing.Size(385, 30)
-        Me.txtStaffID.TabIndex = 7
-        Me.txtStaffID.UseSelectable = True
-        Me.txtStaffID.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
-        Me.txtStaffID.WaterMarkFont = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel)
+        'lblPassword
         '
-        'lblStaffID
+        Me.lblPassword.AutoSize = True
+        Me.lblPassword.Location = New System.Drawing.Point(99, 264)
+        Me.lblPassword.Name = "lblPassword"
+        Me.lblPassword.Size = New System.Drawing.Size(59, 13)
+        Me.lblPassword.TabIndex = 2
+        Me.lblPassword.Text = "Password :"
         '
-        Me.lblStaffID.AutoSize = True
-        Me.lblStaffID.FontSize = MetroFramework.MetroLabelSize.Tall
-        Me.lblStaffID.FontWeight = MetroFramework.MetroLabelWeight.Bold
-        Me.lblStaffID.Location = New System.Drawing.Point(49, 193)
-        Me.lblStaffID.Name = "lblStaffID"
-        Me.lblStaffID.Size = New System.Drawing.Size(82, 25)
-        Me.lblStaffID.TabIndex = 8
-        Me.lblStaffID.Text = "Staff ID:"
+        'txtId
         '
-        'lblStaffPassword
-        '
-        Me.lblStaffPassword.AutoSize = True
-        Me.lblStaffPassword.FontSize = MetroFramework.MetroLabelSize.Tall
-        Me.lblStaffPassword.FontWeight = MetroFramework.MetroLabelWeight.Bold
-        Me.lblStaffPassword.Location = New System.Drawing.Point(34, 243)
-        Me.lblStaffPassword.Name = "lblStaffPassword"
-        Me.lblStaffPassword.Size = New System.Drawing.Size(97, 25)
-        Me.lblStaffPassword.TabIndex = 9
-        Me.lblStaffPassword.Text = "Password:"
+        Me.txtId.Location = New System.Drawing.Point(181, 221)
+        Me.txtId.Name = "txtId"
+        Me.txtId.Size = New System.Drawing.Size(305, 20)
+        Me.txtId.TabIndex = 3
         '
         'txtPassword
         '
-        '
-        '
-        '
-        Me.txtPassword.CustomButton.Image = Nothing
-        Me.txtPassword.CustomButton.Location = New System.Drawing.Point(357, 2)
-        Me.txtPassword.CustomButton.Name = ""
-        Me.txtPassword.CustomButton.Size = New System.Drawing.Size(25, 25)
-        Me.txtPassword.CustomButton.Style = MetroFramework.MetroColorStyle.Blue
-        Me.txtPassword.CustomButton.TabIndex = 1
-        Me.txtPassword.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
-        Me.txtPassword.CustomButton.UseSelectable = True
-        Me.txtPassword.CustomButton.Visible = False
-        Me.txtPassword.FontSize = MetroFramework.MetroTextBoxSize.Medium
-        Me.txtPassword.Lines = New String(-1) {}
-        Me.txtPassword.Location = New System.Drawing.Point(147, 238)
-        Me.txtPassword.MaxLength = 32767
+        Me.txtPassword.Location = New System.Drawing.Point(181, 257)
         Me.txtPassword.Name = "txtPassword"
         Me.txtPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.txtPassword.ScrollBars = System.Windows.Forms.ScrollBars.None
-        Me.txtPassword.SelectedText = ""
-        Me.txtPassword.SelectionLength = 0
-        Me.txtPassword.SelectionStart = 0
-        Me.txtPassword.ShortcutsEnabled = True
-        Me.txtPassword.Size = New System.Drawing.Size(385, 30)
-        Me.txtPassword.TabIndex = 10
-        Me.txtPassword.UseSelectable = True
-        Me.txtPassword.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
-        Me.txtPassword.WaterMarkFont = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel)
+        Me.txtPassword.Size = New System.Drawing.Size(305, 20)
+        Me.txtPassword.TabIndex = 4
         '
-        'ErrorProvider1
+        'MenuStrip1
         '
-        Me.ErrorProvider1.ContainerControl = Me
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.HistoryToolStripMenuItem, Me.OptionToolStripMenuItem, Me.HelpToolStripMenuItem})
+        Me.MenuStrip1.Location = New System.Drawing.Point(20, 60)
+        Me.MenuStrip1.Name = "MenuStrip1"
+        Me.MenuStrip1.Size = New System.Drawing.Size(550, 24)
+        Me.MenuStrip1.TabIndex = 7
+        Me.MenuStrip1.Text = "MenuStrip1"
+        '
+        'HistoryToolStripMenuItem
+        '
+        Me.HistoryToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SearchHistoryToolStripMenuItem})
+        Me.HistoryToolStripMenuItem.Name = "HistoryToolStripMenuItem"
+        Me.HistoryToolStripMenuItem.Size = New System.Drawing.Size(57, 20)
+        Me.HistoryToolStripMenuItem.Text = "History"
+        '
+        'SearchHistoryToolStripMenuItem
+        '
+        Me.SearchHistoryToolStripMenuItem.Name = "SearchHistoryToolStripMenuItem"
+        Me.SearchHistoryToolStripMenuItem.Size = New System.Drawing.Size(109, 22)
+        Me.SearchHistoryToolStripMenuItem.Text = "Report"
+        '
+        'OptionToolStripMenuItem
+        '
+        Me.OptionToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ChangeBackgroundToolStripMenuItem, Me.ResetToolStripMenuItem})
+        Me.OptionToolStripMenuItem.Name = "OptionToolStripMenuItem"
+        Me.OptionToolStripMenuItem.Size = New System.Drawing.Size(56, 20)
+        Me.OptionToolStripMenuItem.Text = "Option"
+        '
+        'ChangeBackgroundToolStripMenuItem
+        '
+        Me.ChangeBackgroundToolStripMenuItem.Name = "ChangeBackgroundToolStripMenuItem"
+        Me.ChangeBackgroundToolStripMenuItem.Size = New System.Drawing.Size(182, 22)
+        Me.ChangeBackgroundToolStripMenuItem.Text = "Change Background"
+        '
+        'ResetToolStripMenuItem
+        '
+        Me.ResetToolStripMenuItem.Name = "ResetToolStripMenuItem"
+        Me.ResetToolStripMenuItem.Size = New System.Drawing.Size(182, 22)
+        Me.ResetToolStripMenuItem.Text = "Reset"
+        '
+        'HelpToolStripMenuItem
+        '
+        Me.HelpToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ForgetPasswordToolStripMenuItem, Me.AboutUsToolStripMenuItem})
+        Me.HelpToolStripMenuItem.Name = "HelpToolStripMenuItem"
+        Me.HelpToolStripMenuItem.Size = New System.Drawing.Size(44, 20)
+        Me.HelpToolStripMenuItem.Text = "Help"
+        '
+        'ForgetPasswordToolStripMenuItem
+        '
+        Me.ForgetPasswordToolStripMenuItem.Name = "ForgetPasswordToolStripMenuItem"
+        Me.ForgetPasswordToolStripMenuItem.Size = New System.Drawing.Size(161, 22)
+        Me.ForgetPasswordToolStripMenuItem.Text = "Forget Password"
+        '
+        'AboutUsToolStripMenuItem
+        '
+        Me.AboutUsToolStripMenuItem.Name = "AboutUsToolStripMenuItem"
+        Me.AboutUsToolStripMenuItem.Size = New System.Drawing.Size(161, 22)
+        Me.AboutUsToolStripMenuItem.Text = "About Us"
         '
         'btnLogin
         '
-        Me.btnLogin.BackColor = System.Drawing.Color.ForestGreen
-        Me.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnLogin.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnLogin.ForeColor = System.Drawing.Color.White
         Me.btnLogin.Image = Global.Econsave_POS.My.Resources.Resources.cbvoi_qjprf_6
-        Me.btnLogin.Location = New System.Drawing.Point(147, 287)
+        Me.btnLogin.Location = New System.Drawing.Point(413, 292)
         Me.btnLogin.Name = "btnLogin"
-        Me.btnLogin.Size = New System.Drawing.Size(385, 45)
-        Me.btnLogin.TabIndex = 5
+        Me.btnLogin.Size = New System.Drawing.Size(73, 45)
+        Me.btnLogin.TabIndex = 8
         Me.btnLogin.Text = "Login"
-        Me.btnLogin.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnLogin.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.btnLogin.UseVisualStyleBackColor = False
+        Me.btnLogin.UseVisualStyleBackColor = True
         '
-        'PictureBox1
+        'epId
         '
-        Me.PictureBox1.Image = Global.Econsave_POS.My.Resources.Resources.Econsave_logo
-        Me.PictureBox1.Location = New System.Drawing.Point(49, 65)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(5)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(483, 102)
-        Me.PictureBox1.TabIndex = 4
-        Me.PictureBox1.TabStop = False
+        Me.epId.ContainerControl = Me
+        '
+        'epPassword
+        '
+        Me.epPassword.ContainerControl = Me
+        '
+        'epWrongPassword
+        '
+        Me.epWrongPassword.ContainerControl = Me
+        '
+        'epWrongId
+        '
+        Me.epWrongId.ContainerControl = Me
         '
         'Login
         '
         Me.AcceptButton = Me.btnLogin
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(586, 376)
-        Me.Controls.Add(Me.txtPassword)
-        Me.Controls.Add(Me.lblStaffPassword)
-        Me.Controls.Add(Me.lblStaffID)
-        Me.Controls.Add(Me.txtStaffID)
+        Me.ClientSize = New System.Drawing.Size(590, 359)
         Me.Controls.Add(Me.btnLogin)
-        Me.Controls.Add(Me.PictureBox1)
-        Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Margin = New System.Windows.Forms.Padding(5)
-        Me.MaximizeBox = False
+        Me.Controls.Add(Me.MenuStrip1)
+        Me.Controls.Add(Me.txtPassword)
+        Me.Controls.Add(Me.txtId)
+        Me.Controls.Add(Me.lblPassword)
+        Me.Controls.Add(Me.lblId)
+        Me.Controls.Add(Me.Label1)
+        Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "Login"
-        Me.Resizable = False
         Me.Text = "Login"
-        CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.MenuStrip1.ResumeLayout(False)
+        Me.MenuStrip1.PerformLayout()
+        CType(Me.epId, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.epPassword, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.epWrongPassword, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.epWrongId, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents PictureBox1 As PictureBox
+
+    Friend WithEvents Label1 As Label
+    Friend WithEvents lblId As Label
+    Friend WithEvents lblPassword As Label
+    Friend WithEvents txtId As TextBox
+    Friend WithEvents txtPassword As TextBox
+    Friend WithEvents MenuStrip1 As MenuStrip
+    Friend WithEvents HistoryToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents SearchHistoryToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents OptionToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ChangeBackgroundToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ResetToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents HelpToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ForgetPasswordToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents AboutUsToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents btnLogin As Button
-    Friend WithEvents txtPassword As MetroFramework.Controls.MetroTextBox
-    Friend WithEvents lblStaffPassword As MetroFramework.Controls.MetroLabel
-    Friend WithEvents lblStaffID As MetroFramework.Controls.MetroLabel
-    Friend WithEvents txtStaffID As MetroFramework.Controls.MetroTextBox
-    Friend WithEvents ErrorProvider1 As ErrorProvider
+    Friend WithEvents epId As ErrorProvider
+    Friend WithEvents epPassword As ErrorProvider
+    Friend WithEvents epWrongPassword As ErrorProvider
+    Friend WithEvents epWrongId As ErrorProvider
+    Friend WithEvents ColorDialog1 As ColorDialog
 End Class
