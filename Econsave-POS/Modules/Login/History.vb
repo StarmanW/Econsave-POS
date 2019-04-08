@@ -144,15 +144,6 @@ Public Class History
     Private bitmap As Bitmap
 
     Private Sub btnPrint_Click(sender As Object, e As EventArgs) Handles btnPrint.Click
-        'Dim height As Integer = historyDataGV.Height
-        'historyDataGV.Height = historyDataGV.RowCount * historyDataGV.RowTemplate.Height
-        'bitmap = New Bitmap(Me.historyDataGV.Width, Me.historyDataGV.Height)
-        'historyDataGV.DrawToBitmap(bitmap, New Rectangle(0, 0, Me.historyDataGV.Width, Me.historyDataGV.Height))
-        'dlgPrintPreview.Document = doc
-        'dlgPrintPreview.PrintPreviewControl.Zoom = 2
-        'dlgPrintPreview.ShowDialog()
-        'historyDataGV.Height = height
-
         dlgPrintPreview.Document = doc
         DirectCast(dlgPrintPreview, Form).WindowState = FormWindowState.Maximized
         dlgPrintPreview.PrintPreviewControl.Zoom = 1.0
