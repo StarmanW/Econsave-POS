@@ -25,9 +25,6 @@ Partial Class AddItem
         Me.components = New System.ComponentModel.Container()
         Me.MenuStrip2 = New System.Windows.Forms.MenuStrip()
         Me.SalesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ItemManagementToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.AddNewItemToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.DisplayItemListToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ProfileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.txtItemID = New MetroFramework.Controls.MetroTextBox()
@@ -46,6 +43,7 @@ Partial Class AddItem
         Me.MetroComboBox1 = New MetroFramework.Controls.MetroComboBox()
         Me.btnAddItem = New MetroFramework.Controls.MetroButton()
         Me.btnClear = New MetroFramework.Controls.MetroButton()
+        Me.LogoutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip2.SuspendLayout()
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.numPrice, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -57,7 +55,7 @@ Partial Class AddItem
         '
         Me.MenuStrip2.Font = New System.Drawing.Font("Segoe UI", 10.0!)
         Me.MenuStrip2.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.MenuStrip2.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SalesToolStripMenuItem, Me.ItemManagementToolStripMenuItem, Me.ProfileToolStripMenuItem})
+        Me.MenuStrip2.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ProfileToolStripMenuItem, Me.SalesToolStripMenuItem})
         Me.MenuStrip2.Location = New System.Drawing.Point(21, 60)
         Me.MenuStrip2.Name = "MenuStrip2"
         Me.MenuStrip2.Padding = New System.Windows.Forms.Padding(6, 3, 0, 3)
@@ -71,32 +69,12 @@ Partial Class AddItem
         Me.SalesToolStripMenuItem.Size = New System.Drawing.Size(51, 23)
         Me.SalesToolStripMenuItem.Text = "Sales"
         '
-        'ItemManagementToolStripMenuItem
-        '
-        Me.ItemManagementToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AddNewItemToolStripMenuItem, Me.DisplayItemListToolStripMenuItem})
-        Me.ItemManagementToolStripMenuItem.Name = "ItemManagementToolStripMenuItem"
-        Me.ItemManagementToolStripMenuItem.Size = New System.Drawing.Size(135, 23)
-        Me.ItemManagementToolStripMenuItem.Text = "Item Management"
-        '
-        'AddNewItemToolStripMenuItem
-        '
-        Me.AddNewItemToolStripMenuItem.Name = "AddNewItemToolStripMenuItem"
-        Me.AddNewItemToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.A), System.Windows.Forms.Keys)
-        Me.AddNewItemToolStripMenuItem.Size = New System.Drawing.Size(230, 24)
-        Me.AddNewItemToolStripMenuItem.Text = "Add New Item"
-        '
-        'DisplayItemListToolStripMenuItem
-        '
-        Me.DisplayItemListToolStripMenuItem.Name = "DisplayItemListToolStripMenuItem"
-        Me.DisplayItemListToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.D), System.Windows.Forms.Keys)
-        Me.DisplayItemListToolStripMenuItem.Size = New System.Drawing.Size(230, 24)
-        Me.DisplayItemListToolStripMenuItem.Text = "Display Item List"
-        '
         'ProfileToolStripMenuItem
         '
+        Me.ProfileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.LogoutToolStripMenuItem})
         Me.ProfileToolStripMenuItem.Name = "ProfileToolStripMenuItem"
-        Me.ProfileToolStripMenuItem.Size = New System.Drawing.Size(59, 23)
-        Me.ProfileToolStripMenuItem.Text = "Profile"
+        Me.ProfileToolStripMenuItem.Size = New System.Drawing.Size(41, 23)
+        Me.ProfileToolStripMenuItem.Text = "File"
         '
         'ErrorProvider1
         '
@@ -368,6 +346,12 @@ Partial Class AddItem
         Me.btnClear.UseCustomForeColor = True
         Me.btnClear.UseSelectable = True
         '
+        'LogoutToolStripMenuItem
+        '
+        Me.LogoutToolStripMenuItem.Name = "LogoutToolStripMenuItem"
+        Me.LogoutToolStripMenuItem.Size = New System.Drawing.Size(180, 24)
+        Me.LogoutToolStripMenuItem.Text = "Logout"
+        '
         'AddItem
         '
         Me.AcceptButton = Me.btnAddItem
@@ -399,10 +383,7 @@ Partial Class AddItem
     End Sub
     Friend WithEvents MenuStrip2 As MenuStrip
     Friend WithEvents SalesToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents ItemManagementToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ProfileToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents AddNewItemToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents DisplayItemListToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ErrorProvider1 As ErrorProvider
     Friend WithEvents MetroComboBox1 As MetroFramework.Controls.MetroComboBox
     Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
@@ -420,4 +401,5 @@ Partial Class AddItem
     Friend WithEvents btnClear As MetroFramework.Controls.MetroButton
     Friend WithEvents txtDescription As MetroFramework.Controls.MetroTextBox
     Friend WithEvents txtItemName As MetroFramework.Controls.MetroTextBox
+    Friend WithEvents LogoutToolStripMenuItem As ToolStripMenuItem
 End Class

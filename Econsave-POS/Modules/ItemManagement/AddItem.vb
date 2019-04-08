@@ -93,7 +93,7 @@ Public Class AddItem
         Return validData
     End Function
 
-    Private Sub DisplayItemListToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DisplayItemListToolStripMenuItem.Click
+    Private Sub DisplayItemListToolStripMenuItem_Click(sender As Object, e As EventArgs)
         Me.Hide()
         DisplayItem.ShowDialog()
         DisplayItem.Close()
