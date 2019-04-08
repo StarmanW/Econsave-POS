@@ -5,8 +5,8 @@
             dgvStaffMonthlyTrans.DataSource = From t In db.Transactions
                                               Where t.createdOn.Month = 0
                                               Select
-                                                  Staff_ID = t.staffID,
-                                                  Staff_Name = t.Staff.name,
+                                                  ID = t.staffID,
+                                                  Name = t.Staff.name,
                                                   Total_Transaction = t.transactionID.ToArray.Length
         End Using
     End Sub
@@ -16,8 +16,8 @@
             dgvStaffMonthlyTrans.DataSource = From t In db.Transactions
                                               Where t.createdOn.Month = cboMonth.SelectedIndex
                                               Select
-                                                  Staff_ID = t.staffID,
-                                                  Staff_Name = t.Staff.name,
+                                                  ID = t.staffID,
+                                                  Name = t.Staff.name,
                                                   Total_Transaction = t.transactionID.ToArray.Length
         End Using
 
