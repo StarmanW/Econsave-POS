@@ -32,6 +32,7 @@ Partial Class AddStaff
         Me.txtConfirmPassword = New MetroFramework.Controls.MetroTextBox()
         Me.txtPassword = New MetroFramework.Controls.MetroTextBox()
         Me.txtName = New MetroFramework.Controls.MetroTextBox()
+        Me.txtStaffID = New MetroFramework.Controls.MetroTextBox()
         Me.lblDialogBoxPassword = New System.Windows.Forms.Label()
         Me.radCashier = New System.Windows.Forms.RadioButton()
         Me.radManager = New System.Windows.Forms.RadioButton()
@@ -47,7 +48,6 @@ Partial Class AddStaff
         Me.StaffBindingSource4 = New System.Windows.Forms.BindingSource(Me.components)
         Me.btnRegisterStaff = New MetroFramework.Controls.MetroButton()
         Me.btnClear = New MetroFramework.Controls.MetroButton()
-        Me.txtStaffID = New MetroFramework.Controls.MetroLabel()
         Me.grpEmployee.SuspendLayout()
         CType(Me.EconsaveDBDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.StaffBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -97,10 +97,10 @@ Partial Class AddStaff
         '
         'grpEmployee
         '
-        Me.grpEmployee.Controls.Add(Me.txtStaffID)
         Me.grpEmployee.Controls.Add(Me.txtConfirmPassword)
         Me.grpEmployee.Controls.Add(Me.txtPassword)
         Me.grpEmployee.Controls.Add(Me.txtName)
+        Me.grpEmployee.Controls.Add(Me.txtStaffID)
         Me.grpEmployee.Controls.Add(Me.lblDialogBoxPassword)
         Me.grpEmployee.Controls.Add(Me.radCashier)
         Me.grpEmployee.Controls.Add(Me.radManager)
@@ -124,9 +124,9 @@ Partial Class AddStaff
         '
         '
         Me.txtConfirmPassword.CustomButton.Image = Nothing
-        Me.txtConfirmPassword.CustomButton.Location = New System.Drawing.Point(146, 2)
+        Me.txtConfirmPassword.CustomButton.Location = New System.Drawing.Point(195, 2)
         Me.txtConfirmPassword.CustomButton.Name = ""
-        Me.txtConfirmPassword.CustomButton.Size = New System.Drawing.Size(19, 20)
+        Me.txtConfirmPassword.CustomButton.Size = New System.Drawing.Size(25, 25)
         Me.txtConfirmPassword.CustomButton.Style = MetroFramework.MetroColorStyle.Blue
         Me.txtConfirmPassword.CustomButton.TabIndex = 1
         Me.txtConfirmPassword.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
@@ -155,9 +155,9 @@ Partial Class AddStaff
         '
         '
         Me.txtPassword.CustomButton.Image = Nothing
-        Me.txtPassword.CustomButton.Location = New System.Drawing.Point(146, 2)
+        Me.txtPassword.CustomButton.Location = New System.Drawing.Point(195, 2)
         Me.txtPassword.CustomButton.Name = ""
-        Me.txtPassword.CustomButton.Size = New System.Drawing.Size(19, 20)
+        Me.txtPassword.CustomButton.Size = New System.Drawing.Size(25, 25)
         Me.txtPassword.CustomButton.Style = MetroFramework.MetroColorStyle.Blue
         Me.txtPassword.CustomButton.TabIndex = 1
         Me.txtPassword.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
@@ -186,9 +186,9 @@ Partial Class AddStaff
         '
         '
         Me.txtName.CustomButton.Image = Nothing
-        Me.txtName.CustomButton.Location = New System.Drawing.Point(146, 2)
+        Me.txtName.CustomButton.Location = New System.Drawing.Point(195, 2)
         Me.txtName.CustomButton.Name = ""
-        Me.txtName.CustomButton.Size = New System.Drawing.Size(19, 20)
+        Me.txtName.CustomButton.Size = New System.Drawing.Size(25, 25)
         Me.txtName.CustomButton.Style = MetroFramework.MetroColorStyle.Blue
         Me.txtName.CustomButton.TabIndex = 1
         Me.txtName.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
@@ -211,16 +211,15 @@ Partial Class AddStaff
         Me.txtName.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
         Me.txtName.WaterMarkFont = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel)
         '
-
         'txtStaffID
         '
         '
         '
         '
         Me.txtStaffID.CustomButton.Image = Nothing
-        Me.txtStaffID.CustomButton.Location = New System.Drawing.Point(146, 2)
+        Me.txtStaffID.CustomButton.Location = New System.Drawing.Point(195, 2)
         Me.txtStaffID.CustomButton.Name = ""
-        Me.txtStaffID.CustomButton.Size = New System.Drawing.Size(19, 20)
+        Me.txtStaffID.CustomButton.Size = New System.Drawing.Size(25, 25)
         Me.txtStaffID.CustomButton.Style = MetroFramework.MetroColorStyle.Blue
         Me.txtStaffID.CustomButton.TabIndex = 1
         Me.txtStaffID.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
@@ -339,15 +338,9 @@ Partial Class AddStaff
         Me.btnRegisterStaff.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.btnRegisterStaff.FontSize = MetroFramework.MetroButtonSize.Tall
         Me.btnRegisterStaff.ForeColor = System.Drawing.SystemColors.ControlLightLight
-
-        Me.btnRegisterStaff.Location = New System.Drawing.Point(109, 400)
+        Me.btnRegisterStaff.Location = New System.Drawing.Point(90, 400)
         Me.btnRegisterStaff.Name = "btnRegisterStaff"
-        Me.btnRegisterStaff.Size = New System.Drawing.Size(129, 48)
-
-        Me.btnRegisterStaff.Location = New System.Drawing.Point(116, 400)
-        Me.btnRegisterStaff.Name = "btnRegisterStaff"
-        Me.btnRegisterStaff.Size = New System.Drawing.Size(104, 48)
-
+        Me.btnRegisterStaff.Size = New System.Drawing.Size(130, 48)
         Me.btnRegisterStaff.TabIndex = 10
         Me.btnRegisterStaff.Text = "&Register Staff"
         Me.btnRegisterStaff.UseCustomBackColor = True
@@ -360,26 +353,14 @@ Partial Class AddStaff
         Me.btnClear.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.btnClear.FontSize = MetroFramework.MetroButtonSize.Tall
         Me.btnClear.ForeColor = System.Drawing.SystemColors.ControlLightLight
-
-        Me.btnClear.Location = New System.Drawing.Point(263, 400)
-
         Me.btnClear.Location = New System.Drawing.Point(242, 400)
-
         Me.btnClear.Name = "btnClear"
-        Me.btnClear.Size = New System.Drawing.Size(104, 48)
+        Me.btnClear.Size = New System.Drawing.Size(130, 48)
         Me.btnClear.TabIndex = 11
         Me.btnClear.Text = "&Clear"
         Me.btnClear.UseCustomBackColor = True
         Me.btnClear.UseCustomForeColor = True
         Me.btnClear.UseSelectable = True
-        '
-        'txtStaffID
-        '
-        Me.txtStaffID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtStaffID.Location = New System.Drawing.Point(166, 36)
-        Me.txtStaffID.Name = "txtStaffID"
-        Me.txtStaffID.Size = New System.Drawing.Size(223, 32)
-        Me.txtStaffID.TabIndex = 22
         '
         'AddStaff
         '
@@ -390,9 +371,7 @@ Partial Class AddStaff
         Me.Controls.Add(Me.btnClear)
         Me.Controls.Add(Me.btnRegisterStaff)
         Me.Controls.Add(Me.grpEmployee)
-
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-
         Me.MaximizeBox = False
         Me.Name = "AddStaff"
         Me.Resizable = False
@@ -430,7 +409,7 @@ Partial Class AddStaff
     Friend WithEvents txtConfirmPassword As MetroFramework.Controls.MetroTextBox
     Friend WithEvents txtPassword As MetroFramework.Controls.MetroTextBox
     Friend WithEvents txtName As MetroFramework.Controls.MetroTextBox
+    Friend WithEvents txtStaffID As MetroFramework.Controls.MetroTextBox
     Friend WithEvents btnClear As MetroFramework.Controls.MetroButton
     Friend WithEvents btnRegisterStaff As MetroFramework.Controls.MetroButton
-    Friend WithEvents txtStaffID As MetroFramework.Controls.MetroLabel
 End Class

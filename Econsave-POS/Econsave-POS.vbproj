@@ -153,6 +153,18 @@
     <Compile Include="Modules\ItemManagement\UpdateItem.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Modules\Login\AboutUs.Designer.vb">
+      <DependentUpon>AboutUs.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Login\AboutUs.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Login\ForgetPassword.Designer.vb">
+      <DependentUpon>ForgetPassword.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Login\ForgetPassword.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Modules\Login\History.Designer.vb">
       <DependentUpon>History.vb</DependentUpon>
     </Compile>
@@ -169,6 +181,12 @@
       <DependentUpon>ManagerForm.vb</DependentUpon>
     </Compile>
     <Compile Include="Modules\ManagerForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Sales\DailySalesReport.Designer.vb">
+      <DependentUpon>DailySalesReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Sales\DailySalesReport.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Modules\Sales\Sales.Designer.vb">
@@ -231,6 +249,12 @@
     <EmbeddedResource Include="Modules\ItemManagement\UpdateItem.resx">
       <DependentUpon>UpdateItem.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Login\AboutUs.resx">
+      <DependentUpon>AboutUs.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Login\ForgetPassword.resx">
+      <DependentUpon>ForgetPassword.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Modules\Login\History.resx">
       <DependentUpon>History.vb</DependentUpon>
     </EmbeddedResource>
@@ -239,6 +263,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Modules\ManagerForm.resx">
       <DependentUpon>ManagerForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Sales\DailySalesReport.resx">
+      <DependentUpon>DailySalesReport.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Modules\Sales\Sales.resx">
       <DependentUpon>Sales.vb</DependentUpon>

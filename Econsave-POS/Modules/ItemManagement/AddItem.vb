@@ -1,7 +1,6 @@
 ﻿Imports System.Text.RegularExpressions
 
 Public Class AddItem
-
     Public Sub New()
         ' This call is required by the designer.
         InitializeComponent()

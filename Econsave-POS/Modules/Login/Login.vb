@@ -51,7 +51,9 @@ Public Class Login
                         Sales.ShowDialog()
                         Sales.Close()
                     End If
+                    staffId = String.Empty
                     Me.Show()
+                    Me.Select()
                 End If
             End Using
         End If

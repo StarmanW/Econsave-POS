@@ -98,7 +98,6 @@ Public Class AddStaff
     Private Sub txtPassword_KeyUp(sender As Object, e As KeyEventArgs) Handles txtPassword.KeyUp
         If txtPassword.Text.Length < 8 Then
             lblDialogBoxPassword.Text = "Password must be at least 9 digits/characters."
-            lblDialogBoxPassword.ForeColor = Color.Green
         ElseIf txtPassword.Text.Length > 8 Then
             lblDialogBoxPassword.ResetText()
         End If

@@ -135,6 +135,7 @@ Partial Class DisplayItem
         'MetroButton1
         '
         Me.MetroButton1.BackColor = System.Drawing.Color.ForestGreen
+        Me.MetroButton1.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.MetroButton1.FontSize = MetroFramework.MetroButtonSize.Tall
         Me.MetroButton1.ForeColor = System.Drawing.Color.White
         Me.MetroButton1.Location = New System.Drawing.Point(1165, 618)
@@ -150,6 +151,7 @@ Partial Class DisplayItem
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.CancelButton = Me.MetroButton1
         Me.ClientSize = New System.Drawing.Size(1346, 687)
         Me.Controls.Add(Me.MetroButton1)
         Me.Controls.Add(Me.txtSearchBox)

@@ -281,6 +281,7 @@ Partial Class DailySalesReport
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.CancelButton = Me.btnClose
         Me.ClientSize = New System.Drawing.Size(1061, 825)
         Me.Controls.Add(Me.MenuStrip2)
         Me.Controls.Add(Me.lblTotalSales)

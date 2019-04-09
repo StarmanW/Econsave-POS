@@ -149,7 +149,7 @@ Partial Class Sales
         Me.DataGridView1.ShowCellToolTips = False
         Me.DataGridView1.ShowEditingIcon = False
         Me.DataGridView1.ShowRowErrors = False
-        Me.DataGridView1.Size = New System.Drawing.Size(388, 421)
+        Me.DataGridView1.Size = New System.Drawing.Size(465, 421)
         Me.DataGridView1.StandardTab = True
         Me.DataGridView1.TabIndex = 0
         '
@@ -182,7 +182,7 @@ Partial Class Sales
         DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
         Me.DataGridView2.DefaultCellStyle = DataGridViewCellStyle7
         Me.DataGridView2.GridColor = System.Drawing.Color.White
-        Me.DataGridView2.Location = New System.Drawing.Point(508, 193)
+        Me.DataGridView2.Location = New System.Drawing.Point(512, 193)
         Me.DataGridView2.MultiSelect = False
         Me.DataGridView2.Name = "DataGridView2"
         Me.DataGridView2.ReadOnly = True
@@ -224,7 +224,7 @@ Partial Class Sales
         Me.MetroButton2.FontSize = MetroFramework.MetroButtonSize.Tall
         Me.MetroButton2.ForeColor = System.Drawing.Color.White
         Me.MetroButton2.Location = New System.Drawing.Point(592, 564)
-        Me.MetroButton2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.MetroButton2.Margin = New System.Windows.Forms.Padding(2)
         Me.MetroButton2.Name = "MetroButton2"
         Me.MetroButton2.Size = New System.Drawing.Size(121, 50)
         Me.MetroButton2.TabIndex = 3
@@ -239,7 +239,7 @@ Partial Class Sales
         Me.MetroButton1.FontSize = MetroFramework.MetroButtonSize.Tall
         Me.MetroButton1.ForeColor = System.Drawing.Color.White
         Me.MetroButton1.Location = New System.Drawing.Point(729, 564)
-        Me.MetroButton1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.MetroButton1.Margin = New System.Windows.Forms.Padding(2)
         Me.MetroButton1.Name = "MetroButton1"
         Me.MetroButton1.Size = New System.Drawing.Size(121, 50)
         Me.MetroButton1.TabIndex = 4
@@ -303,7 +303,7 @@ Partial Class Sales
         Me.Controls.Add(Me.MetroLabel1)
         Me.Controls.Add(Me.Tota)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.MaximizeBox = False
         Me.Name = "Sales"
         Me.Padding = New System.Windows.Forms.Padding(15, 60, 15, 16)

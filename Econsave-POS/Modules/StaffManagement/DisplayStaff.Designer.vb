@@ -29,6 +29,7 @@ Partial Class DisplayStaff
         Me.txtSearchBox = New MetroFramework.Controls.MetroTextBox()
         Me.MetroLabel1 = New MetroFramework.Controls.MetroLabel()
         Me.itemDGV = New System.Windows.Forms.DataGridView()
+        Me.MetroButton1 = New MetroFramework.Controls.MetroButton()
         CType(Me.itemDGV, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -108,14 +109,31 @@ Partial Class DisplayStaff
         Me.itemDGV.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
         Me.itemDGV.RowHeadersVisible = False
         Me.itemDGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.itemDGV.Size = New System.Drawing.Size(1276, 509)
+        Me.itemDGV.Size = New System.Drawing.Size(1276, 478)
         Me.itemDGV.TabIndex = 5
+        '
+        'MetroButton1
+        '
+        Me.MetroButton1.BackColor = System.Drawing.Color.ForestGreen
+        Me.MetroButton1.DialogResult = System.Windows.Forms.DialogResult.Cancel
+        Me.MetroButton1.FontSize = MetroFramework.MetroButtonSize.Tall
+        Me.MetroButton1.ForeColor = System.Drawing.Color.White
+        Me.MetroButton1.Location = New System.Drawing.Point(1174, 638)
+        Me.MetroButton1.Name = "MetroButton1"
+        Me.MetroButton1.Size = New System.Drawing.Size(136, 45)
+        Me.MetroButton1.TabIndex = 8
+        Me.MetroButton1.Text = "&Close"
+        Me.MetroButton1.UseCustomBackColor = True
+        Me.MetroButton1.UseCustomForeColor = True
+        Me.MetroButton1.UseSelectable = True
         '
         'DisplayStaff
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.CancelButton = Me.MetroButton1
         Me.ClientSize = New System.Drawing.Size(1353, 704)
+        Me.Controls.Add(Me.MetroButton1)
         Me.Controls.Add(Me.txtSearchBox)
         Me.Controls.Add(Me.MetroLabel1)
         Me.Controls.Add(Me.itemDGV)
@@ -136,4 +154,5 @@ Partial Class DisplayStaff
     Friend WithEvents txtSearchBox As MetroFramework.Controls.MetroTextBox
     Friend WithEvents MetroLabel1 As MetroFramework.Controls.MetroLabel
     Friend WithEvents itemDGV As DataGridView
+    Friend WithEvents MetroButton1 As MetroFramework.Controls.MetroButton
 End Class
