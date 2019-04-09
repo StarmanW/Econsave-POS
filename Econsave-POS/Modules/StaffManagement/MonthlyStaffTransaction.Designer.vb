@@ -22,15 +22,14 @@ Partial Class MonthlyStaffTransaction
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MonthlyStaffTransaction))
         Me.dgvStaffMonthlyTrans = New System.Windows.Forms.DataGridView()
-        Me.btnPrint = New MetroFramework.Controls.MetroButton()
+        Me.MetroButton2 = New MetroFramework.Controls.MetroButton()
         Me.btnClose = New MetroFramework.Controls.MetroButton()
         Me.MetroLabel1 = New MetroFramework.Controls.MetroLabel()
         Me.cboMonth = New MetroFramework.Controls.MetroComboBox()
-        Me.EntityCommand1 = New System.Data.Entity.Core.EntityClient.EntityCommand()
         Me.dlgPrintPreview = New System.Windows.Forms.PrintPreviewDialog()
         Me.doc = New System.Drawing.Printing.PrintDocument()
         CType(Me.dgvStaffMonthlyTrans, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -42,22 +41,22 @@ Partial Class MonthlyStaffTransaction
         Me.dgvStaffMonthlyTrans.AllowUserToDeleteRows = False
         Me.dgvStaffMonthlyTrans.AllowUserToResizeColumns = False
         Me.dgvStaffMonthlyTrans.AllowUserToResizeRows = False
-        DataGridViewCellStyle3.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.dgvStaffMonthlyTrans.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.dgvStaffMonthlyTrans.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
         Me.dgvStaffMonthlyTrans.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgvStaffMonthlyTrans.BackgroundColor = System.Drawing.Color.White
         Me.dgvStaffMonthlyTrans.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dgvStaffMonthlyTrans.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None
         Me.dgvStaffMonthlyTrans.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
         Me.dgvStaffMonthlyTrans.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.DodgerBlue
-        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgvStaffMonthlyTrans.DefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.DodgerBlue
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvStaffMonthlyTrans.DefaultCellStyle = DataGridViewCellStyle2
         Me.dgvStaffMonthlyTrans.Location = New System.Drawing.Point(34, 102)
         Me.dgvStaffMonthlyTrans.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.dgvStaffMonthlyTrans.MultiSelect = False
@@ -69,21 +68,21 @@ Partial Class MonthlyStaffTransaction
         Me.dgvStaffMonthlyTrans.Size = New System.Drawing.Size(839, 509)
         Me.dgvStaffMonthlyTrans.TabIndex = 1
         '
-        'btnPrint
+        'MetroButton2
         '
-        Me.btnPrint.BackColor = System.Drawing.SystemColors.Highlight
-        Me.btnPrint.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.btnPrint.FontSize = MetroFramework.MetroButtonSize.Tall
-        Me.btnPrint.ForeColor = System.Drawing.Color.White
-        Me.btnPrint.Location = New System.Drawing.Point(754, 620)
-        Me.btnPrint.Margin = New System.Windows.Forms.Padding(4)
-        Me.btnPrint.Name = "btnPrint"
-        Me.btnPrint.Size = New System.Drawing.Size(122, 56)
-        Me.btnPrint.TabIndex = 7
-        Me.btnPrint.Text = "&Print"
-        Me.btnPrint.UseCustomBackColor = True
-        Me.btnPrint.UseCustomForeColor = True
-        Me.btnPrint.UseSelectable = True
+        Me.MetroButton2.BackColor = System.Drawing.SystemColors.Highlight
+        Me.MetroButton2.DialogResult = System.Windows.Forms.DialogResult.Cancel
+        Me.MetroButton2.FontSize = MetroFramework.MetroButtonSize.Tall
+        Me.MetroButton2.ForeColor = System.Drawing.Color.White
+        Me.MetroButton2.Location = New System.Drawing.Point(754, 620)
+        Me.MetroButton2.Margin = New System.Windows.Forms.Padding(4)
+        Me.MetroButton2.Name = "MetroButton2"
+        Me.MetroButton2.Size = New System.Drawing.Size(122, 56)
+        Me.MetroButton2.TabIndex = 7
+        Me.MetroButton2.Text = "&Print"
+        Me.MetroButton2.UseCustomBackColor = True
+        Me.MetroButton2.UseCustomForeColor = True
+        Me.MetroButton2.UseSelectable = True
         '
         'btnClose
         '
@@ -122,14 +121,6 @@ Partial Class MonthlyStaffTransaction
         Me.cboMonth.TabIndex = 9
         Me.cboMonth.UseSelectable = True
         '
-        'EntityCommand1
-        '
-        Me.EntityCommand1.CommandTimeout = 0
-        Me.EntityCommand1.CommandTree = Nothing
-        Me.EntityCommand1.Connection = Nothing
-        Me.EntityCommand1.EnablePlanCaching = True
-        Me.EntityCommand1.Transaction = Nothing
-        '
         'dlgPrintPreview
         '
         Me.dlgPrintPreview.AutoScrollMargin = New System.Drawing.Size(0, 0)
@@ -154,7 +145,7 @@ Partial Class MonthlyStaffTransaction
         Me.ClientSize = New System.Drawing.Size(910, 687)
         Me.Controls.Add(Me.cboMonth)
         Me.Controls.Add(Me.MetroLabel1)
-        Me.Controls.Add(Me.btnPrint)
+        Me.Controls.Add(Me.MetroButton2)
         Me.Controls.Add(Me.btnClose)
         Me.Controls.Add(Me.dgvStaffMonthlyTrans)
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -172,11 +163,10 @@ Partial Class MonthlyStaffTransaction
     End Sub
 
     Friend WithEvents dgvStaffMonthlyTrans As DataGridView
-    Friend WithEvents btnPrint As MetroFramework.Controls.MetroButton
+    Friend WithEvents MetroButton2 As MetroFramework.Controls.MetroButton
     Friend WithEvents btnClose As MetroFramework.Controls.MetroButton
     Friend WithEvents MetroLabel1 As MetroFramework.Controls.MetroLabel
     Friend WithEvents cboMonth As MetroFramework.Controls.MetroComboBox
-    Friend WithEvents EntityCommand1 As Entity.Core.EntityClient.EntityCommand
     Friend WithEvents dlgPrintPreview As PrintPreviewDialog
     Friend WithEvents doc As Printing.PrintDocument
 End Class
