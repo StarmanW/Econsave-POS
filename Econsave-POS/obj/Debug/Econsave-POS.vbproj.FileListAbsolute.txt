@@ -105,3 +105,6 @@ C:\Users\User\Documents\GitHub\Econsave-POS\Econsave-POS\obj\Debug\Econsave_POS.
 C:\Users\User\Documents\GitHub\Econsave-POS\Econsave-POS\obj\Debug\Econsave_POS.AddStaff.resources
 C:\Users\User\Documents\GitHub\Econsave-POS\Econsave-POS\obj\Debug\Econsave_POS.DisplayStaff.resources
 C:\Users\User\Documents\GitHub\Econsave-POS\Econsave-POS\obj\Debug\Econsave_POS.MonthlyStaffTransaction.resources
+C:\Users\User\Documents\GitHub\Econsave-POS\Econsave-POS\obj\Debug\Econsave_POS.AboutUs.resources
+C:\Users\User\Documents\GitHub\Econsave-POS\Econsave-POS\obj\Debug\Econsave_POS.ForgetPassword.resources
+C:\Users\User\Documents\GitHub\Econsave-POS\Econsave-POS\obj\Debug\Econsave_POS.DailySalesReport.resources
