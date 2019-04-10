@@ -48,17 +48,20 @@ Public Class History
 
         Do Until dataNum = db.Staffs.Count
 
-            If search.ToString.Count = 9 Then
+            Try
+                dataName = (staffList(dataNum).name.ToString)
+                dataPosition = (staffList(dataNum).position.ToString)
+                dataStaffID = (staffList(dataNum).staffID)
+                dataDateRegister = (staffList(dataNum).registeredOn.ToShortDateString)
                 dataDateLastLogin = (staffList(dataNum).lastLogin.ToString).Substring(0, 9)
-                dataDateRegister = (staffList(dataNum).registeredOn.ToString).Substring(0, 9)
-            Else
-                dataDateLastLogin = (staffList(dataNum).lastLogin.ToString).Substring(0, 10)
-                dataDateRegister = (staffList(dataNum).registeredOn.ToString).Substring(0, 10)
-            End If
+            Catch ex As Exception
+                dataName = " "
+                dataPosition = " "
+                dataStaffID = " "
+                dataDateRegister = " "
+                dataDateLastLogin = " "
+            End Try
 
-            dataName = (staffList(dataNum).name.ToString)
-            dataPosition = (staffList(dataNum).position.ToString)
-            dataStaffID = (staffList(dataNum).staffID)
 
             If String.Compare(search.ToString, dataDateLastLogin) = 0 Then
 
