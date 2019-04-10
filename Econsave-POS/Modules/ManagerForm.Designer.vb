@@ -29,14 +29,14 @@ Partial Class ManagerForm
         Me.AddStaffToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DisplayStaffToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ResetPasswordToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ItemManagementToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AddItemToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DisplayItemToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ReportsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.LoginHistoryToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DailySalesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.StockReportToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MonthlyStaffTransactionToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ItemManagementToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.AddItemToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.DisplayItemToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.lblWelcome = New MetroFramework.Controls.MetroLabel()
         Me.MetroLabel2 = New MetroFramework.Controls.MetroLabel()
         Me.MetroLabel3 = New MetroFramework.Controls.MetroLabel()
@@ -97,6 +97,29 @@ Partial Class ManagerForm
         Me.ResetPasswordToolStripMenuItem.Size = New System.Drawing.Size(222, 24)
         Me.ResetPasswordToolStripMenuItem.Text = "Reset Password"
         '
+        'ItemManagementToolStripMenuItem
+        '
+        Me.ItemManagementToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AddItemToolStripMenuItem, Me.DisplayItemToolStripMenuItem})
+        Me.ItemManagementToolStripMenuItem.Name = "ItemManagementToolStripMenuItem"
+        Me.ItemManagementToolStripMenuItem.Size = New System.Drawing.Size(135, 23)
+        Me.ItemManagementToolStripMenuItem.Text = "Item Management"
+        '
+        'AddItemToolStripMenuItem
+        '
+        Me.AddItemToolStripMenuItem.Name = "AddItemToolStripMenuItem"
+        Me.AddItemToolStripMenuItem.ShortcutKeys = CType(((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Alt) _
+            Or System.Windows.Forms.Keys.D5), System.Windows.Forms.Keys)
+        Me.AddItemToolStripMenuItem.Size = New System.Drawing.Size(232, 24)
+        Me.AddItemToolStripMenuItem.Text = "Add Item"
+        '
+        'DisplayItemToolStripMenuItem
+        '
+        Me.DisplayItemToolStripMenuItem.Name = "DisplayItemToolStripMenuItem"
+        Me.DisplayItemToolStripMenuItem.ShortcutKeys = CType(((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Alt) _
+            Or System.Windows.Forms.Keys.D), System.Windows.Forms.Keys)
+        Me.DisplayItemToolStripMenuItem.Size = New System.Drawing.Size(232, 24)
+        Me.DisplayItemToolStripMenuItem.Text = "Display Item"
+        '
         'ReportsToolStripMenuItem
         '
         Me.ReportsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.LoginHistoryToolStripMenuItem, Me.DailySalesToolStripMenuItem, Me.StockReportToolStripMenuItem, Me.MonthlyStaffTransactionToolStripMenuItem})
@@ -135,29 +158,6 @@ Partial Class ManagerForm
             Or System.Windows.Forms.Keys.M), System.Windows.Forms.Keys)
         Me.MonthlyStaffTransactionToolStripMenuItem.Size = New System.Drawing.Size(325, 24)
         Me.MonthlyStaffTransactionToolStripMenuItem.Text = "Monthly Staff Transaction"
-        '
-        'ItemManagementToolStripMenuItem
-        '
-        Me.ItemManagementToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AddItemToolStripMenuItem, Me.DisplayItemToolStripMenuItem})
-        Me.ItemManagementToolStripMenuItem.Name = "ItemManagementToolStripMenuItem"
-        Me.ItemManagementToolStripMenuItem.Size = New System.Drawing.Size(135, 23)
-        Me.ItemManagementToolStripMenuItem.Text = "Item Management"
-        '
-        'AddItemToolStripMenuItem
-        '
-        Me.AddItemToolStripMenuItem.Name = "AddItemToolStripMenuItem"
-        Me.AddItemToolStripMenuItem.ShortcutKeys = CType(((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Alt) _
-            Or System.Windows.Forms.Keys.D5), System.Windows.Forms.Keys)
-        Me.AddItemToolStripMenuItem.Size = New System.Drawing.Size(232, 24)
-        Me.AddItemToolStripMenuItem.Text = "Add Item"
-        '
-        'DisplayItemToolStripMenuItem
-        '
-        Me.DisplayItemToolStripMenuItem.Name = "DisplayItemToolStripMenuItem"
-        Me.DisplayItemToolStripMenuItem.ShortcutKeys = CType(((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Alt) _
-            Or System.Windows.Forms.Keys.D), System.Windows.Forms.Keys)
-        Me.DisplayItemToolStripMenuItem.Size = New System.Drawing.Size(232, 24)
-        Me.DisplayItemToolStripMenuItem.Text = "Display Item"
         '
         'lblWelcome
         '
@@ -282,7 +282,7 @@ Partial Class ManagerForm
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MainMenuStrip = Me.MenuStrip1
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.MaximizeBox = False
         Me.Name = "ManagerForm"
         Me.Padding = New System.Windows.Forms.Padding(27, 74, 27, 25)
