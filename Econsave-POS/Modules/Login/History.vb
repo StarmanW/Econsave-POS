@@ -49,21 +49,21 @@ Public Class History
         Do Until dataNum = db.Staffs.Count
 
             Try
+
+
                 dataName = (staffList(dataNum).name.ToString)
                 dataPosition = (staffList(dataNum).position.ToString)
                 dataStaffID = (staffList(dataNum).staffID)
                 dataDateRegister = (staffList(dataNum).registeredOn.ToShortDateString)
                 dataDateLastLogin = (staffList(dataNum).lastLogin.ToString).Substring(0, 9)
             Catch ex As Exception
-                dataName = " "
-                dataPosition = " "
-                dataStaffID = " "
-                dataDateRegister = " "
+
                 dataDateLastLogin = " "
+
             End Try
 
 
-            If String.Compare(search.ToString, dataDateLastLogin) = 0 Then
+            If String.Compare(search.ToString.ToLower(), dataDateLastLogin.ToLower()) = 0 Then
 
                 Dim Data = From i In db.Staffs Where i.lastLogin = Date.Parse(search)
                            Select
@@ -77,7 +77,7 @@ Public Class History
 
             End If
 
-            If String.Compare(search.ToString, dataDateRegister) = 0 Then
+            If String.Compare(search.ToString.ToLower(), dataDateRegister.ToLower()) = 0 Then
 
                 Dim Data = From i In db.Staffs Where i.registeredOn = Date.Parse(search)
                            Select
@@ -91,7 +91,7 @@ Public Class History
 
             End If
 
-            If String.Compare(search.ToString, dataName) = 0 Then
+            If String.Compare(search.ToString.ToLower(), dataName.ToLower()) = 0 Then
 
                 Dim Data = From i In db.Staffs Where i.name = search
                            Select
@@ -105,7 +105,7 @@ Public Class History
 
             End If
 
-            If String.Compare(search.ToString, dataStaffID) = 0 Then
+            If String.Compare(search.ToString.ToLower(), dataStaffID.ToLower()) = 0 Then
 
                 Dim Data = From i In db.Staffs Where i.staffID = search
                            Select
@@ -119,7 +119,7 @@ Public Class History
 
             End If
 
-            If String.Compare(search.ToString, dataPosition) = 0 Then
+            If String.Compare(search.ToString.ToLower(), dataPosition.ToLower()) = 0 Then
                 Dim Data = From i In db.Staffs Where i.position = search
                            Select
                                          ID = i.staffID,

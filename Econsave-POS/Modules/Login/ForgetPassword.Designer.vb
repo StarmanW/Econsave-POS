@@ -31,9 +31,10 @@ Partial Class ForgetPassword
         'MetroLabel1
         '
         Me.MetroLabel1.AutoSize = True
-        Me.MetroLabel1.Location = New System.Drawing.Point(67, 79)
+        Me.MetroLabel1.Location = New System.Drawing.Point(89, 97)
+        Me.MetroLabel1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.MetroLabel1.Name = "MetroLabel1"
-        Me.MetroLabel1.Size = New System.Drawing.Size(24, 19)
+        Me.MetroLabel1.Size = New System.Drawing.Size(25, 20)
         Me.MetroLabel1.TabIndex = 9
         Me.MetroLabel1.Text = "ID:"
         '
@@ -43,16 +44,18 @@ Partial Class ForgetPassword
         '
         '
         Me.txtId.CustomButton.Image = Nothing
-        Me.txtId.CustomButton.Location = New System.Drawing.Point(152, 1)
+        Me.txtId.CustomButton.Location = New System.Drawing.Point(275, 2)
+        Me.txtId.CustomButton.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtId.CustomButton.Name = ""
-        Me.txtId.CustomButton.Size = New System.Drawing.Size(21, 21)
+        Me.txtId.CustomButton.Size = New System.Drawing.Size(31, 28)
         Me.txtId.CustomButton.Style = MetroFramework.MetroColorStyle.Blue
         Me.txtId.CustomButton.TabIndex = 1
         Me.txtId.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light
         Me.txtId.CustomButton.UseSelectable = True
         Me.txtId.CustomButton.Visible = False
         Me.txtId.Lines = New String(-1) {}
-        Me.txtId.Location = New System.Drawing.Point(107, 79)
+        Me.txtId.Location = New System.Drawing.Point(143, 97)
+        Me.txtId.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtId.MaxLength = 32767
         Me.txtId.Name = "txtId"
         Me.txtId.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -61,7 +64,7 @@ Partial Class ForgetPassword
         Me.txtId.SelectionLength = 0
         Me.txtId.SelectionStart = 0
         Me.txtId.ShortcutsEnabled = True
-        Me.txtId.Size = New System.Drawing.Size(174, 23)
+        Me.txtId.Size = New System.Drawing.Size(232, 28)
         Me.txtId.TabIndex = 11
         Me.txtId.UseSelectable = True
         Me.txtId.WaterMarkColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(109, Byte), Integer))
@@ -72,9 +75,10 @@ Partial Class ForgetPassword
         Me.btnSubmit.BackColor = System.Drawing.Color.ForestGreen
         Me.btnSubmit.FontSize = MetroFramework.MetroButtonSize.Medium
         Me.btnSubmit.ForeColor = System.Drawing.Color.White
-        Me.btnSubmit.Location = New System.Drawing.Point(107, 117)
+        Me.btnSubmit.Location = New System.Drawing.Point(143, 144)
+        Me.btnSubmit.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnSubmit.Name = "btnSubmit"
-        Me.btnSubmit.Size = New System.Drawing.Size(174, 41)
+        Me.btnSubmit.Size = New System.Drawing.Size(232, 50)
         Me.btnSubmit.TabIndex = 13
         Me.btnSubmit.Text = "Submit"
         Me.btnSubmit.UseCustomBackColor = True
@@ -83,15 +87,18 @@ Partial Class ForgetPassword
         '
         'ForgetPassword
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AcceptButton = Me.btnSubmit
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(313, 181)
+        Me.ClientSize = New System.Drawing.Size(417, 223)
         Me.Controls.Add(Me.btnSubmit)
         Me.Controls.Add(Me.txtId)
         Me.Controls.Add(Me.MetroLabel1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.MaximizeBox = False
         Me.Name = "ForgetPassword"
+        Me.Padding = New System.Windows.Forms.Padding(27, 74, 27, 25)
         Me.Resizable = False
         Me.Text = "Reset Password"
         Me.ResumeLayout(False)

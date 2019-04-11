@@ -17,6 +17,8 @@ Public Class ForgetPassword
                 Catch ex As Exception
                     MsgBox(ex.ToString)
                 End Try
+            Else
+                MessageBox.Show("Invalid ID!", "Invalid Credentials", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             End If
         End Using
     End Sub
