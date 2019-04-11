@@ -126,18 +126,18 @@ Partial Class DailySalesReport
         Me.Metrolbl.Location = New System.Drawing.Point(467, 125)
         Me.Metrolbl.Margin = New System.Windows.Forms.Padding(7, 0, 7, 0)
         Me.Metrolbl.Name = "Metrolbl"
-        Me.Metrolbl.Size = New System.Drawing.Size(101, 25)
+        Me.Metrolbl.Size = New System.Drawing.Size(103, 25)
         Me.Metrolbl.TabIndex = 11
         Me.Metrolbl.Text = "Transaction:"
         '
         'cboTransaction
         '
         Me.cboTransaction.FormattingEnabled = True
-        Me.cboTransaction.ItemHeight = 23
+        Me.cboTransaction.ItemHeight = 24
         Me.cboTransaction.Location = New System.Drawing.Point(582, 125)
         Me.cboTransaction.Margin = New System.Windows.Forms.Padding(7)
         Me.cboTransaction.Name = "cboTransaction"
-        Me.cboTransaction.Size = New System.Drawing.Size(169, 29)
+        Me.cboTransaction.Size = New System.Drawing.Size(169, 30)
         Me.cboTransaction.TabIndex = 1
         Me.cboTransaction.UseSelectable = True
         '
@@ -148,18 +148,18 @@ Partial Class DailySalesReport
         Me.MetroDatelbl.Location = New System.Drawing.Point(44, 125)
         Me.MetroDatelbl.Margin = New System.Windows.Forms.Padding(7, 0, 7, 0)
         Me.MetroDatelbl.Name = "MetroDatelbl"
-        Me.MetroDatelbl.Size = New System.Drawing.Size(51, 25)
+        Me.MetroDatelbl.Size = New System.Drawing.Size(54, 25)
         Me.MetroDatelbl.TabIndex = 13
         Me.MetroDatelbl.Text = "Date:"
         '
         'cboDate
         '
         Me.cboDate.FormattingEnabled = True
-        Me.cboDate.ItemHeight = 23
+        Me.cboDate.ItemHeight = 24
         Me.cboDate.Location = New System.Drawing.Point(102, 125)
         Me.cboDate.Margin = New System.Windows.Forms.Padding(7)
         Me.cboDate.Name = "cboDate"
-        Me.cboDate.Size = New System.Drawing.Size(337, 29)
+        Me.cboDate.Size = New System.Drawing.Size(337, 30)
         Me.cboDate.TabIndex = 0
         Me.cboDate.UseSelectable = True
         '
@@ -169,7 +169,7 @@ Partial Class DailySalesReport
         Me.MetroLabel1.FontSize = MetroFramework.MetroLabelSize.Tall
         Me.MetroLabel1.Location = New System.Drawing.Point(44, 173)
         Me.MetroLabel1.Name = "MetroLabel1"
-        Me.MetroLabel1.Size = New System.Drawing.Size(122, 25)
+        Me.MetroLabel1.Size = New System.Drawing.Size(125, 25)
         Me.MetroLabel1.TabIndex = 15
         Me.MetroLabel1.Text = "Transaction ID:"
         '
@@ -179,7 +179,7 @@ Partial Class DailySalesReport
         Me.MetroLabel2.FontSize = MetroFramework.MetroLabelSize.Tall
         Me.MetroLabel2.Location = New System.Drawing.Point(44, 208)
         Me.MetroLabel2.Name = "MetroLabel2"
-        Me.MetroLabel2.Size = New System.Drawing.Size(51, 25)
+        Me.MetroLabel2.Size = New System.Drawing.Size(54, 25)
         Me.MetroLabel2.TabIndex = 16
         Me.MetroLabel2.Text = "Date:"
         '
@@ -189,7 +189,7 @@ Partial Class DailySalesReport
         Me.lblTransaction.FontSize = MetroFramework.MetroLabelSize.Tall
         Me.lblTransaction.Location = New System.Drawing.Point(237, 173)
         Me.lblTransaction.Name = "lblTransaction"
-        Me.lblTransaction.Size = New System.Drawing.Size(19, 25)
+        Me.lblTransaction.Size = New System.Drawing.Size(20, 25)
         Me.lblTransaction.TabIndex = 18
         Me.lblTransaction.Text = "-"
         '
@@ -199,7 +199,7 @@ Partial Class DailySalesReport
         Me.lblDate.FontSize = MetroFramework.MetroLabelSize.Tall
         Me.lblDate.Location = New System.Drawing.Point(237, 208)
         Me.lblDate.Name = "lblDate"
-        Me.lblDate.Size = New System.Drawing.Size(19, 25)
+        Me.lblDate.Size = New System.Drawing.Size(20, 25)
         Me.lblDate.TabIndex = 19
         Me.lblDate.Text = "-"
         '
@@ -209,7 +209,7 @@ Partial Class DailySalesReport
         Me.lblByStaff.FontSize = MetroFramework.MetroLabelSize.Tall
         Me.lblByStaff.Location = New System.Drawing.Point(237, 245)
         Me.lblByStaff.Name = "lblByStaff"
-        Me.lblByStaff.Size = New System.Drawing.Size(19, 25)
+        Me.lblByStaff.Size = New System.Drawing.Size(20, 25)
         Me.lblByStaff.TabIndex = 20
         Me.lblByStaff.Text = "-"
         '
@@ -219,7 +219,7 @@ Partial Class DailySalesReport
         Me.MetroLabel3.FontSize = MetroFramework.MetroLabelSize.Tall
         Me.MetroLabel3.Location = New System.Drawing.Point(44, 245)
         Me.MetroLabel3.Name = "MetroLabel3"
-        Me.MetroLabel3.Size = New System.Drawing.Size(172, 25)
+        Me.MetroLabel3.Size = New System.Drawing.Size(179, 25)
         Me.MetroLabel3.TabIndex = 17
         Me.MetroLabel3.Text = "Transaction Made by:"
         '
@@ -229,7 +229,7 @@ Partial Class DailySalesReport
         Me.MetroLabel4.FontSize = MetroFramework.MetroLabelSize.Tall
         Me.MetroLabel4.Location = New System.Drawing.Point(44, 279)
         Me.MetroLabel4.Name = "MetroLabel4"
-        Me.MetroLabel4.Size = New System.Drawing.Size(93, 25)
+        Me.MetroLabel4.Size = New System.Drawing.Size(97, 25)
         Me.MetroLabel4.TabIndex = 21
         Me.MetroLabel4.Text = "Total Sales:"
         '
@@ -239,7 +239,7 @@ Partial Class DailySalesReport
         Me.lblTotalSales.FontSize = MetroFramework.MetroLabelSize.Tall
         Me.lblTotalSales.Location = New System.Drawing.Point(237, 279)
         Me.lblTotalSales.Name = "lblTotalSales"
-        Me.lblTotalSales.Size = New System.Drawing.Size(19, 25)
+        Me.lblTotalSales.Size = New System.Drawing.Size(20, 25)
         Me.lblTotalSales.TabIndex = 22
         Me.lblTotalSales.Text = "-"
         '
@@ -267,19 +267,20 @@ Partial Class DailySalesReport
         Me.MenuStrip2.Location = New System.Drawing.Point(27, 74)
         Me.MenuStrip2.Name = "MenuStrip2"
         Me.MenuStrip2.Padding = New System.Windows.Forms.Padding(8, 4, 0, 4)
-        Me.MenuStrip2.Size = New System.Drawing.Size(1007, 31)
+        Me.MenuStrip2.Size = New System.Drawing.Size(1007, 35)
         Me.MenuStrip2.TabIndex = 23
         Me.MenuStrip2.Text = "MenuStrip2"
         '
         'ProfileToolStripMenuItem
         '
         Me.ProfileToolStripMenuItem.Name = "ProfileToolStripMenuItem"
-        Me.ProfileToolStripMenuItem.Size = New System.Drawing.Size(65, 23)
+        Me.ProfileToolStripMenuItem.Size = New System.Drawing.Size(76, 27)
         Me.ProfileToolStripMenuItem.Text = "Logout"
         '
         'DailySalesReport
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AcceptButton = Me.MetroButton2
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.CancelButton = Me.btnClose
         Me.ClientSize = New System.Drawing.Size(1061, 825)

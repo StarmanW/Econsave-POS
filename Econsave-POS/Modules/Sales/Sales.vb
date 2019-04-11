@@ -43,11 +43,12 @@
         DataGridView1.DataSource = rs
 
         DataGridView1.Columns(0).Width = 60
-        DataGridView1.Columns(1).Width = 170
-        DataGridView1.Columns(2).Width = 95
-        DataGridView1.Columns(3).Width = 75
-        DataGridView1.Columns(4).Width = 65
+        DataGridView1.Columns(1).Width = 172
+        DataGridView1.Columns(2).Width = 96
+        DataGridView1.Columns(3).Width = 81
+        DataGridView1.Columns(4).Width = 61
 
+        DataGridView1.Columns(3).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
         DataGridView1.Columns(4).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
         DataGridView1.Columns(4).DefaultCellStyle.Format = "N2"
         'DataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells
@@ -214,11 +215,12 @@
         DataGridView1.DataSource = rs
 
         DataGridView1.Columns(0).Width = 60
-        DataGridView1.Columns(1).Width = 170
-        DataGridView1.Columns(2).Width = 95
-        DataGridView1.Columns(3).Width = 65
-        DataGridView1.Columns(4).Width = 65
+        DataGridView1.Columns(1).Width = 172
+        DataGridView1.Columns(2).Width = 96
+        DataGridView1.Columns(3).Width = 81
+        DataGridView1.Columns(4).Width = 61
 
+        DataGridView1.Columns(3).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
         DataGridView1.Columns(4).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
         DataGridView1.Columns(4).DefaultCellStyle.Format = "N2"
     End Sub
