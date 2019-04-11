@@ -195,6 +195,12 @@
     <Compile Include="Modules\Sales\Sales.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Modules\SplashScreen.Designer.vb">
+      <DependentUpon>SplashScreen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\SplashScreen.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Modules\StaffManagement\AddStaff.Designer.vb">
       <DependentUpon>AddStaff.vb</DependentUpon>
     </Compile>
@@ -270,6 +276,9 @@
     <EmbeddedResource Include="Modules\Sales\Sales.resx">
       <DependentUpon>Sales.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Modules\SplashScreen.resx">
+      <DependentUpon>SplashScreen.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Modules\StaffManagement\AddStaff.resx">
       <DependentUpon>AddStaff.vb</DependentUpon>
     </EmbeddedResource>
@@ -333,6 +342,7 @@
     <Content Include="Resources\cb4e4-ot9m3-6.png" />
     <Content Include="Resources\cbvoi-qjprf-6.png" />
     <Content Include="Resources\Econsave_logo.png" />
+    <None Include="Resources\econsave_logo_big_cropped.png" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">

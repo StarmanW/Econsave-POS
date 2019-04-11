@@ -14,12 +14,12 @@ Public Class Login
         ErrorProvider1.Clear()
 
         If Not textRegex.IsMatch(txtStaffID.Text) Then
-            ErrorProvider1.SetError(txtStaffID, "Please enter staff ID.")
+            ErrorProvider1.SetError(txtStaffID, "Please Enter Staff ID.")
             validData = False
         End If
 
         If Not textRegex.IsMatch(txtPassword.Text) Then
-            ErrorProvider1.SetError(txtPassword, "Please enter passwrod.")
+            ErrorProvider1.SetError(txtPassword, "Please Enter Passwrod.")
             validData = False
         End If
 
@@ -28,12 +28,12 @@ Public Class Login
 
     Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
         If isValidDataField() Then
-            staffId = txtStaffID.Text
-            password = SHA.GenerateSHA256String(txtPassword.Text)
+            staffId = txtStaffID.Text.ToLower
+            password = SHA.GenerateSHA256String(txtPassword.Text).ToLower()
 
             'Retrieve Data
             Using db As New EconsaveDataClassesDataContext()
-                Dim staff = db.Staffs.Where(Function(s) s.staffID = staffId AndAlso s.password = password).FirstOrDefault()
+                Dim staff = db.Staffs.Where(Function(s) s.staffID.ToLower() = staffId AndAlso s.password.ToLower() = password).FirstOrDefault()
                 If staff Is Nothing Then
                     MessageBox.Show("Invalid staff ID or password, please try again.", "Invalid Credentials", MessageBoxButtons.OK, MessageBoxIcon.Warning)
                 Else
@@ -47,7 +47,7 @@ Public Class Login
                     If staff.position = "Manager" Then
                         ManagerForm.ShowDialog()
                         ManagerForm.Close()
-                    Else
+                    ElseIf staff.position = "Cashier" Then
                         Sales.ShowDialog()
                         Sales.Close()
                     End If
