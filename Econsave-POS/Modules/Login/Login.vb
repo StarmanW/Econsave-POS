@@ -64,4 +64,8 @@ Public Class Login
         Dim showHistory = New History()
         History.Show()
     End Sub
+
+    Private Sub Login_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        txtStaffID.Select()
+    End Sub
 End Class
