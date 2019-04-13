@@ -139,7 +139,6 @@ Public Class DailySalesReport
 
         With body
             .AppendLine()
-            '.AppendFormat("{0,81}Total" & Format(itemSaleList(0).Transaction.totalPrice, "0.00") & vbNewLine & vbNewLine, " ")
             .AppendFormat(
                 "{0,81}Total" & vbNewLine &
                 "{1,81}--------" & vbNewLine &

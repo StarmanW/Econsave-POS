@@ -51,8 +51,6 @@
         dgvItems.Columns(3).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
         dgvItems.Columns(4).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
         dgvItems.Columns(4).DefaultCellStyle.Format = "N2"
-        'dgvItems.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells
-        'dgvItems.AutoSizeColumnsMode = CType(DataGridViewAutoSizeColumnMode.Fill, DataGridViewAutoSizeColumnsMode)
 
         Dim dt As New DataTable
         dt.Columns.Add("ID")
@@ -70,8 +68,6 @@
         dgvSelectedItems.Columns(4).Width = 85
 
         dgvSelectedItems.Columns(1).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
-        'dgvSelectedItems.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells
-        'dgvSelectedItems.AutoSizeColumnsMode = CType(DataGridViewAutoSizeColumnMode.Fill, DataGridViewAutoSizeColumnsMode)
 
         MetroLabel4.Text = transaction.transactionID
     End Sub
@@ -80,44 +76,6 @@
         If e.RowIndex >= 0 AndAlso e.ColumnIndex >= 0 Then
             Dim selectedRow = dgvItems.Rows(e.RowIndex)
             Dim selectedItemID = dgvItems.Item(0, selectedRow.Index).Value.ToString
-
-            'If itemSaleList.Count = 0 Then
-            '    Dim itemSale As New ItemSale
-            '    With itemSale
-            '        .itemID = selectedItemID
-            '        .transactionID = transaction.transactionID
-            '        .quantity = 1
-            '        .subtotal = CDbl(dgvItems.Item(3, selectedRow.Index).Value)
-            '    End With
-
-            '    itemSaleList.Add(itemSale)
-
-            '    '==============================================
-            '    db.ItemSales.InsertOnSubmit(itemSale)
-            '    db.SubmitChanges()
-            'Else
-            '    Dim found As Boolean = False
-
-            'For Each tmpItemSale In itemSaleList
-            '    If tmpItemSale.itemID = selectedItemID Then
-            '        Dim item As New Item
-
-            '        For Each tmpItem In itemList
-            '            If tmpItem.itemID = selectedItemID Then
-            '                item = tmpItem
-            '                Exit For
-            '            End If
-            '        Next
-
-            '        With tmpItemSale
-            '            .quantity += 1
-            '            .subtotal += item.price
-            '        End With
-
-            '        found = True
-            '        Exit For
-            '    End If
-            'Next
 
             If CDbl(dgvItems.Item(3, selectedRow.Index).Value) <> 0 Then
                 Dim itemSale = db.ItemSales.Where(Function(i) i.transactionID = transaction.transactionID And i.itemID = selectedItemID).FirstOrDefault
@@ -133,7 +91,6 @@
                         .subtotal = CDbl(dgvItems.Item(4, selectedRow.Index).Value)
                     End With
 
-                    'itemSaleList.Add(newItemSale)
                     item.stockQuantity -= 1
 
                     db.ItemSales.InsertOnSubmit(newItemSale)
@@ -251,9 +208,6 @@
         dgvSelectedItems.Columns(3).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
         dgvSelectedItems.Columns(4).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
         dgvSelectedItems.Columns(4).DefaultCellStyle.Format = "N2"
-
-        'dgvSelectedItems.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells
-        'dgvSelectedItems.AutoSizeColumnsMode = CType(DataGridViewAutoSizeColumnMode.Fill, DataGridViewAutoSizeColumnsMode)
     End Sub
 
     Private Sub dgvSelectedItems_CellMouseDoubleClick(sender As Object, e As DataGridViewCellMouseEventArgs) Handles dgvSelectedItems.CellMouseDoubleClick
