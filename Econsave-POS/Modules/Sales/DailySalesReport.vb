@@ -60,10 +60,10 @@ Public Class DailySalesReport
                                Select t).FirstOrDefault()
 
             ' Set label text
-            lblTransaction.Text = transaction.transactionID
+            lblTransactionID.Text = transaction.transactionID
             lblDate.Text = transaction.createdOn.ToLongDateString()
-            lblByStaff.Text = transaction.Staff.name
-            lblTotalSales.Text = $"RM{transaction.totalPrice.ToString("N2")}"
+            lblCashierName.Text = transaction.Staff.name
+            lblTotal.Text = $"RM{transaction.totalPrice.ToString("N2")}"
 
             dgvDailySales.DataSource = From itmSls In db.ItemSales
                                        Where itmSls.transactionID = cboTransaction.SelectedItem.ToString()
@@ -75,7 +75,7 @@ Public Class DailySalesReport
                                            Subtotal = itmSls.subtotal
         End Using
 
-        MetroButton2.Enabled = True
+        btnPrint.Enabled = True
     End Sub
 
     Private Sub cboDate_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboDate.SelectedIndexChanged
@@ -92,7 +92,7 @@ Public Class DailySalesReport
         End Using
     End Sub
 
-    Private Sub MetroButton2_Click(sender As Object, e As EventArgs) Handles MetroButton2.Click
+    Private Sub btnPrint_Click(sender As Object, e As EventArgs) Handles btnPrint.Click
         dlgPrintPreview.Document = doc
         DirectCast(dlgPrintPreview, Form).WindowState = FormWindowState.Maximized
         dlgPrintPreview.PrintPreviewControl.Zoom = 1.0
@@ -157,5 +157,9 @@ Public Class DailySalesReport
             .DrawString(body.ToString(), fontBody, Brushes.Black, 0, 120)
             .DrawString(footer, fontFooter, Brushes.Gray, 550, 930)
         End With
+    End Sub
+
+    Private Sub mnuLogout_Click(sender As Object, e As EventArgs) Handles mnuLogout.Click
+        Me.Close()
     End Sub
 End Class

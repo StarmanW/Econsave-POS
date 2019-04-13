@@ -31,47 +31,46 @@ Partial Class Sales
         Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Sales))
-        Me.Tota = New MetroFramework.Controls.MetroLabel()
-        Me.MetroLabel1 = New MetroFramework.Controls.MetroLabel()
+        Me.lblTotal = New MetroFramework.Controls.MetroLabel()
+        Me.lblTotalValue = New MetroFramework.Controls.MetroLabel()
         Me.EconsaveDBDataSet = New Econsave_POS.EconsaveDBDataSet()
         Me.lblCategory = New MetroFramework.Controls.MetroLabel()
         Me.cmbCategory = New MetroFramework.Controls.MetroComboBox()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.DataGridView2 = New System.Windows.Forms.DataGridView()
-        Me.MetroLabel2 = New MetroFramework.Controls.MetroLabel()
-        Me.MetroButton2 = New MetroFramework.Controls.MetroButton()
-        Me.MetroButton1 = New MetroFramework.Controls.MetroButton()
-        Me.MetroLabel3 = New MetroFramework.Controls.MetroLabel()
+        Me.dgvItems = New System.Windows.Forms.DataGridView()
+        Me.dgvSelectedItems = New System.Windows.Forms.DataGridView()
+        Me.btnSubmit = New MetroFramework.Controls.MetroButton()
+        Me.btnClear = New MetroFramework.Controls.MetroButton()
+        Me.lblTransactionID = New MetroFramework.Controls.MetroLabel()
         Me.MetroLabel4 = New MetroFramework.Controls.MetroLabel()
-        Me.MenuStrip2 = New System.Windows.Forms.MenuStrip()
-        Me.ProfileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.mnuStrip = New System.Windows.Forms.MenuStrip()
+        Me.mnuLogout = New System.Windows.Forms.ToolStripMenuItem()
         CType(Me.EconsaveDBDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.MenuStrip2.SuspendLayout()
+        CType(Me.dgvItems, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgvSelectedItems, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.mnuStrip.SuspendLayout()
         Me.SuspendLayout()
         '
-        'Tota
+        'lblTotal
         '
-        Me.Tota.FontSize = MetroFramework.MetroLabelSize.Tall
-        Me.Tota.ForeColor = System.Drawing.Color.DimGray
-        Me.Tota.Location = New System.Drawing.Point(789, 636)
-        Me.Tota.Name = "Tota"
-        Me.Tota.Size = New System.Drawing.Size(115, 30)
-        Me.Tota.TabIndex = 8
-        Me.Tota.Text = "Total : "
-        Me.Tota.TextAlign = System.Drawing.ContentAlignment.TopRight
+        Me.lblTotal.FontSize = MetroFramework.MetroLabelSize.Tall
+        Me.lblTotal.ForeColor = System.Drawing.Color.DimGray
+        Me.lblTotal.Location = New System.Drawing.Point(789, 636)
+        Me.lblTotal.Name = "lblTotal"
+        Me.lblTotal.Size = New System.Drawing.Size(161, 30)
+        Me.lblTotal.TabIndex = 8
+        Me.lblTotal.Text = "Total :    RM"
+        Me.lblTotal.TextAlign = System.Drawing.ContentAlignment.TopRight
         '
-        'MetroLabel1
+        'lblTotalValue
         '
-        Me.MetroLabel1.FontSize = MetroFramework.MetroLabelSize.Tall
-        Me.MetroLabel1.ForeColor = System.Drawing.Color.DimGray
-        Me.MetroLabel1.Location = New System.Drawing.Point(972, 636)
-        Me.MetroLabel1.Name = "MetroLabel1"
-        Me.MetroLabel1.Size = New System.Drawing.Size(103, 30)
-        Me.MetroLabel1.TabIndex = 9
-        Me.MetroLabel1.Text = "0.00"
-        Me.MetroLabel1.TextAlign = System.Drawing.ContentAlignment.TopRight
+        Me.lblTotalValue.FontSize = MetroFramework.MetroLabelSize.Tall
+        Me.lblTotalValue.ForeColor = System.Drawing.Color.DimGray
+        Me.lblTotalValue.Location = New System.Drawing.Point(972, 636)
+        Me.lblTotalValue.Name = "lblTotalValue"
+        Me.lblTotalValue.Size = New System.Drawing.Size(103, 30)
+        Me.lblTotalValue.TabIndex = 9
+        Me.lblTotalValue.Text = "0.00"
+        Me.lblTotalValue.TextAlign = System.Drawing.ContentAlignment.TopRight
         '
         'EconsaveDBDataSet
         '
@@ -99,17 +98,17 @@ Partial Class Sales
         Me.cmbCategory.TabIndex = 1
         Me.cmbCategory.UseSelectable = True
         '
-        'DataGridView1
+        'dgvItems
         '
-        Me.DataGridView1.AllowUserToAddRows = False
-        Me.DataGridView1.AllowUserToDeleteRows = False
-        Me.DataGridView1.AllowUserToResizeRows = False
+        Me.dgvItems.AllowUserToAddRows = False
+        Me.dgvItems.AllowUserToDeleteRows = False
+        Me.dgvItems.AllowUserToResizeRows = False
         DataGridViewCellStyle1.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.DataGridView1.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
-        Me.DataGridView1.BackgroundColor = System.Drawing.Color.White
-        Me.DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.DataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None
-        Me.DataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        Me.dgvItems.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        Me.dgvItems.BackgroundColor = System.Drawing.Color.White
+        Me.dgvItems.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.dgvItems.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None
+        Me.dgvItems.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
         DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control
         DataGridViewCellStyle2.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -117,8 +116,8 @@ Partial Class Sales
         DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.DodgerBlue
         DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvItems.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        Me.dgvItems.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window
         DataGridViewCellStyle3.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -126,14 +125,14 @@ Partial Class Sales
         DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(219, Byte), Integer))
         DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DataGridView1.DefaultCellStyle = DataGridViewCellStyle3
-        Me.DataGridView1.GridColor = System.Drawing.Color.White
-        Me.DataGridView1.Location = New System.Drawing.Point(41, 238)
-        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(4)
-        Me.DataGridView1.MultiSelect = False
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.ReadOnly = True
-        Me.DataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        Me.dgvItems.DefaultCellStyle = DataGridViewCellStyle3
+        Me.dgvItems.GridColor = System.Drawing.Color.White
+        Me.dgvItems.Location = New System.Drawing.Point(41, 238)
+        Me.dgvItems.Margin = New System.Windows.Forms.Padding(4)
+        Me.dgvItems.MultiSelect = False
+        Me.dgvItems.Name = "dgvItems"
+        Me.dgvItems.ReadOnly = True
+        Me.dgvItems.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
         DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control
         DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -141,30 +140,30 @@ Partial Class Sales
         DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight
         DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView1.RowHeadersDefaultCellStyle = DataGridViewCellStyle4
-        Me.DataGridView1.RowHeadersVisible = False
-        Me.DataGridView1.RowHeadersWidth = 45
-        Me.DataGridView1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DataGridView1.ShowCellErrors = False
-        Me.DataGridView1.ShowCellToolTips = False
-        Me.DataGridView1.ShowEditingIcon = False
-        Me.DataGridView1.ShowRowErrors = False
-        Me.DataGridView1.Size = New System.Drawing.Size(620, 518)
-        Me.DataGridView1.StandardTab = True
-        Me.DataGridView1.TabIndex = 0
+        Me.dgvItems.RowHeadersDefaultCellStyle = DataGridViewCellStyle4
+        Me.dgvItems.RowHeadersVisible = False
+        Me.dgvItems.RowHeadersWidth = 45
+        Me.dgvItems.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
+        Me.dgvItems.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.dgvItems.ShowCellErrors = False
+        Me.dgvItems.ShowCellToolTips = False
+        Me.dgvItems.ShowEditingIcon = False
+        Me.dgvItems.ShowRowErrors = False
+        Me.dgvItems.Size = New System.Drawing.Size(620, 518)
+        Me.dgvItems.StandardTab = True
+        Me.dgvItems.TabIndex = 0
         '
-        'DataGridView2
+        'dgvSelectedItems
         '
-        Me.DataGridView2.AllowUserToAddRows = False
-        Me.DataGridView2.AllowUserToDeleteRows = False
-        Me.DataGridView2.AllowUserToResizeRows = False
+        Me.dgvSelectedItems.AllowUserToAddRows = False
+        Me.dgvSelectedItems.AllowUserToDeleteRows = False
+        Me.dgvSelectedItems.AllowUserToResizeRows = False
         DataGridViewCellStyle5.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.DataGridView2.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle5
-        Me.DataGridView2.BackgroundColor = System.Drawing.Color.White
-        Me.DataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.DataGridView2.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None
-        Me.DataGridView2.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        Me.dgvSelectedItems.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle5
+        Me.dgvSelectedItems.BackgroundColor = System.Drawing.Color.White
+        Me.dgvSelectedItems.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.dgvSelectedItems.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None
+        Me.dgvSelectedItems.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
         DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control
         DataGridViewCellStyle6.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -172,8 +171,8 @@ Partial Class Sales
         DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.DodgerBlue
         DataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView2.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle6
-        Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvSelectedItems.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle6
+        Me.dgvSelectedItems.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Window
         DataGridViewCellStyle7.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -181,14 +180,14 @@ Partial Class Sales
         DataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(219, Byte), Integer))
         DataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DataGridView2.DefaultCellStyle = DataGridViewCellStyle7
-        Me.DataGridView2.GridColor = System.Drawing.Color.White
-        Me.DataGridView2.Location = New System.Drawing.Point(683, 238)
-        Me.DataGridView2.Margin = New System.Windows.Forms.Padding(4)
-        Me.DataGridView2.MultiSelect = False
-        Me.DataGridView2.Name = "DataGridView2"
-        Me.DataGridView2.ReadOnly = True
-        Me.DataGridView2.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        Me.dgvSelectedItems.DefaultCellStyle = DataGridViewCellStyle7
+        Me.dgvSelectedItems.GridColor = System.Drawing.Color.White
+        Me.dgvSelectedItems.Location = New System.Drawing.Point(683, 238)
+        Me.dgvSelectedItems.Margin = New System.Windows.Forms.Padding(4)
+        Me.dgvSelectedItems.MultiSelect = False
+        Me.dgvSelectedItems.Name = "dgvSelectedItems"
+        Me.dgvSelectedItems.ReadOnly = True
+        Me.dgvSelectedItems.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
         DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control
         DataGridViewCellStyle8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -196,67 +195,57 @@ Partial Class Sales
         DataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight
         DataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView2.RowHeadersDefaultCellStyle = DataGridViewCellStyle8
-        Me.DataGridView2.RowHeadersVisible = False
-        Me.DataGridView2.RowHeadersWidth = 45
-        Me.DataGridView2.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.DataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DataGridView2.ShowCellErrors = False
-        Me.DataGridView2.ShowCellToolTips = False
-        Me.DataGridView2.ShowEditingIcon = False
-        Me.DataGridView2.ShowRowErrors = False
-        Me.DataGridView2.Size = New System.Drawing.Size(567, 370)
-        Me.DataGridView2.StandardTab = True
-        Me.DataGridView2.TabIndex = 2
+        Me.dgvSelectedItems.RowHeadersDefaultCellStyle = DataGridViewCellStyle8
+        Me.dgvSelectedItems.RowHeadersVisible = False
+        Me.dgvSelectedItems.RowHeadersWidth = 45
+        Me.dgvSelectedItems.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
+        Me.dgvSelectedItems.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.dgvSelectedItems.ShowCellErrors = False
+        Me.dgvSelectedItems.ShowCellToolTips = False
+        Me.dgvSelectedItems.ShowEditingIcon = False
+        Me.dgvSelectedItems.ShowRowErrors = False
+        Me.dgvSelectedItems.Size = New System.Drawing.Size(567, 370)
+        Me.dgvSelectedItems.StandardTab = True
+        Me.dgvSelectedItems.TabIndex = 2
         '
-        'MetroLabel2
+        'btnSubmit
         '
-        Me.MetroLabel2.FontSize = MetroFramework.MetroLabelSize.Tall
-        Me.MetroLabel2.ForeColor = System.Drawing.Color.DimGray
-        Me.MetroLabel2.Location = New System.Drawing.Point(911, 636)
-        Me.MetroLabel2.Name = "MetroLabel2"
-        Me.MetroLabel2.Size = New System.Drawing.Size(67, 30)
-        Me.MetroLabel2.TabIndex = 13
-        Me.MetroLabel2.Text = "RM"
+        Me.btnSubmit.BackColor = System.Drawing.Color.ForestGreen
+        Me.btnSubmit.FontSize = MetroFramework.MetroButtonSize.Tall
+        Me.btnSubmit.ForeColor = System.Drawing.Color.White
+        Me.btnSubmit.Location = New System.Drawing.Point(789, 694)
+        Me.btnSubmit.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.btnSubmit.Name = "btnSubmit"
+        Me.btnSubmit.Size = New System.Drawing.Size(161, 62)
+        Me.btnSubmit.TabIndex = 3
+        Me.btnSubmit.Text = "&Submit"
+        Me.btnSubmit.UseCustomBackColor = True
+        Me.btnSubmit.UseCustomForeColor = True
+        Me.btnSubmit.UseSelectable = True
         '
-        'MetroButton2
+        'btnClear
         '
-        Me.MetroButton2.BackColor = System.Drawing.Color.ForestGreen
-        Me.MetroButton2.FontSize = MetroFramework.MetroButtonSize.Tall
-        Me.MetroButton2.ForeColor = System.Drawing.Color.White
-        Me.MetroButton2.Location = New System.Drawing.Point(789, 694)
-        Me.MetroButton2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.MetroButton2.Name = "MetroButton2"
-        Me.MetroButton2.Size = New System.Drawing.Size(161, 62)
-        Me.MetroButton2.TabIndex = 3
-        Me.MetroButton2.Text = "&Submit"
-        Me.MetroButton2.UseCustomBackColor = True
-        Me.MetroButton2.UseCustomForeColor = True
-        Me.MetroButton2.UseSelectable = True
+        Me.btnClear.BackColor = System.Drawing.SystemColors.Highlight
+        Me.btnClear.FontSize = MetroFramework.MetroButtonSize.Tall
+        Me.btnClear.ForeColor = System.Drawing.Color.White
+        Me.btnClear.Location = New System.Drawing.Point(972, 694)
+        Me.btnClear.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.btnClear.Name = "btnClear"
+        Me.btnClear.Size = New System.Drawing.Size(161, 62)
+        Me.btnClear.TabIndex = 4
+        Me.btnClear.Text = "C&lear"
+        Me.btnClear.UseCustomBackColor = True
+        Me.btnClear.UseCustomForeColor = True
+        Me.btnClear.UseSelectable = True
         '
-        'MetroButton1
+        'lblTransactionID
         '
-        Me.MetroButton1.BackColor = System.Drawing.SystemColors.Highlight
-        Me.MetroButton1.FontSize = MetroFramework.MetroButtonSize.Tall
-        Me.MetroButton1.ForeColor = System.Drawing.Color.White
-        Me.MetroButton1.Location = New System.Drawing.Point(972, 694)
-        Me.MetroButton1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.MetroButton1.Name = "MetroButton1"
-        Me.MetroButton1.Size = New System.Drawing.Size(161, 62)
-        Me.MetroButton1.TabIndex = 4
-        Me.MetroButton1.Text = "C&lear"
-        Me.MetroButton1.UseCustomBackColor = True
-        Me.MetroButton1.UseCustomForeColor = True
-        Me.MetroButton1.UseSelectable = True
-        '
-        'MetroLabel3
-        '
-        Me.MetroLabel3.FontSize = MetroFramework.MetroLabelSize.Tall
-        Me.MetroLabel3.Location = New System.Drawing.Point(19, 138)
-        Me.MetroLabel3.Name = "MetroLabel3"
-        Me.MetroLabel3.Size = New System.Drawing.Size(172, 36)
-        Me.MetroLabel3.TabIndex = 18
-        Me.MetroLabel3.Text = "Transaction ID"
+        Me.lblTransactionID.FontSize = MetroFramework.MetroLabelSize.Tall
+        Me.lblTransactionID.Location = New System.Drawing.Point(19, 138)
+        Me.lblTransactionID.Name = "lblTransactionID"
+        Me.lblTransactionID.Size = New System.Drawing.Size(172, 36)
+        Me.lblTransactionID.TabIndex = 18
+        Me.lblTransactionID.Text = "Transaction ID"
         '
         'MetroLabel4
         '
@@ -266,42 +255,41 @@ Partial Class Sales
         Me.MetroLabel4.Size = New System.Drawing.Size(269, 33)
         Me.MetroLabel4.TabIndex = 19
         '
-        'MenuStrip2
+        'mnuStrip
         '
-        Me.MenuStrip2.Font = New System.Drawing.Font("Segoe UI", 10.0!)
-        Me.MenuStrip2.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.MenuStrip2.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ProfileToolStripMenuItem})
-        Me.MenuStrip2.Location = New System.Drawing.Point(20, 74)
-        Me.MenuStrip2.Name = "MenuStrip2"
-        Me.MenuStrip2.Padding = New System.Windows.Forms.Padding(8, 4, 0, 4)
-        Me.MenuStrip2.Size = New System.Drawing.Size(1229, 35)
-        Me.MenuStrip2.TabIndex = 24
-        Me.MenuStrip2.Text = "MenuStrip2"
+        Me.mnuStrip.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.mnuStrip.ImageScalingSize = New System.Drawing.Size(20, 20)
+        Me.mnuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuLogout})
+        Me.mnuStrip.Location = New System.Drawing.Point(20, 74)
+        Me.mnuStrip.Name = "mnuStrip"
+        Me.mnuStrip.Padding = New System.Windows.Forms.Padding(8, 4, 0, 4)
+        Me.mnuStrip.Size = New System.Drawing.Size(1229, 35)
+        Me.mnuStrip.TabIndex = 24
+        Me.mnuStrip.Text = "MenuStrip2"
         '
-        'ProfileToolStripMenuItem
+        'mnuLogout
         '
-        Me.ProfileToolStripMenuItem.Name = "ProfileToolStripMenuItem"
-        Me.ProfileToolStripMenuItem.Size = New System.Drawing.Size(76, 27)
-        Me.ProfileToolStripMenuItem.Text = "&Logout"
+        Me.mnuLogout.Name = "mnuLogout"
+        Me.mnuLogout.Size = New System.Drawing.Size(76, 27)
+        Me.mnuLogout.Text = "&Logout"
         '
         'Sales
         '
-        Me.AcceptButton = Me.MetroButton2
+        Me.AcceptButton = Me.btnSubmit
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1269, 798)
-        Me.Controls.Add(Me.MenuStrip2)
+        Me.Controls.Add(Me.mnuStrip)
         Me.Controls.Add(Me.MetroLabel4)
-        Me.Controls.Add(Me.MetroLabel3)
-        Me.Controls.Add(Me.MetroButton1)
-        Me.Controls.Add(Me.MetroButton2)
-        Me.Controls.Add(Me.MetroLabel2)
-        Me.Controls.Add(Me.DataGridView2)
-        Me.Controls.Add(Me.DataGridView1)
+        Me.Controls.Add(Me.lblTransactionID)
+        Me.Controls.Add(Me.btnClear)
+        Me.Controls.Add(Me.btnSubmit)
+        Me.Controls.Add(Me.dgvSelectedItems)
+        Me.Controls.Add(Me.dgvItems)
         Me.Controls.Add(Me.lblCategory)
         Me.Controls.Add(Me.cmbCategory)
-        Me.Controls.Add(Me.MetroLabel1)
-        Me.Controls.Add(Me.Tota)
+        Me.Controls.Add(Me.lblTotalValue)
+        Me.Controls.Add(Me.lblTotal)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.MaximizeBox = False
@@ -311,26 +299,25 @@ Partial Class Sales
         Me.Text = "Sales"
         Me.Theme = MetroFramework.MetroThemeStyle.[Default]
         CType(Me.EconsaveDBDataSet, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.MenuStrip2.ResumeLayout(False)
-        Me.MenuStrip2.PerformLayout()
+        CType(Me.dgvItems, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgvSelectedItems, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.mnuStrip.ResumeLayout(False)
+        Me.mnuStrip.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents Tota As MetroFramework.Controls.MetroLabel
-    Friend WithEvents MetroLabel1 As MetroFramework.Controls.MetroLabel
+    Friend WithEvents lblTotal As MetroFramework.Controls.MetroLabel
+    Friend WithEvents lblTotalValue As MetroFramework.Controls.MetroLabel
     Friend WithEvents EconsaveDBDataSet As EconsaveDBDataSet
     Friend WithEvents lblCategory As MetroFramework.Controls.MetroLabel
     Friend WithEvents cmbCategory As MetroFramework.Controls.MetroComboBox
-    Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents DataGridView2 As DataGridView
-    Friend WithEvents MetroLabel2 As MetroFramework.Controls.MetroLabel
-    Friend WithEvents MetroButton2 As MetroFramework.Controls.MetroButton
-    Friend WithEvents MetroButton1 As MetroFramework.Controls.MetroButton
-    Friend WithEvents MetroLabel3 As MetroFramework.Controls.MetroLabel
+    Friend WithEvents dgvItems As DataGridView
+    Friend WithEvents dgvSelectedItems As DataGridView
+    Friend WithEvents btnSubmit As MetroFramework.Controls.MetroButton
+    Friend WithEvents btnClear As MetroFramework.Controls.MetroButton
+    Friend WithEvents lblTransactionID As MetroFramework.Controls.MetroLabel
     Friend WithEvents MetroLabel4 As MetroFramework.Controls.MetroLabel
-    Friend WithEvents MenuStrip2 As MenuStrip
-    Friend WithEvents ProfileToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents mnuStrip As MenuStrip
+    Friend WithEvents mnuLogout As ToolStripMenuItem
 End Class
