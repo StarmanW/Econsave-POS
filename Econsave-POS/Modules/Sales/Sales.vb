@@ -5,14 +5,6 @@
     Private itemSaleList As New List(Of ItemSale)
     Private transaction As New Transaction
 
-    Private Function GenerateTransactionID() As String
-        Return (db.Transactions.Count + 1).ToString("D6")
-    End Function
-
-    Private Function GenerateItemSaleID() As String
-        Return (db.ItemSales.Count + 1).ToString("D6")
-    End Function
-
     Private Sub Sales_Closing(sender As Object, e As EventArgs) Handles MyBase.Closing
         If transaction.totalPrice = 0 Then
             clearSelectedItems()
@@ -113,6 +105,32 @@
         UpdateTransaction()
     End Sub
 
+    Private Sub dgvSelectedItems_CellMouseDoubleClick(sender As Object, e As DataGridViewCellMouseEventArgs) Handles dgvSelectedItems.CellMouseDoubleClick
+        If e.RowIndex >= 0 AndAlso e.ColumnIndex >= 0 Then
+            Dim selectedRow = dgvSelectedItems.Rows(e.RowIndex)
+            Dim selectedItemID = dgvSelectedItems.Item(0, selectedRow.Index).Value.ToString
+            Dim item = db.Items.Where(Function(i) i.itemID = selectedItemID).FirstOrDefault()
+
+            Dim itemSale = db.ItemSales.Where(Function(i) i.transactionID = transaction.transactionID And i.itemID = selectedItemID).FirstOrDefault
+
+            If itemSale.quantity < 2 Then
+                item.stockQuantity += 1
+                db.ItemSales.DeleteOnSubmit(itemSale)
+                db.SubmitChanges()
+            Else
+                item.stockQuantity += 1
+                itemSale.quantity -= 1
+                itemSale.subtotal -= itemSale.Item.price
+                db.SubmitChanges()
+            End If
+        End If
+
+        UpdateItemList()
+        UpdateSelectItemList()
+        UpdateTotalPrice()
+        UpdateTransaction()
+    End Sub
+
     Public Sub New()
         ' This call is required by the designer.
         InitializeComponent()
@@ -136,7 +154,7 @@
         cmbCategory.SelectedIndex = 0
     End Sub
 
-    Private Sub cmbCategory_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbCategory.SelectedIndexChanged
+    Private Sub cboCategory_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbCategory.SelectedIndexChanged
         Dim db As New EconsaveDataClassesDataContext()
         Dim rs As Object
 
@@ -161,12 +179,30 @@
     End Sub
 
     Private Sub UpdateItemList()
-        Dim rs = From i In db.Items Select
+        'Dim rs = From i In db.Items Select
+        '                        ID = i.itemID,
+        '                        Name = i.name,
+        '                        Category = i.Category.categoryName,
+        '                        Quantity = i.stockQuantity,
+        '                        Price = i.price
+        Dim rs As Object
+
+        If cmbCategory.SelectedIndex = 0 Then
+            rs = From i In db.Items Select
                                 ID = i.itemID,
                                 Name = i.name,
                                 Category = i.Category.categoryName,
                                 Quantity = i.stockQuantity,
                                 Price = i.price
+        Else
+            Dim itemCategory = CType(cmbCategory.SelectedItem, String)
+            rs = From i In db.Items Where i.Category.categoryName = itemCategory Select
+                                ID = i.itemID,
+                                Name = i.name,
+                                Category = i.Category.categoryName,
+                                Quantity = i.stockQuantity,
+                                Price = i.price
+        End If
 
         dgvItems.DataSource = vbNull
         dgvItems.DataSource = rs
@@ -210,32 +246,6 @@
         dgvSelectedItems.Columns(4).DefaultCellStyle.Format = "N2"
     End Sub
 
-    Private Sub dgvSelectedItems_CellMouseDoubleClick(sender As Object, e As DataGridViewCellMouseEventArgs) Handles dgvSelectedItems.CellMouseDoubleClick
-        If e.RowIndex >= 0 AndAlso e.ColumnIndex >= 0 Then
-            Dim selectedRow = dgvSelectedItems.Rows(e.RowIndex)
-            Dim selectedItemID = dgvSelectedItems.Item(0, selectedRow.Index).Value.ToString
-            Dim item = db.Items.Where(Function(i) i.itemID = selectedItemID).FirstOrDefault()
-
-            Dim itemSale = db.ItemSales.Where(Function(i) i.transactionID = transaction.transactionID And i.itemID = selectedItemID).FirstOrDefault
-
-            If itemSale.quantity < 2 Then
-                item.stockQuantity += 1
-                db.ItemSales.DeleteOnSubmit(itemSale)
-                db.SubmitChanges()
-            Else
-                item.stockQuantity += 1
-                itemSale.quantity -= 1
-                itemSale.subtotal -= itemSale.Item.price
-                db.SubmitChanges()
-            End If
-        End If
-
-        UpdateItemList()
-        UpdateSelectItemList()
-        UpdateTotalPrice()
-        UpdateTransaction()
-    End Sub
-
     Private Sub UpdateTotalPrice()
         Dim total As Double
 
@@ -246,10 +256,9 @@
         lblTotalValue.Text = Format(total, "0.00")
     End Sub
 
-    Private Sub btnClear_Click(sender As Object, e As EventArgs) Handles btnClear.Click
-        clearSelectedItems()
-        lblTotalValue.Text = "0.00"
-        UpdateTransaction()
+    Private Sub UpdateTransaction()
+        transaction.totalPrice = CDbl(lblTotalValue.Text)
+        db.SubmitChanges()
     End Sub
 
     Private Sub clearSelectedItems()
@@ -287,12 +296,21 @@
         End If
     End Sub
 
-    Private Sub UpdateTransaction()
-        transaction.totalPrice = CDbl(lblTotalValue.Text)
-        db.SubmitChanges()
+    Private Sub btnClear_Click(sender As Object, e As EventArgs) Handles btnClear.Click
+        clearSelectedItems()
+        lblTotalValue.Text = "0.00"
+        UpdateTransaction()
     End Sub
 
     Private Sub mnuLogout_Click(sender As Object, e As EventArgs) Handles mnuLogout.Click
         Me.Close()
     End Sub
+
+    Private Function GenerateTransactionID() As String
+        Return (db.Transactions.Count + 1).ToString("D6")
+    End Function
+
+    Private Function GenerateItemSaleID() As String
+        Return (db.ItemSales.Count + 1).ToString("D6")
+    End Function
 End Class
