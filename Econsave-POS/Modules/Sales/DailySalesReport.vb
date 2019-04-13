@@ -3,61 +3,32 @@
 Public Class DailySalesReport
     Private Sub DailySalesReport_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Using db As New EconsaveDataClassesDataContext()
-            Dim dates = (From t In db.Transactions
-                         Order By t.createdOn Descending
-                         Select t.createdOn).Distinct().ToList()
+            Dim dates = (
+                From t In db.Transactions
+                Order By t.createdOn Descending
+                Select t.createdOn
+            ).Distinct().ToList()
 
             cboDate.Items.Clear()
+
             For Each d In dates
                 cboDate.Items.Add(d)
             Next
         End Using
 
-        Dim dt As New DataTable
-        dt.Columns.Add("ID")
-        dt.Columns.Add("Name")
-        dt.Columns.Add("Price")
-        dt.Columns.Add("Quantity")
-        dt.Columns.Add("Subtotal")
-
-        dgvDailySales.DataSource = dt
-
-        dgvDailySales.Columns(0).Width = 60
-        dgvDailySales.Columns(1).Width = 130
-        dgvDailySales.Columns(2).Width = 65
-        dgvDailySales.Columns(3).Width = 85
-        dgvDailySales.Columns(4).Width = 85
-
-        dgvDailySales.Columns(2).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
-        dgvDailySales.Columns(2).DefaultCellStyle.Format = "N2"
-
-        dgvDailySales.Columns(3).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
-        dgvDailySales.Columns(4).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
-        dgvDailySales.Columns(4).DefaultCellStyle.Format = "N2"
+        InitDgvDailySales()
+        SetDgvDailySales()
     End Sub
 
-    Private Sub btnClose_Click(sender As Object, e As EventArgs) Handles btnClose.Click
-        Me.Close()
-    End Sub
-
-    Private Sub cmbTransaction_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboTransaction.SelectedIndexChanged
-        dgvDailySales.Columns(0).Width = 60
-        dgvDailySales.Columns(1).Width = 130
-        dgvDailySales.Columns(2).Width = 65
-        dgvDailySales.Columns(3).Width = 85
-        dgvDailySales.Columns(4).Width = 85
-
-        dgvDailySales.Columns(2).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
-        dgvDailySales.Columns(2).DefaultCellStyle.Format = "N2"
-
-        dgvDailySales.Columns(3).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
-        dgvDailySales.Columns(4).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
-        dgvDailySales.Columns(4).DefaultCellStyle.Format = "N2"
+    Private Sub cboTransaction_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboTransaction.SelectedIndexChanged
+        SetDgvDailySales()
 
         Using db As New EconsaveDataClassesDataContext()
-            Dim transaction = (From t In db.Transactions
-                               Where t.transactionID Is cboTransaction.SelectedItem
-                               Select t).FirstOrDefault()
+            Dim transaction = (
+                    From t In db.Transactions
+                    Where t.transactionID Is cboTransaction.SelectedItem
+                    Select t
+                ).FirstOrDefault()
 
             ' Set label text
             lblTransactionID.Text = transaction.transactionID
@@ -81,15 +52,19 @@ Public Class DailySalesReport
     Private Sub cboDate_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboDate.SelectedIndexChanged
         Using db As New EconsaveDataClassesDataContext()
             Dim selectedDate = Date.Parse(cboDate.SelectedItem.ToString())
-            Dim transactions = (From t In db.Transactions
-                                Where t.createdOn.Date.Equals(selectedDate.Date)
-                                Select t.transactionID).ToList()
+            Dim transactions = (
+                From t In db.Transactions
+                Where t.createdOn.Date.Equals(selectedDate.Date)
+                Select t.transactionID
+            ).ToList()
 
             cboTransaction.Items.Clear()
             For Each transaction In transactions
                 cboTransaction.Items.Add(transaction)
             Next
         End Using
+
+        ResetItems()
     End Sub
 
     Private Sub btnPrint_Click(sender As Object, e As EventArgs) Handles btnPrint.Click
@@ -97,12 +72,17 @@ Public Class DailySalesReport
         DirectCast(dlgPrintPreview, Form).WindowState = FormWindowState.Maximized
         dlgPrintPreview.PrintPreviewControl.Zoom = 1.0
         dlgPrintPreview.ShowDialog(Me)
+        Me.DialogResult = DialogResult.None
     End Sub
 
     Private Sub doc_PrintPage(sender As Object, e As Printing.PrintPageEventArgs) Handles doc.PrintPage
         Dim db As New EconsaveDataClassesDataContext()
-        Dim itemSaleList As List(Of ItemSale) = (From i In db.ItemSales Where i.transactionID = cboTransaction.SelectedItem.ToString).ToList
-        Dim staff As Staff = (From i In db.Staffs Where i.staffID = Login.staffId Select i).FirstOrDefault
+        Dim itemSaleList As List(Of ItemSale) = (
+                From i In db.ItemSales Where i.transactionID = cboTransaction.SelectedItem.ToString
+            ).ToList
+        Dim staff As Staff = (
+                From i In db.Staffs Where i.staffID = Login.staffId Select i
+            ).FirstOrDefault
 
         Dim fontHeader As New Font("Calibri", 24, FontStyle.Bold)
         Dim fontSubHeader As New Font("Calibri", 12)
@@ -116,7 +96,6 @@ Public Class DailySalesReport
         )
 
         Dim body As New StringBuilder()
-
         body.AppendLine(
             "No     Item ID      Item Name                      Price         Quantity        Subtotal" & vbNewLine &
             "--     -------      ----------------------------   -------       --------        --------"
@@ -124,15 +103,15 @@ Public Class DailySalesReport
 
         Dim cnt As Integer = 0
         For Each item In itemSaleList
-            '27
             Dim itemName = itemSaleList(cnt).Item.name
             If itemName.Count > 25 Then
                 itemName = itemName.Remove(25) & "..."
             End If
 
             body.AppendFormat(
-                "{0,2} {1,12}     {2,-30} {3,7} {4,14} {5,15}" & vbNewLine, cnt, itemSaleList(cnt).itemID, itemName,
-                Format(itemSaleList(cnt).Item.price, "0.00"), itemSaleList(cnt).quantity, Format(itemSaleList(cnt).subtotal, "0.00")
+                "{0,2} {1,12}     {2,-30} {3,7} {4,14} {5,15}" & vbNewLine,
+                cnt, itemSaleList(cnt).itemID, itemName, Format(itemSaleList(cnt).Item.price, "0.00"),
+                itemSaleList(cnt).quantity, Format(itemSaleList(cnt).subtotal, "0.00")
             )
             cnt += 1
         Next
@@ -158,7 +137,62 @@ Public Class DailySalesReport
         End With
     End Sub
 
+    Private Sub btnClose_Click(sender As Object, e As EventArgs) Handles btnClose.Click
+        Me.Close()
+    End Sub
+
     Private Sub mnuLogout_Click(sender As Object, e As EventArgs) Handles mnuLogout.Click
         Me.Close()
+    End Sub
+
+    Private Sub InitDgvDailySales()
+        Dim dt As New DataTable
+        With dt.Columns
+            .Add("ID")
+            .Add("Name")
+            .Add("Price")
+            .Add("Quantity")
+            .Add("Subtotal")
+        End With
+        dgvDailySales.DataSource = dt
+    End Sub
+
+    Private Sub SetDgvDailySales()
+        With dgvDailySales
+            .Columns(0).Width = 60
+            .Columns(1).Width = 130
+            With .Columns(2)
+                .Width = 65
+                .DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
+                .DefaultCellStyle.Format = "N2"
+            End With
+            With .Columns(3)
+                .Width = 85
+                .DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
+            End With
+            With .Columns(4)
+                .Width = 85
+                .DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
+                .DefaultCellStyle.Format = "N2"
+            End With
+        End With
+    End Sub
+
+    Private Sub ResetItems()
+        cboTransaction.SelectedIndex = -1
+        cboTransaction.Select()
+        cboDate.Select()
+
+        lblTransactionID.Text = "-"
+        lblCashierName.Text = "-"
+        lblDate.Text = "-"
+        lblCashierName.Text = "-"
+        lblTotal.Text = "-"
+
+        dgvDailySales.DataSource = vbNull
+        InitDgvDailySales()
+        SetDgvDailySales()
+
+        btnPrint.Enabled = False
     End Sub
 End Class
