@@ -40,8 +40,8 @@ Partial Class Sales
         Me.dgvSelectedItems = New System.Windows.Forms.DataGridView()
         Me.btnSubmit = New MetroFramework.Controls.MetroButton()
         Me.btnClear = New MetroFramework.Controls.MetroButton()
+        Me.lblTransactionIDTitle = New MetroFramework.Controls.MetroLabel()
         Me.lblTransactionID = New MetroFramework.Controls.MetroLabel()
-        Me.MetroLabel4 = New MetroFramework.Controls.MetroLabel()
         Me.mnuStrip = New System.Windows.Forms.MenuStrip()
         Me.mnuLogout = New System.Windows.Forms.ToolStripMenuItem()
         CType(Me.EconsaveDBDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -238,22 +238,22 @@ Partial Class Sales
         Me.btnClear.UseCustomForeColor = True
         Me.btnClear.UseSelectable = True
         '
+        'lblTransactionIDTitle
+        '
+        Me.lblTransactionIDTitle.FontSize = MetroFramework.MetroLabelSize.Tall
+        Me.lblTransactionIDTitle.Location = New System.Drawing.Point(19, 138)
+        Me.lblTransactionIDTitle.Name = "lblTransactionIDTitle"
+        Me.lblTransactionIDTitle.Size = New System.Drawing.Size(172, 36)
+        Me.lblTransactionIDTitle.TabIndex = 18
+        Me.lblTransactionIDTitle.Text = "Transaction ID"
+        '
         'lblTransactionID
         '
         Me.lblTransactionID.FontSize = MetroFramework.MetroLabelSize.Tall
-        Me.lblTransactionID.Location = New System.Drawing.Point(19, 138)
+        Me.lblTransactionID.Location = New System.Drawing.Point(196, 138)
         Me.lblTransactionID.Name = "lblTransactionID"
-        Me.lblTransactionID.Size = New System.Drawing.Size(172, 36)
-        Me.lblTransactionID.TabIndex = 18
-        Me.lblTransactionID.Text = "Transaction ID"
-        '
-        'MetroLabel4
-        '
-        Me.MetroLabel4.FontSize = MetroFramework.MetroLabelSize.Tall
-        Me.MetroLabel4.Location = New System.Drawing.Point(196, 138)
-        Me.MetroLabel4.Name = "MetroLabel4"
-        Me.MetroLabel4.Size = New System.Drawing.Size(269, 33)
-        Me.MetroLabel4.TabIndex = 19
+        Me.lblTransactionID.Size = New System.Drawing.Size(269, 33)
+        Me.lblTransactionID.TabIndex = 19
         '
         'mnuStrip
         '
@@ -280,8 +280,8 @@ Partial Class Sales
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1269, 798)
         Me.Controls.Add(Me.mnuStrip)
-        Me.Controls.Add(Me.MetroLabel4)
         Me.Controls.Add(Me.lblTransactionID)
+        Me.Controls.Add(Me.lblTransactionIDTitle)
         Me.Controls.Add(Me.btnClear)
         Me.Controls.Add(Me.btnSubmit)
         Me.Controls.Add(Me.dgvSelectedItems)
@@ -316,8 +316,8 @@ Partial Class Sales
     Friend WithEvents dgvSelectedItems As DataGridView
     Friend WithEvents btnSubmit As MetroFramework.Controls.MetroButton
     Friend WithEvents btnClear As MetroFramework.Controls.MetroButton
+    Friend WithEvents lblTransactionIDTitle As MetroFramework.Controls.MetroLabel
     Friend WithEvents lblTransactionID As MetroFramework.Controls.MetroLabel
-    Friend WithEvents MetroLabel4 As MetroFramework.Controls.MetroLabel
     Friend WithEvents mnuStrip As MenuStrip
     Friend WithEvents mnuLogout As ToolStripMenuItem
 End Class
